@@ -20,6 +20,10 @@ abstract class TestCase extends BaseTestCase
                         'token' => 'foobar'
                     ]
                 ])),
+            'https://api4.thetvdb.com/v4/search?q=foobar&type=series&limit=20' =>
+                Http::response(json_encode([
+                    'data' => []
+                ])),
             'https://api4.thetvdb.com/v4/search?q=Doc&type=series&limit=20' =>
                 json_decode(file_get_contents(base_path('tests/Fixtures/Http/TVDB/search-doc.json')), 1),
             'https://api4.thetvdb.com/v4/series/78804/episodes/official' =>
