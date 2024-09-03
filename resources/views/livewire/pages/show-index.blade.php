@@ -1,7 +1,7 @@
 <div>
     <h1>Your Shows</h1>
     <p>
-        @if(count($this->shows))
+        @if(count($shows))
             <table>
                 <thead>
                 <tr>
@@ -10,7 +10,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($this->shows as $show)
+                @foreach($shows as $show)
                     <tr :key="$result->external_id">
                         <td>{{ $show['name'] }}</td>
                         <td>{{ $show['year'] }}</td>

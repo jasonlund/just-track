@@ -5,7 +5,7 @@
 
     <h1>Results</h1>
     <p>
-        @if(count($this->results))
+        @if(count($results))
             <table>
                 <thead>
                 <tr>
@@ -14,7 +14,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($this->results as $result)
+                @foreach($results as $result)
                     <tr :key="$result->tvdb_id">
                         <td>{{ $result['name'] }}</td>
                         <td>{{ $result['year'] ?? '' }}</td>
@@ -22,7 +22,7 @@
                 @endforeach
                 </tbody>
             </table>
-        @elseif($this->query === '')
+        @elseif($query === '')
             Please search for a show above
         @else
             Your search returned no results
