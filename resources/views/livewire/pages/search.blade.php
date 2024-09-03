@@ -3,13 +3,14 @@
         <input type="text" wire:model.live.debounce.150ms="query" />
     </p>
 
-
+    <h1>Results</h1>
     <p>
         @if(count($this->results))
             <table>
                 <thead>
                 <tr>
-                    <th>Results</th>
+                    <th>Title</th>
+                    <th>Year</th>
                 </tr>
                 </thead>
                 <tbody>
