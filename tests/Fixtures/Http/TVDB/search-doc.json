@@ -1,0 +1,1223 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "objectID": "series-378074",
+      "aliases": [
+        "Doc – In your hands",
+        "DOC",
+        "Doc Es liegt in deinen Haenden"
+      ],
+      "country": "ita",
+      "id": "series-378074",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/378074/posters/6472a9326cba9.jpg",
+      "name": "DOC - Nelle tue mani",
+      "first_air_time": "2020-03-26",
+      "overview": "Andrea Fanti perde la memoria dei suoi ultimi dodici anni di vita a causa di un trauma cerebrale e, per la prima volta, si ritrova ad essere non più il medico brillante e autorevole di sempre ma un semplice paziente. Con una vita amputata di ricordi, l'uomo precipita in un mondo sconosciuto dove i suoi cari sono improvvisamente diventati degli estranei e l'ospedale è l'unico posto in cui si sente veramente a casa. Ispirato alla vera storia del dottor Pier Dante Piccioni.",
+      "primary_language": "ita",
+      "primary_type": "series",
+      "status": "Continuing",
+      "type": "series",
+      "tvdb_id": "378074",
+      "year": "2020",
+      "slug": "doc-nelle-tue-mani",
+      "overviews": {
+        "deu": "Doktor Andrea Fanti, ein brillanter Internist, verliert nach einem Unfall seine Erinnerungen an die letzten zwölf Jahre. Im Krankenhaus, wo er vorher arbeitete, versucht er nun, seinem Gedächtnis auf die Sprünge zu helfen. Nur dort fühlt er sich wirklich zu Hause, während seine Vertrauten zu Fremden geworden sind. (rog)",
+        "eng": "When Doctor Andrea Fanti loses 12 years of memories from a brain injury, he finds himself adjusting to a world full of strangers.",
+        "fin": "Andrea Fanti menettää 12 vuoden muistonsa sairaskohtauksessa ja muuttuu loistavasta ja maineikkaasta lääkäristä avuttomaksi potilaaksi. Sairaalaan sijoittuva kansainvälistä huomiota kahminut italialainen laatudraama.",
+        "fra": "Andrea Fanti perd le souvenir de ses douze dernières années de vie à cause d'un traumatisme crânien et, pour la première fois, il ne se retrouve plus le brillant et autoritaire médecin, mais un simple patient. Avec une vie amputée de souvenirs, l'homme tombe dans un monde inconnu où ses proches sont soudainement devenus des étrangers et l'hôpital est le seul endroit où il se sent vraiment chez lui.",
+        "ita": "Andrea Fanti perde la memoria dei suoi ultimi dodici anni di vita a causa di un trauma cerebrale e, per la prima volta, si ritrova ad essere non più il medico brillante e autorevole di sempre ma un semplice paziente. Con una vita amputata di ricordi, l'uomo precipita in un mondo sconosciuto dove i suoi cari sono improvvisamente diventati degli estranei e l'ospedale è l'unico posto in cui si sente veramente a casa. Ispirato alla vera storia del dottor Pier Dante Piccioni.",
+        "pt": "O Dr. Andrea Fanti é um brilhante médico em diagnósticos. Mas sua vida muda de cabeça para baixo quando ele é vítima de um tiro disparado pelo pai de um antigo paciente falecido. Após o disparo, ele perde a memória dos seus últimos 12 anos de vida, esquecendo de sua família e até mesmo quem ele é. \r\n",
+        "rus": "Сериал основан на реальных событиях. Андреа Фанти получил черепно-мозговую травму и, очнувшись после комы, обнаружил, что не помнит последние 12 лет своей жизни. Впервые в жизни выдающийся врач-диагност стал обычным пациентом. Он оказался в новом для себя мире, где его близкие стали чужими людьми, где больница - единственное место, где он как дома. Что это? Начало новой жизни? Возможность работы над ошибками? Об этом и не только он подумает, пока спасает жизни и наставляет интернов.",
+        "spa": "El Dr. Andrea Fanti es uno de los más brillantes especialistas de medicina interna, aunque todos le reconozcan como frío, distante y con escasa empatía por sus pacientes. Tras un terrible incidente, Andrea pierde todos los recuerdos de sus últimos 12 años, consecuencia de una gravísima lesión en la cabeza. Por primera vez se encuentra en el otro lado, en el del paciente. Despojado de años de recuerdos, se sentirá a la deriva en un mundo desconocido, en el que hijos, amigos o colegas del hospital, le resultan ajenos y extraños. Sin embargo, en un intento por mantener la cordura, toma la decisión de permanecer en su lugar de trabajo. Aunque eso suponga tener que encontrar un nuevo modo de ser lo que era, lo que siempre quiso ser, el mejor de los doctores."
+      },
+      "translations": {
+        "deu": "DOC - Es liegt in deinen Händen",
+        "eng": "DOC",
+        "fin": "DOC",
+        "fra": "Doc",
+        "ita": "DOC - Nelle tue mani",
+        "pt": "DOC - Uma Nova Vida",
+        "rus": "Док — Всё в твоих руках",
+        "spa": "DOC"
+      },
+      "network": "Rai 1",
+      "remote_ids": [
+        {
+          "id": "DocNelleTueMani",
+          "type": 5,
+          "sourceName": "Facebook"
+        },
+        {
+          "id": "tt11876490",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "docnelletuemani",
+          "type": 9,
+          "sourceName": "Instagram"
+        },
+        {
+          "id": "https://www.raiplay.it/programmi/doc-nelletuemani",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "101048",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "DocNelleTueMani",
+          "type": 6,
+          "sourceName": "Twitter"
+        },
+        {
+          "id": "Doc_–_Nelle_tue_mani",
+          "type": 24,
+          "sourceName": "Wikipedia"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/378074/posters/6472a9326cba9_t.jpg"
+    },
+    {
+      "objectID": "series-84765",
+      "country": "usa",
+      "id": "series-84765",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/84765/posters/656c9e9655afa.jpg",
+      "name": "Doc",
+      "first_air_time": "2001-03-11",
+      "overview": "\"Doc\" is a heart-warming and award-winning drama about country doctor Clint Cassidy (Billy Ray Cyrus). when Clint Moves from Montana to the Big Apple, this cowboy is in for a shock! with new changes and new problems will Dr. Cassidy be able to follow his heart?\r\n",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "84765",
+      "year": "2001",
+      "slug": "doc",
+      "overviews": {
+        "eng": "\"Doc\" is a heart-warming and award-winning drama about country doctor Clint Cassidy (Billy Ray Cyrus). when Clint Moves from Montana to the Big Apple, this cowboy is in for a shock! with new changes and new problems will Dr. Cassidy be able to follow his heart?\r\n",
+        "fra": "Le Docteur Clint Cassidy quitte son Montana pour venir exercer la médecine à New York. Son intégration sera t'elle plus difficile pour cet amoureux de la nature ou pour les habitants de la jungle new yorkaise?"
+      },
+      "translations": {
+        "eng": "Doc"
+      },
+      "network": "Ion Television",
+      "remote_ids": [
+        {
+          "id": "tt0283724",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "10042",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/84765/posters/656c9e9655afa_t.jpg"
+    },
+    {
+      "objectID": "series-433263",
+      "aliases": [
+        "Doc"
+      ],
+      "country": "usa",
+      "id": "series-433263",
+      "image_url": "https://artworks.thetvdb.com/banners/images/missing/series.jpg",
+      "name": "Doc (US)",
+      "overview": "After a brain injury erases the last eight years of her life, Amy must navigate an unfamiliar world where she has no recollection of patients she’s treated, colleagues she’s crossed, the man she loves, or the tragedy that caused her to push everyone away. She can rely only on her estranged 17-year-old daughter, whom she remembers as a 9-year-old, and a handful of devoted friends, as she struggles to continue practicing medicine despite having lost nearly a decade of knowledge and experience.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Upcoming",
+      "type": "series",
+      "tvdb_id": "433263",
+      "slug": "433263-doc",
+      "overviews": {
+        "eng": "After a brain injury erases the last eight years of her life, Amy must navigate an unfamiliar world where she has no recollection of patients she’s treated, colleagues she’s crossed, the man she loves, or the tragedy that caused her to push everyone away. She can rely only on her estranged 17-year-old daughter, whom she remembers as a 9-year-old, and a handful of devoted friends, as she struggles to continue practicing medicine despite having lost nearly a decade of knowledge and experience.",
+        "fra": "Après une lésion cérébrale qui a effacé les huit dernières années de sa vie, le docteur Amy Elias, brillante chef du service de médecine interne à l'hôpital Westside de Minneapolis, retourne au bloc et navigue dans un monde inconnu où elle n'a aucun souvenir des patients qu'elle a traités, des collègues qu'elle a croisés ou encore de l'homme qu'elle aime maintenant."
+      },
+      "translations": {
+        "eng": "Doc (US)",
+        "fra": "Doc (US)",
+        "ita": "Doc — Nelle tue mani (US)"
+      },
+      "network": "FOX",
+      "remote_ids": [
+        {
+          "id": "tt26748321",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://www.fox.com/doc/",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "255055",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ]
+    },
+    {
+      "objectID": "series-328634",
+      "aliases": [
+        "Good Doctor (US)",
+        "Le bon docteur",
+        "良医",
+        "好医生",
+        "仁医",
+        "良医心",
+        "良医墨菲",
+        "Хороший лікар",
+        "الطبيب الطيّب"
+      ],
+      "country": "usa",
+      "id": "series-328634",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/328634-2.jpg",
+      "name": "The Good Doctor",
+      "first_air_time": "2017-09-25",
+      "overview": "Shaun Murphy, a young surgeon with autism and savant syndrome, relocates from a quiet country life to join a prestigious hospital surgical unit. Alone in the world and unable to personally connect with those around him, Shaun uses his extraordinary medical gifts to save lives and challenge the skepticism of his colleagues.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "328634",
+      "year": "2017",
+      "slug": "the-good-doctor",
+      "overviews": {
+        "ara": "شون مورفي، جراح شاب مصاب بالتوحد ومتلازمة العلماء، ينتقل من حياة ريفية هادئة للانضمام إلى وحدة جراحية مرموقة في المستشفى. وحيدًا في العالم وغير قادر على التواصل شخصيًا مع من حوله، يستخدم شون مواهبه الطبية غير العادية لإنقاذ الأرواح وتحدي شكوك زملائه.",
+        "ces": "Hlavním hrdinou je Shaun Murphy, mladý chirurg se syndromem savant, který přesedlá ze svého poklidného vesnického života, když dostane práci v pediatrickém chirurgickém týmu v prestižní nemocnici. Nabízí se ale otázka. Může člověk, který nemá schopnost ztotožnit se s lidmi, přispět k záchraně jejich životů? Shaun využívá své mimořádné lékařské nadání, aby zachraňoval své pacienty navzdory skepsi svých kolegů.",
+        "deu": "Shaun Murphy hat Autismus und eine sogenannte Inselbegabung. Das hindert ihn jedoch nicht daran, eine Laufbahn als Mediziner einzuschlagen. Shaun schafft es tatsächlich als Chirurg an ein renommiertes Krankenhaus. Doch ist ein Arzt, der keine Empathie für seine Patienten empfinden kann, die richtige Person, um Leben zu retten?",
+        "ell": "Ένας ταλαντούχος χειρούργος με αυτισμό και σύνδρομο Σαβάν προσλαμβάνεται σε ένα κορυφαίο νοσοκομείο, όπου αντιμετωπίζει τη δυσπιστία των ασθενών και του προσωπικού.",
+        "eng": "Shaun Murphy, a young surgeon with autism and savant syndrome, relocates from a quiet country life to join a prestigious hospital surgical unit. Alone in the world and unable to personally connect with those around him, Shaun uses his extraordinary medical gifts to save lives and challenge the skepticism of his colleagues.",
+        "fin": "Autistinen ja savant-lahjakas kirurgi aloittaa työt arvostetussa sairaalassa, mutta potilaat ja henkilökunta suhtautuvat häneen skeptisesti.",
+        "fra": "Le jeune chirurgien Shaun Murphy rejoint un prestigieux hôpital de San Jose, California. Atteint du syndrome d'Asperger, Shaun a des difficultés à s'intégrer à l'équipe. Son incapacité à la compréhension, usuellement naturelle et innée, de la communication non-verbale et des codes sociaux, rendent son intégration difficile et fausse son interprétation des émotions d'autrui. Mais en mettant son incroyable don au service de ses patients, il suscite l'admiration de ses collègues, même des plus sceptiques.",
+        "heb": "הסדרה הרופא הטוב היא דרמה מעולם הרפואה בהפקת דיויד שור ודניאל דיי קים. העלילה מתרכז בדר' שון מרפי הסובל מתסמונת סוואנט המתחיל את דרכו כמנתח בבית חולים.",
+        "hrv": "Glavni lik je mladi kirurg Shaun Murphy, autističan genij koji stvari vidi drugačije od ostalih i koji se iz rodnog Wyominga seli u San Jose kako bi radio u tamošnjoj prestižnoj bolnici.",
+        "hun": "A sorozat főszereplője dr. Shaun Murphy, egy fiatal és kivételesen tehetséges sebész, aki teljesen felkavarja az Egyesült Államok egyik legrangosabb kórházának életét. A kollégái nehezen tudnak mit kezdeni Murphyvel, aki autizmussal és Savant-szindrómával küzd. A munkatársaival képtelen személyes kapcsolatot kialakítani, miközben rendkívüli megoldásaival folyamatosan megkérdőjelezi kollégái tapasztalatát. Murphy nemcsak, hogy megmenti azokat, akikről már lemondtak, hanem a kórház többi dolgozójának szakmai fejlődésében is felbecsülhetetlen segítségnek bizonyul.",
+        "ita": "Un ragazzo con problemi di autismo ma, al tempo stesso, con una mente geniale viene assunto come chirurgo specializzando nell'ospedale di San Jose. il dottor Murphy dovrà lottare contro tutti i pregiudizi nei suoi confronti e contro un difficile passato che l'ha profondamente segnato.",
+        "kor": "KBS2 굿 닥터의 리메이크 버전으로 서번트 신드롬을 앓고 있는 숀머피가 미국 산호세 세인트 보나벤처 병원의 소아과 병동에 채용되면서 일어나는 일들을 그린 드라마",
+        "lit": "Shaunas Murphy, jaunas chirurgas, turintis autizmo ir savanto sindromą, persikelia iš ramaus kaimo gyvenimo į prestižinį ligoninės chirurgijos skyrių. Vienas pasaulyje ir negalėdamas susisiekti su aplinkiniais, Shaunas naudojasi savo nepaprastomis medicinos dovanomis, kad išgelbėtų gyvybes ir atsikratytų kolegų skepticizmo.",
+        "nld": "De jonge autistische arts dr. Shaun Murphy verhuist van het platteland van Wyoming naar San Jose om daar in een prestigieus ziekenhuis zijn specialisatie tot chirurg af te ronden. Een aantal van zijn nieuwe collega's is zeer sceptisch over zijn komst vanwege zijn autistische stoornis.\r\n",
+        "pol": "Dr Shaun Murphy (Freddie Highmore) jest młodym chirurgiem, u którego zdiagnozowano autyzm. Nie przeszkadza mu to jednak być wybitnym specjalistą w swojej dziedzinie. Lekarz dołącza do zespołu chirurgów prestiżowego szpitala w Kalifornii. Mimo że nie potrafi nawiązywać normalnych relacji uczuciowych z innymi ludźmi, będzie próbował ich skutecznie leczyć swoich pacjentów.",
+        "por": "Um jovem médico com autismo começa a trabalhar em um prestigiado hospital. Além dos desafios da profissão, ele terá também que provar sua capacidade a seus colegas e superiores.",
+        "pt": "Um jovem médico com autismo vindo da calma vida do interior começa a trabalhar em um famoso hospital. Além dos desafios da profissão, Shaun Murphy precisa provar sua capacidade a seus colegas e superiores.",
+        "rus": "История молодого талантливого врача с синдромом саванта, обладающего уникальными способностями — невероятной памятью и фантастической чувствительностью к проблемам, вспыхивающим внутри человеческого организма. Герой становится блестящим хирургом, несмотря на то, в личностном плане его развитие соответствует развитию десятилетнего ребёнка…",
+        "slk": "Hlavním hrdinou je Shaun Murphy, mladý chirurg se syndromem savant, který přesedlá ze svého poklidného vesnického života, když dostane práci v pediatrickém chirurgickém týmu v prestižní nemocnici. Nabízí se ale otázka. Může člověk, který nemá schopnost ztotožnit se s lidmi, přispět k záchraně jejich životů? Shaun využívá své mimořádné lékařské nadání, aby zachraňoval své pacienty navzdory skepsi svých kolegů.",
+        "spa": "Shaun Murphy, un joven cirujano con autismo y síndrome del sabio, tuvo una infancia problemática. Pero Murphy decide trasladarse a una pequeña ciudad para unirse al prestigioso departamento de cirugía en San José St. Bonaventure Hospital.",
+        "swe": "Shaun kämpar mot doktor Melendez för att få behandla en mycket sjuk vakmästare. Doktor Lim riskerar sin karriär för att behandla en tonårsflicka.",
+        "tur": "Otizmli ve savant sendromu olan yetenekli bir cerrah, çalışmaya başladığı prestijli hastanede hem hastaların hem de personelin şüpheci tavırlarıyla karşılaşır.",
+        "ukr": "Серіал розповідає про Шона Мерфі, молодого хірурга з діагнозом аутизм і синдром саванта з невеликого містечка, в якому він провів нещасливе дитинство. Він переїжджає і отримує роботу в престижному хірургічному відділенні лікарні Сан-Бонавентура в Сан-Хосе. Він використовує свій вроджений талант для того, щоб рятувати життя пацієнтів і кинути виклик скептицизму своїх колег; в цьому йому допомагає наставник і друг Аарон Глассман.",
+        "yue": "講述患有高功能自閉症的年輕外科醫師肖恩·墨菲，被身為醫院院長的導師艾倫·葛拉斯曼醫師從小鎮招募至位在都市的聖荷西聖文德醫院之外科部門，而不能走出傷痛的他，將利用自己非凡的醫術拯救病患性命，並挑戰同事們的想法。",
+        "zho": "講述患有自閉症與學者症候群的年輕外科醫師尚恩·墨菲，被身為醫院院長的導師艾倫·葛拉斯曼醫師從小鎮招募至位在都市的聖荷西聖文德醫院之外科部門，而不擅社交的他，將利用自己非凡的醫術拯救病患性命，並挑戰同事們的眼光。",
+        "zhtw": "講述患有高功能自閉症的年輕外科醫師尚恩·墨非，被身為醫院院長的導師艾倫·葛拉斯曼醫師從小鎮招募至位在都市的聖荷西聖文德醫院之外科部門，而不能走出傷痛的他，將利用自己非凡的醫術拯救病患性命，並挑戰同事們的想法。"
+      },
+      "translations": {
+        "ara": "الطبيب الجيد",
+        "ces": "Dobrý doktor",
+        "deu": "The Good Doctor",
+        "ell": "Ο Καλός Γιατρός",
+        "eng": "The Good Doctor",
+        "fra": "Good Doctor (2017)",
+        "heb": "הרופא הטוב",
+        "hrv": "Dobri liječnik",
+        "hun": "Doktor Murphy",
+        "ita": "The Good Doctor",
+        "kor": "굿 닥터",
+        "lit": "The Good Doctor",
+        "pol": "The good doctor",
+        "por": "The Good Doctor",
+        "pt": "The Good Doctor: O Bom Doutor",
+        "rus": "Хороший доктор",
+        "slk": "Dobrý doktor",
+        "spa": "The Good Doctor",
+        "swe": "The Good Doctor",
+        "tha": "คุณหมอฟ้าประทาน",
+        "tur": "The Good Doctor",
+        "ukr": "Добрий лікар",
+        "yue": "好醫生",
+        "zho": "妙手仁醫",
+        "zhtw": "良醫墨非"
+      },
+      "network": "ABC (US)",
+      "remote_ids": [
+        {
+          "id": "10.5240/F6DE-277C-6B7D-A499-59BA-J",
+          "type": 13,
+          "sourceName": "EIDR"
+        },
+        {
+          "id": "TheGoodDoctorABC",
+          "type": 5,
+          "sourceName": "Facebook"
+        },
+        {
+          "id": "tt6470478",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "thegooddoctorabc",
+          "type": 9,
+          "sourceName": "Instagram"
+        },
+        {
+          "id": "71712",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "SH02696628",
+          "type": 3,
+          "sourceName": "TMS (Zap2It)"
+        },
+        {
+          "id": "GoodDoctorABC",
+          "type": 6,
+          "sourceName": "X (Twitter)"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/328634-2_t.jpg"
+    },
+    {
+      "objectID": "series-78804",
+      "aliases": [
+        "Doctor Who",
+        "Dr. Who",
+        "Dr Who",
+        "Dr Who (2005)",
+        "异世奇人",
+        "异世奇人",
+        "Doctor Who"
+      ],
+      "country": "gbr",
+      "id": "series-78804",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/78804-52.jpg",
+      "name": "Doctor Who (2005)",
+      "first_air_time": "2005-03-26",
+      "overview": "The Doctor is an alien Time Lord from the planet Gallifrey who travels through all of time and space in the TARDIS. The Doctor has a long list of friends and companions who have shared journeys along the way. Instead of dying, the Doctor is able to “regenerate” into a new body, taking on a new personality with each regeneration.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "78804",
+      "year": "2005",
+      "slug": "doctor-who-2005",
+      "overviews": {
+        "ara": "تدور قصة المسلسل حول شخصية الدكتور، سيد الزمن أو تايم لورد من كوكب جاليفري وهو مجهول الاسم يدعي بكنية الدكتور. يتجول عبر الزمان والمكان بصحبة عدد من المرافقين بواسطة مركبته التي تسمى تارديس المموهة على شكل \"كابينة تليفون للاتصال بالشرطة\".",
+        "bul": "Докторът е извънземен властелин на времето от планетата Галифри, който пътува през цялото време и пространство в ТАРДИС. Докторът има дълъг списък с приятели и спътници, които са споделяли пътувания с него.\r\nДокторът е от раса която живее много по-дълго от очакваното и когато е на път да умре поради различни стечения на обстоятелствата той просто се „регенерира“ в ново тяло, приемайки нова личност с всяка регенерация.",
+        "ces": "Pán času je původní britský televizní sci-fi seriál společnosti BBC. Popisuje dobrodružství cestovatele vesmírem a časem, který si nechá říkat \"The Doctor\". Cestuje ve své lodi Tardis, která zvenčí vypadá jako britská policejní budka z 50. let a se svými společnicemi zkoumá vesmír a čas, řeší problémy a napravuje škody.\r\n\r\nDoctor je mimozemšťan, pochází z planety Gallifrey, ale vypadá jako člověk. Drobnou odlišností může být pouze to, že má dvě srdce a je prakticky nesmrtelný, protože se může regenerovat (je mu 903 let).\r\n\r\nSeriál je zapsán v Guinnessově knize rekordů, jako nejdéle běžící sci-fi seriál na světě a je součástí moderní britské kultury. Britové považují seriál, proslulý barvitými příběhy a speciálními efekty, za kultovní a v roce 2006 byl oceněn jako nejlepší televizní seriál.\r\n\r\nVysílání započalo roku 1963 a pokračovalo až do roku 1989. Následně byl v roce 1996 natočen film, který měl sloužit jako pilotní snímek k nové sérii (k natočení nikdy nedošlo). Ke skutečnému znovuzrození Doktora došlo až v roce 2005, opět pod taktovkou BBC.",
+        "deu": "Die Serie handelt von einem mysteriösen Außerirdischen namens „Der Doktor“, der mit seinem Raumschiff, der TARDIS (Time and Relative Dimension in Space), welches von außen aussieht wie eine englische Notruf-Telefonzelle der 60er Jahre, durch Raum und Zeit fliegt. Der Doktor ist ein Time Lord vom Planeten Gallifrey - und bereits über 900 Jahre alt. Dass man ihm das nicht ansieht, liegt vor allem daran, dass ein Time Lord, wenn er stirbt, in der Lage ist, sich zu regenerieren, wobei er auch eine andere Gestalt annimmt.",
+        "ell": "Ο γιατρός φαίνεται ως άνθρωπος. Είναι όμορφος, πνευματώδης, και θα μπορούσαν να τον περάσουν ως ένα οποιοδήποτε άλλο άτομο στο δρόμο. Αλλά αυτός είναι ένας Κύριος του Χρόνου: Είναι 900 ετών εξωγίηνος με 2 καρδιές, μέρος ενός χαρισματικού πολιτισμού που κυριάρχησε το ταξίδι στο χρόνο. Ο γιατρός σώζει πλανήτες περισσότερο σαν από χόμπι αλλά στην πραγματικότητα, είναι πολύ, πολύ καλός σ 'αυτό. Μας έχει σώσει από εξωγίηνες απειλές και το κακό πριν από την εποχή της αρχής - αλλά ακριβώς ποιος είναι αυτός;",
+        "eng": "The Doctor is an alien Time Lord from the planet Gallifrey who travels through all of time and space in the TARDIS. The Doctor has a long list of friends and companions who have shared journeys along the way. Instead of dying, the Doctor is able to “regenerate” into a new body, taking on a new personality with each regeneration.",
+        "fin": "Doctor Who on brittiläinen BBC:n tuottama tieteistelevisiosarja. Television pisimpään jatkunut tieteissarja kertoo salaperäisen, ainoastaan nimellä Tohtori (”the Doctor”) tunnetun aikamatkaajan seikkailuista. Tohtorin motiivit eivät ole selvillä, mutta hän taistelee useita maapallon ja koko maailmankaikkeuden uhkia vastaan. Hänen suurimpia vihollisiaan ovat muun muassa dalekit, kybermiehet (cyberman) ja Mestari. Tohtorilla on usein mukanaan myös matkakumppani.",
+        "fra": "Dernier descendant des Seigneurs du Temps et âgé de plus de 900 ans, le Docteur parcourt l'espace et le temps dans son TARDIS (Time And Relative Dimension In Space). Amoureux de la race humaine, il se fait régulièrement accompagner par une femme ou un homme.\r\nPartagé entre folie et génie, insouciant mais conscient de ses responsabilités, il défendra l'humanité quel que soit le prix à payer.",
+        "heb": "גירסא חדשה לסדרת הקאלט הבריטית.\r\nהסדרה נפתחת עם הצגתה של רוז טיילר, נערה בריטית צעירה העובדת כזבנית בחנות כלבו. רוז חיה חיים ממוצעים - מגורים עם אם שתלטנית, חבר שהיא לא ממש אוהבת ועבודה גרועה - עד שלילה אחד בובות התצוגה בכלבו \"קמות לתחייה\" ומנסות להרוג אותה. חייה ניצלים בידי אדם מוזר המכנה את עצמו \"הדוקטור\", רוז מסוקרנת ומוצאת את עצמה במהרה מצטרפת לדוקטור למאבק בניסיון של נוכחות חייזרית לפלוש לכדור הארץ ולהשמיד את המין האנושי. היא מגלה שחברה החדש הדוקטור הוא מוזר יותר משחשבה - הוא למעשה אדון זמן, מורד והרפתקן מכוכב אחר, האחרון מבני מינו, אשר נוסע ברחבי הזמן והחלל בספינת החלל שלו ה-\"טארדיס\" ונלחם ברשע היכן שהוא מוצא אותו. רוז מצטרפת לדוקטור למסע של הרפתקאות במהלכו היא תחזה בהתפוצצות כדור הארץ בעתיד, תפגוש את צ`ארלס דיקנס בעבר ותפגוש צורות חיים ופולשים מהחלל שלעולם לא חשבה שתפגוש...\r\n",
+        "hrv": "Pustolovine tajanstvenog izvanzemaljca, poznatijeg kao Doktor, koji putuje kroz vrijeme i prostor u svom svemirskom brodu, TARDIS-u. Putujući sa svojim mnogim suputnicima istražuje svemir i vrijeme, rješava probleme te se susreće s različitim čudovištima.",
+        "hun": "Rose Tyler (Billie Piper), a csinos fiatal lány egy londoni áruházban dolgozik. Egy napon véres, megmagyarázhatatlan események tanúja lesz, és veszélybe kerül az ő élete is. Azonban felbukkan egy rejtélyes férfi (Christopher Eccleston), aki magát nemes egyszerűséggel Doktornak nevezi, és aki nem csak őt menti meg... Rose rövid időn belül egy lázas és mozgalmas csata közepén találja magát, ahol a tét nem más, mint a Föld és az emberiség megmentése. A lány hamar rájön, hogy új barátja még annál is különösebb, mint ahogy ő gondolta. A Doktor ugyanis képes utazni térben és időben, hogy felvegye a harcot az ellenséggel. Amennyiben Rose vele tart, tanúja lehet a Föld jövőbeni pusztulásának, találkozhat Charles Dickens-szel a múltban és szembesülhet olyan eseményekkel, amelyeket előtte lehetetlennek hitt. Csupán egy dolog biztos: ez az utazás egy életen át tart.",
+        "ita": "Il Dottore è un Signore del Tempo, ultimo superstite del pianeta Gallifrey, che compie viaggi spazio-temporali a bordo del TARDIS, di enormi dimensioni all'interno, ma che all'esterno presenta l'aspetto dimesso e le dimensioni di una vecchia cabina telefonica della polizia britannica.\r\n\r\nI Signori del Tempo assomigliano molto agli esseri umani, ma la loro fisiologia differisce in alcuni aspetti chiave: il Dottore ha due cuori, un sistema respiratorio di esclusione che gli permette di respirare senza aria, ha una temperatura corporea interna di 15-16 gradi centigradi. Ha, inoltre, una resistenza agli effetti temporali, così come alcune abilità telepatiche.\r\n\r\nIl misterioso Dottore (Who in inglese significa \"chi\") è in realtà un extraterrestre, un Signore del Tempo, che periodicamente si rigenera, allo scadere del suo ciclo vitale o in caso di morte violenta, in un nuovo corpo per un massimo di 12 rigenerazioni. Inizialmente bandito dal suo pianeta natale, Gallifrey, è stato successivamente eletto presidente dell'Alto Consiglio, rifiutando però la carica per continuare a viaggiare liberamente nello spazio e nel tempo. Ha eletto la Terra come sua seconda patria e vi torna ogni volta che può.",
+        "nld": "Doctor Who is een Britse SF-serie met als hoofdpersoon “De Doctor\". De Doctor is een alien, een Time Lord, en heeft een schip genaamd de TARDIS (’Time And Relative Dimensions In Space) waarmee hij door tijd en ruimte reist. Een eigenschap van de TARDIS is dat zij van binnen groter is dan van buiten. De buitenkant van de TARDIS heeft de vorm van een ouderwetse, Engelse politietelefooncel met een mooie, blauwe kleur (beter bekend als ‘TARDIS-blauw’). De Doctor reist altijd in het gezelschap van èèn of meerdere reisgenoten.",
+        "pol": "Serial opowiada o losach Doktora Who, który jest ostatnim z rasy Władców Czasu. Podróżując w niebieskiej budce wraz z ziemską towarzyszką jest uczestnikiem wielu przygód",
+        "por": "Um excêntrico extraterrestre, conhecido como Doutor, viaja pelo tempo e espaço em sua nave espacial, a TARDIS, para proteger a Terra e o cosmos de todos os tipos de perigo.",
+        "pt": "Um excêntrico extraterrestre, conhecido como Doutor, viaja pelo tempo e espaço em sua nave espacial, a TARDIS, para proteger a Terra e o cosmos de todos os tipos de perigo.",
+        "rus": "Сериал отображает приключения мистического инопланетянина-гуманоида называющего себя Доктор, без цели путешествующего через время и пространство в космическом корабле, который снаружи выглядит как полицейская будка 50-х годов. Доктор чрезвычайно эксцентричен и имеет невероятные знания в областях технологии, истории и науки. Он путешествует вместе со своими компаньонами, попутно борясь против космических злодеев и спасая Землю от бесчисленных врагов.",
+        "slk": "Doktor je mimozemský Pán času z planéty Gallifrey, ktorý cestuje naprieč časom a priestorom v TARDIS. Doktor má dlhý zoznam priateľov a spoločníkov, s ktorými zdieľa spoločné cesty. Doktor sa namiesto umierania dokáže „regenerovať“ do nového tela, pričom s každou regeneráciou získava novú osobnosť.",
+        "spa": "Doctor Who es una puesta al día de la serie de televisión del mismo título que, emitida por la BBC entre 1963 y 1989, llegó a convertirse en una de las más longevas de la historia de la pequeña pantalla. En ella acompañamos en sus aventuras a El Doctor, un misterioso y divertido alienígena de aspecto humano que viaja a través del tiempo y el espacio para combatir el mal en sus más variadas y estrambóticas formas a bordo de lo que parece una cabina de teléfonos de los años 50. A su lado van pasando una serie de acompañantes, la mayoría humanos, que comparten sus aventuras.",
+        "srp": "Авантуре мистериозног ванземаљца, познатијег као Доктор, који путује кроз време и простор у свом свемирском броду названом ТАРДИС. Путујући са својим многобројним сапутницима, он истражује простор и време, решава проблеме и сусреће се са различитим чудовиштима.",
+        "tur": "Doctor Who (Türkçe anlamıyla Doktor Kim) BBC yapımı İngiliz bilim kurgu televizyon dizisidir. Dizi; Doktor olarak bilinen, zamanda yolculuk yapan insansı Dünya dışı yaratık olan Zaman Lordu'nun maceralarını anlatmaktadır. Doktor, dışarıdan 1950'lerden kalma bir polis kulübesi gibi görünen TARDIS adındaki bilince sahip ve zamanda yolculuk edebilen bir uzay gemisi ile evreni araştırır. Doktor, yardımcıları ile beraber uzay ve zamanı keşfeder, sorunları çözer, yaratıklarla yüzleşir ve tarihe yapılan müdahalelere engel olur.\r\n\r\nGuinness Rekorlar Kitabı tarafından dünyanın en uzun süren bilim kurgu televizyon programı olarak listelenen dizi aynı zamanda İngiliz popüler kültürünün de önemli bir parçasıdır. Dizi iyi planlanmış hikâyeleri, ilk yayınlandığı dönemdeki düşük bütçeli yaratıcı özel efektleri ve elektronik müzik kullanımındaki önderliği ile tanınır.",
+        "ukr": "«Доктор Хто» - найтриваліший науково-фантастичний серіал усіх часів про неймовірні пригоди загадкового мандрівника у часі.\r\n\r\nГоловний герой на ім’я Доктор виглядає як і поводиться як звичайна людина.\r\nПроте за цією зовнішністю ховається інопланетянин з двома серцями, якому вже понад тисячу років.\r\nВін є нащадком давньої цивілізації Володарів Часу з планети Ґалліфрей.\r\n\r\nДоктор мандрує крізь час і простір на своєму космічному кораблі ТАРДИС - дивовижної «поліцейської будки», непримітної зовні і повної сюрпризів всередині.\r\nУ нього є багато друзів і компаньйонів, які весь час подорожували з ним рятуючи планети від знищення темними силами...\r\n\r\nЗамість того, щоб померти, Доктор може регенерувати в нове тіло, отримуючи з кожним разом нове обличчя та нову особистість.",
+        "yue": "《神秘博士》是一部由英国广播公司出品的长寿英国科幻电视剧。\r\n2005年版的第九任博士是忧郁的战争幸存者，经历了时之战争，他封印了他的种族和敌人戴立克，是唯一活下来的人。\r\n该剧讲述了名为“Doctor”（克里斯托弗·埃克莱斯顿 Christopher Eccleston 饰）的神秘外星时间旅行者，随着他的时空机器TARDIS的（Time And Relative Dimensions In Space）冒险故事，他的时空机器外观看上去像1950年代的警亭。博士带着他的伙伴罗斯（比莉·派佩 Billie Piper 饰）在时间、空间中探索悠游、打击邪恶力量、拯救文明、帮助人民、纠正错误、解决各类问题。",
+        "zho": "《神秘博士》是一部由英国广播公司出品的长寿英国科幻电视剧。\r\n2005年版的第九任博士是忧郁的战争幸存者，经历了时之战争，他封印了他的种族和敌人戴立克，是唯一活下来的人。\r\n该剧讲述了名为“Doctor”（克里斯托弗·埃克莱斯顿 Christopher Eccleston 饰）的神秘外星时间旅行者，随着他的时空机器TARDIS的（Time And Relative Dimensions In Space）冒险故事，他的时空机器外观看上去像1950年代的警亭。博士带着他的伙伴罗斯（比莉·派佩 Billie Piper 饰）在时间、空间中探索悠游、打击邪恶力量、拯救文明、帮助人民、纠正错误、解决各类问题。",
+        "zhtw": "名為「博士」的宇宙最後一個時間管理者，有著重生的能力、體力及優越的智力，利用時光機器TARDIS英國傳統的藍色警亭，展開他勇敢的時光冒險之旅，拯救外星生物、英國與時空。\r\n\r\n"
+      },
+      "translations": {
+        "ara": "دكتور هو (2005)",
+        "bul": "Доктор Кой",
+        "ces": "Pán času (2005)",
+        "deu": "Doctor Who (2005)",
+        "ell": "Doctor Who",
+        "eng": "Doctor Who (2005)",
+        "fin": "Doctor Who (2005)",
+        "fra": "Doctor Who (2005)",
+        "heb": "(2005) דוקטור הו",
+        "hrv": "Doktor Who",
+        "hun": "Ki vagy, doki? (2005)",
+        "ita": "Doctor Who (2005)",
+        "kor": "닥터 후 (2005)",
+        "nld": "Doctor Who (2005)",
+        "pol": "Doktor Who (2005)",
+        "por": "Doctor Who (2005)",
+        "pt": "Doctor Who (2005)",
+        "rus": "Доктор Кто (2005)",
+        "slk": "Pán času",
+        "spa": "Doctor Who",
+        "srp": "Доктор Ху",
+        "tur": "Doktor Kim",
+        "ukr": "Доктор Хто (2005)",
+        "yue": "神秘博士",
+        "zho": "神秘博士",
+        "zhtw": "超時空奇俠"
+      },
+      "network": "BBC One",
+      "remote_ids": [
+        {
+          "id": "tt0436992",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://www.bbc.co.uk/programmes/b006q2x0",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "57243",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "EP00750178",
+          "type": 3,
+          "sourceName": "TMS (Zap2It)"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/78804-52_t.jpg"
+    },
+    {
+      "objectID": "series-299845",
+      "aliases": [
+        "Doctor Foster: A Woman Scorned",
+        "Dr. Foster",
+        "The Betrayal (UK)",
+        "The World of the Married (UK)",
+        "The Broken Marriage Vow (UK)"
+      ],
+      "country": "gbr",
+      "id": "series-299845",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/299845-3.jpg",
+      "name": "Doctor Foster",
+      "first_air_time": "2015-09-09",
+      "overview": "Gemma appears to have it all - the job, the husband, the family. But can you ever really know someone, including yourself?",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "299845",
+      "year": "2015",
+      "slug": "doctor-foster",
+      "overviews": {
+        "deu": "Britische Dramaserie über die beliebte und anerkannte Ärztin Gemma Foster, deren Leben vollends auf den Kopf gestellt wird, als sie eine Affäre ihres Mannes vermutet. Als sie der Sache auf den Grund geht, hat das sowohl auf ihr Privat- als auch auf ihr Berufsleben dramatische Auswirkungen. (Text: DB)",
+        "eng": "Gemma appears to have it all - the job, the husband, the family. But can you ever really know someone, including yourself?",
+        "fin": "Määrätietoinen ja lahjakas nainen, yleislääkäri Gemma Foster, elää täydellistä elämää. Perheeseen kuuluu rakastava aviomies Simon ja poika Tom. Gemman arki suistuu raiteiltaan, kun hän alkaa epäillä miestään uskottomuudesta. Gemma päättää selvittää totuuden, minkä seurauksena hän ajautuu pakkomielteen pimeälle polulle.",
+        "fra": "Respectée par les gens de son village qui voient en elle une personne de confiance, la docteure Gemma Foster mène une vie satisfaisante. Quand elle commence à suspecter que son mari la trompe, elle cherche à découvrir la vérité. Cela la mènera à mettre à jour de nombreux secrets qui vont pousser sa vie, celle de sa famille et de certains de ses patients dans le chaos.",
+        "heb": "כשג'מה פגשה לראשונה את בעלה לפני 14 שנים, היא ויתרה על חיי העיר הגדולה ועברה לגור איתו בעיר הולדתו. כעת ד\"ר פוסטר היא דמות מוכרת ומכובדת בקהילה ואמא שחיה את חיי המשפחה המושלמים. יום אחד ג'מה מוצאת שערה בלונדינית על הצעיף של סיימון, ומתחילה לחשוד שהוא מנהל רומן. במקום להתעמת איתו, היא מחליטה לחקור ולעקוב אחריו, כדי לרדת לחקר האמת. כשסדקים מתחילים להיווצר בחיי משפחתה, ג'מה נאלצת להתמודד עם השאלה, האם חייה באמת אידיאלים כפי שהאמינה, והאם העיירה היא באמת הבית שלו קיוותה?",
+        "ita": "Beata da una vita all'apparenza perfetta e serena con il marito Simon e il figlio Tom, la dottoressa Gemma Foster deve affrontare molte verità nascoste quando inizia a sospettare che il coniuge la stia tradendo.",
+        "kor": "훌륭한 의사 젬마는 완벽한 삶을 살아가는 듯 보이지만 남편 사이먼의 외도를 눈치채고 고민에 빠지고, 젬마와 사이먼을 둘러싼 갈등은 주변 인물들까지 파국으로 몰고 간다.",
+        "nld": "Gemma Foster is een vrouw die alles onder controle heeft. Ze is het middenpunt van haar gemeenschap, een vrouw waar men vertrouwen in heeft. Maar haar leven staat op het punt van exploderen wanneer zij vermoedt dat haar man een affaire heeft en achter de waarheid komt.",
+        "nor": "Doktor Gemma Foster lever lykkelig sammen med ektemannen Simon og deres sønn, inntil hun får mistanke om at Simon er utro.",
+        "pol": "Gemma Foster (Suranne Jones) - atrakcyjna, odnosząca sukcesy pani doktor, szczęśliwa żona i doskonała matka pewnego dnia odkrywa, że jej życie zbudowane jest na kłamstwie. Długi blond włos znaleziony przez nią na szaliku męża nie pozostawia wątpliwości i zmienia życie statecznej doktor w pasmo tajemnic i nieufności. Gemma za wszelką cenę będzie chciała dotrzeć do prawdy, choć na przeszkodzie stawać będą rozliczne i zaskakujące przeciwności. Sprawy nie będą ułatwiać także znajomi lekarki, w których interesie leży zatuszowanie prawdy o małżeńskiej niewierności. Pani doktor wie jednak, że zemsta najlepiej smakuje na zimno... Serial był nominowany do nagrody BAFTA.",
+        "spa": "Una serie totalmente claustrofóbica en la que todo empieza por una duda. Gemma Foster es una mujer felizmente casada y con un hijo a la que la vida le ha sonreído siempre. Una vida idílica que se romperá por completo cuando empieza a sospechar que su marido le está siendo infiel. Una duda que la llevará a investigar la vida de su cónyuge, descubriendo mucho más de lo que ella hubiera querido.",
+        "zho": "在别人眼中，Foster医生有着令人羡慕的一切，工作受人尊敬，家庭幸福和睦，夫妻恩爱甜蜜，孩子乖巧听话。其实她自己也一直这样认为，直到有一天，一支唇膏，一根金发的出现，让她开始怀疑眼前的一切。为了查清楚丈夫是否真的出轨，她甚至利用病人帮她跟踪丈夫，结果却发现事情的真相，完全在她的预料之外。"
+      },
+      "translations": {
+        "deu": "Doctor Foster",
+        "eng": "Doctor Foster",
+        "fin": "Doctor Foster",
+        "fra": "Docteur Foster",
+        "heb": "דוקטור פוסטר",
+        "ita": "Doctor Foster",
+        "kor": "닥터 포스터",
+        "nor": "Doktor Foster",
+        "pol": "Doktor Foster",
+        "spa": "Doctora Foster",
+        "zho": "福斯特医生"
+      },
+      "network": "BBC One",
+      "remote_ids": [
+        {
+          "id": "tt4602768",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "EP02387898",
+          "type": 3,
+          "sourceName": "TMS (Zap2It)"
+        },
+        {
+          "id": "63913",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/299845-3_t.jpg"
+    },
+    {
+      "objectID": "series-76107",
+      "country": "gbr",
+      "id": "series-76107",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/76107-4.jpg",
+      "name": "Doctor Who",
+      "first_air_time": "1963-11-23",
+      "overview": "The Doctor, a mysterious traveller in space and time, travels in his ship, the TARDIS.  The TARDIS can take him and his companions anywhere in time and space. Inevitably he finds evil at work wherever he goes...",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "76107",
+      "year": "1963",
+      "slug": "doctor-who",
+      "overviews": {
+        "deu": "Doctor Who ist eine britische Science-Fiction-Fernsehserie, die seit 1963 von der BBC produziert wird. Sie handelt von einem mysteriösen Zeitreisenden, der nur als \"Der Doktor\" bekannt ist. Er reist mit seinen Begleitern in einer Zeit-Raum-Maschine, der TARDIS, die von außen wie eine altmodische, britische Polizei-Notrufzelle aussieht. Der Doktor trifft dabei auf eine Vielfalt von Gegnern, hilft den Leuten, denen er begegnet, und rettet ganze Zivilisationen.",
+        "eng": "The Doctor, a mysterious traveller in space and time, travels in his ship, the TARDIS.  The TARDIS can take him and his companions anywhere in time and space. Inevitably he finds evil at work wherever he goes...",
+        "fra": "Cette série relate les aventures du Docteur, un extraterrestre, un Seigneur du Temps originaire de la planète Gallifrey, qui voyage à bord d'un TARDIS (Time And Relative Dimension(s) In Space), une machine pouvant voyager dans l'espace et dans le temps.\r\nLe TARDIS a l'apparence d'une cabine de police (construction typiquement britannique ressemblant à une cabine téléphonique), le système de camouflage étant resté bloqué.\r\nComme tous les Seigneur du Temps, le Docteur possède treize vies, ce qui explique sa capacité à changer de corps lorsqu'il est proche de la mort.",
+        "ita": "Doctor Who è il titolo di una popolare serie televisiva britannica di fantascienza prodotta dalla BBC a partire dal 1963. Narra delle avventure di un viaggiatore del tempo noto come \"il Dottore\", con trame che vanno dalla fantascienza al racconto gotico.\r\n\r\nIl telefilm, con i suoi 27 anni di programmazione (continuativa dal 1963 al 1989 e ripresa nel 2005) e più di 600 episodi (realizzati a colori solo a partire dal 1970) detiene tuttora il record di serie televisiva di fantascienza più longeva.\r\n\r\nLa serie ha offerto anche una delle sigle musicali più ricordate, tanto da finire come estratto nella celeberrima canzone dei Pink Floyd One of These Days.",
+        "kor": "갈리프레이에서 태어난 타임로드 종족의 최후의 생존자인 '닥터'가 타임머신을 타고 시간여행을 다니며 여러 가지 사건을 해결하는 이야기",
+        "pol": "Serial skupia się na przygodach Władcy Czasu - podróżującego przez czas i przestrzeń humanoidalnego obcego, znanego jako Doktor. Zwiedza wszechświat w swojej TARDIS - żyjącym statku kosmicznym, który wygląda jak niebieska budka policyjna. W swoje podróże zabiera zwykle towarzyszy, których większość zalicza się do rodzaju ludzkiego. Podczas swych wycieczek po wszechświecie Doktor mierzy się z wrogami, ratuje cywilizacje, pomaga ludziom i naprawia błędy.",
+        "pt": "A série acompanha Doctor, cientista de um planeta distante que viaja no tempo a bordo da TARDIS, uma nave que muda sua forma de acordo com seus arredores. Doctor também é capaz de alterar sua própria aparência.",
+        "rus": "Британский научно-фантастический телесериал компании Би-Би-Си о загадочном путешественнике во времени, известном как «Доктор», который вместе со своими спутниками исследует время и пространство, решая различные проблемы и борясь со злом.",
+        "spa": "Doctor Who es la serie de televisión de ciencia ficción de más larga duración de la historia, transmitida inicialmente de 1963 a 1989. Doctor Who trata sobre las ideas. Fue pionero en contar historias complejas de niveles mixtos. Su formato fue la clave de su longevidad: el Doctor, un misterioso viajero en el espacio y el tiempo, viaja en su barco, el TARDIS. La TARDIS puede llevarlo a él y a sus acompañantes en cualquier lugar en el tiempo y el espacio. Inevitablemente, encuentra el mal en el trabajo donde quiera que vaya ..."
+      },
+      "translations": {
+        "ces": "Pán času (1963)",
+        "deu": "Doctor Who",
+        "eng": "Doctor Who",
+        "fra": "Doctor Who",
+        "heb": "דוקטור הו",
+        "ita": "Doctor Who",
+        "kor": "닥터 후",
+        "pol": "Doctor Who",
+        "pt": "Doctor Who",
+        "rus": "Доктор Кто",
+        "spa": "Doctor Who"
+      },
+      "network": "BBC One",
+      "remote_ids": [
+        {
+          "id": "tt0056751",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "121",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "EP001301",
+          "type": 3,
+          "sourceName": "TMS (Zap2It)"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/76107-4_t.jpg"
+    },
+    {
+      "objectID": "series-263828",
+      "country": "gbr",
+      "id": "series-263828",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/263828-3.jpg",
+      "name": "A Young Doctor's Notebook",
+      "first_air_time": "2012-12-06",
+      "overview": "Based on short stories by Mikhail Bulgakov, this new series on Sky Arts 1 follows the adventures of a youthful, innocent doctor in his first job in a small country hospital in Russia.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "263828",
+      "year": "2012",
+      "slug": "a-young-doctors-notebook",
+      "overviews": {
+        "deu": "1917: Russland steht kurz vor der russischen Revolution. Der junge Arzt Dr. Vladimir Bomgard tritt in der Provinz seine erste Stelle an. Die Medizin kennt der frische Universitätsabsolvent aus Moskau bislang nur von ihrer theoretischen Seite, doch nun muss er sich der harten Realität stellen. Obwohl er der einzige Arzt im Umkreis ist, bleibt Dr. Bomgard nicht ganz allein. Denn Rat erhält er von seinem Alter Ego aus der Zukunft, der sich allerdings nicht mit sarkastischen Bemerkungen über seine Unsicherheiten und Neurosen zurückhält...",
+        "eng": "Based on short stories by Mikhail Bulgakov, this new series on Sky Arts 1 follows the adventures of a youthful, innocent doctor in his first job in a small country hospital in Russia.",
+        "fin": "Venäjän vallankumouksen aikaan sijoittuva koominen minisarja, joka perustuu lääkärin muistoihin aikaisemmasta työstään syrjäisessä kylässä.",
+        "fra": "En 1917, les débuts d'un jeune médecin russe sur les champs de bataille de la Première Guerre mondiale.",
+        "heb": "ג'ון האם (מד מן) ודניאל רדקליף (הארי פוטר) מככבים בסדרת טלוויזיה המבוססת על סיפוריו האוטוביוגרפיים של יוצר \"האמן ומרגריטה\", מיכאיל בולגאקוב. האם מגלם את בן דמותו של הסופר בתקופת הרדיפה הפוליטית של המשטר הסטליניסטי, שנזכר באלטר אגו שלו ד\"ר ולדימיר הצעיר שלאחר סיום לימודי הרפואה שלו, יצא אל הפרובינציה הרוסית בתקופת המהפכה הבולשביקית כדי לטפל בחולים. שילוב של דרמה וקומדיה שחורה משחור.",
+        "ita": "Una storia raccontata attraverso il blocco note sul quale il protagonista appunta le vicissitudini del provare a fare carriera e curare i pazienti di un paese che prova a modernizzarsi. Taglio realistico e nettamente umoristico, quello del racconto ed del personaggio protagonista così come lo sviluppo della narrazione. Un'ironia che vive anche nella doppia anima del romanzo, rappresentata dai due protagonisti: il giovane ed l'anziano, la vecchia e la nuova scuola. I tempi sono cambiati in medicina e il medico più anziano guarda il suo sé stesso più giovane, con umorismo e pathos.",
+        "nld": "'A Young Doctor's Notebook' speelt zich af tijdens het begin van de Russische revolutie. We volgen het turbulente leven van een net afgestudeerde dokter die worstelt met de moeizame start van zijn beroep. Het verhaal wordt verteld door zijn oudere en meer ervaren ik. Hierbij dient hij niet alleen om te gaan met bijgelovige en onwetende patiënten, maar worstelt hij ook met zijn eigen innerlijke strubbelingen. De jonge dokter onthult twijfels over zijn eigen bekwaamheid en worstelt met de immense druk van de medische verantwoordelijkheid die hij draagt.",
+        "pol": "Moskwa, rok 1934. Władimir Bomgard jest lekarzem zmagającym się z depresją i uzależnieniem od morfiny. Wieczorami ucieka więc w przeszłość, czytając pamiętniki, które prowadził za młodu. Przypomina sobie trudne początki, kiedy w przededniu Rewolucji październikowej pracował na wsi. Jej mieszkańcy byli wyjątkowo nieufni wobec dokonań medycyny, co rodziło tyleż skomplikowane co zabawne sytuacje.",
+        "rus": "В неспокойное революционное время юный врач Бомгард Владимир прибыл в маленькую деревушку, где принялся лечить местных жителей. Главному герою сериала приходится весьма нелегко, ведь он вынужден сталкиваться с трудностями своей профессии, а также постоянными суевериями своих пациентов.\r\n",
+        "spa": "Miniserie de 4 capítulos basada en los relatos semi-autobiográficos del escritor ruso Mijail Bulgakov, sobre un doctor que trabaja en un hospital de una pequeña aldea rusa, tras la Primera Guerra Mundial y durante la Revolución Rusa. El protagonista tendrá dificultades para hacer frente tanto a sus pacientes como a sus propios demonios internos."
+      },
+      "translations": {
+        "deu": "A Young Doctor's Notebook",
+        "eng": "A Young Doctor's Notebook",
+        "fin": "A Young Doctor's Notebook",
+        "fra": "A Young Doctor's Notebook",
+        "heb": "יומני הרופא הצעיר",
+        "hun": "Egy ifjú orvos feljegyzései és más történetek",
+        "ita": "Appunti di un giovane medico",
+        "nor": "fd",
+        "pol": "Zapiski młodego lekarza",
+        "rus": "Записки юного врача",
+        "spa": "Diario de un Joven Doctor"
+      },
+      "network": "Sky Arts",
+      "remote_ids": [
+        {
+          "id": "tt2164430",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "EP01953379",
+          "type": 3,
+          "sourceName": "TMS (Zap2It)"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/263828-3_t.jpg"
+    },
+    {
+      "objectID": "series-258111",
+      "aliases": [
+        "Doctora de Juguetes",
+        "الطبيبة مكستافينز (2012)",
+        "الدكتورة مكستافينز",
+        "الدكتورة مكستافينز (2012)"
+      ],
+      "country": "usa",
+      "id": "series-258111",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/258111-3.jpg",
+      "name": "Doc McStuffins",
+      "first_air_time": "2012-03-23",
+      "overview": "Animated series about a 6-year-old girl who communicates with and heals stuffed animals and toys.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "258111",
+      "year": "2012",
+      "slug": "doc-mcstuffins",
+      "overviews": {
+        "ara": "مسلسل رسوم متحركة للأطفال، يرافق مغامرت الفتاة الصغيرة دوتي التي تعالج دمى الحيوانات، وتتمكن من التكلم معها.",
+        "ces": "Animovaný seriál o šestileté holčičce, která léčí plyšáky a jiné hračky.",
+        "deu": "Dottie \"Doc\" McStuffins ist ein sechs jähriges Mädchen, das die Gabe besitzt mit Spielzeugen und Stofftieren zu sprechen. Dadurch ist es ihr möglich diese in ihrer Gartenpraxis von allerlei Krankheiten zu heilen.",
+        "eng": "Animated series about a 6-year-old girl who communicates with and heals stuffed animals and toys.",
+        "fin": "Tohtori Pehmolalla on leluvastaanotto leikkimökissään.",
+        "fra": "Docteur La Peluche suit les aventures de Dottie, une fillette de six ans qui soigne des peluches et des jouets cassés dans la cabane de son jardin. Lors de ses tâches quotidiennes elle est aidée par tous ses amis adorés : ...\r\n",
+        "heb": "הסדרה מספרת על דוק, ילדה בת שש (במהלך הסדרה הפכה לבת שבע) אשר רוצה להיות רופאה כמו אמה, רופאת ילדים. היא מתרגלת את חלומה על ידי תיקון צעצועים ובובות. כאשר היא מפעילה את הסטטוסקופ הקסום שלה, היא יכולה ליצור מגוון השפעות על טבעיות, ביניהם מסע בזמן. השימוש העיקרי של דוק עם הסטטוסקופ הקסום שלה הוא הפיכת צעצועים לחיים ולאפשר להם לנוע, לדבר, לשמוע, לראות ולהריח. בעזרת חבריה הצעצועים, דוק עוזרים לצעצועים להרגיש טוב יותר על ידי בדיקות.",
+        "hun": "A sorozat a hatéves Doc McStuffins-ról szól, aki kórházat működtet játszóházának játékai részére. A hatéves kislány a kertjükben lévő kis faházában segít az elromlott játékoknak és plüssállatoknak meggyógyulni. Abban a pillanatban, amikor felteszi sztetoszkópját, a játékok megelevenednek, a kis doktor pedig felállítja a diagnózist és ellátja nem csak saját, de barátai és szomszédjai \"beteg\" játékait is.",
+        "ita": "Dott.ssa Peluche ha per protagonista Dottie, una premurosa bambina di sei anni che riesce a parlare con giocattoli e animali di stoffa prendendosi cura di loro e medicandoli laddove necessario. Quando Dottie usa il suo stetoscopio, accade qualcosa di magico: giocattoli, bambole e peluche prendono vita e lei può comunicare con loro. Ad assistere Dottie nella sua clinica ci sono sempre i suoi adorati amici di peluche: l’orgoglioso Draghetto, l’affettuosa pecorella Bianchina, Hallie, ippopotamo infermiere allegro e premuroso, Squittino, pesciolino allarmista dalla voce squillante e il pupazzo di neve Nevino che passa molto tempo in clinica per i suoi check-up. Che si tratti di una cucitura allentata, batterie scariche o una piccola crepa Dottie e i suoi assistenti sono lì a dare una mano trasmettendo ai giovani telespettatori l’importanza di prendersi cura di se stessi e degli altri.",
+        "por": "A série acompanha uma menina de seis anos que finge ser uma médica, arranjando brinquedos, bonecas e peluches, ela chama-se a \"Doutora Brinquedos\". Quando ela coloca o estetoscópio os brinquedos, bonecas e peluches magicamente ganham vida e ela pode comunicar com eles. Com uma pequena ajuda dos seus amigos, os bonecos de peluche Valentim (Dragão Azul), Lãzinha (cordeiro cor-de-rosa) Tremeliques (boneco de neve) e Hélia (uma hipopótamo), ela ajuda brinquedos a sentirem-se melhor, fazendo-lhes um check-up e a diagnosticar as suas doenças com  \"O Grande Livro do Dodói\"",
+        "rus": "Хорошим врачом может быть даже ребенок. Главное — желание помочь близким. В этом уверена 6-летняя героиня мультсериала Дотти, зовущая себя Доктор Плюшева, которая просто обожает свои игрушки. Стоит ей только поднести к ним стетоскоп, и они оживают!",
+        "spa": "“Doctora Juguetes”, serie animada que cuenta la historia de una niña de seis años que puede hablar con sus animalitos de felpa y otros muñecos, a quienes cuida en su clínica para juguetes.\r\n\r\nCuando la pequeña ‘Doctora’ se coloca el estetoscopio algo mágico sucede: sus muñecos y animales cobran vida y ella puede comunicarse con todos, aún con aquellos que pertenecen a sus amigos y otros niños del vecindario.\r\n\r\nLos asistentes de la Doctora en la particular clínica son sus muy queridos animales de peluche: Felpita, un sumamente orgulloso dragón; Lambie, su tierna mejor amiga; Hally, una alegre y afectuosa enfermera hipopótamo; Chillón, un alarmista y estridente pececillo; y Friolín, un muñeco de nieve que pasa buena parte del tiempo realizándose chequeos en la clínica.\r\n\r\nAsí se trate de un caso de costuras sueltas, baterías bajas o pinchaduras en algún juguete inflable, la Doctora y sus amigos están allí para brindar una mano mientras comparten con los jóvenes espectadores la importancia de cuidar de la salud propia y de otros.\r\n",
+        "swe": "Har dina leksaker eller gosedjur något problem? Doktor McStuffins kan både prata med dem och bota deras krämpor."
+      },
+      "translations": {
+        "ara": "الطبيبة مكستافينز",
+        "ces": "Doktorka Plyšáková",
+        "dan": "Doktor McStuffins",
+        "deu": "Doc McStuffins, Spielzeugärztin",
+        "eng": "Doc McStuffins",
+        "fin": "Tohtori Pehmola",
+        "fra": "Docteur La Peluche",
+        "heb": "דוק רופאת צעצועים",
+        "hun": "Dr. Plüssi",
+        "ita": "Dottoressa Peluche",
+        "kor": "꼬마의사 맥스터핀스",
+        "nld": "De Speelgoeddokter",
+        "pol": "Klinika dla pluszaków",
+        "por": "Doutora Brinquedos",
+        "rus": "Доктор Плюшева",
+        "spa": "Doctora Juguetes",
+        "swe": "Doktor McStuffins"
+      },
+      "network": "Disney Jr.",
+      "remote_ids": [
+        {
+          "id": "tt1710295",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "46262",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/258111-3_t.jpg"
+    },
+    {
+      "objectID": "series-295697",
+      "country": "usa",
+      "id": "series-295697",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/295697-3.jpg",
+      "name": "Documentary Now!",
+      "first_air_time": "2015-08-20",
+      "overview": "Documentary Now! is a comedy series that pays loving homage to the world's best-known documentaries. Each episode adopts a different style of nonfiction filmmaking to honor the most important stories that didn't actually happen.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "295697",
+      "year": "2015",
+      "slug": "documentary-now",
+      "overviews": {
+        "eng": "Documentary Now! is a comedy series that pays loving homage to the world's best-known documentaries. Each episode adopts a different style of nonfiction filmmaking to honor the most important stories that didn't actually happen.",
+        "spa": "De las mentes de Fred Armisen, Bill Hader y Seth Meyers llega una nueva serie que rememora los 50 años de excelencia e integridad en el cine documental. Esta serie de comedia rinde un cariñoso homenaje a los documentales más conocidos de todo el mundo. Cada episodio adopta un estilo diferente de cinematografía de no ficción como homenaje a las historias más importantes que no sucedieron en realidad."
+      },
+      "translations": {
+        "eng": "Documentary Now!",
+        "spa": "Documentary Now!"
+      },
+      "network": "IFC",
+      "remote_ids": [
+        {
+          "id": "10.5240/2859-D0B4-C727-1871-8337-J",
+          "type": 13,
+          "sourceName": "EIDR"
+        },
+        {
+          "id": "tt4677934",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://www.ifc.com/documentary-now",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "63593",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "DocumentaryNow",
+          "type": 6,
+          "sourceName": "X (Twitter)"
+        },
+        {
+          "id": "Q20642667",
+          "type": 18,
+          "sourceName": "Wikidata"
+        },
+        {
+          "id": "Documentary_Now",
+          "type": 24,
+          "sourceName": "Wikipedia"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/295697-3_t.jpg"
+    },
+    {
+      "objectID": "series-79285",
+      "country": "gbr",
+      "id": "series-79285",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/79285-4.jpg",
+      "name": "Doc Martin",
+      "first_air_time": "2004-09-02",
+      "overview": "Make an appointment with the brilliant but socially awkward and neurotic Doc Martin. When Martin develops an aversion to blood, he abandons his career as a celebrated London surgeon and becomes the only doctor in a sleepy small town where his tactless manner soon has the whole town in an uproar.\r\n",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "79285",
+      "year": "2004",
+      "slug": "doc-martin",
+      "overviews": {
+        "ces": "Úspěšný londýnský chirurg Martin Ellingham se rozhodne dát vale městu i kariéře a odchází na venkov do ospalé vesnice Cornish, aby se zde působil jako praktický lékař. Má sice skvělé chirurgické schopnosti, ale naprosto mu chybí schopnost komunikovat s lidmi, což jeho novým pacientům brzy začne jít na nervy. Navíc je v ordinaci zmatek po jeho předchůdci, lékařské vybavení je neopravitelné a v záznamech o pacientech panuje nepořádek. \"Korunou\" jeho nové praxe je ovšem Elaine Denhamová, nejneschopnější sekretářka v kraji, kterou zdědil po svém předchůdci.",
+        "deu": "Martin Ellingham ist ein höchst kompetenter Mediziner, der nach einem traumatischen Erlebnis kein Blut mehr sehen und riechen kann. Daher gibt er seinen gut dotierten Chirurgenjob in London auf und lässt sich als Allgemeinmediziner im verschlafenen Provinznest Portwenn nieder. Allerdings fehlt es ihm scheinbar gänzlich an Einfühlungsvermögen, so dass er seine Patienten in aller Regelmäßigkeit vor den Kopf stößt.",
+        "eng": "Make an appointment with the brilliant but socially awkward and neurotic Doc Martin. When Martin develops an aversion to blood, he abandons his career as a celebrated London surgeon and becomes the only doctor in a sleepy small town where his tactless manner soon has the whole town in an uproar.\r\n",
+        "fin": "Brittiläinen komediallinen draamasarja Doc Martin kertoo sosiaalitaidottomasta ja äkkiväärästä ex-kirurgista Martin Ellinghamistä. Koska hän ei pysty enää leikkaamaan, mies hakeutuu yleislääkäriksi Cornewallissa sijaitsevaan pikkukylään, jossa vietti lapsuuden kesiään.",
+        "fra": "Le docteur Martin était auparavant un grand chirurgien jusqu'à ce qu'une phobie du sang l'oblige à abandonner cette voie. Il décide alors d'exercer dans le petit village où il passait ses vacances durant son enfance.",
+        "hun": "Dr. Martin Ellingham, a sikeres londoni sebész kénytelen hátat fordítani hivatásának, miután egy műtét során rosszul lesz a vér látványától. Körzeti orvosként folytatja, egy Isten háta mögötti településen, ahol sokat nyaralt gyerekkorában nagynénjénél.",
+        "ita": "Il Dr. Martin Ellingham è un celebre chirurgo londinese che si trasferisce in un tranquillo villaggio di pescatori in Cornovaglia per svolgere il lavoro di medico condotto. È sempre burbero e scontroso con tutti e a volte litiga con gli abitanti del villaggio.",
+        "nld": "Doc Martin is min of meer gebaseerd op de komische film Saving Grace, een verhaal over een vrouw in de vijftig, die cannabis gaat kweken om de schulden waarmee haar overleden man haar heeft achtergelaten te kunnen betalen. Martin Clunes speelt in deze film de rol van Doctor Martin Bamford. Hij speelde deze rol nog in twee films die zich afspelen voor de gebeurtenissen in Saving Grace - Doc Martin en The legend of the cloutie.",
+        "pol": "Doktor Martin Ellingham (Martin Clunes) jest cenionym chirurgiem z Londynu. Nie mogąc opanować narastającego, panicznego strachu przed krwią, postanawia rozpocząć praktykę jako lekarz rodzinny. Przenosi się więc do Kornwalii, do małego nadmorskiego miasteczka Portwenn, gdzie niegdyś, jako dziecko, regularnie spędzał wakacje u ciotki Joan (Stephanie Cole). W mieścinie napotyka cały wachlarz różnorodnych osobowości - wśród nich sympatycznego, choć nieco irytującego hydraulika Berta (Ian McNeice), nieudolnego policjanta Marka (Stewart Wright), zwariowaną i nieodpowiedzialną sekretarkę przychodni (Lucy Punch), a także niechętną mu z początku nauczycielkę Louisę (Caroline Catz), która później zdaje się być zaintrygowana nowym lekarzem. Doktor Martin jest z natury oschły i bardzo bezpośredni, czym od początku nieco zraża do siebie lokalną społeczność. Długo nie może też przywyknąć do specyfiki pracy w małym miasteczku, gdzie większość pacjentów traktuje gabinet lekarski jako miejsce spotkań towarzyskich i liczy raczej na pogawędkę, a nie diagnozę medyczną. Doktor stopniowo wprowadza własne porządki w gabinecie i wtapia się w grono mieszkańców Portwenn. Z czasem jednak ukrywanie wstydliwego sekretu - panicznego lęku przed krwią - staje się coraz trudniejszym zadaniem.",
+        "rus": "Решив кардинально изменить свою жизнь, знаменитый доктор Мартин переезжает из Лондона в сонную корнуолльскую деревушку и становится сельским врачом. Но, несмотря на блестящий опыт, он не умеет ладить с людьми, и отсутствие у него врачебного такта начинает раздражать новых пациентов. Плюс к этому, ему достаётся самая неопытная на свете секретарша. Очень скоро доктор Мартин понимает, что для примирения с деревенской жизнью ему не обойтись без союзников, какими бы они ни были, - и это влечёт за собой самые забавные последствия...",
+        "spa": "Como consecuencia de una fobia recién adquirida, un brillante cirujano abandona Londres para ser el médico de un pequeño pueblo."
+      },
+      "translations": {
+        "ces": "Doktor Martin",
+        "deu": "Doc Martin",
+        "eng": "Doc Martin",
+        "fin": "Doc Martin",
+        "fra": "Doc Martin",
+        "heb": "דוקטור מרטין",
+        "hun": "Doc Martin",
+        "ita": "Doc Martin",
+        "nld": "Doc Martin",
+        "pol": "Doktor Martin",
+        "rus": "Доктор Мартин",
+        "spa": "Doc Martin"
+      },
+      "network": "ITV1",
+      "remote_ids": [
+        {
+          "id": "tt0408381",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "2430",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "EP00687031",
+          "type": 3,
+          "sourceName": "TMS (Zap2It)"
+        },
+        {
+          "id": "List_of_Doc_Martin_episodes",
+          "type": 24,
+          "sourceName": "Wikipedia"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/79285-4_t.jpg"
+    },
+    {
+      "objectID": "series-436518",
+      "country": "bra",
+      "id": "series-436518",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/436518/posters/6496ec827aac9.jpg",
+      "name": "Xuxa: O Documentário",
+      "first_air_time": "2023-07-13",
+      "overview": "A trajetória de Maria da Graça Xuxa Meneghel e como ela conquistou o Brasil e se consagrou a Rainha dos Baixinhos.",
+      "primary_language": "pt",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "436518",
+      "year": "2023",
+      "slug": "xuxa-o-documentario",
+      "overviews": {
+        "eng": "Maria da Graça Xuxa Meneghel, about to celebrate her 60th birthday and more than 40 years in the business, looks back at all the important moments in her life and career. Successes and disappointments, fights and love. Retracing her entire trajectory.",
+        "pt": "A trajetória de Maria da Graça Xuxa Meneghel e como ela conquistou o Brasil e se consagrou a Rainha dos Baixinhos.",
+        "spa": "Maria da Graça Xuxa Meneghel, a punto de celebrar sus 60 años de vida y más de 40 de profesión, se retrotrae a los momentos importantes de su vida y su carrera. Triunfos y desilusiones, peleas y amores. Rememora toda su trayectoria"
+      },
+      "translations": {
+        "eng": "Xuxa, A Life On TV",
+        "pt": "Xuxa: O Documentário",
+        "spa": "Xuxa, Una Vida En La Tele"
+      },
+      "network": "Globoplay",
+      "remote_ids": [
+        {
+          "id": "tt28227925",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://globoplay.globo.com/xuxa-o-documentario/t/xgNJTCZyL7/",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "223318",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "69545",
+          "type": 19,
+          "sourceName": "TV Maze"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/436518/posters/6496ec827aac9_t.jpg"
+    },
+    {
+      "objectID": "series-112671",
+      "country": "usa",
+      "id": "series-112671",
+      "image_url": "https://artworks.thetvdb.com/banners/images/missing/series.jpg",
+      "name": "Doctor Who (2009)",
+      "first_air_time": "2009-09-04",
+      "overview": "Doctor Who 2009 is a non-profit making series of short fan films celebrating the BBC TV series Doctor Who.  Join the adventure, with a brand new series of 13 episodes for the Doctor, in this exciting new fan project.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "112671",
+      "year": "2009",
+      "slug": "doctor-who-2009",
+      "overviews": {
+        "eng": "Doctor Who 2009 is a non-profit making series of short fan films celebrating the BBC TV series Doctor Who.  Join the adventure, with a brand new series of 13 episodes for the Doctor, in this exciting new fan project."
+      },
+      "translations": {
+        "eng": "Doctor Who (2009)"
+      },
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/112671-1_t.jpg"
+    },
+    {
+      "objectID": "series-259011",
+      "country": "usa",
+      "id": "series-259011",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/65e4f8014ca42.jpg",
+      "name": "The Mob Doctor",
+      "first_air_time": "2012-09-17",
+      "overview": "A young thoracic surgeon becomes indebted to the South Chicago mafia and is forced to moonlight as a mob doctor, while also working full time at Chicago's most prominent hospital.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "259011",
+      "year": "2012",
+      "slug": "the-mob-doctor",
+      "overviews": {
+        "ces": "Drama o doktorce, která pracuje nejen v prestižní nemocnici v Chicagu, ale po nocích také pro chicagskou mafii.\r\n",
+        "deu": "Die Chirurgin Grace Devlin steht vor einer vielversprechenden beruflichen Karriere. Doch während sie sich am Roosevelt Medical Center ambitioniert um ihre Patienten kümmert, führt sie gleichzeitig ein Doppelleben als Ärztin für die örtliche Mafia. Um die lebenslangen Spielschulden ihres Bruders Nate zu begleichen, hatte sie einen Paket mit dem Teufel geschlossen – in Gestalt von Mafiaboss Constantine Alexander. So jongliert die nervenstarke Grace zwischen zwei Welten: Tagsüber kümmert sie sich um den Klinikalltag, nachts pflegt sie Schusswunden oder hilft alternden Gangstern mit Erektionsstörungen. Diese Art der Doppelbelastung führt nicht nur regelmäßig zu Gewissenskonflikten. Grace muss ihre spezielle Tätigkeit auch noch permanent vor ihrem Freund Brett und dem Kollegium geheim halten.",
+        "eng": "A young thoracic surgeon becomes indebted to the South Chicago mafia and is forced to moonlight as a mob doctor, while also working full time at Chicago's most prominent hospital.",
+        "fin": "The Mob Doctorin keskushahmo on vaatimattomasta taustasta ponnistava kirurgi Grace Devlin, joka on noussut lahjakkuutensa ja kunnianhimonsa ansiosta chicagolaissairaalan ydinkaartiin. Synkän sivupolun lupaavaan uraan tuo Gracen lupaus tehdä kuutamokeikkaa paikalliselle mafialle, koska hänen veljensä uhkapelivelat edellyttävät vastinetta.",
+        "fra": "Une jeune doctoresse spécialisée en chirurgie cardiaque est partagée entre deux mondes : la médecine, au sein de laquelle elle espère faire carrière, et la mafia de Chicago, à laquelle elle est liée à cause d'une grosse dette dont elle ne parvient pas à s'acquitter.",
+        "hun": "A történet egy fiatal sebész orvosnőről szól, aki a dél-chicagói maffia lekötelezettjévé válik. Tartozását le kell rónia: miközben továbbra is Chicago egyik neves kórházában dolgozik, \"mellékállásban\", a maffia orvosa lesz.",
+        "ita": "Grace Devlin è una dei chirurghi più promettenti del paese ma nasconde un segreto: per salvare la vita di suo fratello, oppresso dai debiti di gioco, Grace è costretta a lavorare per la malavita organizzata. Di giorno lavora al Chicago Roosvelt Medical Center, mentre di notte si ritrova a curare ferite d'arma da fuoco o a estrarre proiettili da cadaveri per evitare l'identificazione delle armi.",
+        "pol": "Serial opowiada o młodej i utalentowanej kardiochirurg, która staje się dłużniczką chicagowskiej mafii. Tym samym jest zmuszona być na jej każde zawołanie, co nie jest łatwym zadaniem, gdy na co dzień pracuje się w najbardziej prestiżowym szpitalu w Chicago.",
+        "rus": "Для большинства врачей клятва Гиппократа священна. Но для одного доктора из Чикаго, которая оказалась в долгу у мафии, спасение жизней не на первом месте. The Mob Doctor - динамичная медицинская драма про талантливую молодую женщину, которая работает кардиохирургом днем, а ночью становится доктором для мафии, отрабатывая свои долги. Доктор Грейс Девлин - ведущий ординатор в медицинском центре Рузвельта в Чикаго. Умная, уверенная в себе, она один из самых многообещающих молодых хирургов.",
+        "spa": "Grace Devlin (Jordana Spiro) es una prestigiosa cirujana torácica, pero su vida no es nada fácil, pues está relacionada con la mafia de Chicago debido a las enormes deudas de juego de su hermano. Al tiempo que trabaja en el Roosevelt Medical de Chicago, se ve obligada a realizar trabajos para la mafia para saldar esas deudas."
+      },
+      "translations": {
+        "ces": "Doktorka podsvětí",
+        "deu": "Mob Doctor",
+        "eng": "The Mob Doctor",
+        "fin": "The Mob Doctor",
+        "fra": "Mob Doctor",
+        "hun": "Maffiadoktor",
+        "ita": "The Mob Doctor",
+        "rus": "Доктор мафии",
+        "spa": "The Mob Doctor",
+        "zho": "黑帮天使"
+      },
+      "network": "FOX",
+      "remote_ids": [
+        {
+          "id": "tt2215717",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "EP01568040",
+          "type": 3,
+          "sourceName": "TMS (Zap2It)"
+        },
+        {
+          "id": "43105",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/65e4f8014ca42_t.jpg"
+    },
+    {
+      "objectID": "series-82926",
+      "aliases": [
+        "Doctors Diary",
+        "Doctor's Diary - Männer sind die beste Medizin"
+      ],
+      "country": "deu",
+      "id": "series-82926",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/82926/posters/64c91a8cbbc54.jpg",
+      "name": "Doctor's Diary",
+      "first_air_time": "2008-06-23",
+      "overview": "Nachdem sie eine Woche vor ihrer Hochzeit ihren Verlobten Peter beim Betrug erwischt, bricht eine Welt für Gretchen Haase zusammen. Sie kehrt zurück nach Berlin in ihr Elternhaus. Ihr Vater, Prof. Franz Haase, macht ihr das Angebot, sich in seinem Krankenhaus um die Assistenzarztstelle in der Chirurgie zu bewerben. Sie geht auf das Angebot ein. Im Krankenhaus trifft sie auf Dr. Marc Meier, den leitenden Oberarzt der Chirurgie. Marc Meier ist ihre alte Jugendliebe sowie der Fluch ihrer Kindheit in einer Person. Er hat in der Schulzeit nicht eine Minute versäumt, ihr das Leben schwer zu machen und dennoch war Gretchen bis zum Abitur hoffnungslos in ihn verliebt.",
+      "primary_language": "deu",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "82926",
+      "year": "2008",
+      "slug": "doctors-diary",
+      "overviews": {
+        "ces": "Seriál mapující citové a kariérní trampoty mladé doktorky úspěšně spojuje dva divácky atraktivní koncepty. Na jedné straně využívá prostředí nemocnice s jeho dramatickými situacemi a spletitými vztahy ve stylu populárních sérií typu Pohotovost a kombinuje je s postupy slavné romantické komedie Deník Bridget Jonesové. Hlavní hrdinka německého seriálu Dr. Grétka Haaseová tedy s nadhledem své britské předchůdkyně glosuje vlastní citovou rozkolísanost, slabost pro sladkosti a především touhu po šarmantních kolezích v zaměstnání. Ocitá se totiž v milostném trojúhelníku mezi sebestředným, ale neodolatelným sukničkářem z chirurgie primářem Marcem Meierem a vnímavým šarmantním gynekologem Mehdim Kaanem. Současně musí Grétka na novém pracovišti, které vede její otec, prokázat své profesní schopnosti a ukázat, že není žádné protekční dítko, nýbrž cílevědomá a samostatná žena. Do toho musí řešit rozbouřenou situaci doma ve vztahu svých rodičů, který se postupem času ukazuje jako méně idylický než se zdá. Nemluvě o tom, že by její přehnaně starostlivá matka Grétku mnohem radši viděla ne v lékařském plášti, nýbrž ve svatebních šatech.",
+        "deu": "Nachdem sie eine Woche vor ihrer Hochzeit ihren Verlobten Peter beim Betrug erwischt, bricht eine Welt für Gretchen Haase zusammen. Sie kehrt zurück nach Berlin in ihr Elternhaus. Ihr Vater, Prof. Franz Haase, macht ihr das Angebot, sich in seinem Krankenhaus um die Assistenzarztstelle in der Chirurgie zu bewerben. Sie geht auf das Angebot ein. Im Krankenhaus trifft sie auf Dr. Marc Meier, den leitenden Oberarzt der Chirurgie. Marc Meier ist ihre alte Jugendliebe sowie der Fluch ihrer Kindheit in einer Person. Er hat in der Schulzeit nicht eine Minute versäumt, ihr das Leben schwer zu machen und dennoch war Gretchen bis zum Abitur hoffnungslos in ihn verliebt.",
+        "eng": "The protagonist is Dr. Gretchen Haase who causes turmoil not only in the surgical ward but also in the hearts of her colleagues.\r\nAfter a disastrous relationship Gretchen goes back to the house of her parents, a professor of surgery and a competent uber-mother. Gretchen's aim is to finally pursue her career and to forget men. She copes with professional adventures in a charming and unselfish manner - but her love-life soon becomes chaotic. Her new senior physician, Dr. Marc Meier, is not only the worst macho in the department, he also happens to be Gretchen's long-term teenage heartthrob. Or does the good-natured gynaecologist Dr. Mehdi Kaan maybe have the better cards? Gretchen Haase never presents herself as a goddess in a white overall, but she remains a very normal woman who pursues her career, yet always listens to her heart. And her heart does not always beat rationally.\r\nFrom the standpoint of an imperfect and witty protagonist the genre \"Medical\" becomes amusing family entertainment with addiction potential. Finally we have the proof: doctors are only human. They tell lies, fall in love and suffer. And for obesity and love sickness a cure has yet to be found.",
+        "fra": "Suite à une rupture amoureuse douloureuse, Meg décide de prendre sa vie en main et commence à travailler dans lhôpital qui emploie son père. Mais son parcours de jeune médecin lui réserve bien des surprises...",
+        "rus": "Главная героиня – доктор Гретхен Хазе – вызывает переполох не только в операционной, но и в сердцах своих коллег. После краха личной жизни Гретхен возвращается в дом своих родителей, профессора хирургии и сведущей во всем супер-матери. Цель Гретхен состоит в том, чтобы, наконец, заняться своей карьерой и забыть о мужчинах. Она – очаровательная и непредубежденная – прекрасно справляется с профессиональными трудностями, но ее личная жизнь вскоре превращается в хаос.\r\nНовый главный врач, доктор Марк Мейер, не только первый мачо в отделении, но и бывшая школьная любовь Гретхен. А, может, добродушный гинеколог доктор Мехди Каан имеет больше шансов? Гретхен Хазе не претендует на звание белой и пушистой, она – самая обычная женщина, которая не только задумывается о своей карьере, но и прислушивается к своему сердцу. Однако ее сердце не всегда бьется ровно. Наконец-то у нас есть доказательство, что врачи – тоже люди. Они могут лгать, влюбляться и страдать. И от лишнего веса, и от любовной болезни лекарство все еще не найдено.",
+        "spa": "Después de una desastrosa relación sentimental, la doctora Gretchen Hasse (Diana Amft) vuelve a casa de sus padres y comienza a trabajar como residente en un hospital. Esto va a originar una serie de cambios no sólo en su familia si no también en los corazones de sus futuros compañeros. Gretchen es médico pero ante todo es una mujer algo insegura que descubre que su prometido la engaña. Por eso decide volver al hogar familiar. \r\n\r\nMientras su madre Bárbara (Ursela Monn) quiere que se case a toda costa su padre, profesor de cirugía que trabaja en su mismo hospital, sólo desea que se centre en su carrera. Puesto que es difícil casarse sin un pretendiente a la vista, Gretchen decide centrarse en su carrera como médico. \r\n\r\nGracias a su encanto y su preocupación por los demás tendrá sus primeras experiencias en el campo profesional como cirujana y pronto se verá inmersa en un triángulo amoroso. Su jefe el Dr. Marc Meier (Florian David Fitz) no es precisamente el hombre ideal, creído y mujeriego resulta ser su antiguo amor platónico del instituto. Por otro lado el amable ginecólogo Mehdi Kaan (Kai Schumann) parece reunir las cualidades deseadas por toda novia."
+      },
+      "translations": {
+        "ces": "Deník doktorky",
+        "deu": "Doctor's Diary",
+        "eng": "Doctor's Diary",
+        "fra": "Le Journal de Meg",
+        "rus": "Дневник доктора",
+        "spa": "Diario de una Doctora"
+      },
+      "network": "RTL Television",
+      "remote_ids": [
+        {
+          "id": "tt0954636",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "41255",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/82926/posters/64c91a8cbbc54_t.jpg"
+    },
+    {
+      "objectID": "series-79298",
+      "country": "gbr",
+      "id": "series-79298",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/79298-1.jpg",
+      "name": "Doctor Who Confidential",
+      "first_air_time": "2005-03-26",
+      "overview": "Specially filmed for BBC Three as a companion piece to Doctor Who, Doctor Who Confidential aims to give a taste of the excitement and the energy that surrounds the show. The programme includes behind-the-scenes filming and interviews with the cast, writers and production team as they bring our favourite Time Lord back to our screens.\r\n\r\nAn abbreviated 15-minute version, concentrating on the production of the new series and without reference to the original show, is also broadcast on BBC Three as Doctor Who Confidential Cutdown.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "79298",
+      "year": "2005",
+      "slug": "doctor-who-confidential",
+      "overviews": {
+        "eng": "Specially filmed for BBC Three as a companion piece to Doctor Who, Doctor Who Confidential aims to give a taste of the excitement and the energy that surrounds the show. The programme includes behind-the-scenes filming and interviews with the cast, writers and production team as they bring our favourite Time Lord back to our screens.\r\n\r\nAn abbreviated 15-minute version, concentrating on the production of the new series and without reference to the original show, is also broadcast on BBC Three as Doctor Who Confidential Cutdown.",
+        "fra": "Doctor Who Confidential est un documentaire diffusé sur la BBC en complément de la série. On y retrouve des secret de tournage, des interviews avec les acteurs, producteurs et scénaristes.",
+        "ita": "Doctor Who Confidential, ovvero i\r\ndietro le quinte della serie piu' bella del mondo tra quelle in onda."
+      },
+      "translations": {
+        "deu": "Doctor Who Confidential",
+        "eng": "Doctor Who Confidential",
+        "fra": "Doctor Who Confidential",
+        "ita": "Doctor Who Confidential"
+      },
+      "network": "BBC Three",
+      "remote_ids": [
+        {
+          "id": "tt0453422",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "1056",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/79298-1_t.jpg"
+    },
+    {
+      "objectID": "series-405678",
+      "aliases": [
+        "Você nunca esteve sozinha - o doc de Juliette"
+      ],
+      "country": "bra",
+      "id": "series-405678",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/405678/posters/60d9372eb83df.jpg",
+      "name": "Você Nunca Esteve Sozinha: O Doc de Juliette",
+      "first_air_time": "2021-06-29",
+      "overview": "100 dias de BBB e o Brasil caiu de amores por Juliette. Quem é essa mulher? O que no seu passado projeta o fenômeno que ela se tornou? Os bastidores da fama e os próximos passos.\r\n\r\n",
+      "primary_language": "pt",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "405678",
+      "year": "2021",
+      "slug": "voce-nunca-esteve-sozinha-o-doc-de-juliette",
+      "overviews": {
+        "eng": "Details of Juliette's personal life, professional ups and downs, victory at BBB21 and passion for music.",
+        "por": "100 dias de BBB e o Brasil caiu de amores por Juliette. Quem é essa mulher? O que no seu passado projeta o fenômeno que ela se tornou? Os bastidores da fama e os próximos passos.",
+        "pt": "100 dias de BBB e o Brasil caiu de amores por Juliette. Quem é essa mulher? O que no seu passado projeta o fenômeno que ela se tornou? Os bastidores da fama e os próximos passos.\r\n\r\n"
+      },
+      "translations": {
+        "eng": "You Have Never Been Alone - Juliette's Documentary",
+        "por": "Você Nunca Esteve Sozinha: O Doc de Juliette",
+        "pt": "Você Nunca Esteve Sozinha: O Doc de Juliette"
+      },
+      "network": "Globoplay",
+      "remote_ids": [
+        {
+          "id": "https://globoplay.globo.com/voce-nunca-esteve-sozinha-o-doc-de-juliette/t/tYBjy6XBbV/",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "128273",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "128273",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "tt14924628",
+          "type": 2,
+          "sourceName": "IMDB"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/405678/posters/60d9372eb83df_t.jpg"
+    },
+    {
+      "objectID": "series-307343",
+      "country": "gbr",
+      "id": "series-307343",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/307343-2.jpg",
+      "name": "Doctor Thorne",
+      "first_air_time": "2016-03-06",
+      "overview": "Tom Hollander, Rebecca Front and Ian McShane star in our brand new three-part drama Doctor Thorne, which has been adapted for TV by Julian Fellowes.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "307343",
+      "year": "2016",
+      "slug": "doctor-thorne",
+      "overviews": {
+        "ces": "Minisérie vypráví příběh doktora Thomase Thornea, který žije ve vesnici Greshamsbury v Barsetshire se svou nádhernou neteří Mary. Mary je dívka, které bylo do vínku naděleno vše kromě peněz. Nyní je z ní krásná mladá žena, která vyrůstala spolu se sestrami Greshamovými - Augustou, Beatrice a Alexandrinou, a také s jejich pohledným bratrem Frankem. Greshamovi žijí ve velkém domě v Greshamsbury Park.\r\n\r\nKdyž se Lady Arabella Gresham dozví, že se její milovaný syn Frank zamiloval do chudé neteře doktora Thornea, je zděšena. Její manžel už před lety rozházel veškeré rodinné dědictví a nad vodou rodinu drží pouze půjčky, které jim dává doktor Thorne z majetku, který doktor spravuje pro milionáře Sira Rogera Scatcherda.\r\n\r\nSir Roger je alkoholik, který se upíjí do hrobu. Finanční situace všech začíná být velmi nestálá. Lady Arabella proto spoléhá na Franka, který se podle ní má oženit s bohatnou nevěstou a zachránit tak celou rodinu. Rozhodne se, že mu budoucí manželku vybere sama.",
+        "dan": "England, 1855. Doktor Thornes smukke niece, Mary, forelsker sig i godsejersønnen Frank Gresham. Frank gengælder hendes følelser, men det unge par har alle odds imod sig. Franks frygtindgydende mor mener nemlig ikke, at Mary er det rette parti for hendes søn, for Mary har hverken penge eller social status.",
+        "deu": "Im Zentrum der Handlung steht Dr. Thomas Thorne, der gemeinsam mit seiner schönen Nichte Mary in dem kleinen Dorf Greshamsbury lebt. Mary ist mit allerlei Talenten gesegnet, reich ist sie aber nicht - im Gegensatz zu den Gresham-Schwestern, mit denen Mary aufgewachsen ist, und deren Bruder Frank, in den sie sich verliebt.",
+        "eng": "Tom Hollander, Rebecca Front and Ian McShane star in our brand new three-part drama Doctor Thorne, which has been adapted for TV by Julian Fellowes.",
+        "fra": "L'histoire raconte la vie du docteur Thomas Thorne avec sa nièce Mary dans le village anglais de Greshambury.",
+        "nld": "Driedelig Brits kostuumdrama naar de gelijknamige roman uit Anthony Trollopes reeks 'Chronicles of Barsetshire'.",
+        "rus": "По одноименному произведению английского писателя Энтони Троллопа (1815 - 1882) - в центре сюжета — история двух влюблённых, союзу которых мешает два обстоятельства: она бедна, а его семью от разорения может спасти только брак по расчёту.",
+        "spa": "El Doctor Thomas Thorne y su joven hermano, Henry, son dejados a su suerte tras la muerte de su padre. Mientras Thomas establece una clínica para practicar medicina, Henry seduce a Mary Scatcherd. Cuando el hermano de esta mujer, descubre que ella espera un hijo, pelea con Henry hasta matarlo. Ante esta situación, Thomas decide quedarse con la niña que nace como producto de esta relación y dejar que Mary se case con un hombre que le promete una nueva vida en los Estados Unidos pero no quiere hacerse cargo del  bebé. \r\n\r\nMary Thorne crece pobre y bajo la tutela de su tío. La joven Mary pasa la mayor parte de sus años de formación en la compañía de los Gresham en la propiedad de la familia. A medida que se acerca a la adultez, el pasado y los problemas financieros de la familia comienzan a amenazar la relación con los Gresham."
+      },
+      "translations": {
+        "dan": "Doktor Thorne",
+        "deu": "Doctor Thorne",
+        "eng": "Doctor Thorne",
+        "fra": "Docteur Thorne",
+        "nld": "Doctor Thorne",
+        "rus": "Доктор Торн",
+        "spa": "Doctor Thorne"
+      },
+      "network": "ITV1",
+      "remote_ids": [
+        {
+          "id": "tt4938084",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "65805",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/307343-2_t.jpg"
+    },
+    {
+      "objectID": "series-365236",
+      "country": "bra",
+      "id": "series-365236",
+      "image_url": "https://artworks.thetvdb.com/banners/series/365236/posters/62069643.jpg",
+      "name": "Guerras do Brasil.doc",
+      "first_air_time": "2019-04-19",
+      "overview": "Esta série documental detalha como o Brasil foi formado por séculos de conflito armado, desde os primeiros conquistadores até a violência nos dias de hoje.",
+      "primary_language": "pt",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "365236",
+      "year": "2019",
+      "slug": "guerras-do-brasildoc",
+      "overviews": {
+        "eng": "This documentary series details how Brazil was formed by centuries of armed conflict, from the first conquerors to the violence of today.",
+        "por": "Esta série documental detalha como o Brasil foi formado por séculos de conflito armado, desde os primeiros conquistadores até a violência nos dias de hoje.\r\n",
+        "pt": "Esta série documental detalha como o Brasil foi formado por séculos de conflito armado, desde os primeiros conquistadores até a violência nos dias de hoje."
+      },
+      "translations": {
+        "eng": "Brazil's Wars.doc",
+        "por": "Guerras do Brasil.doc",
+        "pt": "Guerras do Brasil.doc"
+      },
+      "network": "Netflix",
+      "remote_ids": [
+        {
+          "id": "91175",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/series/365236/posters/62069643_t.jpg"
+    },
+    {
+      "objectID": "series-316394",
+      "aliases": [
+        "The Heart Guy"
+      ],
+      "country": "aus",
+      "id": "series-316394",
+      "image_url": "https://artworks.thetvdb.com/banners/posters/316394-2.jpg",
+      "name": "Doctor Doctor (2016)",
+      "first_air_time": "2016-09-14",
+      "overview": "After a spectacular fall from grace, high-flying heart surgeon Dr. Hugh Knight receives a life-changing punishment from the Medical Tribunal - he is forced to work for a year as a country GP in his former home town of Whyhope.\r\n\r\nDoctor Doctor follows Hugh's attempt to rebuild his world in the town he has spent his whole life running away from. Now the only way to salvage his brilliant career is to work as a lowly GP in an under-resourced, small-town hospital surrounded by estranged family, former friends, crazed colleagues, oddball patients, jealous brothers and a newlywed ex-girlfriend.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "316394",
+      "year": "2016",
+      "slug": "doctor-doctor-2016",
+      "overviews": {
+        "deu": "Hugh Knight genießt den Ruf als Shootingstar der Medizinwelt Sydneys. Er gilt als genialer und charmanter Herzchirurg, aber auch als selbstsüchtiger Hedonist, der sich an keine Spielregeln hält. Nach einer wilden Partynacht wacht er in seiner Hotelsuite neben einem wegen einer Überdosis bewusstlosen Model auf. Dieser Skandal kostet ihn seine Chirurgenlizenz. Fortan bleibt ihm nur, sich als Allgemeinmediziner niederzulassen. Er kehrt zurück in seinen kleinen Heimatort Wyhope, wo er einen klaren Kopf bekommen will. Doch dazu kommt es nicht: Seine chaotische Familiensituation lässt ihn nicht zur Ruhe kommen - erst recht nicht, als er seine Ex-Freundin Charlie wiedertrifft, die mittlerweile mit seinem Bruder verheiratet ist!",
+        "ell": "H ζωή ενός καρδιοχειρουργού παίρνει μια απρόσμενη τροπή και σύντομα τα πάντα καταρρέουν. Από ένας γιατρός της μεγαλούπολης γίνεται γιατρός μιας μικρής πόλης. Είναι αυτή η χειρότερη χρονιά της ζωής του ή είναι απλά «εντολές γιατρού..»;",
+        "eng": "After a spectacular fall from grace, high-flying heart surgeon Dr. Hugh Knight receives a life-changing punishment from the Medical Tribunal - he is forced to work for a year as a country GP in his former home town of Whyhope.\r\n\r\nDoctor Doctor follows Hugh's attempt to rebuild his world in the town he has spent his whole life running away from. Now the only way to salvage his brilliant career is to work as a lowly GP in an under-resourced, small-town hospital surrounded by estranged family, former friends, crazed colleagues, oddball patients, jealous brothers and a newlywed ex-girlfriend.",
+        "fin": "Sydänlääkärin syöksykierre kertoo itsevarman australialaislääkärin takkuisesta urasta ja elämästä vanhoilla kotikonnuillaan. Vastuuttoman käytöksen takia Whyhopeen siirretty ja sinne juurtunut Hugh Knight on huomannut muuttuneensa – ehkä vähän yllättäen – arjen sankariksi.",
+        "fra": "Hugh Knight est un chirurgien cardiaque de renom. Talentueux et charmant, il croit fermement qu'il peut vivre en dehors des règles, jusqu'au moment où cela va se retourner contre lui.",
+        "heb": "ד\"ר יו נייט הוא מנתח לב מצליח בסידני, כוכב עולה בתחומו. הוא מוכשר, כריזמטי, יהיר ונהנתן המאמין שהחוקים אינם חלים עליו. יו מתעורר בסוויטת מלון עם דוגמנית מחוסרת הכרה שנטלה מנת יתר, ומכאן הכל מתחיל להתדרדר: הוא עומד לשימוע בפני ועדה רפואית, נאסר עליו לנתח והוא נאלץ לשמש כרופא במרפאה. יו נשלח חזרה לעיירת הולדתו, ווייהופ, שם הוא מקווה להימנע בפיתויים ולפתוח דף חדש. למציאות, לעומת זאת, יש תוכניות אחרות עבורו. יו מגלה שבריחה היא לא תמיד הפתרון הקל – וזאת אפילו לפני שפגש את הפציינטים החדשים שלו.",
+        "ita": "La serie segue la storia di Hugh Knight, un cardiochirurgo in ascesa che è dotato, affascinante e infallibile. È un edonista che, grazie al suo talento puro, crede di poter vivere al di fuori delle regole. La sua filosofia lavora sodo, gioca più duro sta per tornare e morderlo.",
+        "pol": "Hugh Knight to wschodząca gwiazda kardiochirurgii w Sydney. Jest utalentowany, czarujący i czerpie z życia garściami. Błyskotliwą karierę przerywa mu jednak pewien incydent na imprezie. Hugh trafia do prowincjonalnego miasteczka, gdzie jako lokalny internista zaczyna poznawać prawdziwe życie. Na miejscu musi się zmierzyć nie tylko z codziennymi dolegliwościami mieszkańców, ale też z własną rodziną i swoją przeszłością. Czy to będzie najgorszy rok w jego karierze?",
+        "rus": "После череды неудач медицинский совет отправляет кардиохирурга Хью Найта работать терапевтом в своём родном городе Вайхоуп, в австралийской глубинке. Однако этому возвращению рады далеко не все жители городка.",
+        "spa": "Tras una espectacular caída en desgracia, el doctor Hugh Knight, cirujano cardíaco de altos vuelos, recibe un castigo que le cambia la vida por parte del Tribunal Médico: se ve obligado a trabajar durante un año como médico de cabecera en su antiguo pueblo natal, Whyhope. Doctor Doctor sigue el intento de Hugh de reconstruir su mundo en el pueblo del que ha pasado toda su vida huyendo. Ahora, la única manera de salvar su brillante carrera es trabajar como un humilde médico de cabecera en un hospital de pueblo con pocos recursos, rodeado de familiares distanciados, antiguos amigos, colegas enloquecidos, pacientes extraños, hermanos celosos y una ex novia recién casada."
+      },
+      "translations": {
+        "dan": "The Heart Guy",
+        "deu": "The Heart Guy",
+        "ell": "Doctor Doctor",
+        "eng": "Doctor Doctor (2016)",
+        "fin": "Sydänlääkärin syöksykierre",
+        "heb": "רופא כלבבי",
+        "ita": "Re Di Cuori",
+        "rus": "Доктор, доктор",
+        "spa": "Doctor Doctor (2016)",
+        "swe": "Hjärtats vägar"
+      },
+      "network": "Nine Network",
+      "remote_ids": [
+        {
+          "id": "tt6015808",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://www.9now.com.au/doctor-doctor",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "67728",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "20303",
+          "type": 19,
+          "sourceName": "TV Maze"
+        },
+        {
+          "id": "Q23013591",
+          "type": 18,
+          "sourceName": "Wikidata"
+        },
+        {
+          "id": "Doctor_Doctor_(Australian_TV_series)",
+          "type": 24,
+          "sourceName": "Wikipedia"
+        },
+        {
+          "id": "67728",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/posters/316394-2_t.jpg"
+    }
+  ],
+  "links": {
+    "prev": null,
+    "self": "https://api4.thetvdb.com/v4/search?query=Doc&type=series&limit=20&page=0",
+    "next": "https://api4.thetvdb.com/v4/search?query=Doc&type=series&limit=20&page=1",
+    "total_items": 825,
+    "page_size": 20
+  }
+}

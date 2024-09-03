@@ -11,9 +11,14 @@
 |
 */
 
+use App\Models\User;
+use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
+use function Pest\Laravel\actingAs;
+use function Pest\Laravel\withoutExceptionHandling;
+
 uses(
     Tests\TestCase::class,
-    // Illuminate\Foundation\Testing\RefreshDatabase::class,
+    LazilyRefreshDatabase::class
 )->in('Feature');
 
 /*
@@ -27,10 +32,6 @@ uses(
 |
 */
 
-expect()->extend('toBeOne', function () {
-    return $this->toBe(1);
-});
-
 /*
 |--------------------------------------------------------------------------
 | Functions
@@ -42,7 +43,16 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+function asUser(User $user = null): User
 {
-    // ..
+    $user = $user ?? User::factory()->create();
+    actingAs($user);
+
+    return $user;
+}
+
+
+function hcf(): void
+{
+    withoutExceptionHandling();
 }

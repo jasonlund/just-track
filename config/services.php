@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'tvdb' => [
+        'api_key' => env('TVDB_API_KEY')
+    ]
+
 ];
