@@ -5,12 +5,16 @@ use Livewire\Livewire;
 use function Pest\Laravel\get;
 
 it("renders successfully", function () {
+    asUser();
+
     get(route('search'))
         ->assertOk()
         ->assertSeeLivewire(Search::class);
 });
 
 it("is able to return search results", function() {
+    asUser();
+
     Livewire::withQueryParams(['query' => 'Doc'])
         ->test(Search::class)
         ->assertSee('Doctor Who (2005)')
@@ -20,6 +24,8 @@ it("is able to return search results", function() {
 });
 
 it("can return handle no query string", function () {
+    asUser();
+
     Livewire::withQueryParams(['query' => ''])
         ->test(Search::class)
         ->assertSee('Please search for a show above')
@@ -35,6 +41,8 @@ it("can return handle no query string", function () {
 });
 
 it("can return no results", function() {
+    asUser();
+
     Livewire::withQueryParams(['query' => 'foobar'])
         ->test(Search::class)
         ->assertSee('Your search returned no results')
@@ -45,6 +53,8 @@ it("can return no results", function() {
 
 
 it("can reset the search query and results", function() {
+    asUser();
+
     Livewire::withQueryParams(['query' => 'Doc'])
         ->test(Search::class)
         ->assertViewHas('results', function ($results) {
