@@ -1,19 +1,16 @@
 <?php
 
-use App\Livewire\Pages\Auth\Login;
-use App\Livewire\Pages\Dashboard;
-use App\Livewire\Pages\Search;
-use App\Livewire\Pages\ShowIndex;
+use App\Livewire\Pages;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', Dashboard::class)
+    Route::get('/dashboard', Pages\Dashboard::class)
         ->name('dashboard');
 
-    Route::get('/search', Search::class)
+    Route::get('/search', Pages\Search::class)
         ->name('search');
 
-    Route::get('/shows/', ShowIndex::class)
+    Route::get('/shows/', Pages\ShowIndex::class)
         ->name('show.index');
 });
 
@@ -32,6 +29,9 @@ Route::middleware('guest')->group(function () {
 //    Volt::route('reset-password/{token}', 'pages.auth.reset-password')
 //        ->name('password.reset');
 
-    Route::get('/login', Login::class)
+    Route::get('/login', Pages\Auth\Login::class)
         ->name('login');
+
+    Route::get('/register', Pages\Auth\Register::class)
+        ->name('register');
 });

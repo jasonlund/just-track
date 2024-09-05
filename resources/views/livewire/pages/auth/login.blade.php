@@ -3,6 +3,7 @@
         <p>
             <label for="email">Email</label>
             <input type="email" id="email" wire:model="form.email" />
+            @error('form.email') <span>{{ $message }}</span> @enderror
         </p>
 
         <p>
@@ -19,4 +20,6 @@
 
         <button type="submit">Login</button>
     </form>
+
+    <p><a href="{{ route('register') }}" wire:navigate>Register an Account</a></p>
 </div>

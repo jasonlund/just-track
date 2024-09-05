@@ -7,6 +7,8 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
+        <livewire:components.layouts.app.navigation />
+        
         {{ $slot }}
     </body>
 </html>

@@ -16,6 +16,12 @@ it("uses the guest layout", function() {
         ->assertSeeHtml('<h1>Guest Layout!</h1>');
 });
 
+it("links to the registration page", function() {
+    get(route('login'))
+        ->assertSee('Register an Account')
+        ->assertSee(route('register'));
+});
+
 it("can authenticate users", function () {
     $user = User::factory()->create();
 
@@ -51,7 +57,8 @@ it("can not authenticate invalid credentials", function () {
 
     $component
         ->assertHasErrors()
-        ->assertNoRedirect();
+        ->assertNoRedirect()
+        ->assertSee(trans('auth.failed'));
 
     $this->assertGuest();
 });
