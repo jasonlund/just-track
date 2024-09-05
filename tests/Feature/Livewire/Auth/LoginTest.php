@@ -35,7 +35,7 @@ it("can authenticate users", function () {
 
     $component
         ->assertHasNoErrors()
-        ->assertRedirect(route('dashboard', absolute: false));
+        ->assertRedirectToRoute('dashboard');
 
     $this->assertAuthenticated();
 });
