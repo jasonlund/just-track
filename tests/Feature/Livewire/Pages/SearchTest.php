@@ -42,3 +42,18 @@ it("can return no results", function() {
             return count($results) == 0;
         });
 });
+
+
+it("can reset the search query and results", function() {
+    Livewire::withQueryParams(['query' => 'Doc'])
+        ->test(Search::class)
+        ->assertViewHas('results', function ($results) {
+            return count($results) == 20;
+        })
+        ->assertSeeHtml('<button wire:click="resetQuery">Reset Search</button>')
+        ->call('resetQuery')
+        ->assertSet('query', '')
+        ->assertViewHas('results', function ($results) {
+            return count($results) == 0;
+        });
+});

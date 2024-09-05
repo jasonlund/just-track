@@ -2,21 +2,17 @@
 
 namespace App\Livewire\Pages;
 
-use App\Models\Show;
-use Illuminate\Database\Eloquent\Collection;
+use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Title('View Your Shows')]
 class ShowIndex extends Component
 {
-    public Collection $shows;
-
-    public function render()
+    #[Computed]
+    public function shows()
     {
-        $this->shows = auth()->user()->shows()
+        return auth()->user()->shows()
             ->select(['external_id', 'name', 'year'])->get();
-
-        return view('livewire.pages.show-index');
     }
 }

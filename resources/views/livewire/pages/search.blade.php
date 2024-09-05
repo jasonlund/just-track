@@ -1,6 +1,11 @@
 <div>
     <p>
-        <input type="text" wire:model.live.debounce.150ms="query" />
+        {{-- TODO -- when we add caching to the response, do we want throttle instead? --}}
+        <input type="text" wire:model.live.debounce="query" />
+    </p>
+
+    <p>
+        <button wire:click="resetQuery">Reset Search</button>
     </p>
 
     <h1>Results</h1>
