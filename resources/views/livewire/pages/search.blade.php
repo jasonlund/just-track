@@ -11,22 +11,15 @@
     <h1>Results</h1>
     <p>
         @if(count($results))
-            <table>
-                <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Year</th>
-                </tr>
-                </thead>
-                <tbody>
+            <ul>
                 @foreach($results as $result)
-                    <tr :key="$result->tvdb_id">
-                        <td>{{ $result['name'] }}</td>
-                        <td>{{ $result['year'] ?? '' }}</td>
-                    </tr>
+                    <li wire:key="{{ $result['tvdb_id'] }}">
+                        <button wire:click="addShow({{ $result['tvdb_id'] }})">
+                            {{ $result['name'] }} @if($result['year'] !== null) ({{ $result['year'] }}) @endif
+                        </button>
+                    </li>
                 @endforeach
-                </tbody>
-            </table>
+            </ul>
         @elseif($query === '')
             Please search for a show above
         @else
