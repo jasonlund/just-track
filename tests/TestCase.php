@@ -25,9 +25,13 @@ abstract class TestCase extends BaseTestCase
                     'data' => []
                 ])),
             'https://api4.thetvdb.com/v4/search?q=Doc&type=series&limit=20' =>
-                json_decode(file_get_contents(base_path('tests/Fixtures/Http/TVDB/search-doc.json')), 1),
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVDB/search-doc.json'))),
             'https://api4.thetvdb.com/v4/series/78804/episodes/official' =>
-                json_decode(file_get_contents(base_path('tests/Fixtures/Http/TVDB/series-78804.json')), 1)
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVDB/series-78804.json'))),
+            'https://api4.thetvdb.com/v4/series/12345/episodes/official' =>
+                Http::response(json_encode([
+                    'data' => []
+                ]), 404),
         ]);
     }
 }

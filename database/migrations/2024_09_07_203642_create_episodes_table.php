@@ -22,7 +22,7 @@ return new class extends Migration
             $table->unsignedInteger('season');
             $table->string('name')->nullable();
             $table->date('aired')->nullable();
-            $table->unsignedInteger('runtime');
+            $table->unsignedInteger('runtime')->nullable();
             $table->text('overview')->nullable();
 
             $table->timestamps();

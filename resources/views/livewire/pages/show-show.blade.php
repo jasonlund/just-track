@@ -1,5 +1,14 @@
 <div>
-    <h3>{{ $show['name'] }}</h3>
+    @if($show == null)
+        @php
+            // If show is null, that means the TVDB service couldn't find anything.
+            // This is the only way I could find to redirect.
+            // I wasn't able to in mount() or render().
+            $this->redirect('/404');
+        @endphp
+    @else
+
+   <h3>{{ $show['name'] }}</h3>
 
     <ul>
         <li>{{ $show['name'] }}</li>
@@ -47,5 +56,7 @@
         @endforeach
         </tbody>
     </table>
+
+    @endif
 
 </div>

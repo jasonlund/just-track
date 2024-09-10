@@ -12,7 +12,7 @@
                 <tbody>
                 @foreach($this->shows as $show)
                     <tr :key="$result->external_id">
-                        <td>{{ $show['name'] }}</td>
+                        <td><a href="{{ route('show.show', $show) }}" wire:navigate>{{ $show['name'] }}</a></td>
                         <td>{{ $show['year'] }}</td>
                     </tr>
                 @endforeach

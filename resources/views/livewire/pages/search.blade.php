@@ -14,13 +14,13 @@
             <ul>
                 @foreach($results as $result)
                     <li wire:key="{{ $result['tvdb_id'] }}">
-                        <button wire:click="visitShow({{ $result['tvdb_id'] }})">
+                        <a href="{{ route('show.show', $result['tvdb_id'] ) }}" wire:navigate>
                             {{ $result['name'] }} @if($result['year'] !== null) ({{ $result['year'] }}) @endif
-                        </button>
+                        </a>
 
-                        <button wire:click="visitShow({{ $result['tvdb_id'] }}, true)">
+                        <a href="{{ route('show.show', [$result['tvdb_id'], 'attach'] ) }}" wire:navigate>
                             Add
-                        </button>
+                        </a>
                     </li>
                 @endforeach
             </ul>

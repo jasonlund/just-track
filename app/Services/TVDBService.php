@@ -42,8 +42,7 @@ class TVDBService
                 // If we have a next url, use that instead of our uri.
                 ->get($next ?? ($this->baseUri . $uri . '?' . http_build_query($params)));
 
-
-            if(! $response->ok()) throw new \Exception('Could not execute TVDB API call');
+            $response->throwUnlessStatus(200);
 
             $response = $response->json();
 

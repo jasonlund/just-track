@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('show_id');
             $table->unsignedBigInteger('user_id');
-            $table->timestamps();
         });
     }
 

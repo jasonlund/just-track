@@ -20,7 +20,7 @@ class Episode extends Model
      */
     public function scopeCritical(Builder $query): void
     {
-        $query->whereNot('absolute_number', 0)
-            ->orderBy('absolute_number');
+//        $query->whereNot('absolute_number', 0)
+//            ->orderBy('absolute_number');
     }
 }

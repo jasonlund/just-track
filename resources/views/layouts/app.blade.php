@@ -7,8 +7,14 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
+
         <livewire:components.layouts.app.navigation />
-        
+
         {{ $slot }}
     </body>
 </html>

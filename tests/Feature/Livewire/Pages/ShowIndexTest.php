@@ -56,5 +56,22 @@ it("only shows shows the user is subscribed to", function() {
         ->assertDontSee($shows[2]['name']);
 });
 
+it("links to each show", function() {
+    // Arrange
+
+    $shows = Show::factory()
+        ->count(3)
+        ->create();
+
+    $user = asUser();
+
+    $user->shows()->attach($shows);
+
+    // Act & Assert
+
+    Livewire::test(Page::class)
+        ->assertSeeHtml('<a href="' . route('show.show', $shows->first()) . '" wire:navigate>');
+});
+
 it("orders shows")
     ->todo();

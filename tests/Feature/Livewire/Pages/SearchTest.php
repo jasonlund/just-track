@@ -1,9 +1,6 @@
 <?php
 
-use App\Livewire\Pages\Dashboard;
 use App\Livewire\Pages\Search;
-use App\Livewire\Pages\ShowShow;
-use App\Models\Show;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Livewire\Livewire;
@@ -23,6 +20,8 @@ it("is able to return search results", function() {
     Livewire::withQueryParams(['query' => 'Doc'])
         ->test(Search::class)
         ->assertSee('Doctor Who (2005)')
+        ->assertSeeHtml('<a href="' . route('show.show', ['78804']) . '" wire:navigate>')
+        ->assertSeeHtml('<a href="' . route('show.show', ['78804', 'attach']) . '" wire:navigate>')
         ->assertViewHas('results', function ($results) {
             return count($results) == 20;
         });
@@ -82,7 +81,6 @@ it("can return no results", function() {
         });
 });
 
-
 it("can reset the search query and results", function() {
     asUser();
 
@@ -99,80 +97,3 @@ it("can reset the search query and results", function() {
         });
 });
 
-it("can add a show that was searched for", function() {
-    asUser();
-
-    expect(Show::count())
-        ->toBe(0);
-
-    Livewire::withQueryParams(['query' => 'Doc'])
-        ->test(Search::class)
-
-        ->assertMethodWiredToAction('click', 'visitShow(78804)')
-
-        ->call('visitShow', '78804')
-
-        ->assertRedirectToRoute('show.show', ['show' => '78804'])
-
-        ->assertSee('Doctor Who (2005)');
-
-    $show = Show::first();
-
-    expect(Show::count())
-        ->toBe(1)
-
-        ->and($show->name)->toBe('Doctor Who (2005)')
-        ->and($show->external_id)->toBe(78804)
-
-        ->and($show->episodes()->count())->toBe(322);
-});
-
-it("won't add a show that already exists", function () {
-    asUser();
-
-    expect(Show::count())
-        ->toBe(0);
-
-    Show::factory([
-        'external_id' => 78804,
-        'name' => 'Doctor Who (2005)',
-    ])->create();
-
-    expect(Show::count())
-        ->toBe(1);
-
-    Livewire::test(Search::class)
-        ->call('visitShow', '78804');
-
-    expect(Show::count())
-        ->toBe(1);
-});
-
-it("will optionally associate the added show to the authenticated user", function() {
-    $user = asUser();
-
-    expect($user->shows()->count())
-        ->toBe(0);
-
-    Show::factory([
-        'external_id' => '78805',           // For the very rare case that we randomly generate 78804
-    ])->create();
-
-    Livewire::withQueryParams(['query' => 'Doc'])
-        ->test(Search::class)
-
-        ->assertMethodWiredToAction('click', 'visitShow(78804)')
-
-        ->call('visitShow', '78804');
-
-    expect($user->shows()->count())
-        ->toBe(0);
-
-    Livewire::test(Search::class)
-        ->assertMethodWiredToAction('click', 'visitShow(78804, true)')
-
-        ->call('visitShow', '78804', true);
-
-    expect($user->shows()->count())
-        ->toBe(1);
-});

@@ -3,6 +3,8 @@
 use App\Livewire\Pages;
 use Illuminate\Support\Facades\Route;
 
+Route::get('404', function() { abort(404); });
+
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', Pages\Dashboard::class)
         ->name('dashboard');
@@ -13,8 +15,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/shows/', Pages\ShowIndex::class)
         ->name('show.index');
 
-    Route::get('/shows/{show}', Pages\ShowShow::class)
-        ->name('show.show');
+    Route::get('/shows/{tvdb_id}/{attach?}', Pages\ShowShow::class)
+        ->name('show.show')
+        ->where('tvdb_id', '[0-9]+')
+        ->lazy();
 });
 
 

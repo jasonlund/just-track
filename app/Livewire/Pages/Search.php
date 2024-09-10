@@ -57,38 +57,4 @@ class Search extends Component
     {
         $this->query = '';
     }
-
-    public function visitShow($tvdb_id, $attach = false)
-    {
-        // If we do not already have this show in the database, find it and add it.
-        if(! $show = Show::where('external_id', $tvdb_id)->first()) {
-            $data = $this->service->episodes($tvdb_id);
-
-            $show = Show::create([
-                'external_id' => $data['series']['id'],
-                'name' => $data['series']['name'],
-                'year' => $data['series']['year'],
-                'overview' => $data['series']['overview'],
-                'original_country' => $data['series']['originalCountry'],
-            ]);
-
-            Episode::insert(collect($data['episodes'])->map(fn ($episode) => [
-                'show_id' => $episode['seriesId'],
-                'external_id' => $episode['id'],
-                'number' => $episode['number'],
-                'absolute_number' => $episode['absoluteNumber'],
-                'season' => $episode['seasonNumber'],
-                'name' => $episode['name'],
-                'aired' => $episode['aired'],
-                'runtime' => $episode['runtime'],
-                'overview' => $episode['overview'],
-            ])->toArray());
-        }
-
-        // Associate the show with the authenticated user.
-
-        if($attach) Auth::user()->shows()->attach($show);
-
-        $this->redirect(route('show.show', $show));
-    }
 }
