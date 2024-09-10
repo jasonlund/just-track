@@ -14,8 +14,12 @@
             <ul>
                 @foreach($results as $result)
                     <li wire:key="{{ $result['tvdb_id'] }}">
-                        <button wire:click="addShow({{ $result['tvdb_id'] }})">
+                        <button wire:click="visitShow({{ $result['tvdb_id'] }})">
                             {{ $result['name'] }} @if($result['year'] !== null) ({{ $result['year'] }}) @endif
+                        </button>
+
+                        <button wire:click="visitShow({{ $result['tvdb_id'] }}, true)">
+                            Add
                         </button>
                     </li>
                 @endforeach

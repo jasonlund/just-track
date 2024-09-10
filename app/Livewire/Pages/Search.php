@@ -58,7 +58,7 @@ class Search extends Component
         $this->query = '';
     }
 
-    public function addShow($tvdb_id)
+    public function visitShow($tvdb_id, $attach = false)
     {
         // If we do not already have this show in the database, find it and add it.
         if(! $show = Show::where('external_id', $tvdb_id)->first()) {
@@ -72,25 +72,23 @@ class Search extends Component
                 'original_country' => $data['series']['originalCountry'],
             ]);
 
-            foreach($data['episodes'] as $episode) {
-                Episode::create([
-                    'show_id' => $episode['seriesId'],
-                    'external_id' => $episode['id'],
-                    'number' => $episode['number'],
-                    'absolute_number' => $episode['absoluteNumber'],
-                    'season' => $episode['seasonNumber'],
-                    'name' => $episode['name'],
-                    'aired' => $episode['aired'],
-                    'runtime' => $episode['runtime'],
-                    'overview' => $episode['overview'],
-                ]);
-            }
+            Episode::insert(collect($data['episodes'])->map(fn ($episode) => [
+                'show_id' => $episode['seriesId'],
+                'external_id' => $episode['id'],
+                'number' => $episode['number'],
+                'absolute_number' => $episode['absoluteNumber'],
+                'season' => $episode['seasonNumber'],
+                'name' => $episode['name'],
+                'aired' => $episode['aired'],
+                'runtime' => $episode['runtime'],
+                'overview' => $episode['overview'],
+            ])->toArray());
         }
 
         // Associate the show with the authenticated user.
 
-        Auth::user()->shows()->attach($show);
+        if($attach) Auth::user()->shows()->attach($show);
 
-        $this->redirect(route('dashboard'));
+        $this->redirect(route('show.show', $show));
     }
 }

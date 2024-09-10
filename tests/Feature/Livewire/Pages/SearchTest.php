@@ -2,6 +2,7 @@
 
 use App\Livewire\Pages\Dashboard;
 use App\Livewire\Pages\Search;
+use App\Livewire\Pages\ShowShow;
 use App\Models\Show;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
@@ -107,13 +108,13 @@ it("can add a show that was searched for", function() {
     Livewire::withQueryParams(['query' => 'Doc'])
         ->test(Search::class)
 
-        ->assertMethodWiredToAction('click', 'addShow(78804)')
+        ->assertMethodWiredToAction('click', 'visitShow(78804)')
 
-        ->call('addShow', '78804')
+        ->call('visitShow', '78804')
 
-        // TODO -- assertSee whenever we list shows on the dashboard.
-        ->assertRedirectToRoute('dashboard')
-        ->assertRedirect(Dashboard::class);
+        ->assertRedirectToRoute('show.show', ['show' => '78804'])
+
+        ->assertSee('Doctor Who (2005)');
 
     $show = Show::first();
 
@@ -141,33 +142,37 @@ it("won't add a show that already exists", function () {
         ->toBe(1);
 
     Livewire::test(Search::class)
-        ->call('addShow', '78804');
+        ->call('visitShow', '78804');
 
     expect(Show::count())
         ->toBe(1);
 });
 
-it("will associate the added show to the authenticated user", function() {
+it("will optionally associate the added show to the authenticated user", function() {
     $user = asUser();
 
     expect($user->shows()->count())
         ->toBe(0);
 
-    // A newly created show.
-    Livewire::test(Search::class)
-        ->call('addShow', '78804');
-
-    expect($user->shows()->count())
-        ->toBe(1);
-
-    // An existing show.
     Show::factory([
         'external_id' => '78805',           // For the very rare case that we randomly generate 78804
     ])->create();
 
-    Livewire::test(Search::class)
-        ->call('addShow', '78805');
+    Livewire::withQueryParams(['query' => 'Doc'])
+        ->test(Search::class)
+
+        ->assertMethodWiredToAction('click', 'visitShow(78804)')
+
+        ->call('visitShow', '78804');
 
     expect($user->shows()->count())
-        ->toBe(2);
+        ->toBe(0);
+
+    Livewire::test(Search::class)
+        ->assertMethodWiredToAction('click', 'visitShow(78804, true)')
+
+        ->call('visitShow', '78804', true);
+
+    expect($user->shows()->count())
+        ->toBe(1);
 });

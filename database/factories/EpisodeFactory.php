@@ -21,9 +21,9 @@ class EpisodeFactory extends Factory
         return [
             'external_id' => $this->faker->unique()->numberBetween(),
             'show_id' => Show::factory(),
-            'number' => $this->faker->unique()->numberBetween(1, 100),
+            'number' => $this->faker->numberBetween(1, 100),
             'absolute_number' => $this->faker->unique()->numberBetween(1, 100),
-            'season' => $this->faker->numberBetween(1, 10),
+            'season' => $this->faker->numberBetween(0, 10),
             'name' => Str::title($this->faker->words(rand(3, 6), true)),
             'aired' => $this->faker->dateTimeBetween('-10 years')->format('Y-m-d'),
             'runtime' => $this->faker->numberBetween(10, 90),

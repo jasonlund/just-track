@@ -13,6 +13,14 @@ class Show extends Model
     protected $fillable = ['external_id', 'name', 'year', 'overview', 'original_country'];
 
     /**
+     * Get the route key for the model.
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'external_id';
+    }
+
+    /**
      * Get the episodes for the show.
      */
     public function episodes(): HasMany
