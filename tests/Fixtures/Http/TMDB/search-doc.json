@@ -1,0 +1,427 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/94IX4eV3goPM1Ftcw9nYtBRmjBI.jpg",
+            "genre_ids": [
+                18,
+                10751
+            ],
+            "id": 10042,
+            "origin_country": [
+                "US",
+                "CA"
+            ],
+            "original_language": "en",
+            "original_name": "Doc",
+            "overview": "Doc is a medical drama/family drama with strong Christian undertones starring Billy Ray Cyrus as Dr. Clint \"Doc\" Cassidy, a Montana doctor who takes a job in a New York City medical clinic. It ran from March 11, 2001 to November 28, 2004 on PAX. Although set in New York City, all the episodes were shot in and around Toronto, Ontario, Canada.",
+            "popularity": 47.09,
+            "poster_path": "/4hNOf5ulemoI7EqYg8fDVIclFzq.jpg",
+            "first_air_date": "2001-03-11",
+            "name": "Doc",
+            "vote_average": 7.429,
+            "vote_count": 14
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                35
+            ],
+            "id": 6901,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Doc",
+            "overview": "Doc is an American sitcom which aired on CBS from September 1975 to October 1976.",
+            "popularity": 17.426,
+            "poster_path": null,
+            "first_air_date": "1975-09-13",
+            "name": "Doc",
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/pJuH3WLjEqIrsztrV9t8a0lmRS7.jpg",
+            "genre_ids": [
+                80,
+                18
+            ],
+            "id": 36301,
+            "origin_country": [
+                "DE"
+            ],
+            "original_language": "de",
+            "original_name": "Notruf Hafenkante",
+            "overview": "Shows the interaction between Hamburg police officers and paramedics.",
+            "popularity": 135.235,
+            "poster_path": "/JSNSFn5vIIkdZnshTbNra4bcrZ.jpg",
+            "first_air_date": "2007-01-04",
+            "name": "Hamburg Dockland",
+            "vote_average": 5.9,
+            "vote_count": 12
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/5hXkZ1CQlH24OB5Nr32boR4RgmT.jpg",
+            "genre_ids": [
+                16,
+                10762,
+                10751
+            ],
+            "id": 46262,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Doc McStuffins",
+            "overview": "A young African-American girl aspires to be a doctor like her mom.",
+            "popularity": 1853.521,
+            "poster_path": "/eeGWJaFkxX0vvOFFpNFXrh9QVxl.jpg",
+            "first_air_date": "2012-03-23",
+            "name": "Doc McStuffins",
+            "vote_average": 6.0,
+            "vote_count": 56
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/vcFW09U4834DyFOeRZpsx9x1D3S.jpg",
+            "genre_ids": [
+                10759,
+                18,
+                10765
+            ],
+            "id": 57243,
+            "origin_country": [
+                "GB"
+            ],
+            "original_language": "en",
+            "original_name": "Doctor Who",
+            "overview": "The Doctor is a Time Lord: a 900 year old alien with 2 hearts, part of a gifted civilization who mastered time travel. The Doctor saves planets for a living—more of a hobby actually, and the Doctor's very, very good at it.",
+            "popularity": 938.592,
+            "poster_path": "/4edFyasCrkH4MKs6H4mHqlrxA6b.jpg",
+            "first_air_date": "2005-03-26",
+            "name": "Doctor Who",
+            "vote_average": 7.525,
+            "vote_count": 2968
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/f3cin9kOz4nOrlYEMxGFQhv4bdN.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 71712,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "The Good Doctor",
+            "overview": "Shaun Murphy, a young surgeon with autism and savant syndrome, relocates from a quiet country life to join a prestigious hospital's surgical unit. Unable to personally connect with those around him, Shaun uses his extraordinary medical gifts to save lives and challenge the skepticism of his colleagues.",
+            "popularity": 633.136,
+            "poster_path": "/53P8oHo9cfOsgb1cLxBi4pFY0ja.jpg",
+            "first_air_date": "2017-09-25",
+            "name": "The Good Doctor",
+            "vote_average": 8.485,
+            "vote_count": 12302
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/log55R8c7zTSxxDCwVVREHuLx2K.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 92967,
+            "origin_country": [
+                "TR"
+            ],
+            "original_language": "tr",
+            "original_name": "Mucize Doktor",
+            "overview": "Ali was born in a provincial town and was rejected by his father for adoption. Ali with savant syndrome, who grew up in orphanages, graduated from the faculty of medicine with a first degree.",
+            "popularity": 472.497,
+            "poster_path": "/29ifz2K8kqZD6eb2sTKBP9Hlc3N.jpg",
+            "first_air_date": "2019-09-12",
+            "name": "Miracle Doctor",
+            "vote_average": 8.052,
+            "vote_count": 977
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8VWgyQjExeMgeg6Qzv6agduMU1A.jpg",
+            "genre_ids": [
+                18,
+                10759,
+                10765
+            ],
+            "id": 121,
+            "origin_country": [
+                "GB"
+            ],
+            "original_language": "en",
+            "original_name": "Doctor Who",
+            "overview": "The adventures of The Doctor, a time-traveling humanoid alien known as a Time Lord. He explores the universe in his TARDIS, a sentient time-traveling spaceship. Its exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. Along with a succession of companions, The Doctor faces a variety of foes while working to save civilizations, help ordinary people, and right many wrongs.",
+            "popularity": 588.969,
+            "poster_path": "/xinqAmYrZ1TEwowcQhgTkZVtVE0.jpg",
+            "first_air_date": "1963-11-23",
+            "name": "Doctor Who",
+            "vote_average": 7.866,
+            "vote_count": 621
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2JMQI9dyR6wzgs8kWDiDK6Npt3j.jpg",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "id": 222233,
+            "origin_country": [
+                "KR"
+            ],
+            "original_language": "ko",
+            "original_name": "닥터 슬럼프",
+            "overview": "Once rivals in school, two brilliant doctors reunite by chance — each facing life’s worst slump and unexpectedly finding solace in each other.",
+            "popularity": 103.968,
+            "poster_path": "/iOWmbZEbhvrYyWm6O4W3oHf2S9B.jpg",
+            "first_air_date": "2024-01-27",
+            "name": "Doctor Slump",
+            "vote_average": 8.4,
+            "vote_count": 60
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/htJef5Rp7z1vMEuCV3SRdVIHr2x.jpg",
+            "genre_ids": [
+                16,
+                10765
+            ],
+            "id": 221310,
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "外科医エリーゼ",
+            "overview": "Making up for her sins in a past life as the evil princess Elise, Aoi Takamoto dedicates her life to saving people as a doctor. But a fatal accident cuts her atonement short, and suddenly, she's back to her previous life, 10 years before her death! Will her foresight and medical brilliance help her change her past ways and heal an ailing empire, or is fate doomed to repeat itself?",
+            "popularity": 85.128,
+            "poster_path": "/dYqcim8IjD8TNoae9SAcYrRmVXi.jpg",
+            "first_air_date": "2024-01-10",
+            "name": "Doctor Elise: The Royal Lady with the Lamp",
+            "vote_average": 7.1,
+            "vote_count": 12
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/xlK27IlLQ2K5InXSLkgl4mJUbCx.jpg",
+            "genre_ids": [
+                9648,
+                18
+            ],
+            "id": 59134,
+            "origin_country": [
+                "AU"
+            ],
+            "original_language": "en",
+            "original_name": "The Doctor Blake Mysteries",
+            "overview": "Dr Lucien Blake left Ballarat as a young man. But now he finds himself returning to take over not only his dead father's medical practice, but also his on-call role as the town's police surgeon, only to find change is afoot, nothing is sacred, and no one is safe.",
+            "popularity": 142.858,
+            "poster_path": "/nQ9uCfDu12jLxMU3ea618LMvMyX.jpg",
+            "first_air_date": "2013-02-01",
+            "name": "The Doctor Blake Mysteries",
+            "vote_average": 7.786,
+            "vote_count": 42
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tlBntE4ukrQ0ffGDBlAlO85DAB7.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 45811,
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "DOCTORS 最強の名医",
+            "overview": "Donoue General Hospital runs into a budget deficit, even though the doctors drive expensive imported cars and live an outlandish lifestyle. Office manager Momoi finds surgeon Kosuke Sagara through a medical website. Kosuke Sagara arrives at the hospital and tells the director of the general hospital to decide on his pay after watching his work. Kosuke Sagara informs the hospital that he had previously quit his job at a university hospital and taken a year sabbatical.",
+            "popularity": 89.239,
+            "poster_path": "/eeSWXom0RUjogX8VdYxIYuWXQdH.jpg",
+            "first_air_date": "2011-10-27",
+            "name": "DOCTORS: The Ultimate Surgeon",
+            "vote_average": 7.429,
+            "vote_count": 7
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mTb5sBKD5GkAE6vHyjZH3kR3v1T.jpg",
+            "genre_ids": [
+                18,
+                80
+            ],
+            "id": 60956,
+            "origin_country": [
+                "KR"
+            ],
+            "original_language": "ko",
+            "original_name": "닥터 이방인",
+            "overview": "As a child, Park Hoon and his dad were kidnapped and taken to North Korea. He grew up there, learning to be a doctor just like his father. When Park Hoon escapes back to South Korea and begins work at a prestigious hospital, he makes it his goal to earn enough money to go back to North Korea to rescue his true love. He'll do anything to find her, but then he meets and falls for a mysterious woman who looks exactly like her.",
+            "popularity": 40.209,
+            "poster_path": "/odH9cebqUNHKh1p6BKVSs0gsD34.jpg",
+            "first_air_date": "2014-05-05",
+            "name": "Doctor Stranger",
+            "vote_average": 8.152,
+            "vote_count": 277
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/Asd9Mi9pC2B5UQp2pLplzhbd0bB.jpg",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "id": 214997,
+            "origin_country": [
+                "KR"
+            ],
+            "original_language": "ko",
+            "original_name": "닥터 차정숙",
+            "overview": "Twenty years after leaving her medical career, a housewife returns as a first-year resident — struggling to find her footing in a job full of surprises.",
+            "popularity": 42.611,
+            "poster_path": "/qgQQeiy2zyfla5y2yiZJGGU4y1I.jpg",
+            "first_air_date": "2023-04-15",
+            "name": "Doctor Cha",
+            "vote_average": 8.118,
+            "vote_count": 38
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/5HjfWdjRHawvIrbg4pP3Oj6N9u2.jpg",
+            "genre_ids": [
+                10766,
+                18,
+                35,
+                10764
+            ],
+            "id": 5080,
+            "origin_country": [
+                "GB",
+                "MX",
+                "KR"
+            ],
+            "original_language": "en",
+            "original_name": "Doctors",
+            "overview": "Set in the fictional Midlands town of Letherbridge, defined as being close to the city of Birmingham, this soap opera follows the staff and families of a doctor's surgery.",
+            "popularity": 822.346,
+            "poster_path": "/thZKqMWevSJVTeAiedy40umvz11.jpg",
+            "first_air_date": "2000-03-27",
+            "name": "Doctors",
+            "vote_average": 4.6,
+            "vote_count": 37
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/le8QyslLxUVN5VeFLPoMPqfO1nm.jpg",
+            "genre_ids": [
+                18,
+                9648
+            ],
+            "id": 46052,
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "ドクターX ～外科医・大門未知子～",
+            "overview": "Daimon Michiko is a 37-year-old freelance surgeon who is part of a questionable “doctor placement service” that has her wander from hospital to hospital. The harsh environment at the hospitals led many doctors to retire from their positions, forcing hospitals to make use of said program to fill the empty spots at least temporary. However, Michiko doesn’t look like a doctor at all with her flashy clothes and eccentric attitude. In the first episode she raises objections to a certain operation which is planned to be done by the head of a hospital who hasn’t performed an operation for a very long time. This causes Michiko to incur odium at the hospital, however, everyone becomes frozen when Michiko points out the outdated skills of the director. She also holds a scrupulous compliance when it comes to her working hours, never does any unnecessary chores that don’t require a medical license, and couldn’t care less about the power struggles within the hospitals. Nobody knows how she acquired such a top-level skill that allows her to claim exorbitant sums as reward, but her private life is an even greater mystery to everyone around her. Tanaka plays a rookie surgeon, Uchida an anesthetist, Kishibe the head of the placement service, and Ito the head of the surgical department of this institution.",
+            "popularity": 232.338,
+            "poster_path": "/5DjPvjvhDCyy6fH8Ko7Fkq0Zbiw.jpg",
+            "first_air_date": "2012-10-18",
+            "name": "Doctor-X: Surgeon Michiko Daimon",
+            "vote_average": 7.464,
+            "vote_count": 28
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/1pmLsPXz5k37BILPH1wq1OV2E7U.jpg",
+            "genre_ids": [
+                10759,
+                18,
+                10765
+            ],
+            "id": 239770,
+            "origin_country": [
+                "GB"
+            ],
+            "original_language": "en",
+            "original_name": "Doctor Who",
+            "overview": "The Doctor and his companion travel across time and space encountering incredible friends and foes.",
+            "popularity": 227.785,
+            "poster_path": "/8FHthx4Vu81J4X5BTLhJYK9Gtbs.jpg",
+            "first_air_date": "2024-05-11",
+            "name": "Doctor Who",
+            "vote_average": 6.503,
+            "vote_count": 143
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 110992,
+            "origin_country": [
+                "CN"
+            ],
+            "original_language": "zh",
+            "original_name": "皇朝太医",
+            "overview": "",
+            "popularity": 26.844,
+            "poster_path": "/sa3NK5esX4Ty7WlUVht47DHEOu1.jpg",
+            "first_air_date": "2001-01-01",
+            "name": "Rogue Doctor",
+            "vote_average": 4.0,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 10955,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Doctors' Hospital",
+            "overview": "Doctors' Hospital is an American medical drama that ran on NBC during the 1975–1976 season.",
+            "popularity": 15.488,
+            "poster_path": "/ikGXUFKw8Th83AkUTSRyek7U5O7.jpg",
+            "first_air_date": "1975-09-10",
+            "name": "Doctors' Hospital",
+            "vote_average": 5.0,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/AfanuPdlRgJqlYq72vVeiuZaCbh.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 4014,
+            "origin_country": [
+                "AU"
+            ],
+            "original_language": "en",
+            "original_name": "The Flying Doctors",
+            "overview": "The Flying Doctors is an Australian drama series produced by Crawford Productions that revolved around the everyday lifesaving efforts of the real Royal Flying Doctor Service of Australia.\n\nIt was initially a 1985 mini-series based in the fictional outback town of Cooper's Crossing starring Andrew McFarlane as the newly arrived Dr. Tom Callaghan. The success of the mini series led to its return the following year as an on-going series with McFarlane being joined by a new doctor, Chris Randall, played by Liz Burch. McFarlane left during the first season and actor Robert Grubb came in as new doctor Geoff Standish.\n\nThe series' episodes were mostly self-contained but also featured ongoing storylines, such as Dr. Standish's romance with Sister Kate Wellings. Other major characters included pilot Sam Patterson, mechanic Emma Plimpton, local policeman Sgt. Jack Carruthers and Vic and Nancy Buckley, who ran the local pub/hotel, The Majestic. Andrew McFarlane also later returned to the series, resuming his role as Dr. Callaghan. The popular series ran for nine seasons and was successfully screened internationally.",
+            "popularity": 196.909,
+            "poster_path": "/Aj4xa7lo9RwTV6DpZ3Pcjgp26Ht.jpg",
+            "first_air_date": "1986-05-15",
+            "name": "The Flying Doctors",
+            "vote_average": 6.5,
+            "vote_count": 13
+        }
+    ],
+    "total_pages": 32,
+    "total_results": 638
+}

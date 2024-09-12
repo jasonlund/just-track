@@ -13,12 +13,12 @@
         @if(count($results))
             <ul>
                 @foreach($results as $result)
-                    <li wire:key="{{ $result['tvdb_id'] }}">
-                        <a href="{{ route('show.show', $result['tvdb_id'] ) }}" wire:navigate>
-                            {{ $result['name'] }} @if($result['year'] !== null) ({{ $result['year'] }}) @endif
+                    <li wire:key="{{ $result['id'] }}">
+                        <a href="{{ route('show.show', $result['id'] ) }}" wire:navigate>
+                            {{ $result['name'] }} @if($result['first_air_date'] !== null) ({{ $result['first_air_date'] }}) @endif
                         </a>
 
-                        <a href="{{ route('show.show', [$result['tvdb_id'], 'attach'] ) }}" wire:navigate>
+                        <a href="{{ route('show.show', [$result['id'], 'attach'] ) }}" wire:navigate>
                             Add
                         </a>
                     </li>

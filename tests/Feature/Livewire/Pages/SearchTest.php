@@ -19,9 +19,9 @@ it("is able to return search results", function() {
 
     Livewire::withQueryParams(['query' => 'Doc'])
         ->test(Search::class)
-        ->assertSee('Doctor Who (2005)')
-        ->assertSeeHtml('<a href="' . route('show.show', ['78804']) . '" wire:navigate>')
-        ->assertSeeHtml('<a href="' . route('show.show', ['78804', 'attach']) . '" wire:navigate>')
+        ->assertSee('Doctor Who')
+        ->assertSeeHtml('<a href="' . route('show.show', ['57243']) . '" wire:navigate>')
+        ->assertSeeHtml('<a href="' . route('show.show', ['57243', 'attach']) . '" wire:navigate>')
         ->assertViewHas('results', function ($results) {
             return count($results) == 20;
         });
@@ -34,22 +34,22 @@ it("should cache results", function() {
     asUser();
 
     // Act & Assert
-    expect(Cache::has('tvdb-search-Doc'))
+    expect(Cache::has('tmdb-search-Doc'))
         ->toBeFalse();
 
     get(route('search', ['query' => 'Doc']));
 
-    expect(Cache::has('tvdb-search-Doc'))
+    expect(Cache::has('tmdb-search-Doc'))
         ->toBeTrue();
 
     Carbon::setTestNow('2024-09-07 02:59:00');
 
-    expect(Cache::has('tvdb-search-Doc'))
+    expect(Cache::has('tmdb-search-Doc'))
         ->toBeTrue();
 
     Carbon::setTestNow('2024-09-07 03:01:00');
 
-    expect(Cache::has('tvdb-search-Doc'))
+    expect(Cache::has('tmdb-search-Doc'))
         ->toBeFalse();
 });
 

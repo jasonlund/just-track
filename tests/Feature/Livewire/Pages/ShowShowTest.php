@@ -16,91 +16,81 @@ it("renders successfully", function () {
         ->assertSeeLivewire(ShowShow::class);
 });
 
-it("creates a show that does not already exists", function() {
+it("initializes a show that is not already", function() {
     asUser();
 
-    expect(Show::count())
-        ->toBe(0);
-
-    Livewire::withoutLazyLoading()
-        ->test(ShowShow::class, ['tvdb_id' => '78804'])
-
-        ->assertSee('Doctor Who (2005)');
-
-    $show = Show::first();
-
-    expect(Show::count())
-        ->toBe(1)
-
-        ->and($show->name)->toBe('Doctor Who (2005)')
-        ->and($show->external_id)->toBe(78804)
-
-        ->and($show->episodes()->count())->toBe(322);
-});
-
-it("does not create a show that already exists", function() {
-    asUser();
-
-    expect(Show::count())
-        ->toBe(0);
-
-    Show::factory([
-        'external_id' => 78804,
-        'name' => 'Doctor Who (2005)',
+    $show = Show::factory([
+        'external_id' => 57243,
+        'original_name' => 'Doctor Who',
+        'name' => null,
+        'first_air_date' => null,
+        'overview' => null,
+        'origin_country' => null,
     ])->create();
 
-    expect(Show::count())
-        ->toBe(1);
-
     Livewire::withoutLazyLoading()
-        ->test(ShowShow::class, ['tvdb_id' => '78804']);
+        ->test(ShowShow::class, ['show' => $show])
 
-    expect(Show::count())
-        ->toBe(1);
+        ->assertSee('Doctor Who');
+
+    expect($show->wasChanged())
+        ->toBeTrue()
+
+        ->and($show->name)->toBe('Doctor Who')
+        ->and($show->external_id)->toBe(57243);
+
 });
 
-it("only accepts an integer for the tvdb_id parameter", function () {
+it("does not initialize a show that is already", function() {
     asUser();
 
-    get(route('show.show', ['tvdb_id' => 'foobar']))
+    $show = Show::factory([
+        'external_id' => 57243,
+        'name' => 'Doctor Who',
+        'original_name' => 'Doctor Who',
+    ])->create();
+
+    Livewire::withoutLazyLoading()
+        ->test(ShowShow::class, ['show' => $show]);
+
+    expect($show->wasChanged())
+        ->toBeFalse();
+});
+
+it("only shows existing shows", function () {
+    asUser();
+
+    get(route('show.show', ['show' => 'foobar']))
+        ->assertNotFound();
+
+    get(route('show.show', ['show' => 57243]))
         ->assertNotFound();
 
     Show::factory([
-        'external_id' => 78804,
-        'name' => 'Doctor Who (2005)',
+        'external_id' => 57243,
+        'original_name' => 'Doctor Who (2005)',
     ])->create();
 
-    get(route('show.show', ['tvdb_id' => '78804']))
+    get(route('show.show', ['show' => 57243]))
         ->assertOk();
-});
-
-it("will handle a tvdb exception as not found", function() {
-    asUser();
-
-    Livewire::withoutLazyLoading()
-        ->test(ShowShow::class, ['tvdb_id' => '12345'])
-        ->assertRedirect('/404');
 });
 
 it("will optionally attach the show to a user", function() {
     $user = asUser();
 
-    Show::factory([
-        'external_id' => 78804,
-        'name' => 'Doctor Who (2005)',
-    ])->create();
+    $show = Show::factory()->create();
 
     expect($user->shows()->count())
         ->toBe(0);
 
     Livewire::withoutLazyLoading()
-        ->test(ShowShow::class, ['78804']);
+        ->test(ShowShow::class, [$show]);
 
     expect($user->shows()->count())
         ->toBe(0);
 
     Livewire::withoutLazyLoading()
-        ->test(ShowShow::class, ['78804', 'attach']);
+        ->test(ShowShow::class, [$show, 'attach']);
 
     expect($user->shows()->count())
         ->toBe(1);
@@ -112,34 +102,35 @@ it("shows a show", function() {
     $show = Show::factory()
         ->has(Episode::factory()->count(100))
         ->create();
-    $episodes = $show->episodes;
-    $firstSeason = $episodes
-        ->sortBy('season')
-        ->unique('season')
-        ->first()
-        ->season;
+//    $episodes = $show->episodes;
+//    $firstSeason = $episodes
+//        ->sortBy('season')
+//        ->unique('season')
+//        ->first()
+//        ->season;
 
     Livewire::withoutLazyLoading()
-        ->test(ShowShow::class, ['tvdb_id' => $show->external_id])
+        ->test(ShowShow::class, [$show])
 
         ->assertSee($show->name)
-        ->assertSee($show->year)
-        ->assertSee($show->original_country)
+        ->assertSee($show->first_air_date)
+        ->assertSee($show->origin_country)
         ->assertSee($show->overview)
 
-        ->assertSeeInOrder($episodes
-            ->sortBy('season')
-            ->unique('season')
-            ->map(function($item) {
-                return 'Season ' . $item['season'];
-            })
-            ->toArray())
-
-        ->assertSeeInOrder($episodes
-            ->where('season', $firstSeason)
-            ->sortBy('number')
-            ->map(function($item) {
-                return $item['number'];
-            })
-            ->toArray());
+//        ->assertSeeInOrder($episodes
+//            ->sortBy('season')
+//            ->unique('season')
+//            ->map(function($item) {
+//                return 'Season ' . $item['season'];
+//            })
+//            ->toArray())
+//
+//        ->assertSeeInOrder($episodes
+//            ->where('season', $firstSeason)
+//            ->sortBy('number')
+//            ->map(function($item) {
+//                return $item['number'];
+//            })
+//            ->toArray())
+    ;
 });

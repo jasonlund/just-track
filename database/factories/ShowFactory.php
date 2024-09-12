@@ -20,9 +20,10 @@ class ShowFactory extends Factory
         return [
             'external_id' => $this->faker->unique()->numberBetween(),
             'name' => Str::title($this->faker->words(rand(3, 6), true)),
-            'year' => $this->faker->dateTimeBetween('-10 years')->format('Y'),
+            'original_name' => Str::title($this->faker->words(rand(3, 6), true)),
+            'first_air_date' => $this->faker->dateTimeBetween('-10 years')->format('Y-m-d'),
             'overview' => $this->faker->paragraph,
-            'original_country' => strtolower($this->faker->countryISOAlpha3),
+            'origin_country' => strtolower($this->faker->countryISOAlpha3),
         ];
     }
 }

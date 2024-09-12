@@ -12,8 +12,8 @@
 
     <ul>
         <li>{{ $show['name'] }}</li>
-        <li>{{ $show['year'] }}</li>
-        <li>{{ $show['original_country'] }}</li>
+        <li>{{ $show['first_air_date'] }}</li>
+        <li>{{ $show['origin_country'] }}</li>
         <li>{{ $show['overview'] }}</li>
     </ul>
 

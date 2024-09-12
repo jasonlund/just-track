@@ -4,7 +4,7 @@ namespace App\Livewire\Pages;
 
 use App\Models\Episode;
 use App\Models\Show;
-use App\Services\TVDBService;
+use App\Services\TMDBService;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
@@ -21,7 +21,7 @@ class Search extends Component
 
     private $service;
 
-    public function boot(TVDBService $service)
+    public function boot(TMDBService $service)
     {
         $this->service = $service;
     }
@@ -31,23 +31,23 @@ class Search extends Component
         $results = [];
 
         // Check our cache for a response.
-        // Since we're calling the TVDB API live, we do this so we don't hammer the API.
+        // Since we're calling the TMDB API live, we do this so we don't hammer the API.
         if($this->query !== '') {
-            $results = Cache::remember('tvdb-search-' . $this->query, now()->addHours(3), function () {
+            $results = Cache::remember('tmdb-search-' . $this->query, now()->addHours(3), function () {
                 return $this->service->search($this->query);
             });
         }
 
         return view('livewire.pages.search')->with([
             'results' =>  Arr::map($results, function($i) {
-                return array_merge([        // year and thumbnail may not be set, but we want null values.
-                    'year'      => null,
-                    'thumbnail' => null,
+                return array_merge([
+                    'first_air_date'      => null,
+                    'poster_path' => null,
                 ], Arr::only($i, [
-                    'tvdb_id',
+                    'id',
                     'name',
-                    'year',
-                    'thumbnail',
+                    'first_air_date',
+                    'poster_path',
                 ]));
             })
         ]);

@@ -14,6 +14,7 @@ abstract class TestCase extends BaseTestCase
         Http::preventStrayRequests();
 
         Http::fake([
+            // TVDB
             'https://api4.thetvdb.com/v4/login' =>
                 Http::response(json_encode([
                     'data' => [
@@ -32,6 +33,19 @@ abstract class TestCase extends BaseTestCase
                 Http::response(json_encode([
                     'data' => []
                 ]), 404),
+
+            // TMDB
+            'https://api.themoviedb.org/3/search/tv?query=Doc' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/search-doc.json'))),
+            'https://api.themoviedb.org/3/search/tv?query=foobar' =>
+                Http::response(json_encode([
+                    "page" => 1,
+                    "results" => [],
+                    "total_pages" => 1,
+                    "total_results" => 0,
+                ])),
+            'https://api.themoviedb.org/3/tv/57243' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243.json'))),
         ]);
     }
 }

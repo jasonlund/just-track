@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
 
             $table->unsignedBigInteger('external_id');
-            $table->string('name');
-            $table->year('year');
-            $table->text('overview');
-            $table->char('original_country', 3);
+            $table->string('name')->nullable();
+            $table->string('original_name');
+            $table->date('first_air_date')->nullable();
+            $table->text('overview')->nullable();
+            $table->char('origin_country', 2)->nullable();
 
             $table->timestamps();
 
