@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Pages;
 
-use App\Models\Episode;
+use App\Models\Season;
 use App\Models\Show;
 use App\Services\TMDBService;
 use Illuminate\Support\Arr;
@@ -13,7 +13,6 @@ use Livewire\Component;
 class ShowShow extends Component
 {
     public Show $show;
-    public $episodes;
 
     private $service;
 
@@ -25,26 +24,27 @@ class ShowShow extends Component
     public function mount(Show $show, $attach = false)
     {
         if(! $show->init) {
-            $data = $this->service->show($show->external_id);;
+            $data = $this->service->show($show->external_id);
+
             DB::transaction(function() use(&$show, $data) {
                 $show->update([
                     'name' => $data['name'],
+                    'status' => strtolower($data['status']),
                     'first_air_date' => $data['first_air_date'],
                     'overview' => $data['overview'],
                     'origin_country' =>  Arr::get($data['origin_country'], 0)
                 ]);
 
-//                    Episode::insert(collect($data['episodes'])->map(fn ($episode) => [
-//                        'show_id' => $episode['seriesId'],
-//                        'external_id' => $episode['id'],
-//                        'number' => $episode['number'],
-//                        'absolute_number' => $episode['absoluteNumber'],
-//                        'season' => $episode['seasonNumber'],
-//                        'name' => $episode['name'],
-//                        'aired' => $episode['aired'],
-//                        'runtime' => $episode['runtime'],
-//                        'overview' => $episode['overview'],
-//                    ])->toArray());
+//                dd($data['seasons']);
+
+                Season::insert(collect($data['seasons'])->map(fn ($season)  => [
+                    'show_id' => $show->id,
+                    'external_id' => $season['id'],
+                    'number' => $season['id'],
+                    'air_date' => $season['air_date'],
+                    'name' => $season['name'] === '' ? null : $season['name'],
+                    'overview' => $season['overview'] === '' ? null : $season['overview'],
+                ])->toArray());
             });
         }
 

@@ -19,7 +19,7 @@
                 </tbody>
             </table>
         @else
-            foobar
+            no shows!
         @endif
     </p>
 </div>

@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Season;
 use App\Models\Show;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -13,17 +12,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('episodes', function (Blueprint $table) {
+        Schema::create('seasons', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignIdFor(Season::class);
+            $table->foreignIdFor(Show::class);
 
             $table->unsignedBigInteger('external_id');
             $table->unsignedInteger('number');
-            $table->unsignedInteger('absolute_number');
+            $table->date('air_date')->nullable();
             $table->string('name')->nullable();
-            $table->date('aired')->nullable();
-            $table->unsignedInteger('runtime')->nullable();
             $table->text('overview')->nullable();
 
             $table->timestamps();
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('episodes');
+        Schema::dropIfExists('seasons');
     }
 };

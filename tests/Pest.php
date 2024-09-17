@@ -11,7 +11,9 @@
 |
 */
 
+use App\Models\Show;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\withoutExceptionHandling;
@@ -49,6 +51,18 @@ function asUser(User $user = null): User
     actingAs($user);
 
     return $user;
+}
+
+function uninitDoctorWhoShowFactory() : Factory
+{
+    return Show::factory([
+        'external_id' => 57243,
+        'original_name' => 'Doctor Who',
+        'name' => null,
+        'first_air_date' => null,
+        'overview' => null,
+        'origin_country' => null,
+    ]);
 }
 
 

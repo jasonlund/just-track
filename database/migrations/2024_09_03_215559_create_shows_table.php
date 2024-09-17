@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('external_id');
             $table->string('name')->nullable();
             $table->string('original_name');
+            $table->string('status')->nullable();
             $table->date('first_air_date')->nullable();
             $table->text('overview')->nullable();
             $table->char('origin_country', 2)->nullable();

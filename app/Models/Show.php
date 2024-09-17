@@ -11,7 +11,9 @@ class Show extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['external_id', 'name', 'original_name', 'first_air_date', 'overview', 'origin_country'];
+    protected $fillable = [
+        'external_id', 'name', 'original_name', 'status', 'first_air_date', 'overview', 'origin_country'
+    ];
 
     /**
      * Get the route key for the model.
@@ -19,6 +21,14 @@ class Show extends Model
     public function getRouteKeyName(): string
     {
         return 'external_id';
+    }
+
+    /**
+     * Get the seasons for the show.
+     */
+    public function seasons(): HasMany
+    {
+        return $this->hasMany(Season::class);
     }
 
     /**

@@ -19,14 +19,7 @@ it("renders successfully", function () {
 it("initializes a show that is not already", function() {
     asUser();
 
-    $show = Show::factory([
-        'external_id' => 57243,
-        'original_name' => 'Doctor Who',
-        'name' => null,
-        'first_air_date' => null,
-        'overview' => null,
-        'origin_country' => null,
-    ])->create();
+    $show = uninitDoctorWhoShowFactory()->create();
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
@@ -37,7 +30,10 @@ it("initializes a show that is not already", function() {
         ->toBeTrue()
 
         ->and($show->name)->toBe('Doctor Who')
-        ->and($show->external_id)->toBe(57243);
+        ->and($show->external_id)->toBe(57243)
+
+        ->and($show->seasons()->count())->toBe(14)
+        ->and($show->seasons()->first()->name)->toBe("Specials");
 
 });
 
@@ -100,7 +96,7 @@ it("shows a show", function() {
     asUser();
 
     $show = Show::factory()
-        ->has(Episode::factory()->count(100))
+//        ->has(Episode::factory()->count(100))
         ->create();
 //    $episodes = $show->episodes;
 //    $firstSeason = $episodes

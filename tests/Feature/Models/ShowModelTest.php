@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Season;
 use App\Models\Show;
 use App\Models\Episode;
 use Illuminate\Database\Eloquent\Collection;
@@ -7,18 +8,33 @@ use Illuminate\Database\Eloquent\Collection;
 uses()
     ->group('models');
 
-it("has many episodes", function() {
+it("has many seasons", function() {
     // Arrange
     $show = Show::factory()
-        ->has(Episode::factory()->count(3))
+        ->has(Season::factory()->count(3))
         ->create();
 
     // Act & Assert
-    expect($show->episodes)
+    expect($show->seasons)
         ->toBeInstanceOf(Collection::class)
-        ->first()->toBeInstanceOf(Episode::class)
+        ->first()->toBeInstanceOf(Season::class)
 
-        ->and($show->episodes->count())
+        ->and($show->seasons->count())
         ->toBe(3);
-
 });
+
+it("has many episodes", function() {
+//    // Arrange
+//    $show = Show::factory()
+//        ->has(Episode::factory()->count(3))
+//        ->create();
+//
+//    // Act & Assert
+//    expect($show->episodes)
+//        ->toBeInstanceOf(Collection::class)
+//        ->first()->toBeInstanceOf(Episode::class)
+//
+//        ->and($show->episodes->count())
+//        ->toBe(3);
+
+})->todo();
