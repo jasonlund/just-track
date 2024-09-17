@@ -5,6 +5,7 @@ namespace App\Console\Commands\TMDB;
 use App\Models\Show;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
 
@@ -24,7 +25,9 @@ class UpdateIDs extends Command
      *
      * @var string
      */
-    protected $signature = 'tmdb:update-ids {--date= : The date to export in the format m-d-Y. If undefined, then today.}';
+    protected $signature = 'tmdb:update-ids
+        {--date= : The date to export in the format m-d-Y. If undefined, then today. }
+        {--dry-run : Do not actually process the file. Used for testing. }';
 
     /**
      * The console command description.
@@ -57,32 +60,43 @@ class UpdateIDs extends Command
             }
         }
 
-        // TODO -- test coverage for ingestion.
-        if(app()->runningUnitTests()) {
+        if($this->option('dry-run')) {
             return 0;
         }
 
         $formattedDate = str_replace('-', '_', $today->format($this->dateFormat));
-        $filePath = 'temp/tmdb/series-' . $formattedDate . '.json';
+        $relativeFilePath = 'temp/tmdb/series-' . $formattedDate . '.json';
         Storage::put(
-            $filePath,
-            gzdecode(file_get_contents(str_replace('{date}', $formattedDate, $this->url)))
+            $relativeFilePath,
+            gzdecode(Http::get(str_replace('{date}', $formattedDate, $this->url))->body())
         );
 
-        $filePath = storage_path('app/' . $filePath);
+        $filePath = storage_path('app/' . $relativeFilePath);
         $count = intval(exec("wc -l '$filePath'"));
 
         $bar = $this->output->createProgressBar($count);
 
         $bar->start();
+        $recordCount = 0;
+
+        $latestRecord = Show::latest('external_id')->first()->external_id ?? null;
 
         $handle = fopen(storage_path('app/temp/tmdb/series-' . $formattedDate . '.json'), "r");
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
+                if($line === '') break;
+
                 $data = json_decode($line, 1);
+
+                if($latestRecord !== null && $data['id'] <= $latestRecord) continue;
+
                 Show::updateOrCreate(
                     ['external_id' => $data['id']],
-                    ['original_name' => $data['original_name']]);
+                    ['original_name' => $data['original_name']]
+                );
+
+                $recordCount++;
+
                 $bar->advance();
             }
 
@@ -91,6 +105,9 @@ class UpdateIDs extends Command
 
         $bar->finish();
 
-        Storage::delete($filePath);
+        $this->newLine();
+        $this->info("Created {$recordCount} shows.");
+
+        Storage::delete($relativeFilePath);
     }
 }

@@ -35,8 +35,6 @@ class ShowShow extends Component
                     'origin_country' =>  Arr::get($data['origin_country'], 0)
                 ]);
 
-//                dd($data['seasons']);
-
                 Season::insert(collect($data['seasons'])->map(fn ($season)  => [
                     'show_id' => $show->id,
                     'external_id' => $season['id'],

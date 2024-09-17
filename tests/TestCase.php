@@ -46,6 +46,11 @@ abstract class TestCase extends BaseTestCase
                 ])),
             'https://api.themoviedb.org/3/tv/57243' =>
                 Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243.json'))),
+
+            'http://files.tmdb.org/p/exports/tv_series_ids_09_16_2024.json.gz' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv_series_ids_09_16_2024.json.gz'))),
+            'http://files.tmdb.org/p/exports/tv_series_ids_09_17_2024.json.gz' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv_series_ids_09_17_2024.json.gz')))
         ]);
     }
 }
