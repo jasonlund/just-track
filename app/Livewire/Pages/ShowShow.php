@@ -23,6 +23,7 @@ class ShowShow extends Component
 
     public function mount(Show $show, $attach = false)
     {
+        // If we haven't initialized the show yet, do so first.
         if(! $show->init) {
             $data = $this->service->show($show->external_id);
 
@@ -35,14 +36,16 @@ class ShowShow extends Component
                     'origin_country' =>  Arr::get($data['origin_country'], 0)
                 ]);
 
-                Season::insert(collect($data['seasons'])->map(fn ($season)  => [
-                    'show_id' => $show->id,
-                    'external_id' => $season['id'],
-                    'number' => $season['id'],
-                    'air_date' => $season['air_date'],
-                    'name' => $season['name'] === '' ? null : $season['name'],
-                    'overview' => $season['overview'] === '' ? null : $season['overview'],
-                ])->toArray());
+                foreach ($data['seasons'] as $season) {
+                    Season::create([
+                        'show_id' => $show->id,
+                        'external_id' => $season['id'],
+                        'number' => $season['season_number'],
+                        'air_date' => $season['air_date'],
+                        'name' => $season['name'] === '' ? null : $season['name'],
+                        'overview' => $season['overview'] === '' ? null : $season['overview'],
+                    ]);
+                }
             });
         }
 

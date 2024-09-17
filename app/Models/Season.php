@@ -9,5 +9,5 @@ class Season extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['external_id', 'number', 'air_date', 'name', 'overview'];
+    protected $fillable = ['external_id', 'show_id', 'number', 'air_date', 'name', 'overview'];
 }

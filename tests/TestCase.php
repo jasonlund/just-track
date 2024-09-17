@@ -44,8 +44,37 @@ abstract class TestCase extends BaseTestCase
                     "total_pages" => 1,
                     "total_results" => 0,
                 ])),
+
             'https://api.themoviedb.org/3/tv/57243' =>
                 Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/0' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-0.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/1' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-1.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/2' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-2.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/3' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-3.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/4' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-4.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/5' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-5.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/6' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-6.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/7' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-7.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/8' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-8.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/9' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-9.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/10' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-10.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/11' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-11.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/12' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-12.json'))),
+            'https://api.themoviedb.org/3/tv/57243/season/13' =>
+                Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv-57243-season-13.json'))),
 
             'http://files.tmdb.org/p/exports/tv_series_ids_09_16_2024.json.gz' =>
                 Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv_series_ids_09_16_2024.json.gz'))),

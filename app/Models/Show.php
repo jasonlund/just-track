@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class Show extends Model
 {
@@ -34,9 +35,9 @@ class Show extends Model
     /**
      * Get the episodes for the show.
      */
-    public function episodes(): HasMany
+    public function episodes(): HasManyThrough
     {
-        return $this->hasMany(Episode::class, 'show_id', 'external_id');
+        return $this->hasManyThrough(Episode::class, Season::class);
     }
 
     protected function init(): Attribute

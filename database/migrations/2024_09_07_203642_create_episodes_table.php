@@ -20,9 +20,9 @@ return new class extends Migration
 
             $table->unsignedBigInteger('external_id');
             $table->unsignedInteger('number');
-            $table->unsignedInteger('absolute_number');
+            $table->string('production_code')->nullable();
             $table->string('name')->nullable();
-            $table->date('aired')->nullable();
+            $table->date('air_date')->nullable();
             $table->unsignedInteger('runtime')->nullable();
             $table->text('overview')->nullable();
 
