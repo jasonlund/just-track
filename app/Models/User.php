@@ -46,11 +46,22 @@ class User extends Authenticatable
         ];
     }
 
+    protected $with = ['shows', 'episodes'];
+
     /**
      * The shows that belong to the user.
      */
     public function shows(): BelongsToMany
     {
         return $this->belongsToMany(Show::class);
+    }
+
+    /**
+     * The shows that belong to the user (ie. they have watched).
+     */
+    public function episodes(): BelongsToMany
+    {
+        return $this->belongsToMany(Episode::class)
+            ->withPivot('created_at');
     }
 }

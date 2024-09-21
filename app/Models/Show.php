@@ -40,6 +40,13 @@ class Show extends Model
         return $this->hasManyThrough(Episode::class, Season::class);
     }
 
+    protected function attached (): Attribute
+    {
+        return Attribute::make(
+            get: fn () => auth()->user()->shows->find($this->id) !== null,
+        );
+    }
+
     protected function init(): Attribute
     {
         return Attribute::make(

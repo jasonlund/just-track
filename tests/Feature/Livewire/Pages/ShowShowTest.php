@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Components\Show\EpisodeList;
 use App\Livewire\Pages\ShowShow;
 use App\Models\Episode;
 use App\Models\Show;
@@ -14,6 +15,10 @@ it("renders successfully", function () {
     get(route('show.show', [$show->external_id]))
         ->assertOk()
         ->assertSeeLivewire(ShowShow::class);
+
+    Livewire::withoutLazyLoading()
+        ->test(ShowShow::class, ['show' => $show])
+        ->assertContainsLivewireComponent(EpisodeList::class);
 });
 
 it("initializes a show that is not already", function() {

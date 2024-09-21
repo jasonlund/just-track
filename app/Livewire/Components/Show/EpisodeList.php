@@ -5,6 +5,7 @@ namespace App\Livewire\Components\Show;
 use App\Models\Episode;
 use App\Models\Show;
 use App\Services\TMDBService;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Computed;
@@ -36,6 +37,7 @@ class EpisodeList extends Component
                 foreach($data as $key => $episodes) {
                     foreach($episodes['episodes'] as $episode) {
                         Episode::create([
+                            'show_id' => $show->id,
                             'season_id' => $key,
                             'external_id' => $episode['id'],
                             'number' => $episode['episode_number'],
@@ -53,15 +55,42 @@ class EpisodeList extends Component
         $this->show = $show;
     }
 
+    public function placeholder()
+    {
+        return <<<'HTML'
+        <div>
+            Loading...
+        </div>
+        HTML;
+    }
+
     #[Computed]
     public function episodes()
     {
-        return $this->show->episodes()
-            ->with('season')
+        return Episode::with('season')
+            ->where('show_id', $this->show->id)
             ->get()
             ->sortBy('number')
             ->groupBy('season.number')
             ->sortBy(fn ($i) => $i->first()->seasonNumber)
             ->sortByDesc(fn ($i) => $i->first()->seasonNumber !== 0);       // Moves specials to the bottom
+    }
+
+    public function sync($episodeId)
+    {
+        $episode = Episode::find($episodeId);
+
+        $this->authorize('attachUser', $episode);
+
+        if($episode->attached) {
+            auth()->user()->episodes()->detach($episode);
+        }else{
+            auth()->user()->episodes()->attach($episode, [
+                'created_at' => now()
+            ]);
+        }
+
+        // Need to refresh the user's relationship for changes to display.
+        auth()->user()->load('episodes');
     }
 }

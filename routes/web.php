@@ -15,7 +15,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/shows/', Pages\ShowIndex::class)
         ->name('show.index');
 
-    Route::get('/shows/{show:external_id}/{attach?}', Pages\ShowShow::class)
+    Route::get('/shows/{show}/{attach?}', Pages\ShowShow::class)
         ->name('show.show')
         ->where('external_id', '[0-9]+')
         ->lazy();

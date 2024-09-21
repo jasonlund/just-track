@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('episodes', function (Blueprint $table) {
             $table->id();
 
+            $table->foreignIdFor(Show::class);
             $table->foreignIdFor(Season::class);
 
             $table->unsignedBigInteger('external_id');

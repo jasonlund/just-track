@@ -12,7 +12,7 @@ class Episode extends Model
     use HasFactory;
 
     protected $fillable = [
-        'external_id', 'season_id', 'number', 'production_code', 'name', 'air_date', 'runtime', 'overview'
+        'external_id', 'show_id', 'season_id', 'number', 'production_code', 'name', 'air_date', 'runtime', 'overview'
     ];
 
     public function season()
@@ -24,6 +24,13 @@ class Episode extends Model
     {
         return Attribute::make(
             get: fn () => $this->season->number,
+        );
+    }
+
+    protected function attached (): Attribute
+    {
+        return Attribute::make(
+            get: fn () => auth()->user()->episodes->find($this->id) !== null,
         );
     }
 }

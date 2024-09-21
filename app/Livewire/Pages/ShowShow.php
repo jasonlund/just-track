@@ -53,7 +53,7 @@ class ShowShow extends Component
         if($attach !== false) {
             Auth::user()->shows()->syncWithoutDetaching([$show->id]);
             // Clear our parameter
-            $this->redirectIntended(route('show.show', $show));
+            $this->redirectIntended(route('show.show', $show), navigate: true);
         }
 
         $this->show = $show;
