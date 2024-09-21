@@ -36,11 +36,11 @@ return [
     ],
 
     'tvdb' => [
-        'api_key' => env('TVDB_API_KEY')
+        'api_key' => env('TVDB_API_KEY'),
     ],
 
     'tmdb' => [
-        'token' => env('TMDB_API_TOKEN')
-    ]
+        'token' => env('TMDB_API_TOKEN'),
+    ],
 
 ];

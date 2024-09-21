@@ -1,12 +1,12 @@
 <?php
 
-use App\Models\Season;
 use App\Models\Episode;
+use App\Models\Season;
 
 uses()
     ->group('models');
 
-it("belongs to a season", function() {
+it('belongs to a season', function () {
     // Arrange
     $season = Season::factory()
         ->create();

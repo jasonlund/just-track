@@ -2,17 +2,16 @@
 
 use App\Models\Show;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
 uses()->group('Feature');
 
-it("has a console command", function() {
+it('has a console command', function () {
     $this->artisan('tmdb:update-ids --dry-run')
         ->assertSuccessful();
 });
 
-it("will only run after 8 AM UTC today", function () {
+it('will only run after 8 AM UTC today', function () {
     Carbon::setTestNow('2024-09-12 02:00:00');
 
     $this->artisan('tmdb:update-ids --dry-run')
@@ -24,21 +23,21 @@ it("will only run after 8 AM UTC today", function () {
         ->assertSuccessful();
 });
 
-it("it won't run in the future", function() {
+it("it won't run in the future", function () {
     Carbon::setTestNow('2024-09-12 02:00:00');
 
     $this->artisan('tmdb:update-ids --date="09-13-2024" --dry-run')
         ->assertFailed();
 });
 
-it("it won't run for dates 3 months or more in the past", function() {
+it("it won't run for dates 3 months or more in the past", function () {
     Carbon::setTestNow('2024-09-12 02:00:00');
 
     $this->artisan('tmdb:update-ids --date="06-11-2024" --dry-run')
         ->assertFailed();
 });
 
-it("will process an entire file", function() {
+it('will process an entire file', function () {
     Carbon::setTestNow('2024-09-16 09:00:00');
 
     $this->artisan('tmdb:update-ids')
@@ -50,7 +49,7 @@ it("will process an entire file", function() {
         ->toBe(1000);
 });
 
-it("will process a partial file if shows already exist", function() {
+it('will process a partial file if shows already exist', function () {
     Carbon::setTestNow('2024-09-16 09:00:00');
 
     $this->artisan('tmdb:update-ids');

@@ -3,9 +3,10 @@
 use App\Livewire\Pages\ShowIndex as Page;
 use App\Models\Show;
 use Livewire\Livewire;
+
 use function Pest\Laravel\get;
 
-it("renders successfully", function () {
+it('renders successfully', function () {
     asUser();
 
     get(route('show.index'))
@@ -13,7 +14,7 @@ it("renders successfully", function () {
         ->assertSeeLivewire(Page::class);
 });
 
-it("shows the index of shows", function () {
+it('shows the index of shows', function () {
     // Arrange
 
     $shows = Show::factory()
@@ -37,7 +38,7 @@ it("shows the index of shows", function () {
         ->assertSee($shows[2]['year']);
 });
 
-it("only shows shows the user is subscribed to", function() {
+it('only shows shows the user is subscribed to', function () {
     // Arrange
 
     $shows = Show::factory()
@@ -56,7 +57,7 @@ it("only shows shows the user is subscribed to", function() {
         ->assertDontSee($shows[2]['name']);
 });
 
-it("links to each show", function() {
+it('links to each show', function () {
     // Arrange
 
     $shows = Show::factory()
@@ -70,8 +71,8 @@ it("links to each show", function() {
     // Act & Assert
 
     Livewire::test(Page::class)
-        ->assertSeeHtml('<a href="' . route('show.show', $shows->first()) . '" wire:navigate>');
+        ->assertSeeHtml('<a href="'.route('show.show', $shows->first()).'" wire:navigate>');
 });
 
-it("orders shows")
+it('orders shows')
     ->todo();

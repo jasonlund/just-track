@@ -14,7 +14,7 @@ class Register extends Component
 {
     public RegisterForm $form;
 
-    public function register() : void
+    public function register(): void
     {
         $this->validate();
 

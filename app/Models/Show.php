@@ -13,7 +13,7 @@ class Show extends Model
     use HasFactory;
 
     protected $fillable = [
-        'external_id', 'name', 'original_name', 'status', 'first_air_date', 'overview', 'origin_country'
+        'external_id', 'name', 'original_name', 'status', 'first_air_date', 'overview', 'origin_country',
     ];
 
     /**
@@ -40,7 +40,7 @@ class Show extends Model
         return $this->hasManyThrough(Episode::class, Season::class);
     }
 
-    protected function attached (): Attribute
+    protected function attached(): Attribute
     {
         return Attribute::make(
             get: fn () => auth()->user()->shows->find($this->id) !== null,

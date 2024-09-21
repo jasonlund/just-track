@@ -5,12 +5,10 @@ namespace App\Livewire\Components\Show;
 use App\Models\Episode;
 use App\Models\Show;
 use App\Services\TMDBService;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Computed;
-use Livewire\Component;
 use Livewire\Attributes\Lazy;
+use Livewire\Component;
 
 #[Lazy]
 class EpisodeList extends Component
@@ -27,15 +25,15 @@ class EpisodeList extends Component
     public function mount(Show $show)
     {
         // If we haven't initialized the show's episodes yet, do so first.
-        if($show->episodes()->count() === 0) {
+        if ($show->episodes()->count() === 0) {
             $data = $this->service->episodesBySeason(
                 $show->external_id,
                 $show->seasons->mapWithKeys(fn ($i) => [$i['id'] => $i['number']])
             );
 
-            DB::transaction(function() use(&$show, $data) {
-                foreach($data as $key => $episodes) {
-                    foreach($episodes['episodes'] as $episode) {
+            DB::transaction(function () use (&$show, $data) {
+                foreach ($data as $key => $episodes) {
+                    foreach ($episodes['episodes'] as $episode) {
                         Episode::create([
                             'show_id' => $show->id,
                             'season_id' => $key,
@@ -82,11 +80,11 @@ class EpisodeList extends Component
 
         $this->authorize('attachUser', $episode);
 
-        if($episode->attached) {
+        if ($episode->attached) {
             auth()->user()->episodes()->detach($episode);
-        }else{
+        } else {
             auth()->user()->episodes()->attach($episode, [
-                'created_at' => now()
+                'created_at' => now(),
             ]);
         }
 

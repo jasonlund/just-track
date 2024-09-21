@@ -25,16 +25,16 @@ class ShowShow extends Component
     public function mount(Show $show, $attach = false)
     {
         // If we haven't initialized the show yet, do so first.
-        if(! $show->init) {
+        if (! $show->init) {
             $data = $this->service->show($show->external_id);
 
-            DB::transaction(function() use(&$show, $data) {
+            DB::transaction(function () use (&$show, $data) {
                 $show->update([
                     'name' => $data['name'],
                     'status' => strtolower($data['status']),
                     'first_air_date' => $data['first_air_date'],
                     'overview' => $data['overview'],
-                    'origin_country' =>  Arr::get($data['origin_country'], 0)
+                    'origin_country' => Arr::get($data['origin_country'], 0),
                 ]);
 
                 foreach ($data['seasons'] as $season) {
@@ -50,7 +50,7 @@ class ShowShow extends Component
             });
         }
 
-        if($attach !== false) {
+        if ($attach !== false) {
             Auth::user()->shows()->syncWithoutDetaching([$show->id]);
             // Clear our parameter
             $this->redirectIntended(route('show.show', $show), navigate: true);

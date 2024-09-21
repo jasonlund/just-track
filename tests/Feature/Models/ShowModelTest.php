@@ -1,14 +1,14 @@
 <?php
 
+use App\Models\Episode;
 use App\Models\Season;
 use App\Models\Show;
-use App\Models\Episode;
 use Illuminate\Database\Eloquent\Collection;
 
 uses()
     ->group('models');
 
-it("has many seasons", function() {
+it('has many seasons', function () {
     // Arrange
     $show = Show::factory()
         ->has(Season::factory()->count(3))
@@ -23,7 +23,7 @@ it("has many seasons", function() {
         ->toBe(3);
 });
 
-it("has many episodes thru seasons", function() {
+it('has many episodes thru seasons', function () {
     // Arrange
     $show = Show::factory()->create();
     $season = Season::factory(['show_id' => $show->id])->create();

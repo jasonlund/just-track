@@ -2,12 +2,12 @@
 
 use App\Livewire\Components\Show\EpisodeList;
 use App\Livewire\Pages\ShowShow;
-use App\Models\Episode;
 use App\Models\Show;
 use Livewire\Livewire;
+
 use function Pest\Laravel\get;
 
-it("renders successfully", function () {
+it('renders successfully', function () {
     asUser();
 
     $show = Show::factory()->create();
@@ -21,7 +21,7 @@ it("renders successfully", function () {
         ->assertContainsLivewireComponent(EpisodeList::class);
 });
 
-it("initializes a show that is not already", function() {
+it('initializes a show that is not already', function () {
     asUser();
 
     $show = uninitDoctorWhoShowFactory()->create();
@@ -37,11 +37,11 @@ it("initializes a show that is not already", function() {
         ->and($show->external_id)->toBe(57243)
 
         ->and($show->seasons()->count())->toBe(14)
-        ->and($show->seasons()->first()->name)->toBe("Specials");
+        ->and($show->seasons()->first()->name)->toBe('Specials');
 
 });
 
-it("does not initialize a show that is already", function() {
+it('does not initialize a show that is already', function () {
     asUser();
 
     $show = Show::factory([
@@ -57,7 +57,7 @@ it("does not initialize a show that is already", function() {
         ->toBeFalse();
 });
 
-it("only shows existing shows", function () {
+it('only shows existing shows', function () {
     asUser();
 
     get(route('show.show', ['show' => 'foobar']))
@@ -75,7 +75,7 @@ it("only shows existing shows", function () {
         ->assertOk();
 });
 
-it("will optionally attach the show to a user", function() {
+it('will optionally attach the show to a user', function () {
     $user = asUser();
 
     $show = Show::factory()->create();
@@ -96,7 +96,7 @@ it("will optionally attach the show to a user", function() {
         ->toBe(1);
 });
 
-it("shows a show", function() {
+it('shows a show', function () {
     asUser();
 
     $show = Show::factory()

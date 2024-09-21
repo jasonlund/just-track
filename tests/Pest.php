@@ -15,6 +15,7 @@ use App\Models\Show;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
+
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\withoutExceptionHandling;
 
@@ -45,7 +46,7 @@ uses(
 |
 */
 
-function asUser(User $user = null): User
+function asUser(?User $user = null): User
 {
     $user = $user ?? User::factory()->create();
     actingAs($user);
@@ -53,7 +54,7 @@ function asUser(User $user = null): User
     return $user;
 }
 
-function uninitDoctorWhoShowFactory() : Factory
+function uninitDoctorWhoShowFactory(): Factory
 {
     return Show::factory([
         'external_id' => 57243,
@@ -64,7 +65,6 @@ function uninitDoctorWhoShowFactory() : Factory
         'origin_country' => null,
     ]);
 }
-
 
 function hcf(): void
 {

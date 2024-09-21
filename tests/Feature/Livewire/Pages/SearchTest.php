@@ -4,9 +4,10 @@ use App\Livewire\Pages\Search;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Livewire\Livewire;
+
 use function Pest\Laravel\get;
 
-it("renders successfully", function () {
+it('renders successfully', function () {
     asUser();
 
     get(route('search'))
@@ -14,20 +15,20 @@ it("renders successfully", function () {
         ->assertSeeLivewire(Search::class);
 });
 
-it("is able to return search results", function() {
+it('is able to return search results', function () {
     asUser();
 
     Livewire::withQueryParams(['query' => 'Doc'])
         ->test(Search::class)
         ->assertSee('Doctor Who')
-        ->assertSeeHtml('<a href="' . route('show.show', ['57243']) . '" wire:navigate>')
-        ->assertSeeHtml('<a href="' . route('show.show', ['57243', 'attach']) . '" wire:navigate>')
+        ->assertSeeHtml('<a href="'.route('show.show', ['57243']).'" wire:navigate>')
+        ->assertSeeHtml('<a href="'.route('show.show', ['57243', 'attach']).'" wire:navigate>')
         ->assertViewHas('results', function ($results) {
             return count($results) == 20;
         });
 });
 
-it("should cache results", function() {
+it('should cache results', function () {
     // Arrange
     Carbon::setTestNow('2024-09-07 00:00:00');
 
@@ -53,7 +54,7 @@ it("should cache results", function() {
         ->toBeFalse();
 });
 
-it("can return handle no query string", function () {
+it('can return handle no query string', function () {
     asUser();
 
     Livewire::withQueryParams(['query' => ''])
@@ -70,7 +71,7 @@ it("can return handle no query string", function () {
         });
 });
 
-it("can return no results", function() {
+it('can return no results', function () {
     asUser();
 
     Livewire::withQueryParams(['query' => 'foobar'])
@@ -81,7 +82,7 @@ it("can return no results", function() {
         });
 });
 
-it("can reset the search query and results", function() {
+it('can reset the search query and results', function () {
     asUser();
 
     Livewire::withQueryParams(['query' => 'Doc'])
@@ -96,4 +97,3 @@ it("can reset the search query and results", function() {
             return count($results) == 0;
         });
 });
-

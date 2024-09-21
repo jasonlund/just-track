@@ -3,26 +3,27 @@
 use App\Livewire\Pages\Auth\Login;
 use App\Models\User;
 use Livewire\Livewire;
+
 use function Pest\Laravel\get;
 
-it("renders successfully", function () {
+it('renders successfully', function () {
     get(route('login'))
         ->assertOk()
         ->assertSeeLivewire(Login::class);
 });
 
-it("uses the guest layout", function() {
+it('uses the guest layout', function () {
     get(route('login'))
         ->assertSeeHtml('<h1>Guest Layout!</h1>');
 });
 
-it("links to the registration page", function() {
+it('links to the registration page', function () {
     get(route('login'))
         ->assertSee('Register an Account')
         ->assertSee(route('register'));
 });
 
-it("can authenticate users", function () {
+it('can authenticate users', function () {
     $user = User::factory()->create();
 
     $component = Livewire::test(Login::class)
@@ -46,7 +47,7 @@ it("can authenticate users", function () {
     $this->assertAuthenticated();
 });
 
-it("can not authenticate invalid credentials", function () {
+it('can not authenticate invalid credentials', function () {
     $user = User::factory()->create();
 
     $component = Livewire::test(Login::class)

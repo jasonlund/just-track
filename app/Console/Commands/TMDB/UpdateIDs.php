@@ -5,9 +5,9 @@ namespace App\Console\Commands\TMDB;
 use App\Models\Show;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Http\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\File;
 
 class UpdateIDs extends Command
 {
@@ -50,28 +50,28 @@ class UpdateIDs extends Command
         // Do not allow if the date is today before 8 AM, in the future or before 3 months ago.
         //
         // @link https://developer.themoviedb.org/docs/daily-id-exports#availability
-        if($today->isToday() && now()->lt(now()->setTime(8, 0))) {
-            $this->fail('Cannot run command before 8 AM today, ' . now()->format($this->dateFormat) . '.');
-        }else if(! $today->isToday()) {
-            if($today->gt(now()->addDay()->startOfDay())) {
-                $this->fail('Cannot run command for dates after today, ' . now()->format($this->dateFormat) . '.');
-            }else if($today->lt(now()->subMonths(3)->startOfDay())) {
-                $this->fail('Cannot run command for dates before 3 months ago, ' . now()->subMonths(3)->format($this->dateFormat) . '.');
+        if ($today->isToday() && now()->lt(now()->setTime(8, 0))) {
+            $this->fail('Cannot run command before 8 AM today, '.now()->format($this->dateFormat).'.');
+        } elseif (! $today->isToday()) {
+            if ($today->gt(now()->addDay()->startOfDay())) {
+                $this->fail('Cannot run command for dates after today, '.now()->format($this->dateFormat).'.');
+            } elseif ($today->lt(now()->subMonths(3)->startOfDay())) {
+                $this->fail('Cannot run command for dates before 3 months ago, '.now()->subMonths(3)->format($this->dateFormat).'.');
             }
         }
 
-        if($this->option('dry-run')) {
+        if ($this->option('dry-run')) {
             return 0;
         }
 
         $formattedDate = str_replace('-', '_', $today->format($this->dateFormat));
-        $relativeFilePath = 'temp/tmdb/series-' . $formattedDate . '.json';
+        $relativeFilePath = 'temp/tmdb/series-'.$formattedDate.'.json';
         Storage::put(
             $relativeFilePath,
             gzdecode(Http::get(str_replace('{date}', $formattedDate, $this->url))->body())
         );
 
-        $filePath = storage_path('app/' . $relativeFilePath);
+        $filePath = storage_path('app/'.$relativeFilePath);
         $count = intval(exec("wc -l '$filePath'"));
 
         $bar = $this->output->createProgressBar($count);
@@ -81,14 +81,18 @@ class UpdateIDs extends Command
 
         $latestRecord = Show::latest('external_id')->first()->external_id ?? null;
 
-        $handle = fopen(storage_path('app/temp/tmdb/series-' . $formattedDate . '.json'), "r");
+        $handle = fopen(storage_path('app/temp/tmdb/series-'.$formattedDate.'.json'), 'r');
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
-                if($line === '') break;
+                if ($line === '') {
+                    break;
+                }
 
                 $data = json_decode($line, 1);
 
-                if($latestRecord !== null && $data['id'] <= $latestRecord) continue;
+                if ($latestRecord !== null && $data['id'] <= $latestRecord) {
+                    continue;
+                }
 
                 Show::updateOrCreate(
                     ['external_id' => $data['id']],

@@ -2,13 +2,9 @@
 
 namespace App\Livewire\Pages;
 
-use App\Models\Episode;
-use App\Models\Show;
 use App\Services\TMDBService;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
-use Livewire\Attributes\Js;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Url;
 use Livewire\Component;
@@ -32,16 +28,16 @@ class Search extends Component
 
         // Check our cache for a response.
         // Since we're calling the TMDB API live, we do this so we don't hammer the API.
-        if($this->query !== '') {
-            $results = Cache::remember('tmdb-search-' . $this->query, now()->addHours(3), function () {
+        if ($this->query !== '') {
+            $results = Cache::remember('tmdb-search-'.$this->query, now()->addHours(3), function () {
                 return $this->service->search($this->query);
             });
         }
 
         return view('livewire.pages.search')->with([
-            'results' =>  Arr::map($results, function($i) {
+            'results' => Arr::map($results, function ($i) {
                 return array_merge([
-                    'first_air_date'      => null,
+                    'first_air_date' => null,
                     'poster_path' => null,
                 ], Arr::only($i, [
                     'id',
@@ -49,7 +45,7 @@ class Search extends Component
                     'first_air_date',
                     'poster_path',
                 ]));
-            })
+            }),
         ]);
     }
 

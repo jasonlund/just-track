@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Collection;
 uses()
     ->group('models');
 
-it("has many shows", function() {
+it('has many shows', function () {
     // Arrange
     $user = User::factory()
         ->has(Show::factory()->count(3))

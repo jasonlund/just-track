@@ -2,12 +2,12 @@
 
 use App\Livewire\Components\Show\EpisodeList;
 use App\Livewire\Pages\ShowShow;
-use App\Models\Season;
 use App\Models\Show;
 use Livewire\Livewire;
+
 use function Pest\Laravel\get;
 
-it("renders successfully", function () {
+it('renders successfully', function () {
     asUser();
 
     $show = Show::factory()->create();
@@ -24,7 +24,7 @@ it("renders successfully", function () {
         ->assertOk();
 });
 
-it("initializes a show's episodes if none exist", function() {
+it("initializes a show's episodes if none exist", function () {
     asUser();
 
     $show = uninitDoctorWhoShowFactory()->create();
@@ -35,13 +35,13 @@ it("initializes a show's episodes if none exist", function() {
     // We test using ShowShow to initialize the show as well.
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
-        ->assertSee("The Christmas Invasion");
+        ->assertSee('The Christmas Invasion');
 
     expect($show->episodes()->count())
         ->toBe(352);
 });
 
-it("groups episodes by season", function() {
+it('groups episodes by season', function () {
     asUser();
 
     $show = uninitDoctorWhoShowFactory()->create();
@@ -54,11 +54,11 @@ it("groups episodes by season", function() {
             'Series 2',
             'New Earth',
             'Flux',
-            'The Vanquishers'
+            'The Vanquishers',
         ]);
 });
 
-it("lists season zero last", function() {
+it('lists season zero last', function () {
     asUser();
 
     $show = uninitDoctorWhoShowFactory()->create();
@@ -71,7 +71,7 @@ it("lists season zero last", function() {
         ]);
 });
 
-it("allows a user to attach an episode", function() {
+it('allows a user to attach an episode', function () {
     $user = asUser();
 
     $show = uninitDoctorWhoShowFactory()->create();
@@ -94,7 +94,7 @@ it("allows a user to attach an episode", function() {
         ->toHaveCount(1);
 });
 
-it("does not allow a user to mark an episode as watched unless the show belongs to the user", function() {
+it('does not allow a user to mark an episode as watched unless the show belongs to the user', function () {
     asUser();
 
     $show = uninitDoctorWhoShowFactory()->create();
@@ -110,7 +110,7 @@ it("does not allow a user to mark an episode as watched unless the show belongs 
         ->assertForbidden();
 });
 
-it("allows a user to detach an episode", function() {
+it('allows a user to detach an episode', function () {
     $user = asUser();
 
     $show = uninitDoctorWhoShowFactory()->create();

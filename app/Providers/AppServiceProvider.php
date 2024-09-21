@@ -23,7 +23,10 @@ class AppServiceProvider extends ServiceProvider
     {
         Route::bind('show', function (string $value) {
             // Our show is already loaded if our user has it attached, so prefer that over a db call.
-            if($show = auth()->user()->shows->where('external_id', $value)->first()) return $show;
+            if ($show = auth()->user()->shows->where('external_id', $value)->first()) {
+                return $show;
+            }
+
             return Show::where('external_id', $value)->first();
         });
     }
