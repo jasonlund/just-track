@@ -8,6 +8,7 @@ use App\Services\TMDBService;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Livewire\Attributes\Computed;
 use Livewire\Component;
 
 class ShowShow extends Component
@@ -56,7 +57,6 @@ class ShowShow extends Component
         }
 
         $this->show = $show;
-        $this->episodes = collect([]);
     }
 
     public function placeholder()
@@ -66,5 +66,11 @@ class ShowShow extends Component
             Loading...
         </div>
         HTML;
+    }
+
+    #[Computed]
+    public function show()
+    {
+        return Show::find($this->show->id);
     }
 }

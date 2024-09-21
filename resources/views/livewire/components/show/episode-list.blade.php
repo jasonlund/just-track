@@ -3,35 +3,31 @@
         <thead>
         <tr>
             <th>#</th>
-            <th>Abs. #</th>
             <th>Name</th>
             <th>Air Date</th>
             <th>Runtime</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($show->episodes->sortBy('season_id')->groupBy('season_id') as $season => $items)
+        @foreach($this->episodes as $season)
             <tr>
                 <td colspan="5">
-                    <strong>Season {{ $season }}</strong>
+                    <strong>{{ $season->first()->season->name }}</strong>
                 </td>
             </tr>
-            @foreach($items->sortBy('number') as $item)
+            @foreach($season as $episode)
                 <tr>
                     <td>
-                        {{ $item['number'] }}
+                        {{ $episode['number'] }}
                     </td>
                     <td>
-                        {{ $item['absolute_number'] }}
+                        {{ $episode['name'] }}
                     </td>
                     <td>
-                        {{ $item['name'] }}
+                        {{ $episode['aired'] }}
                     </td>
                     <td>
-                        {{ $item['aired'] }}
-                    </td>
-                    <td>
-                        {{ $item['runtime'] }}
+                        {{ $episode['runtime'] }}
                     </td>
                 </tr>
             @endforeach

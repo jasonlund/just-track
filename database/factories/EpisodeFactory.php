@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Season;
 use App\Models\Show;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
@@ -18,14 +19,14 @@ class EpisodeFactory extends Factory
      */
     public function definition(): array
     {
+//        'external_id', 'season_id', 'number', 'production_code', 'name', 'air_date', 'runtime', 'overview'
         return [
             'external_id' => $this->faker->unique()->numberBetween(),
-            'show_id' => Show::factory(),
-            'number' => $this->faker->numberBetween(1, 100),
-            'absolute_number' => $this->faker->unique()->numberBetween(1, 100),
-            'season' => $this->faker->numberBetween(0, 10),
+            'season_id' => Season::factory(),
+            'number' => $this->faker->numberBetween(1, 30),
+            'production_code' => $this->faker->numberBetween(1, 300),
             'name' => Str::title($this->faker->words(rand(3, 6), true)),
-            'aired' => $this->faker->dateTimeBetween('-10 years')->format('Y-m-d'),
+            'air_date' => $this->faker->dateTimeBetween('-10 years')->format('Y-m-d'),
             'runtime' => $this->faker->numberBetween(10, 90),
             'overview' => $this->faker->paragraph,
         ];

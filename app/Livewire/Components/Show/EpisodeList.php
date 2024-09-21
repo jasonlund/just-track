@@ -5,8 +5,9 @@ namespace App\Livewire\Components\Show;
 use App\Models\Episode;
 use App\Models\Show;
 use App\Services\TMDBService;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Livewire\Attributes\Computed;
 use Livewire\Component;
 use Livewire\Attributes\Lazy;
 
@@ -24,13 +25,11 @@ class EpisodeList extends Component
 
     public function mount(Show $show)
     {
-        $this->show = $show;
-
         // If we haven't initialized the show's episodes yet, do so first.
-        if($this->show->episodes()->count() === 0) {
+        if($show->episodes()->count() === 0) {
             $data = $this->service->episodesBySeason(
-                $this->show->external_id,
-                $this->show->seasons->mapWithKeys(fn ($i) => [$i['id'] => $i['number']])
+                $show->external_id,
+                $show->seasons->mapWithKeys(fn ($i) => [$i['id'] => $i['number']])
             );
 
             DB::transaction(function() use(&$show, $data) {
@@ -50,5 +49,19 @@ class EpisodeList extends Component
                 }
             });
         }
+
+        $this->show = $show;
+    }
+
+    #[Computed]
+    public function episodes()
+    {
+        return $this->show->episodes()
+            ->with('season')
+            ->get()
+            ->sortBy('number')
+            ->groupBy('season.number')
+            ->sortBy(fn ($i) => $i->first()->seasonNumber)
+            ->sortByDesc(fn ($i) => $i->first()->seasonNumber !== 0);       // Moves specials to the bottom
     }
 }
