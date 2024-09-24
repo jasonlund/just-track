@@ -11,7 +11,7 @@ class Episode extends Model
     use HasFactory;
 
     protected $fillable = [
-        'external_id', 'show_id', 'season_id', 'number', 'production_code', 'name', 'air_date', 'runtime', 'overview',
+        'external_id', 'season_id', 'number', 'production_code', 'name', 'air_date', 'runtime', 'overview',
     ];
 
     public function season()

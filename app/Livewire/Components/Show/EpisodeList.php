@@ -5,6 +5,7 @@ namespace App\Livewire\Components\Show;
 use App\Models\Episode;
 use App\Models\Show;
 use App\Services\TMDBService;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Lazy;
@@ -35,7 +36,6 @@ class EpisodeList extends Component
                 foreach ($data as $key => $episodes) {
                     foreach ($episodes['episodes'] as $episode) {
                         Episode::create([
-                            'show_id' => $show->id,
                             'season_id' => $key,
                             'external_id' => $episode['id'],
                             'number' => $episode['episode_number'],
@@ -66,7 +66,9 @@ class EpisodeList extends Component
     public function episodes()
     {
         return Episode::with('season')
-            ->where('show_id', $this->show->id)
+            ->whereHas('season', function (Builder $query) {
+                $query->where('show_id', $this->show->id);
+            })
             ->get()
             ->sortBy('number')
             ->groupBy('season.number')

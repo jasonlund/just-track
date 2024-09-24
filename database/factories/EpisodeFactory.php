@@ -20,7 +20,6 @@ class EpisodeFactory extends Factory
     {
         return [
             'external_id' => $this->faker->unique()->numberBetween(),
-            'show_id' => Season::factory(),
             'season_id' => Season::factory(),
             'number' => $this->faker->numberBetween(1, 30),
             'production_code' => $this->faker->numberBetween(1, 300),
