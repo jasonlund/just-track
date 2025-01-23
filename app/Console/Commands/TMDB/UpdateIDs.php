@@ -26,6 +26,7 @@ class UpdateIDs extends Command
      * @var string
      */
     protected $signature = 'tmdb:update-ids
+        {--file= : Override to process a local file. }
         {--date= : The date to export in the format m-d-Y. If undefined, then today. }
         {--dry-run : Do not actually process the file. Used for testing. }';
 
@@ -66,12 +67,18 @@ class UpdateIDs extends Command
 
         $formattedDate = str_replace('-', '_', $today->format($this->dateFormat));
         $relativeFilePath = 'temp/tmdb/series-'.$formattedDate.'.json';
-        Storage::put(
-            $relativeFilePath,
-            gzdecode(Http::get(str_replace('{date}', $formattedDate, $this->url))->body())
-        );
 
-        $filePath = storage_path('app/'.$relativeFilePath);
+        if($this->option('file')){
+            $filePath = storage_path('app/' . $this->option('file'));
+        }else{
+            Storage::put(
+                $relativeFilePath,
+                gzdecode(Http::get(str_replace('{date}', $formattedDate, $this->url))->body())
+            );
+
+            $filePath = storage_path('app/' . $relativeFilePath);
+        }
+
         $count = intval(exec("wc -l '$filePath'"));
 
         $bar = $this->output->createProgressBar($count);
@@ -81,7 +88,7 @@ class UpdateIDs extends Command
 
         $latestRecord = Show::latest('external_id')->first()->external_id ?? null;
 
-        $handle = fopen(storage_path('app/temp/tmdb/series-'.$formattedDate.'.json'), 'r');
+        $handle = fopen($filePath, 'r');
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
                 if ($line === '') {
@@ -112,6 +119,8 @@ class UpdateIDs extends Command
         $this->newLine();
         $this->info("Created {$recordCount} shows.");
 
-        Storage::delete($relativeFilePath);
+        if(! $this->option('file')) {
+            Storage::delete($relativeFilePath);
+        }
     }
 }

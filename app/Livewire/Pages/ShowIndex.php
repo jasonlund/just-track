@@ -12,7 +12,6 @@ class ShowIndex extends Component
     #[Computed]
     public function shows()
     {
-        return auth()->user()->shows()
-            ->select(['external_id', 'name', 'year'])->get();
+        return auth()->user()->shows;
     }
 }

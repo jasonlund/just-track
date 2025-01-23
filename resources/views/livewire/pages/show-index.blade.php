@@ -13,7 +13,7 @@
                 @foreach($this->shows as $show)
                     <tr :key="$result->external_id">
                         <td><a href="{{ route('show.show', $show) }}" wire:navigate>{{ $show['name'] }}</a></td>
-                        <td>{{ $show['year'] }}</td>
+                        <td>{{ $show['first_air_date'] }}</td>
                     </tr>
                 @endforeach
                 </tbody>

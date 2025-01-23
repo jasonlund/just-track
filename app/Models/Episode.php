@@ -14,6 +14,10 @@ class Episode extends Model
         'external_id', 'season_id', 'number', 'production_code', 'name', 'air_date', 'runtime', 'overview',
     ];
 
+    protected $casts = [
+        'air_date' => 'datetime'
+    ];
+
     public function season()
     {
         return $this->belongsTo(Season::class);

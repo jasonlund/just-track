@@ -25,9 +25,12 @@ it('has many seasons', function () {
 
 it('has many episodes thru seasons', function () {
     // Arrange
-    $show = Show::factory()->create();
-    $season = Season::factory(['show_id' => $show->id])->create();
-    Episode::factory(['season_id' => $season->id])->count(3)->create();
+    $show = Show::factory()
+        ->has(
+            Season::factory()
+                ->has(Episode::factory()->count(3))
+        )
+        ->create();
 
     // Act & Assert
     expect($show->episodes)

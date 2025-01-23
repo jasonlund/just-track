@@ -26,6 +26,8 @@ return new class extends Migration
             $table->unsignedInteger('runtime')->nullable();
             $table->text('overview')->nullable();
 
+            $table->index('air_date');
+
             $table->timestamps();
         });
     }

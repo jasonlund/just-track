@@ -11,10 +11,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', Pages\Dashboard::class)
         ->name('dashboard');
 
+    Route::get('/dashboard/upcoming', Pages\DashboardUpcoming::class)
+        ->name('dashboard.upcoming');
+
     Route::get('/search', Pages\Search::class)
         ->name('search');
 
-    Route::get('/shows/', Pages\ShowIndex::class)
+    Route::get('/shows', Pages\ShowIndex::class)
         ->name('show.index');
 
     Route::get('/shows/{show}/{attach?}', Pages\ShowShow::class)
