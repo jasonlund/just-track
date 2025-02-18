@@ -56,6 +56,10 @@ abstract class TestCase extends BaseTestCase
 
             'http://files.tmdb.org/p/exports/tv_series_ids_09_16_2024.json.gz' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv_series_ids_09_16_2024.json.gz'))),
             'http://files.tmdb.org/p/exports/tv_series_ids_09_17_2024.json.gz' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TMDB/tv_series_ids_09_17_2024.json.gz'))),
+
+            // TVMaze
+            'https://api.tvmaze.com/search/shows?q=Doctor' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/search-doctor.json'))),
+            'https://api.tvmaze.com/search/shows?q=foobar' => Http::response(json_encode([])),
         ]);
     }
 }

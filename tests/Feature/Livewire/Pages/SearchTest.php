@@ -18,13 +18,13 @@ it('renders successfully', function () {
 it('is able to return search results', function () {
     asUser();
 
-    Livewire::withQueryParams(['query' => 'Doc'])
+    Livewire::withQueryParams(['query' => 'Doctor'])
         ->test(Search::class)
         ->assertSee('Doctor Who')
-        ->assertSeeHtml('<a href="'.route('show.show', ['57243']).'" wire:navigate>')
-        ->assertSeeHtml('<a href="'.route('show.show', ['57243', 'attach']).'" wire:navigate>')
+        ->assertSeeHtml('<a href="'.route('show.show', ['210']).'" wire:navigate>')
+        ->assertSeeHtml('<a href="'.route('show.show', ['210', 'attach']).'" wire:navigate>')
         ->assertViewHas('results', function ($results) {
-            return count($results) == 20;
+            return count($results) == 10;
         });
 });
 
@@ -35,22 +35,22 @@ it('should cache results', function () {
     asUser();
 
     // Act & Assert
-    expect(Cache::has('tmdb-search-Doc'))
+    expect(Cache::has('tv-maze-search-Doctor'))
         ->toBeFalse();
 
-    get(route('search', ['query' => 'Doc']));
+    get(route('search', ['query' => 'Doctor']));
 
-    expect(Cache::has('tmdb-search-Doc'))
+    expect(Cache::has('tv-maze-search-Doctor'))
         ->toBeTrue();
 
     Carbon::setTestNow('2024-09-07 02:59:00');
 
-    expect(Cache::has('tmdb-search-Doc'))
+    expect(Cache::has('tv-maze-search-Doctor'))
         ->toBeTrue();
 
     Carbon::setTestNow('2024-09-07 03:01:00');
 
-    expect(Cache::has('tmdb-search-Doc'))
+    expect(Cache::has('tv-maze-search-Doctor'))
         ->toBeFalse();
 });
 
@@ -85,10 +85,10 @@ it('can return no results', function () {
 it('can reset the search query and results', function () {
     asUser();
 
-    Livewire::withQueryParams(['query' => 'Doc'])
+    Livewire::withQueryParams(['query' => 'Doctor'])
         ->test(Search::class)
         ->assertViewHas('results', function ($results) {
-            return count($results) == 20;
+            return count($results) == 10;
         })
         ->assertSeeHtml('<button wire:click="resetQuery">Reset Search</button>')
         ->call('resetQuery')

@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Pages;
 
-use App\Services\TMDBService;
+use App\Services\TVMazeService;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 use Livewire\Attributes\Title;
@@ -17,7 +17,7 @@ class Search extends Component
 
     private $service;
 
-    public function boot(TMDBService $service)
+    public function boot(TVMazeService $service)
     {
         $this->service = $service;
     }
@@ -27,23 +27,23 @@ class Search extends Component
         $results = [];
 
         // Check our cache for a response.
-        // Since we're calling the TMDB API live, we do this so we don't hammer the API.
+        // Since we're calling the API live, we do this so we don't hammer the API.
+        // TODO -- move this to the Service.
         if ($this->query !== '') {
-            $results = Cache::remember('tmdb-search-'.$this->query, now()->addHours(3), function () {
+            $results = Cache::remember('tv-maze-search-'.$this->query, now()->addHours(3), function () {
                 return $this->service->search($this->query);
             });
         }
 
         return view('livewire.pages.search')->with([
-            'results' => Arr::map($results, function ($i) {
+            'results' => Arr::map($results, function($i) {
                 return array_merge([
-                    'first_air_date' => null,
-                    'poster_path' => null,
-                ], Arr::only($i, [
+                    'image' => $i['show']['image']['medium'] ?? null,
+                    'premiered' => null,
+                ], Arr::only($i['show'], [
                     'id',
                     'name',
-                    'first_air_date',
-                    'poster_path',
+                    'premiered'
                 ]));
             }),
         ]);

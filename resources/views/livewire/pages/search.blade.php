@@ -15,7 +15,7 @@
                 @foreach($results as $result)
                     <li wire:key="{{ $result['id'] }}">
                         <a href="{{ route('show.show', $result['id'] ) }}" wire:navigate>
-                            {{ $result['name'] }} @if($result['first_air_date'] !== null) ({{ $result['first_air_date'] }}) @endif
+                            {{ $result['name'] }} @if($result['premiered'] !== null) ({{ $result['premiered'] }}) @endif
                         </a>
 
                         <a href="{{ route('show.show', [$result['id'], 'attach'] ) }}" wire:navigate>
