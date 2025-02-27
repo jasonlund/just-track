@@ -60,6 +60,11 @@ abstract class TestCase extends BaseTestCase
             // TVMaze
             'https://api.tvmaze.com/search/shows?q=Doctor' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/search-doctor.json'))),
             'https://api.tvmaze.com/search/shows?q=foobar' => Http::response(json_encode([])),
+
+            'https://api.tvmaze.com/shows?page=0' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-page-0.json'))),
+            'https://api.tvmaze.com/shows?page=1' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-page-1.json'))),
+            'https://api.tvmaze.com/shows?page=2' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-page-2.json'))),
+            'https://api.tvmaze.com/shows?page=3' => Http::response([], 404),
         ]);
     }
 }

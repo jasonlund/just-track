@@ -5,6 +5,7 @@ namespace App\Services;
 use Illuminate\Http\Client\Pool;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Client\RequestException;
 
 class TVMazeService
 {
@@ -15,6 +16,22 @@ class TVMazeService
         return $this->get('search/shows', [
             'q' => $term,
         ]);
+    }
+
+    public function shows(int $page = 0): array|bool
+    {
+        try {
+            return $this->get('shows', [
+                'page' =>  $page
+            ]);
+        }catch(RequestException $exception) {
+            // If we get a 404, the page doesn't exist.
+            // Return false to exit the loop calling this.
+            if($exception->getCode() === 404) return false;
+
+            throw $exception;
+        }
+
     }
 
     public function show(int $id)
@@ -31,33 +48,12 @@ class TVMazeService
 
     public function get(string $uri, array $params = []): array
     {
-        $response = Http::withToken(config('services.tmdb.token'))
-            ->withQueryParameters($params)
+        $response = Http::withQueryParameters($params)
+            ->withUserAgent('just-track-agent')
             ->get($this->baseUri.$uri);
 
         $response->throwUnlessStatus(200);
 
-        $response = $response->json();
-
-        return $response['results'] ?? $response;
-    }
-
-    public function pool(array $uris): array
-    {
-        $responses = Http::pool(function (Pool $pool) use ($uris) {
-            return collect($uris)->map(function ($uri, $key) use ($pool) {
-                return $pool->as($key)
-                    ->withToken(config('services.tmdb.token'))
-                    ->get($this->baseUri.$uri);
-            });
-        });
-
-        foreach ($responses as $k => $response) {
-            $response->throwUnlessStatus(200);
-            $responses[$k] = $response->json();
-            $responses[$k] = $responses[$k]['results'] ?? $responses[$k];
-        }
-
-        return $responses;
+        return $response->json();
     }
 }

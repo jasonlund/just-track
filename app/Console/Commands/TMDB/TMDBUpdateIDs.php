@@ -9,7 +9,7 @@ use Illuminate\Http\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
-class UpdateIDs extends Command
+class TMDBUpdateIDs extends Command
 {
     /**
      * Date format used in file names.

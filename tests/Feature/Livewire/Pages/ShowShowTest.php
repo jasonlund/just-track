@@ -7,6 +7,9 @@ use Livewire\Livewire;
 
 use function Pest\Laravel\get;
 
+beforeEach(fn() => null)
+    ->skip('Temporarily disabled; TMDB has been deprecated in favor of TV Maze');
+
 it('renders successfully', function () {
     asUser();
 

@@ -15,12 +15,19 @@ return new class extends Migration
             $table->id();
 
             $table->unsignedBigInteger('external_id');
-            $table->string('name')->nullable();
-            $table->string('original_name');
+            $table->string('name');
+            $table->string('type')->nullable();
+            $table->string('language')->nullable();
             $table->string('status')->nullable();
-            $table->date('first_air_date')->nullable();
-            $table->text('overview')->nullable();
-            $table->char('origin_country', 2)->nullable();
+            $table->unsignedInteger('runtime')->nullable();
+            $table->unsignedInteger('average_runtime')->nullable();
+            $table->date('premiered')->nullable();
+            $table->date('ended')->nullable();
+            $table->unsignedBigInteger('tvdb_id')->nullable();
+            $table->unsignedBigInteger('imdb_id')->nullable();
+            $table->string('image')->nullable();
+            $table->text('summary')->nullable();
+            $table->dateTime('external_updated_at');
 
             $table->timestamps();
 

@@ -1,6 +1,7 @@
 <?php
 
+use App\Console\Commands\TVMaze\TVMazeUpdateIDs;
 use Illuminate\Support\Facades\Schedule;
 
-Schedule::command('tmdb:update-ids')
-    ->dailyAt('08:00');
+Schedule::command(TVMazeUpdateIDs::class)
+    ->daily();

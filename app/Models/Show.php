@@ -12,9 +12,7 @@ class Show extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'external_id', 'name', 'original_name', 'status', 'first_air_date', 'overview', 'origin_country',
-    ];
+    protected $guarded = [];
 
     /**
      * Get the route key for the model.
