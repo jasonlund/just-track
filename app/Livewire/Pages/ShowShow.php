@@ -5,6 +5,7 @@ namespace App\Livewire\Pages;
 use App\Models\Season;
 use App\Models\Show;
 use App\Services\TMDBService;
+use App\Services\TVMazeService;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,7 @@ class ShowShow extends Component
 
     private $service;
 
-    public function boot(TMDBService $service)
+    public function boot(TVMazeService $service)
     {
         $this->service = $service;
     }
@@ -25,29 +26,28 @@ class ShowShow extends Component
     public function mount(Show $show, $attach = false)
     {
         // If we haven't initialized the show yet, do so first.
-        if (! $show->init) {
+        if ($show->seasons()->count() === 0) {
             $data = $this->service->show($show->external_id);
 
-            DB::transaction(function () use (&$show, $data) {
-                $show->update([
-                    'name' => $data['name'],
-                    'status' => strtolower($data['status']),
-                    'first_air_date' => $data['first_air_date'],
-                    'overview' => $data['overview'],
-                    'origin_country' => Arr::get($data['origin_country'], 0),
-                ]);
+            DB::beginTransaction();
 
-                foreach ($data['seasons'] as $season) {
+            try {
+                foreach ($data['_embedded']['seasons'] as $season) {
                     Season::create([
                         'show_id' => $show->id,
                         'external_id' => $season['id'],
-                        'number' => $season['season_number'],
-                        'air_date' => $season['air_date'],
+                        'number' => $season['number'],
+                        'premiere_date' => $season['premiereDate'],
                         'name' => $season['name'] === '' ? null : $season['name'],
-                        'overview' => $season['overview'] === '' ? null : $season['overview'],
                     ]);
                 }
-            });
+
+                DB::commit();
+            }catch (\Exception $e) {
+                DB::rollBack();
+
+                throw $e;
+            }
         }
 
         if ($attach !== false) {

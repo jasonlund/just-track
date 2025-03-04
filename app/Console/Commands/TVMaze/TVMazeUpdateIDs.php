@@ -4,24 +4,10 @@ namespace App\Console\Commands\TVMaze;
 
 use App\Models\Show;
 use App\Services\TVMazeService;
-use Carbon\Carbon;
 use Illuminate\Console\Command;
-use Illuminate\Http\File;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Storage;
 
 class TVMazeUpdateIDs extends Command
 {
-    /**
-     * The page size TV Maze uses.
-     * Does not necessarily mean every page contains 250 entries, just that the show id is between 0-249, 250-499 etc.
-     *
-     * @see https://www.tvmaze.com/api#show-index
-     *
-     * @var int
-     */
-    private $pageSize = 250;
-
     /**
      * The name and signature of the console command.
      *
@@ -37,6 +23,16 @@ class TVMazeUpdateIDs extends Command
     protected $description = 'Update the shows table given data from the TV Maze Show Index endpoint.';
 
     /**
+     * The page size TV Maze uses.
+     * Does not necessarily mean every page contains 250 entries, just that the show id is between 0-249, 250-499 etc.
+     *
+     * @see https://www.tvmaze.com/api#show-index
+     *
+     * @var int
+     */
+    private $pageSize = 250;
+
+    /**
      * Execute the console command.
      */
     public function handle(TVMazeService $service)
@@ -49,7 +45,7 @@ class TVMazeUpdateIDs extends Command
         $pageCount = 0;
 
         $latestId = Show::latest('external_id')->first()->external_id ?? 0;
-        $page = intval(floor($latestId / 250));
+        $page = intval(floor($latestId / $this->pageSize));
 
         $this->info('Starting update with latest ID ' . $latestId . ' and page ' . $page);
 

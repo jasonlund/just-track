@@ -2,18 +2,16 @@
 
 use App\Livewire\Components\Show\EpisodeList;
 use App\Livewire\Pages\ShowShow;
+use App\Models\Season;
 use App\Models\Show;
 use Livewire\Livewire;
 
 use function Pest\Laravel\get;
 
-beforeEach(fn() => null)
-    ->skip('Temporarily disabled; TMDB has been deprecated in favor of TV Maze');
-
 it('renders successfully', function () {
     asUser();
 
-    $show = Show::factory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     get(route('show.show', [$show->external_id]))
         ->assertOk()
@@ -27,37 +25,35 @@ it('renders successfully', function () {
 it('initializes a show that is not already', function () {
     asUser();
 
-    $show = uninitDoctorWhoShowFactory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
         ->assertSee('Doctor Who');
 
-    expect($show->wasChanged())
-        ->toBeTrue()
-
-        ->and($show->name)->toBe('Doctor Who')
-        ->and($show->external_id)->toBe(57243)
-
-        ->and($show->seasons()->count())->toBe(14)
-        ->and($show->seasons()->first()->name)->toBe('Specials');
+    expect($show->seasons()->count())
+        ->toBe(13)
+        ->and($show->seasons()->first()->name)->toBe(null)
+        ->and($show->seasons()->latest('number')->first()->name)->toBe('Flux');
 
 });
 
 it('does not initialize a show that is already', function () {
     asUser();
 
-    $show = Show::factory([
-        'external_id' => 57243,
-        'name' => 'Doctor Who',
-        'original_name' => 'Doctor Who',
-    ])->create();
+    $show = doctorWhoShowFactory()
+        // A show is considered initialized if there is a season.
+        ->has(Season::factory()->count(1))
+        ->create();
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show]);
 
     expect($show->wasChanged())
-        ->toBeFalse();
+        ->toBeFalse()
+
+        ->and($show->seasons()->count())
+        ->toBe(1);
 });
 
 it('only shows existing shows', function () {
@@ -66,22 +62,21 @@ it('only shows existing shows', function () {
     get(route('show.show', ['show' => 'foobar']))
         ->assertNotFound();
 
-    get(route('show.show', ['show' => 57243]))
+    get(route('show.show', ['show' => 210]))
         ->assertNotFound();
 
-    Show::factory([
-        'external_id' => 57243,
-        'original_name' => 'Doctor Who (2005)',
-    ])->create();
+    doctorWhoShowFactory()->create();
 
-    get(route('show.show', ['show' => 57243]))
+    get(route('show.show', ['show' => 210]))
         ->assertOk();
 });
 
 it('will optionally attach the show to a user', function () {
     $user = asUser();
 
-    $show = Show::factory()->create();
+    $show = doctorWhoShowFactory()
+        ->has(Season::factory()->count(1))
+        ->create();
 
     expect($user->shows()->count())
         ->toBe(0);
@@ -103,6 +98,7 @@ it('shows a show', function () {
     asUser();
 
     $show = Show::factory()
+        ->has(Season::factory()->count(1))
         ->create();
 
     Livewire::withoutLazyLoading()

@@ -54,15 +54,11 @@ function asUser(?User $user = null): User
     return $user;
 }
 
-function uninitDoctorWhoShowFactory(): Factory
+function doctorWhoShowFactory(): Factory
 {
     return Show::factory([
-        'external_id' => 57243,
-        'original_name' => 'Doctor Who',
-        'name' => null,
-        'first_air_date' => null,
-        'overview' => null,
-        'origin_country' => null,
+        'external_id' => 210,
+        'name' => 'Doctor Who',
     ]);
 }
 

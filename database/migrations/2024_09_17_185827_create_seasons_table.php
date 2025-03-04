@@ -19,9 +19,9 @@ return new class extends Migration
 
             $table->unsignedBigInteger('external_id');
             $table->unsignedInteger('number');
-            $table->date('air_date')->nullable();
+            $table->date('premiere_date')->nullable();
             $table->string('name')->nullable();
-            $table->text('overview')->nullable();
+            $table->string('image')->nullable();
 
             $table->timestamps();
         });

@@ -36,7 +36,9 @@ class TVMazeService
 
     public function show(int $id)
     {
-        return $this->get('tv/'.$id);
+        return $this->get('shows/'.$id, [
+            'embed' => 'seasons'
+        ]);
     }
 
     public function episodesBySeason(int $show_id, Collection $seasons)

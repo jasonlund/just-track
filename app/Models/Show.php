@@ -44,11 +44,4 @@ class Show extends Model
             get: fn () => auth()->user()->shows->find($this->id) !== null,
         );
     }
-
-    protected function init(): Attribute
-    {
-        return Attribute::make(
-            get: fn () => $this->name !== null,
-        );
-    }
 }
