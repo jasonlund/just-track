@@ -23,7 +23,6 @@ class SeasonFactory extends Factory
             'show_id' => Show::factory(),
             'number' => $this->faker->numberBetween(1, 20),
             'name' => Str::title($this->faker->words(rand(3, 6), true)),
-            'premiere_date' => $this->faker->dateTimeBetween('-10 years')->format('Y-m-d'),
         ];
     }
 }

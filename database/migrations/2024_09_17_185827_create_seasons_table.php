@@ -19,7 +19,6 @@ return new class extends Migration
 
             $table->unsignedBigInteger('external_id');
             $table->unsignedInteger('number');
-            $table->date('premiere_date')->nullable();
             $table->string('name')->nullable();
             $table->string('image')->nullable();
 

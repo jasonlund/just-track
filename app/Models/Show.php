@@ -12,7 +12,11 @@ class Show extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected static $unguarded = true;
+
+    protected $casts = [
+        'external_updated_at' => 'datetime',
+    ];
 
     /**
      * Get the route key for the model.

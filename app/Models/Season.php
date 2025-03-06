@@ -9,7 +9,7 @@ class Season extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['external_id', 'show_id', 'number', 'air_date', 'name', 'overview'];
+    protected static $unguarded = true;
 
     public function show()
     {

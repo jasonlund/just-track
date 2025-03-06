@@ -22,7 +22,7 @@ it('renders successfully', function () {
         ->assertContainsLivewireComponent(EpisodeList::class);
 });
 
-it('initializes a show that is not already', function () {
+it("initializes a show's seasons that are not already", function () {
     asUser();
 
     $show = doctorWhoShowFactory()->create();
@@ -33,12 +33,20 @@ it('initializes a show that is not already', function () {
 
     expect($show->seasons()->count())
         ->toBe(13)
-        ->and($show->seasons()->first()->name)->toBe(null)
-        ->and($show->seasons()->latest('number')->first()->name)->toBe('Flux');
+        ->and($show->seasons()->first())
+            ->toMatchArray([
+                'external_id' => 859,
+                'number' => 1,
+                'name' => null,
+                'image' => 'https://static.tvmaze.com/uploads/images/original_untouched/177/443002.jpg'
+            ])
+
+        ->and($show->seasons()->latest('number')->first()->name)
+        ->toBe('Flux');
 
 });
 
-it('does not initialize a show that is already', function () {
+it("does not initialize a show's seasons that is already", function () {
     asUser();
 
     $show = doctorWhoShowFactory()

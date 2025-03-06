@@ -4,6 +4,7 @@ namespace App\Console\Commands\TVMaze;
 
 use App\Models\Show;
 use App\Services\TVMazeService;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 
 class TVMazeUpdateIDs extends Command
@@ -70,7 +71,7 @@ class TVMazeUpdateIDs extends Command
                     'imdb_id' => $show['externals']['imdb'] ?? null,
                     'image' => $show['image']['original'] ?? null,
                     'summary' => $show['summary'],
-                    'external_updated_at' => $show['updated'],
+                    'external_updated_at' => Carbon::parse($show['updated']),
                 ]);
 
                 $pageItemCount++;

@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Collection;
 uses()
     ->group('models');
 
+it('is unguarded', function () {
+    expect(Show::isUnguarded())
+        ->toBeTrue();
+});
+
 it('has many seasons', function () {
     // Arrange
     $show = Show::factory()

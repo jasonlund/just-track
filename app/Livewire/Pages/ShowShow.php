@@ -25,7 +25,10 @@ class ShowShow extends Component
 
     public function mount(Show $show, $attach = false)
     {
-        // If we haven't initialized the show yet, do so first.
+        // If we haven't initialized the show's seasons yet, do so first.
+        // It would be better to do this in the TVMazeUpdateIDs command or the EpisodeList component, but the endpoints
+        // called for both of those do not support embedding, so this becomes the most efficient way to get a show's
+        // seasons that we don't already have.
         if ($show->seasons()->count() === 0) {
             $data = $this->service->show($show->external_id);
 
@@ -37,8 +40,8 @@ class ShowShow extends Component
                         'show_id' => $show->id,
                         'external_id' => $season['id'],
                         'number' => $season['number'],
-                        'premiere_date' => $season['premiereDate'],
-                        'name' => $season['name'] === '' ? null : $season['name'],
+                        'name' => $season['name'],
+                        'image' => $season['image']['original'] ?? null,
                     ]);
                 }
 
