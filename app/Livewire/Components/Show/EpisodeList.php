@@ -5,6 +5,7 @@ namespace App\Livewire\Components\Show;
 use App\Models\Episode;
 use App\Models\Show;
 use App\Services\TMDBService;
+use App\Services\TVMazeService;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Computed;
@@ -18,7 +19,7 @@ class EpisodeList extends Component
 
     private $service;
 
-    public function boot(TMDBService $service)
+    public function boot(TVMazeService $service)
     {
         $this->service = $service;
     }
@@ -27,27 +28,32 @@ class EpisodeList extends Component
     {
         // If we haven't initialized the show's episodes yet, do so first.
         if ($show->episodes()->count() === 0) {
-            $data = $this->service->episodesBySeason(
-                $show->external_id,
-                $show->seasons->mapWithKeys(fn ($i) => [$i['id'] => $i['number']])
-            );
+            $data = $this->service->episodes($show->external_id);
 
-            DB::transaction(function () use (&$show, $data) {
-                foreach ($data as $key => $episodes) {
-                    foreach ($episodes['episodes'] as $episode) {
-                        Episode::create([
-                            'season_id' => $key,
-                            'external_id' => $episode['id'],
-                            'number' => $episode['episode_number'],
-                            'production_code' => $episode['production_code'],
-                            'name' => $episode['name'],
-                            'air_date' => $episode['air_date'],
-                            'runtime' => $episode['runtime'],
-                            'overview' => $episode['overview'],
-                        ]);
-                    }
+            $seasons = $show->seasons;
+
+            DB::beginTransaction();
+
+            try {
+                foreach ($data as $key => $episode) {
+                    Episode::create([
+                        'season_id' => $episode[''],
+                        'external_id' => $episode['id'],
+                        'number' => $episode['episode_number'],
+                        'production_code' => $episode['production_code'],
+                        'name' => $episode['name'],
+                        'air_date' => $episode['air_date'],
+                        'runtime' => $episode['runtime'],
+                        'overview' => $episode['overview'],
+                    ]);
                 }
-            });
+
+                DB::commit();
+            } catch(\Exception $e) {
+                DB::rollBack();
+
+                throw $e;
+            }
         }
 
         $this->show = $show;

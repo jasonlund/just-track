@@ -8,5 +8,5 @@
         <li>{{ $this->show['overview'] }}</li>
     </ul>
 
-{{--    <livewire:components.show.episode-list :show="$this->show" />--}}
+    <livewire:components.show.episode-list :show="$this->show" />
 </div>

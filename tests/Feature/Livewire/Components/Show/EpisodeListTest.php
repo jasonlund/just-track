@@ -13,7 +13,7 @@ beforeEach(fn() => null)
 it('renders successfully', function () {
     asUser();
 
-    $show = Show::factory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     get(route('show.show', [$show->external_id]))
         ->assertOk();

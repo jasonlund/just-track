@@ -41,11 +41,11 @@ class TVMazeService
         ]);
     }
 
-    public function episodesBySeason(int $show_id, Collection $seasons)
+    public function episodes(int $id)
     {
-        return $this->pool($seasons->mapWithKeys(function ($i, $k) use ($show_id) {
-            return [$k => 'tv/'.$show_id.'/season/'.$i];
-        })->toArray());
+        return $this->get('shows/'.$id.'/episodes', [
+            'specials' => '1'
+        ]);
     }
 
     public function get(string $uri, array $params = []): array
