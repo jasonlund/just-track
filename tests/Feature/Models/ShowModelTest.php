@@ -13,6 +13,15 @@ it('is unguarded', function () {
         ->toBeTrue();
 });
 
+it('casts dates', function () {
+    $show = Show::factory()->create();
+
+    expect($show->getCasts())
+        ->toMatchArray([
+            'external_updated_at' => 'datetime',
+        ]);
+});
+
 it('has many seasons', function () {
     // Arrange
     $show = Show::factory()

@@ -7,9 +7,6 @@ use Livewire\Livewire;
 
 use function Pest\Laravel\get;
 
-beforeEach(fn() => null)
-    ->skip('Temporarily disabled; TMDB has been deprecated in favor of TV Maze');
-
 it('renders successfully', function () {
     asUser();
 
@@ -30,7 +27,7 @@ it('renders successfully', function () {
 it("initializes a show's episodes if none exist", function () {
     asUser();
 
-    $show = uninitDoctorWhoShowFactory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     expect($show->episodes()->count())
         ->toBe(0);
@@ -41,43 +38,45 @@ it("initializes a show's episodes if none exist", function () {
         ->assertSee('The Christmas Invasion');
 
     expect($show->episodes()->count())
-        ->toBe(352);
+        ->toBe(254);
 });
 
 it('groups episodes by season', function () {
     asUser();
 
-    $show = uninitDoctorWhoShowFactory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
         ->assertSeeInOrder([
-            'Series 1',
+            'Season 1',
             'Rose',
-            'Series 2',
+            'The Christmas Invasion',
+            'Season 2',
             'New Earth',
             'Flux',
-            'The Vanquishers',
         ]);
 });
 
-it('lists season zero last', function () {
+it('labels specials inside of their season', function () {
     asUser();
 
-    $show = uninitDoctorWhoShowFactory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
         ->assertSeeInOrder([
-            'Flux',
-            'Specials',
+            'Season 1',
+            'S',
+            'The Christmas Invasion',
+            'Season 2'
         ]);
 });
 
 it('allows a user to attach an episode', function () {
     $user = asUser();
 
-    $show = uninitDoctorWhoShowFactory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     $user->shows()->attach($show->id);
 
@@ -90,8 +89,8 @@ it('allows a user to attach an episode', function () {
         // action like sync(1234).
         // Maybe that's wrong?
         ->assertSeeInOrder(['Mark as Watched', 'Mark as Watched', 'Mark as Watched', 'Mark as Watched', 'Mark as Watched'])
-        ->call('sync', 204)
-        ->assertSeeInOrder(['Mark as Watched', 'Mark as Watched', 'Mark as Watched', 'Mark as Unwatched', 'Mark as Watched']);
+        ->call('sync', 3)
+        ->assertSeeInOrder(['Mark as Watched', 'Mark as Watched', 'Mark as Unwatched', 'Mark as Watched', 'Mark as Watched']);
 
     expect($user->episodes)
         ->toHaveCount(1);
@@ -100,7 +99,7 @@ it('allows a user to attach an episode', function () {
 it('does not allow a user to mark an episode as watched unless the show belongs to the user', function () {
     asUser();
 
-    $show = uninitDoctorWhoShowFactory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show]);
@@ -109,17 +108,17 @@ it('does not allow a user to mark an episode as watched unless the show belongs 
         ->test(EpisodeList::class, ['show' => $show])
         ->assertDontSee('Mark as Watched')
         ->assertMethodNotWiredToForm('click')
-        ->call('sync', 204)
+        ->call('sync', 3)
         ->assertForbidden();
 });
 
 it('allows a user to detach an episode', function () {
     $user = asUser();
 
-    $show = uninitDoctorWhoShowFactory()->create();
+    $show = doctorWhoShowFactory()->create();
 
     $user->shows()->attach($show->id);
-    $user->episodes()->attach(204);
+    $user->episodes()->attach(3);
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show]);
@@ -132,7 +131,7 @@ it('allows a user to detach an episode', function () {
 //        ->assertMethodWiredToForm('sync')         // This doesn't work because I'm passing the episode id with the
                                                     // action like sync(1234).
                                                     // Maybe that's wrong?
-        ->call('sync', 204);
+        ->call('sync', 3);
 
     expect($user->fresh()->episodes)
         ->toHaveCount(0);

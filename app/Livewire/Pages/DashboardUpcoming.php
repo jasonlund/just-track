@@ -18,18 +18,18 @@ class DashboardUpcoming extends Component
             $query->whereIn('show_id', auth()->user()->shows->pluck('id'));
         })
             ->with('season', 'season.show')
-            ->whereNotNull('air_date')
-            ->where('air_date', '>=', now()->subHours(2))
-            ->orderBy('air_date')
+            ->whereNotNull('air_timestamp')
+            ->where('air_timestamp', '>=', now()->subHours(2))
+            ->orderBy('air_timestamp')
             ->get()
             ->groupBy(function($item) {
-                $diff = now()->diffInDays($item->air_date);
+                $diff = now()->diffInDays($item->air_timestamp);
                 if($diff < 7) {
-                    return 'd' . $item->air_date->format('Y-m-d');
+                    return 'd' . $item->air_timestamp->format('Y-m-d');
                 }else if($diff < 28) {
-                    return 'w '. $item->air_date->startOfWeek()->format('Y-m-d');
+                    return 'w '. $item->air_timestamp->startOfWeek()->format('Y-m-d');
                 } else {
-                    return 'm '. $item->air_date->startOfMonth()->format('Y-m-d');
+                    return 'm '. $item->air_timestamp->startOfMonth()->format('Y-m-d');
                 }
             });
     }

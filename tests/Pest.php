@@ -58,7 +58,19 @@ function doctorWhoShowFactory(): Factory
 {
     return Show::factory([
         'external_id' => 210,
-        'name' => 'Doctor Who',
+        'name' =>  'Doctor Who',
+        'type' => 'scripted',
+        'language' => 'english',
+        'status' => 'ended',
+        'runtime' => null,
+        'average_runtime' => 48,
+        'premiered' => '2005-03-26',
+        'ended' => '2022-10-23',
+        'tvdb_id' => 78804,
+        'imdb_id' => 'tt0436992',
+        'image' => 'https://static.tvmaze.com/uploads/images/original_untouched/488/1220400.jpg',
+        'summary' => '<p>Adventures across time and space with the time traveling alien and companions.</p>',
+        'external_updated_at' => '2025-01-22T23:42:35.000000Z',
     ]);
 }
 

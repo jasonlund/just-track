@@ -10,13 +10,17 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($this->episodes as $season)
+        @foreach($this->episodes as $seasonEpisodes)
+            @php
+                $season = $seasonEpisodes->first()->season;
+            @endphp
+
             <tr>
                 <td colspan="{{ $this->show->attached ? 5 : 4 }}">
-                    <strong>{{ $season->first()->season->name }}</strong>
+                    <strong>{{ $season->name }}</strong>
                 </td>
             </tr>
-            @foreach($season as $episode)
+            @foreach($seasonEpisodes as $episode)
                 <tr wire:key="episode-{{ $episode->id }}">
                     <td>
                         {{ $episode['number'] }}

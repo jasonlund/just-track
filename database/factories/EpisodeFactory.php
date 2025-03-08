@@ -22,11 +22,7 @@ class EpisodeFactory extends Factory
             'external_id' => $this->faker->unique()->numberBetween(),
             'season_id' => Season::factory(),
             'number' => $this->faker->numberBetween(1, 30),
-            'production_code' => $this->faker->numberBetween(1, 300),
-            'name' => Str::title($this->faker->words(rand(3, 6), true)),
-            'air_date' => $this->faker->dateTimeBetween('-8 months', '-6 months')->format('Y-m-d'),
-            'runtime' => $this->faker->numberBetween(10, 90),
-            'overview' => $this->faker->paragraph,
+            'type' => 'regular',
         ];
     }
 }

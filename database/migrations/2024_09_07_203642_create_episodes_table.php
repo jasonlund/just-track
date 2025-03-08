@@ -19,14 +19,17 @@ return new class extends Migration
             $table->foreignIdFor(Season::class);
 
             $table->unsignedBigInteger('external_id');
-            $table->unsignedInteger('number');
-            $table->string('production_code')->nullable();
+            $table->unsignedInteger('number')->nullable();
             $table->string('name')->nullable();
-            $table->date('air_date')->nullable();
+            $table->string('type');
+            $table->date('premiered')->nullable();
+            $table->dateTime('air_timestamp')->nullable();
             $table->unsignedInteger('runtime')->nullable();
-            $table->text('overview')->nullable();
+            $table->string('image')->nullable();
+            $table->text('summary')->nullable();
 
-            $table->index('air_date');
+            $table->index('air_timestamp');
+            $table->index('type');
 
             $table->timestamps();
         });

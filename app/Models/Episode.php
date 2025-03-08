@@ -10,17 +10,23 @@ class Episode extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'external_id', 'season_id', 'number', 'production_code', 'name', 'air_date', 'runtime', 'overview',
-    ];
+    protected static $unguarded = true;
 
     protected $casts = [
-        'air_date' => 'datetime'
+        'premiered' => 'date',
+        'air_timestamp' => 'datetime',
     ];
 
     public function season()
     {
         return $this->belongsTo(Season::class);
+    }
+
+    protected function number(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->attributes['number'] ?? 'S',
+        );
     }
 
     protected function seasonNumber(): Attribute

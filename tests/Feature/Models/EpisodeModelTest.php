@@ -6,6 +6,21 @@ use App\Models\Season;
 uses()
     ->group('models');
 
+it('is unguarded', function () {
+    expect(Episode::isUnguarded())
+        ->toBeTrue();
+});
+
+it('casts dates', function () {
+    $episode = Episode::factory()->create();
+
+    expect($episode->getCasts())
+        ->toMatchArray([
+            'premiered' => 'date',
+            'air_timestamp' => 'datetime',
+        ]);
+});
+
 it('belongs to a season', function () {
     // Arrange
     $season = Season::factory()

@@ -29,7 +29,10 @@ it("initializes a show's seasons that are not already", function () {
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
-        ->assertSee('Doctor Who');
+        ->assertSee($show->name)
+        ->assertSee('Premiered: ' . $show->premiered)
+        ->assertSee('Ended: ' . $show->ended)
+        ->assertSeeHtml($show->summary);
 
     expect($show->seasons()->count())
         ->toBe(13)
@@ -37,7 +40,7 @@ it("initializes a show's seasons that are not already", function () {
             ->toMatchArray([
                 'external_id' => 859,
                 'number' => 1,
-                'name' => null,
+                'name' => 'Season 1',
                 'image' => 'https://static.tvmaze.com/uploads/images/original_untouched/177/443002.jpg'
             ])
 
@@ -105,7 +108,7 @@ it('will optionally attach the show to a user', function () {
 it('shows a show', function () {
     asUser();
 
-    $show = Show::factory()
+    $show = doctorWhoShowFactory()
         ->has(Season::factory()->count(1))
         ->create();
 
