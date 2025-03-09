@@ -15,7 +15,8 @@ it('casts dates', function () {
     $episode = Episode::factory()->create();
 
     expect($episode->getCasts())
-        ->toMatchArray([
+        ->toEqual([
+            'id' => 'int',
             'premiered' => 'date',
             'air_timestamp' => 'datetime',
         ]);

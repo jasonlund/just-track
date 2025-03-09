@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Components\Show\EpisodeList;
+use App\Livewire\Components\Show\ShowCard;
 use App\Livewire\Pages\ShowShow;
 use App\Models\Season;
 use App\Models\Show;
@@ -19,6 +20,7 @@ it('renders successfully', function () {
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
+        ->assertContainsLivewireComponent(ShowCard::class)
         ->assertContainsLivewireComponent(EpisodeList::class);
 });
 

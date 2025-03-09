@@ -54,9 +54,9 @@ function asUser(?User $user = null): User
     return $user;
 }
 
-function doctorWhoShowFactory(): Factory
+function doctorWhoShowFactory(array $overrides = []): Factory
 {
-    return Show::factory([
+    return Show::factory(array_merge([
         'external_id' => 210,
         'name' =>  'Doctor Who',
         'type' => 'scripted',
@@ -71,7 +71,7 @@ function doctorWhoShowFactory(): Factory
         'image' => 'https://static.tvmaze.com/uploads/images/original_untouched/488/1220400.jpg',
         'summary' => '<p>Adventures across time and space with the time traveling alien and companions.</p>',
         'external_updated_at' => '2025-01-22T23:42:35.000000Z',
-    ]);
+    ], $overrides));
 }
 
 function hcf(): void

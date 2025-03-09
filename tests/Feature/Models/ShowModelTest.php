@@ -17,7 +17,9 @@ it('casts dates', function () {
     $show = Show::factory()->create();
 
     expect($show->getCasts())
-        ->toMatchArray([
+        ->toEqual([
+            'id' => 'int',
+            'premiered' => 'date',
             'external_updated_at' => 'datetime',
         ]);
 });

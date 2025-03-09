@@ -15,6 +15,8 @@ class Show extends Model
     protected static $unguarded = true;
 
     protected $casts = [
+        'premiered' => 'date',
+        'ended' => 'date',
         'external_updated_at' => 'datetime',
     ];
 
