@@ -32,19 +32,19 @@ it("initializes a show's seasons that are not already", function () {
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
         ->assertSee($show->name)
-        ->assertSee('Premiered: ' . $show->premiered)
-        ->assertSee('Ended: ' . $show->ended)
+        ->assertSee('Premiered: '.$show->premiered)
+        ->assertSee('Ended: '.$show->ended)
         ->assertSeeHtml($show->summary);
 
     expect($show->seasons()->count())
         ->toBe(13)
         ->and($show->seasons()->first())
-            ->toMatchArray([
-                'external_id' => 859,
-                'number' => 1,
-                'name' => 'Season 1',
-                'image' => 'https://static.tvmaze.com/uploads/images/original_untouched/177/443002.jpg'
-            ])
+        ->toMatchArray([
+            'external_id' => 859,
+            'number' => 1,
+            'name' => 'Season 1',
+            'image' => 'https://static.tvmaze.com/uploads/images/original_untouched/177/443002.jpg',
+        ])
 
         ->and($show->seasons()->latest('number')->first()->name)
         ->toBe('Flux');

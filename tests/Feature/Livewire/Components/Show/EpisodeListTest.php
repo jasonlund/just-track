@@ -69,7 +69,7 @@ it('labels specials inside of their season', function () {
             'Season 1',
             'S',
             'The Christmas Invasion',
-            'Season 2'
+            'Season 2',
         ]);
 });
 

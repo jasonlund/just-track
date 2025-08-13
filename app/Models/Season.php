@@ -27,7 +27,7 @@ class Season extends Model
         return Attribute::make(
             get: fn () => $this->attributes['name'] !== '' ?
                 $this->attributes['name'] :
-                'Season ' . $this->attributes['number']
+                'Season '.$this->attributes['number']
         );
     }
 }

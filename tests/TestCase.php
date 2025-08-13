@@ -68,6 +68,8 @@ abstract class TestCase extends BaseTestCase
 
             'https://api.tvmaze.com/shows/210?embed=seasons' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-210.json'))),
             'https://api.tvmaze.com/shows/210/episodes?specials=1' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-210-episodes.json'))),
+
+            'https://api.tvmaze.com/shows/51303?embed=seasons' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-51303.json'))),
         ]);
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Storage;
 
 uses()->group('Feature');
 
-beforeEach(fn() => null)
+beforeEach(fn () => null)
     ->skip('TMDB has been deprecated in favor of TV Maze');
 
 it('has a console command', function () {

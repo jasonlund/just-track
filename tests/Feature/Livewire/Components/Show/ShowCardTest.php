@@ -25,29 +25,29 @@ it("displays the show's information", function () {
         ->assertSeeHtml('<p>Adventures across time and space with the time traveling alien and companions.</p>');
 });
 
-it("displays each status", function () {
+it('displays each status', function () {
     $statuses = ['running', 'ended', 'to be determined', 'in development'];
 
     $show = doctorWhoShowFactory()->create();
 
-    foreach($statuses as $status) {
+    foreach ($statuses as $status) {
         $show->status = $status;
         $show->save();
 
         Livewire::test(ShowCard::class, ['show' => $show])
-            ->assertSeeText('Status: ' . Str::title($status));
+            ->assertSeeText('Status: '.Str::title($status));
     }
 });
 
-it("displays each type", function () {
+it('displays each type', function () {
     $types = [
         'scripted', 'reality', 'animation', 'talk show', 'documentary', 'sports', 'variety', 'panel show', 'news',
-        'game show', 'award show'
+        'game show', 'award show',
     ];
 
     $show = doctorWhoShowFactory()->create();
 
-    foreach($types as $type) {
+    foreach ($types as $type) {
         $show->type = $type;
         $show->save();
 
@@ -56,7 +56,7 @@ it("displays each type", function () {
     }
 });
 
-it("optionally displays the ended date", function () {
+it('optionally displays the ended date', function () {
     $show = doctorWhoShowFactory()->create();
 
     $year = $show->ended->format('Y');
@@ -71,7 +71,7 @@ it("optionally displays the ended date", function () {
         ->assertDontSeeText($year);
 });
 
-it("optionally displays the premiered date", function () {
+it('optionally displays the premiered date', function () {
     $show = doctorWhoShowFactory()->create();
 
     $year = $show->premiered->format('Y');
@@ -87,9 +87,9 @@ it("optionally displays the premiered date", function () {
         ->assertSeeText('Started: N/A');
 });
 
-it("optionally displays the summary", function () {
+it('optionally displays the summary', function () {
     $show = doctorWhoShowFactory([
-        'summary' => 'foobar'
+        'summary' => 'foobar',
     ])->create();
 
     $summary = $show->summary;

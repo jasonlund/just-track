@@ -7,9 +7,10 @@ use App\Models\Show;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Livewire\Livewire;
+
 use function Pest\Laravel\get;
 
-it("renders successfully", function () {
+it('renders successfully', function () {
     asUser();
 
     get(route('dashboard.upcoming'))
@@ -17,7 +18,7 @@ it("renders successfully", function () {
         ->assertSeeLivewire(DashboardUpcoming::class);
 });
 
-it("lists upcoming episodes by air date", function () {
+it('lists upcoming episodes by air date', function () {
     // Arrange
     $user = asUser();
 
@@ -27,7 +28,7 @@ it("lists upcoming episodes by air date", function () {
         ->has(
             Season::factory()
                 ->has(Episode::factory(rand(10, 30), [
-                    'air_timestamp' => fn () => Carbon::now()->addDays(rand(0, 365))
+                    'air_timestamp' => fn () => Carbon::now()->addDays(rand(0, 365)),
                 ]))
         )
         ->count(5)
@@ -42,7 +43,7 @@ it("lists upcoming episodes by air date", function () {
         ->assertSeeInOrder($episodes->pluck('name')->toArray());
 });
 
-it("groups air dates together", function () {
+it('groups air dates together', function () {
     // Arrange
     $user = asUser();
 
@@ -51,10 +52,10 @@ it("groups air dates together", function () {
     $shows = Show::factory()
         ->has(
             Season::factory()
-                ->has(Episode::factory(rand(10,20), [
+                ->has(Episode::factory(rand(10, 20), [
                     // Couldn't for the life of me figure out how to use faker here.
                     // It didn't respect my Carbon setTestNow, so Carbon will do.
-                    'air_timestamp' => fn () => Carbon::now()->addDays(rand(0, 365))
+                    'air_timestamp' => fn () => Carbon::now()->addDays(rand(0, 365)),
                 ]))
         )
         ->count(5)
@@ -62,14 +63,14 @@ it("groups air dates together", function () {
 
     $episodes = Episode::all()
         ->sortBy('air_timestamp')
-        ->groupBy(function($item) {
+        ->groupBy(function ($item) {
             $diff = Carbon::now()->diffInDays($item->air_timestamp);
-            if($diff < 7) {
-                return 'd' . $item->air_timestamp->format('Y-m-d');
-            }else if($diff < 28) {
-                return 'w'. $item->air_timestamp->startOfWeek()->format('Y-m-d');
+            if ($diff < 7) {
+                return 'd'.$item->air_timestamp->format('Y-m-d');
+            } elseif ($diff < 28) {
+                return 'w'.$item->air_timestamp->startOfWeek()->format('Y-m-d');
             } else {
-                return 'm'. $item->air_timestamp->startOfMonth()->format('Y-m-d');
+                return 'm'.$item->air_timestamp->startOfMonth()->format('Y-m-d');
             }
         });
 
@@ -77,12 +78,12 @@ it("groups air dates together", function () {
 
     // Act & Assert
     Livewire::test(DashboardUpcoming::class)
-        ->assertSeeInOrder($episodes->map(function($items, $key) {
-            if(Str::startsWith($key, 'd')) {
+        ->assertSeeInOrder($episodes->map(function ($items, $key) {
+            if (Str::startsWith($key, 'd')) {
                 return $items->first()->air_timestamp->format('l');
-            }else if(Str::startsWith($key, 'w')) {
+            } elseif (Str::startsWith($key, 'w')) {
                 return $items->first()->air_timestamp->startOfWeek()->format('M jS');
-            }else{
+            } else {
                 return $items->first()->air_timestamp->startOfMonth()->format('M');
             }
         })->toArray());

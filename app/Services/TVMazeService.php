@@ -2,12 +2,14 @@
 
 namespace App\Services;
 
-use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\RequestException;
+use Illuminate\Support\Facades\Http;
 
 class TVMazeService
 {
     private $baseUri = 'https://api.tvmaze.com/';
+
+    private $userAgent = 'just-track-agent';
 
     public function search(string $term): array
     {
@@ -20,12 +22,14 @@ class TVMazeService
     {
         try {
             return $this->get('shows', [
-                'page' =>  $page
+                'page' => $page,
             ]);
-        }catch(RequestException $exception) {
+        } catch (RequestException $exception) {
             // If we get a 404, the page doesn't exist.
             // Return false to exit the loop calling this.
-            if($exception->getCode() === 404) return false;
+            if ($exception->getCode() === 404) {
+                return false;
+            }
 
             throw $exception;
         }
@@ -35,21 +39,38 @@ class TVMazeService
     public function show(int $id)
     {
         return $this->get('shows/'.$id, [
-            'embed' => 'seasons'
+            'embed' => 'seasons',
         ]);
     }
 
     public function episodes(int $id)
     {
         return $this->get('shows/'.$id.'/episodes', [
-            'specials' => '1'
+            'specials' => '1',
         ]);
+    }
+
+    public function scheduleFull(string $tempFile): bool
+    {
+        return $this->downloadToFile('schedule/full', $tempFile);
+    }
+
+    public function downloadToFile(string $uri, string $tempFile, int $timeout = 300): bool
+    {
+        $response = Http::withOptions([
+            'sink' => $tempFile,
+            'timeout' => $timeout,
+        ])
+            ->withUserAgent($this->userAgent)
+            ->get($this->baseUri.$uri);
+
+        return $response->successful();
     }
 
     public function get(string $uri, array $params = []): array
     {
         $response = Http::withQueryParameters($params)
-            ->withUserAgent('just-track-agent')
+            ->withUserAgent($this->userAgent)
             ->get($this->baseUri.$uri);
 
         $response->throwUnlessStatus(200);

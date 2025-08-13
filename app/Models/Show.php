@@ -18,6 +18,7 @@ class Show extends Model
         'premiered' => 'date',
         'ended' => 'date',
         'external_updated_at' => 'datetime',
+        'initialized' => 'boolean',
     ];
 
     /**
@@ -42,6 +43,14 @@ class Show extends Model
     public function episodes(): HasManyThrough
     {
         return $this->hasManyThrough(Episode::class, Season::class);
+    }
+
+    /**
+     * Scope a query to only include initialized shows.
+     */
+    public function scopeInitialized($query)
+    {
+        return $query->where('initialized', true);
     }
 
     protected function attached(): Attribute

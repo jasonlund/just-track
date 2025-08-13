@@ -36,14 +36,14 @@ class Search extends Component
         }
 
         return view('livewire.pages.search')->with([
-            'results' => Arr::map($results, function($i) {
+            'results' => Arr::map($results, function ($i) {
                 return array_merge([
                     'image' => $i['show']['image']['medium'] ?? null,
                     'premiered' => null,
                 ], Arr::only($i['show'], [
                     'id',
                     'name',
-                    'premiered'
+                    'premiered',
                 ]));
             }),
         ]);

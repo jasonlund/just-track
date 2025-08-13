@@ -58,7 +58,7 @@ function doctorWhoShowFactory(array $overrides = []): Factory
 {
     return Show::factory(array_merge([
         'external_id' => 210,
-        'name' =>  'Doctor Who',
+        'name' => 'Doctor Who',
         'type' => 'scripted',
         'language' => 'english',
         'status' => 'ended',

@@ -2,11 +2,9 @@
 
 namespace App\Livewire\Pages;
 
-use App\Models\Season;
 use App\Models\Show;
-use App\Services\TMDBService;
+use App\Services\SeasonService;
 use App\Services\TVMazeService;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Computed;
@@ -16,37 +14,38 @@ class ShowShow extends Component
 {
     public Show $show;
 
-    private $service;
+    private $tvMazeService;
 
-    public function boot(TVMazeService $service)
+    private $seasonService;
+
+    public function boot(TVMazeService $tvMazeService, SeasonService $seasonService)
     {
-        $this->service = $service;
+        $this->tvMazeService = $tvMazeService;
+        $this->seasonService = $seasonService;
     }
 
     public function mount(Show $show, $attach = false)
     {
-        // If we haven't initialized the show's seasons yet, do so first.
+        // If we haven't initialized the show yet, do so first.
         // It would be better to do this in the TVMazeUpdateIDs command or the EpisodeList component, but the endpoints
         // called for both of those do not support embedding, so this becomes the most efficient way to get a show's
         // seasons that we don't already have.
-        if ($show->seasons()->count() === 0) {
-            $data = $this->service->show($show->external_id);
+        if (! $show->initialized) {
+            $data = $this->tvMazeService->show($show->external_id);
 
             DB::beginTransaction();
 
             try {
-                foreach ($data['_embedded']['seasons'] as $season) {
-                    Season::create([
-                        'show_id' => $show->id,
-                        'external_id' => $season['id'],
-                        'number' => $season['number'],
-                        'name' => $season['name'],
-                        'image' => $season['image']['original'] ?? null,
-                    ]);
+                foreach ($data['_embedded']['seasons'] as $seasonData) {
+                    $this->seasonService->create($show, $seasonData);
                 }
 
+                // Mark the show as initialized
+                $show->initialized = true;
+                $show->save();
+
                 DB::commit();
-            }catch (\Exception $e) {
+            } catch (\Exception $e) {
                 DB::rollBack();
 
                 throw $e;

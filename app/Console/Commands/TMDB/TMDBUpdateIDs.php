@@ -68,15 +68,15 @@ class TMDBUpdateIDs extends Command
         $formattedDate = str_replace('-', '_', $today->format($this->dateFormat));
         $relativeFilePath = 'temp/tmdb/series-'.$formattedDate.'.json';
 
-        if($this->option('file')){
-            $filePath = storage_path('app/' . $this->option('file'));
-        }else{
+        if ($this->option('file')) {
+            $filePath = storage_path('app/'.$this->option('file'));
+        } else {
             Storage::put(
                 $relativeFilePath,
                 gzdecode(Http::get(str_replace('{date}', $formattedDate, $this->url))->body())
             );
 
-            $filePath = storage_path('app/' . $relativeFilePath);
+            $filePath = storage_path('app/'.$relativeFilePath);
         }
 
         $count = intval(exec("wc -l '$filePath'"));
@@ -119,7 +119,7 @@ class TMDBUpdateIDs extends Command
         $this->newLine();
         $this->info("Created {$recordCount} shows.");
 
-        if(! $this->option('file')) {
+        if (! $this->option('file')) {
             Storage::delete($relativeFilePath);
         }
     }

@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Show>
@@ -20,9 +19,9 @@ class ShowFactory extends Factory
     public function definition(): array
     {
         return [
-            'external_id' => $this->faker->unique()->numberBetween(),
-            'name' => Str::title($this->faker->words(rand(3, 6), true)),
-            'external_updated_at' => $this->faker->dateTime()
+            'external_id' => fake()->unique()->numberBetween(),
+            'name' => fake()->sentence(3),
+            'external_updated_at' => fake()->dateTime(),
         ];
     }
 }

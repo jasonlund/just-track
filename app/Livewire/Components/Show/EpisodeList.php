@@ -4,7 +4,6 @@ namespace App\Livewire\Components\Show;
 
 use App\Models\Episode;
 use App\Models\Show;
-use App\Services\TMDBService;
 use App\Services\TVMazeService;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
@@ -27,7 +26,9 @@ class EpisodeList extends Component
 
     public function mount(Show $show)
     {
-        // If we haven't initialized the show's episodes yet, do so first.
+        // If we haven't loaded episodes yet, fetch them
+        // Note: ShowShow should have already initialized the show and created seasons
+        // since this is a lazy-loaded component inside ShowShow
         if ($show->episodes()->count() === 0) {
             $data = $this->service->episodes($show->external_id);
 
@@ -38,7 +39,7 @@ class EpisodeList extends Component
             try {
                 foreach ($data as $key => $episode) {
                     // Get our season for our relationship if we don't already have it.
-                    if(! isset($season) || $season !== $episode['season']) {
+                    if (! isset($season) || $season !== $episode['season']) {
                         $season = $seasons->where('number', $episode['season'])
                             ->pluck('id')
                             ->first();
@@ -46,7 +47,9 @@ class EpisodeList extends Component
 
                     // The ShowShow test fails without seeding all the seasons.
                     // So just skip if we don't have a season.
-                    if(app()->runningUnitTests() && ! $season) continue;
+                    if (app()->runningUnitTests() && ! $season) {
+                        continue;
+                    }
 
                     Episode::create([
                         'season_id' => $season,
@@ -63,7 +66,7 @@ class EpisodeList extends Component
                 }
 
                 DB::commit();
-            } catch(\Exception $e) {
+            } catch (\Exception $e) {
                 DB::rollBack();
 
                 throw $e;

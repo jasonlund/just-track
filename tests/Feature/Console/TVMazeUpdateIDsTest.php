@@ -31,7 +31,7 @@ it('processes results', function () {
 
     expect($doctorWho)
         ->toMatchArray([
-            'name' =>  'Doctor Who',
+            'name' => 'Doctor Who',
             'type' => 'scripted',
             'language' => 'english',
             'status' => 'ended',
@@ -45,7 +45,7 @@ it('processes results', function () {
             'summary' => '<p>Adventures across time and space with the time travelling alien and companions.</p>',
             'external_updated_at' => '2025-01-22T23:42:35.000000Z',
             'created_at' => '2025-03-01T00:00:00.000000Z',
-            'updated_at' => '2025-03-01T00:00:00.000000Z'
+            'updated_at' => '2025-03-01T00:00:00.000000Z',
         ]);
 });
 

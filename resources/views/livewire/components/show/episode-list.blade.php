@@ -29,7 +29,7 @@
                         {{ $episode['name'] }}
                     </td>
                     <td>
-                        {{ $episode['aired'] }}
+                        {{ $episode->air_timestamp ? $episode->air_timestamp->format('Y-m-d H:i:s') : 'TBA' }}
                     </td>
                     <td>
                         {{ $episode['runtime'] }}

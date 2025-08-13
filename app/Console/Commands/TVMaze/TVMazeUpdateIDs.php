@@ -48,14 +48,16 @@ class TVMazeUpdateIDs extends Command
         $latestId = Show::latest('external_id')->first()->external_id ?? 0;
         $page = intval(floor($latestId / $this->pageSize));
 
-        $this->info('Starting update with latest ID ' . $latestId . ' and page ' . $page);
+        $this->info('Starting update with latest ID '.$latestId.' and page '.$page);
 
-        while($data = $service->shows($page)) {
+        while ($data = $service->shows($page)) {
             $pageItemCount = 0;
 
-            foreach($data as $show) {
+            foreach ($data as $show) {
                 // Skip the entry if we already have it.
-                if($show['id'] <= $latestId) continue;
+                if ($show['id'] <= $latestId) {
+                    continue;
+                }
 
                 Show::create([
                     'external_id' => $show['id'],
@@ -77,14 +79,14 @@ class TVMazeUpdateIDs extends Command
                 $pageItemCount++;
             }
 
-            $this->line('Processed ' . $pageItemCount . ' entries from page ' . $page);
+            $this->line('Processed '.$pageItemCount.' entries from page '.$page);
 
             $page++;
             $pageCount++;
             $count += $pageItemCount;
         }
 
-        $this->info('Processed ' . $count . ' entries from ' . $pageCount . ' pages');
+        $this->info('Processed '.$count.' entries from '.$pageCount.' pages');
 
         return 0;
     }
