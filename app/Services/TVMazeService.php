@@ -9,8 +9,6 @@ class TVMazeService
 {
     private $baseUri = 'https://api.tvmaze.com/';
 
-    private $userAgent = 'just-track-agent';
-
     public function search(string $term): array
     {
         return $this->get('search/shows', [
@@ -61,7 +59,6 @@ class TVMazeService
             'sink' => $tempFile,
             'timeout' => $timeout,
         ])
-            ->withUserAgent($this->userAgent)
             ->get($this->baseUri.$uri);
 
         return $response->successful();
@@ -70,7 +67,6 @@ class TVMazeService
     public function get(string $uri, array $params = []): array
     {
         $response = Http::withQueryParameters($params)
-            ->withUserAgent($this->userAgent)
             ->get($this->baseUri.$uri);
 
         $response->throwUnlessStatus(200);

@@ -14,6 +14,8 @@ return [
     |
     */
 
+    'user_agent' => env('USER_AGENT', 'just-track-agent'),
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
@@ -41,6 +43,10 @@ return [
 
     'tmdb' => [
         'token' => env('TMDB_API_TOKEN'),
+    ],
+
+    'fanarttv' => [
+        'api_key' => env('FANARTTV_API_KEY'),
     ],
 
 ];

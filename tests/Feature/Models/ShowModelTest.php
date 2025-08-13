@@ -20,7 +20,9 @@ it('casts dates', function () {
         ->toEqual([
             'id' => 'int',
             'premiered' => 'date',
+            'ended' => 'date',
             'external_updated_at' => 'datetime',
+            'initialized' => 'boolean',
         ]);
 });
 

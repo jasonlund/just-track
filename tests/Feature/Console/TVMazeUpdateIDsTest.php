@@ -29,24 +29,21 @@ it('processes results', function () {
     $doctorWho = Show::where('external_id', 210)
         ->first();
 
-    expect($doctorWho)
-        ->toMatchArray([
-            'name' => 'Doctor Who',
-            'type' => 'scripted',
-            'language' => 'english',
-            'status' => 'ended',
-            'runtime' => null,
-            'average_runtime' => 48,
-            'premiered' => '2005-03-26',
-            'ended' => '2022-10-23',
-            'tvdb_id' => 78804,
-            'imdb_id' => 'tt0436992',
-            'image' => 'https://static.tvmaze.com/uploads/images/original_untouched/488/1220400.jpg',
-            'summary' => '<p>Adventures across time and space with the time travelling alien and companions.</p>',
-            'external_updated_at' => '2025-01-22T23:42:35.000000Z',
-            'created_at' => '2025-03-01T00:00:00.000000Z',
-            'updated_at' => '2025-03-01T00:00:00.000000Z',
-        ]);
+    expect($doctorWho->name)->toBe('Doctor Who')
+        ->and($doctorWho->type)->toBe('scripted')
+        ->and($doctorWho->language)->toBe('english')
+        ->and($doctorWho->status)->toBe('ended')
+        ->and($doctorWho->runtime)->toBeNull()
+        ->and($doctorWho->average_runtime)->toBe(48)
+        ->and($doctorWho->premiered->format('Y-m-d'))->toBe('2005-03-26')
+        ->and($doctorWho->ended->format('Y-m-d'))->toBe('2022-10-23')
+        ->and($doctorWho->tvdb_id)->toBe(78804)
+        ->and($doctorWho->imdb_id)->toBe('tt0436992')
+        ->and($doctorWho->image)->toBe('https://static.tvmaze.com/uploads/images/original_untouched/488/1220400.jpg')
+        ->and($doctorWho->summary)->toBe('<p>Adventures across time and space with the time travelling alien and companions.</p>')
+        ->and($doctorWho->external_updated_at->toISOString())->toBe('2025-01-22T23:42:35.000000Z')
+        ->and($doctorWho->created_at->toISOString())->toBe('2025-03-01T00:00:00.000000Z')
+        ->and($doctorWho->updated_at->toISOString())->toBe('2025-03-01T00:00:00.000000Z');
 });
 
 it('resumes from the last id', function () {

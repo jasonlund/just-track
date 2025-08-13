@@ -57,6 +57,17 @@ pest --coverage
 ./vendor/bin/pint --test
 ```
 
+### Important: Finalizing Changes
+**Before finalizing any task or feature implementation:**
+1. Run the entire test suite: `php artisan test`
+2. Run Pint to ensure code formatting: `./vendor/bin/pint`
+
+While you don't need to run the full suite after every small change during development, it's critical to run both the complete test suite and Pint before considering any task complete. This ensures:
+- No regressions were introduced
+- All tests pass with the new changes
+- Code follows Laravel formatting standards
+- The codebase remains stable and maintainable
+
 ### Console Commands
 ```bash
 # Update show IDs from TVMaze

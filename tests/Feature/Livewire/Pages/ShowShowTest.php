@@ -32,8 +32,8 @@ it("initializes a show's seasons that are not already", function () {
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show])
         ->assertSee($show->name)
-        ->assertSee('Premiered: '.$show->premiered)
-        ->assertSee('Ended: '.$show->ended)
+        ->assertSee('Started: '.$show->premiered?->format('Y'))
+        ->assertSee('('.$show->ended->format('Y').')')
         ->assertSeeHtml($show->summary);
 
     expect($show->seasons()->count())
@@ -57,7 +57,7 @@ it("does not initialize a show's seasons that is already", function () {
     $show = doctorWhoShowFactory()
         // A show is considered initialized if there is a season.
         ->has(Season::factory()->count(1))
-        ->create();
+        ->create(['initialized' => true]);
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show]);

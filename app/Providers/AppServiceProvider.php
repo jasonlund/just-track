@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Show;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,6 +22,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Configure global User-Agent for all HTTP requests
+        Http::globalRequestMiddleware(
+            fn ($request) => $request->withHeader(
+                'User-Agent', config('services.user_agent')
+            )
+        );
+
         Route::bind('show', function (string $value) {
             // Our show is already loaded if our user has it attached, so prefer that over a db call.
             if ($show = auth()->user()->shows->where('external_id', $value)->first()) {
