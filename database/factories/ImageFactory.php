@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\ImageType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,12 +10,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ImageFactory extends Factory
 {
-    private array $types = [
-        'tvposter', 'tvbanner', 'tvthumb', 'hdtvlogo', 'clearlogo',
-        'hdclearart', 'clearart', 'showbackground', 'characterart',
-        'seasonposter', 'seasonbanner', 'seasonthumb',
-    ];
-
     private array $languages = ['en', 'es', 'fr', 'de', 'ru', '00'];
 
     /**
@@ -25,7 +20,7 @@ class ImageFactory extends Factory
     public function definition(): array
     {
         return [
-            'type' => fake()->randomElement($this->types),
+            'type' => fake()->randomElement(ImageType::cases())->value,
             'external_path' => fake()->url(),
             'internal_path' => null,
             'language' => fake()->randomElement($this->languages),
@@ -49,7 +44,7 @@ class ImageFactory extends Factory
     public function tvPoster(): static
     {
         return $this->state(fn (array $attributes) => [
-            'type' => 'tvposter',
+            'type' => ImageType::TV_POSTER->value,
         ]);
     }
 
@@ -59,7 +54,7 @@ class ImageFactory extends Factory
     public function seasonPoster(): static
     {
         return $this->state(fn (array $attributes) => [
-            'type' => 'seasonposter',
+            'type' => ImageType::SEASON_POSTER->value,
         ]);
     }
 }

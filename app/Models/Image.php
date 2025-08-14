@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ImageType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -14,6 +15,7 @@ class Image extends Model
 
     protected $casts = [
         'likes' => 'integer',
+        'type' => ImageType::class,
     ];
 
     /**
@@ -35,9 +37,9 @@ class Image extends Model
     /**
      * Scope a query to filter by type.
      */
-    public function scopeOfType($query, string $type)
+    public function scopeOfType($query, ImageType $type)
     {
-        return $query->where('type', $type);
+        return $query->where('type', $type->value);
     }
 
     /**
@@ -51,7 +53,7 @@ class Image extends Model
     /**
      * Get the most popular image of a specific type.
      */
-    public function scopeMostPopularOfType($query, string $type)
+    public function scopeMostPopularOfType($query, ImageType $type)
     {
         return $query->ofType($type)->popular()->first();
     }

@@ -48,6 +48,8 @@ pest tests/Feature/Livewire/Pages/ShowShowTest.php
 pest --coverage
 ```
 
+**Note:** During development, only run tests for the specific files being modified (e.g., `pt tests/Feature/Services/ImageServiceTest.php`). Do not run the full test suite or Pint unless explicitly requested by the user or when the user indicates the task is complete.
+
 ### Code Quality
 ```bash
 # Format code with Laravel Pint
@@ -58,11 +60,11 @@ pest --coverage
 ```
 
 ### Important: Finalizing Changes
-**Before finalizing any task or feature implementation:**
-1. Run the entire test suite: `php artisan test`
+**When the user indicates a task is complete:**
+1. Run the entire test suite: `php artisan test` or `pt`
 2. Run Pint to ensure code formatting: `./vendor/bin/pint`
 
-While you don't need to run the full suite after every small change during development, it's critical to run both the complete test suite and Pint before considering any task complete. This ensures:
+This ensures:
 - No regressions were introduced
 - All tests pass with the new changes
 - Code follows Laravel formatting standards
@@ -114,6 +116,10 @@ php artisan tvmaze:update-ids
    - Service tests with mocked HTTP responses
    - Test helpers defined in `tests/Pest.php`
    - Factory pattern for test data generation
+   - **Pest Best Practices:**
+     - Use `and()` to chain multiple assertions on related data
+     - Example: `expect($data)->toBeArray()->and($data['key'])->toBe('value')`
+     - This keeps tests more readable and groups related assertions together
 
 ## Important Implementation Details
 
@@ -128,6 +134,12 @@ php artisan tvmaze:update-ids
 
 ### Framework-First Approach
 **Always prefer framework features over base PHP functionality.** This ensures consistency, leverages built-in optimizations, and maintains idiomatic code patterns.
+
+#### Enum Usage
+**ALWAYS use Enums instead of string literals when an Enum exists.** This provides type safety, IDE autocompletion, and prevents typos.
+- Use `ImageType::TV_POSTER` instead of `'tvposter'`
+- Method parameters should type-hint the Enum, not accept strings
+- This ensures compile-time validation and better refactoring support
 
 #### Laravel-Specific Guidelines:
 - Use **Laravel Collections** instead of plain PHP arrays for data manipulation
@@ -154,3 +166,7 @@ php artisan tvmaze:update-ids
 - Use wire:model for two-way data binding
 
 This approach ensures the codebase remains maintainable, performant, and consistent with Laravel/Livewire best practices.
+
+## Git Commands Policy
+
+**NEVER run git commands unless they are read-only.** When asked for a git commit message, only provide the message text itself, not the git command. The user will handle the actual commit process.

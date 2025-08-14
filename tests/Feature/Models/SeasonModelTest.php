@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\ImageType;
 use App\Models\Episode;
 use App\Models\Image;
 use App\Models\Season;
@@ -53,7 +54,7 @@ it('has many images through polymorphic relationship', function () {
     Image::factory()->create([
         'imageable_type' => Season::class,
         'imageable_id' => $season->id,
-        'type' => 'seasonbanner',
+        'type' => ImageType::SEASON_BANNER->value,
     ]);
 
     // Act & Assert
@@ -83,12 +84,12 @@ it('can get most popular season image', function () {
     Image::factory()->create([
         'imageable_type' => Season::class,
         'imageable_id' => $season->id,
-        'type' => 'seasonthumb',
+        'type' => ImageType::SEASON_THUMB->value,
         'likes' => 12,
     ]);
 
     // Act & Assert
-    $poster = $season->images()->ofType('seasonposter')->popular()->first();
+    $poster = $season->images()->ofType(ImageType::SEASON_POSTER)->popular()->first();
 
     expect($poster->id)->toBe($mostPopular->id);
 });

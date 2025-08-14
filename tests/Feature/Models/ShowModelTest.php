@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\ImageType;
 use App\Models\Episode;
 use App\Models\Image;
 use App\Models\Season;
@@ -72,7 +73,7 @@ it('has many images through polymorphic relationship', function () {
     Image::factory()->create([
         'imageable_type' => Show::class,
         'imageable_id' => $show->id,
-        'type' => 'tvbanner',
+        'type' => ImageType::TV_BANNER->value,
     ]);
 
     // Act & Assert
@@ -101,12 +102,12 @@ it('can get most popular image of specific type', function () {
     Image::factory()->create([
         'imageable_type' => Show::class,
         'imageable_id' => $show->id,
-        'type' => 'tvbanner',
+        'type' => ImageType::TV_BANNER->value,
         'likes' => 15,
     ]);
 
     // Act & Assert
-    $poster = $show->images()->ofType('tvposter')->popular()->first();
+    $poster = $show->images()->ofType(ImageType::TV_POSTER)->popular()->first();
 
     expect($poster->id)->toBe($mostPopular->id);
 });

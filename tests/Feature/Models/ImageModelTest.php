@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\ImageType;
 use App\Models\Image;
 use App\Models\Season;
 use App\Models\Show;
@@ -11,7 +12,7 @@ it('is unguarded', function () {
         ->toBeTrue();
 });
 
-it('casts likes to integer', function () {
+it('casts likes to integer and type to enum', function () {
     $show = Show::factory()->create();
     $image = Image::factory()->create([
         'imageable_type' => Show::class,
@@ -21,9 +22,12 @@ it('casts likes to integer', function () {
 
     expect($image->getCasts())
         ->toHaveKey('likes', 'integer')
+        ->toHaveKey('type', ImageType::class)
         ->and($image->likes)
         ->toBeInt()
-        ->toBe(10);
+        ->toBe(10)
+        ->and($image->type)
+        ->toBeInstanceOf(ImageType::class);
 });
 
 it('belongs to a show via polymorphic relationship', function () {
@@ -119,10 +123,10 @@ it('can scope by type', function () {
     $banner = Image::factory()->create([
         'imageable_type' => Show::class,
         'imageable_id' => $show->id,
-        'type' => 'tvbanner',
+        'type' => ImageType::TV_BANNER->value,
     ]);
 
-    $posters = Image::ofType('tvposter')->get();
+    $posters = Image::ofType(ImageType::TV_POSTER)->get();
 
     expect($posters)
         ->toHaveCount(1)
@@ -166,11 +170,11 @@ it('can get most popular image of type', function () {
     Image::factory()->create([
         'imageable_type' => Show::class,
         'imageable_id' => $show->id,
-        'type' => 'tvbanner',
+        'type' => ImageType::TV_BANNER->value,
         'likes' => 20,
     ]);
 
-    $result = Image::mostPopularOfType('tvposter');
+    $result = Image::mostPopularOfType(ImageType::TV_POSTER);
 
     expect($result->id)->toBe($mostPopularPoster->id);
 });

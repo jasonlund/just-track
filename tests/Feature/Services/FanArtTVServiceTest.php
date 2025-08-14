@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\ImageType;
 use App\Services\FanArtTVService;
 
 beforeEach(function () {
@@ -12,10 +13,9 @@ it('fetches show images successfully', function () {
     expect($images)
         ->toBeArray()
         ->toHaveKey('name')
-        ->toHaveKey('thetvdb_id');
-
-    expect($images['name'])->toBe('Doctor Who (2005)');
-    expect($images['thetvdb_id'])->toBe('78804');
+        ->toHaveKey('thetvdb_id')
+        ->and($images['name'])->toBe('Doctor Who (2005)')
+        ->and($images['thetvdb_id'])->toBe('78804');
 });
 
 it('returns null for shows not in FanArtTV', function () {
@@ -60,46 +60,48 @@ it('includes user agent in requests via global middleware', function () {
     expect($result)->toBeArray()->toHaveKey('test');
 });
 
-it('returns artwork types in response', function () {
+it('returns artwork types with correct structure', function (ImageType $imageType) {
     $images = $this->service->getShowImages(78804);
 
-    // Check for various artwork types that might be present
-    $possibleArtworkTypes = [
-        'hdtvlogo', 'clearlogo', 'tvposter', 'tvbanner',
-        'hdclearart', 'clearart', 'showbackground', 'tvthumb',
-        'seasonposter', 'seasonbanner', 'seasonthumb', 'characterart',
-    ];
+    // Skip if this image type is not present in the response
+    if (! isset($images[$imageType->value])) {
+        expect(true)->toBeTrue(); // Pass the test for missing types
 
-    $hasArtwork = false;
-    foreach ($possibleArtworkTypes as $type) {
-        if (isset($images[$type])) {
-            $hasArtwork = true;
-            expect($images[$type])->toBeArray();
-
-            // Check first item has expected structure
-            if (count($images[$type]) > 0) {
-                $firstItem = $images[$type][0];
-                expect($firstItem)
-                    ->toHaveKey('id')
-                    ->toHaveKey('url')
-                    ->toHaveKey('lang')
-                    ->toHaveKey('likes');
-            }
-        }
+        return;
     }
 
-    expect($hasArtwork)->toBeTrue();
+    expect($images[$imageType->value])->toBeArray();
+
+    // Check first item has expected structure if any exist
+    if (count($images[$imageType->value]) > 0) {
+        $firstItem = $images[$imageType->value][0];
+        expect($firstItem)
+            ->toHaveKey('id')
+            ->toHaveKey('url')
+            ->toHaveKey('lang')
+            ->toHaveKey('likes');
+    }
+})->with(ImageType::cases());
+
+it('returns at least some artwork types', function () {
+    $images = $this->service->getShowImages(78804);
+
+    $artworkTypes = collect(ImageType::cases())
+        ->filter(fn ($type) => isset($images[$type->value]))
+        ->count();
+
+    expect($artworkTypes)->toBeGreaterThan(0);
 });
 
 it('handles season-specific artwork correctly', function () {
     $images = $this->service->getShowImages(78804);
 
     // Check if any season-specific artwork exists
-    $seasonArtworkTypes = ['seasonposter', 'seasonbanner', 'seasonthumb'];
+    $seasonArtworkTypes = ImageType::seasonTypes();
 
     foreach ($seasonArtworkTypes as $type) {
-        if (isset($images[$type]) && count($images[$type]) > 0) {
-            $firstSeasonArt = $images[$type][0];
+        if (isset($images[$type->value]) && count($images[$type->value]) > 0) {
+            $firstSeasonArt = $images[$type->value][0];
             expect($firstSeasonArt)->toHaveKey('season');
             break;
         }
