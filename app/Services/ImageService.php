@@ -67,6 +67,7 @@ class ImageService
                             $this->storeImage(
                                 $target,
                                 $imageType,
+                                $imageData['id'],
                                 $imageData['url'],
                                 $imageData['lang'] ?? null,
                                 (int) ($imageData['likes'] ?? 0)
@@ -98,7 +99,7 @@ class ImageService
     /**
      * Store or update an image
      */
-    private function storeImage($imageable, ImageType $type, string $externalPath, ?string $language, int $likes): void
+    private function storeImage($imageable, ImageType $type, string $externalId, string $path, ?string $language, int $likes): void
     {
         DB::beginTransaction();
         try {
@@ -106,10 +107,11 @@ class ImageService
                 [
                     'imageable_type' => get_class($imageable),
                     'imageable_id' => $imageable->id,
-                    'external_path' => $externalPath,
+                    'path' => $path,
                 ],
                 [
                     'type' => $type->value,
+                    'external_id' => $externalId,
                     'language' => $language,
                     'likes' => $likes,
                 ]

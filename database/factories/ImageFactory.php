@@ -21,21 +21,11 @@ class ImageFactory extends Factory
     {
         return [
             'type' => fake()->randomElement(ImageType::cases())->value,
-            'external_path' => fake()->url(),
-            'internal_path' => null,
+            'external_id' => (string) fake()->unique()->numberBetween(10000, 99999),
+            'path' => fake()->url(),
             'language' => fake()->randomElement($this->languages),
             'likes' => fake()->numberBetween(0, 20),
         ];
-    }
-
-    /**
-     * Indicate that the image is stored locally.
-     */
-    public function stored(): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'internal_path' => 'images/'.fake()->uuid().'.jpg',
-        ]);
     }
 
     /**
