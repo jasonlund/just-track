@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Show extends Model
 {
@@ -43,6 +44,14 @@ class Show extends Model
     public function episodes(): HasManyThrough
     {
         return $this->hasManyThrough(Episode::class, Season::class);
+    }
+
+    /**
+     * Get all of the show's images.
+     */
+    public function images(): MorphMany
+    {
+        return $this->morphMany(Image::class, 'imageable');
     }
 
     /**

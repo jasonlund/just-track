@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Season extends Model
 {
@@ -20,6 +21,14 @@ class Season extends Model
     public function episodes()
     {
         return $this->hasMany(Episode::class);
+    }
+
+    /**
+     * Get all of the season's images.
+     */
+    public function images(): MorphMany
+    {
+        return $this->morphMany(Image::class, 'imageable');
     }
 
     protected function name(): Attribute
