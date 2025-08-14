@@ -41,33 +41,27 @@ test('initialized scope can be chained with other queries', function () {
         'external_id' => 1003,
     ]);
 
-    // Act - Test chaining with pluck
+    // Act
     $initializedIds = Show::initialized()
         ->pluck('id', 'external_id')
         ->toArray();
 
-    // Assert
-    expect($initializedIds)->toHaveCount(2)
-        ->toHaveKey(1001)
-        ->toHaveKey(1002)
-        ->not->toHaveKey(1003);
-
-    // Act - Test chaining with where
     $breakingBad = Show::initialized()
         ->where('name', 'Breaking Bad')
         ->first();
 
-    // Assert
-    expect($breakingBad)->not->toBeNull()
-        ->and($breakingBad->name)->toBe('Breaking Bad');
-
-    // Act - Test that non-initialized shows are not found
     $theWire = Show::initialized()
         ->where('name', 'The Wire')
         ->first();
 
     // Assert
-    expect($theWire)->toBeNull();
+    expect($initializedIds)->toHaveCount(2)
+        ->toHaveKey(1001)
+        ->toHaveKey(1002)
+        ->not->toHaveKey(1003)
+        ->and($breakingBad)->not->toBeNull()
+        ->and($breakingBad->name)->toBe('Breaking Bad')
+        ->and($theWire)->toBeNull();
 });
 
 test('initialized scope returns empty collection when no initialized shows exist', function () {

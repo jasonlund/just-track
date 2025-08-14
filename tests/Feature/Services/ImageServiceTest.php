@@ -6,7 +6,6 @@ use App\Models\Season;
 use App\Models\Show;
 use App\Services\FanArtTVService;
 use App\Services\ImageService;
-use Illuminate\Support\Facades\Http;
 
 beforeEach(function () {
     $this->fanArtTVService = new FanArtTVService;
@@ -88,11 +87,8 @@ it('skips shows without TVDB ID', function () {
 
 it('handles FanArt.tv API returning null', function () {
     // Arrange
-    Http::fake([
-        'https://webservice.fanart.tv/v3/tv/99999*' => Http::response(['status' => 'error', 'error message' => 'Not found'], 404),
-    ]);
     $show = Show::factory()->create([
-        'tvdb_id' => 99999,
+        'tvdb_id' => 999999,
     ]);
 
     // Act
@@ -110,11 +106,9 @@ it('updates existing images instead of duplicating', function () {
         'tvdb_id' => 78804,
     ]);
 
-    // Act - First fetch
+    // Act
     $count1 = $this->imageService->fetchAndStoreShowImages($show);
     $imageCount1 = Image::count();
-
-    // Act - Second fetch should update, not duplicate
     $count2 = $this->imageService->fetchAndStoreShowImages($show);
     $imageCount2 = Image::count();
 

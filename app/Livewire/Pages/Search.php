@@ -4,7 +4,6 @@ namespace App\Livewire\Pages;
 
 use App\Services\TVMazeService;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Cache;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Url;
 use Livewire\Component;
@@ -26,13 +25,8 @@ class Search extends Component
     {
         $results = [];
 
-        // Check our cache for a response.
-        // Since we're calling the API live, we do this so we don't hammer the API.
-        // TODO -- move this to the Service.
         if ($this->query !== '') {
-            $results = Cache::remember('tv-maze-search-'.$this->query, now()->addHours(3), function () {
-                return $this->service->search($this->query);
-            });
+            $results = $this->service->search($this->query);
         }
 
         return view('livewire.pages.search')->with([

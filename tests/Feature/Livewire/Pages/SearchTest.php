@@ -37,37 +37,29 @@ it('should cache results', function () {
     Carbon::setTestNow('2024-09-07 00:00:00');
     asUser();
 
-    // Assert initial state
-    expect(Cache::has('tv-maze-search-Doctor'))
-        ->toBeFalse();
-
     // Act
+    $cacheExistsBefore = Cache::has('tv-maze-search-Doctor');
     get(route('search', ['query' => 'Doctor']));
+    $cacheExistsAfterSearch = Cache::has('tv-maze-search-Doctor');
 
-    // Assert cache was set
-    expect(Cache::has('tv-maze-search-Doctor'))
-        ->toBeTrue();
-
-    // Act - advance time within cache period
     Carbon::setTestNow('2024-09-07 02:59:00');
+    $cacheExistsBeforeExpiry = Cache::has('tv-maze-search-Doctor');
 
-    // Assert cache still exists
-    expect(Cache::has('tv-maze-search-Doctor'))
-        ->toBeTrue();
-
-    // Act - advance time beyond cache period
     Carbon::setTestNow('2024-09-07 03:01:00');
+    $cacheExistsAfterExpiry = Cache::has('tv-maze-search-Doctor');
 
-    // Assert cache expired
-    expect(Cache::has('tv-maze-search-Doctor'))
-        ->toBeFalse();
+    // Assert
+    expect($cacheExistsBefore)->toBeFalse()
+        ->and($cacheExistsAfterSearch)->toBeTrue()
+        ->and($cacheExistsBeforeExpiry)->toBeTrue()
+        ->and($cacheExistsAfterExpiry)->toBeFalse();
 });
 
 it('can return handle no query string', function () {
     // Arrange
     asUser();
 
-    // Act & Assert - with empty query
+    // Act & Assert
     Livewire::withQueryParams(['query' => ''])
         ->test(Search::class)
         ->assertSee('Please search for a show above')
@@ -75,7 +67,6 @@ it('can return handle no query string', function () {
             return count($results) == 0;
         });
 
-    // Act & Assert - without query param
     Livewire::test(Search::class)
         ->assertSee('Please search for a show above')
         ->assertViewHas('results', function ($results) {

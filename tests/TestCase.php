@@ -11,6 +11,8 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
+        config(['services.fanarttv.api_key' => 'test-api-key']);
+
         Http::preventStrayRequests();
 
         Http::fake([
@@ -60,6 +62,9 @@ abstract class TestCase extends BaseTestCase
             // TVMaze
             'https://api.tvmaze.com/search/shows?q=Doctor' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/search-doctor.json'))),
             'https://api.tvmaze.com/search/shows?q=foobar' => Http::response(json_encode([])),
+            'https://api.tvmaze.com/search/shows?q=test-cache-*' => Http::response([
+                ['show' => ['id' => 1, 'name' => 'Test Show']],
+            ]),
 
             'https://api.tvmaze.com/shows?page=0' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-page-0.json'))),
             'https://api.tvmaze.com/shows?page=1' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-page-1.json'))),
@@ -72,8 +77,8 @@ abstract class TestCase extends BaseTestCase
             'https://api.tvmaze.com/shows/51303?embed=seasons' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/TVMaze/shows-51303.json'))),
 
             // FanArtTV
-            'https://webservice.fanart.tv/v3/tv/78804*' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/FanArtTV/tv-78804.json'))),
-            'https://webservice.fanart.tv/v3/tv/999999*' => Http::response(['status' => 'error', 'error message' => 'Not found'], 404),
+            'https://webservice.fanart.tv/v3/tv/78804?api_key=test-api-key' => Http::response(file_get_contents(base_path('tests/Fixtures/Http/FanArtTV/tv-78804.json'))),
+            'https://webservice.fanart.tv/v3/tv/999999?api_key=test-api-key' => Http::response(['status' => 'error', 'error message' => 'Not found'], 404),
         ]);
     }
 }

@@ -25,39 +25,26 @@ it('returns null for shows not in FanArtTV', function () {
 });
 
 it('includes API key in requests', function () {
-    config(['services.fanarttv.api_key' => 'test-api-key']);
-
-    Http::fake([
-        'https://webservice.fanart.tv/v3/tv/123*' => Http::response(['test' => 'data']),
-    ]);
-
     $service = new FanArtTVService;
-    $result = $service->get('tv/123');
+    $result = $service->get('tv/78804');
 
     Http::assertSent(function ($request) {
         return str_contains($request->url(), 'api_key=test-api-key');
     });
 
-    expect($result)->toBeArray()->toHaveKey('test');
+    expect($result)->toBeArray()->toHaveKey('name');
 });
 
 it('includes user agent in requests via global middleware', function () {
-    // Note: The user agent is now set globally in AppServiceProvider
-    // This test verifies the global configuration is working
-    Http::fake([
-        'https://webservice.fanart.tv/v3/tv/456*' => Http::response(['test' => 'data']),
-    ]);
-
     $service = new FanArtTVService;
-    $result = $service->get('tv/456');
+    $result = $service->get('tv/78804');
 
     Http::assertSent(function ($request) {
-        // The global middleware sets the user agent from config
         return isset($request->header('User-Agent')[0]) &&
                $request->header('User-Agent')[0] === config('services.user_agent');
     });
 
-    expect($result)->toBeArray()->toHaveKey('test');
+    expect($result)->toBeArray()->toHaveKey('name');
 });
 
 it('returns artwork types with correct structure', function (ImageType $imageType) {

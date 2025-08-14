@@ -1,6 +1,7 @@
 <?php
 
 use App\Services\TVMazeService;
+use Illuminate\Support\Facades\Cache;
 
 uses()->group('tv_maze_service');
 
@@ -9,8 +10,29 @@ beforeEach(function () {
 });
 
 it('returns search results', function () {
-    expect($this->service->search('Doctor'))
+    // Arrange & Act
+    $results = $this->service->search('Doctor');
+
+    // Assert
+    expect($results)
         ->toHaveCount(10);
+});
+
+it('caches search results', function () {
+    // Arrange
+    $searchTerm = 'test-cache-'.uniqid();
+
+    // Act
+    $cacheExistsBefore = Cache::has('tv-maze-search-'.$searchTerm);
+    $firstResults = $this->service->search($searchTerm);
+    $cacheExistsAfter = Cache::has('tv-maze-search-'.$searchTerm);
+    $secondResults = $this->service->search($searchTerm);
+
+    // Assert
+    expect($cacheExistsBefore)->toBeFalse()
+        ->and($cacheExistsAfter)->toBeTrue()
+        ->and($firstResults)->toHaveCount(1)
+        ->and($secondResults)->toBe($firstResults);
 });
 
 it('returns shows index', function () {

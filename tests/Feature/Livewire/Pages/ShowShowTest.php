@@ -4,7 +4,6 @@ use App\Livewire\Components\Show\EpisodeList;
 use App\Livewire\Components\Show\ShowCard;
 use App\Livewire\Pages\ShowShow;
 use App\Models\Season;
-use App\Models\Show;
 use Livewire\Livewire;
 
 use function Pest\Laravel\get;
@@ -51,11 +50,10 @@ it("initializes a show's seasons that are not already", function () {
 
 });
 
-it("does not initialize a show's seasons that is already", function () {
+it("does not initialize a show's seasons that is already initialized", function () {
     asUser();
 
     $show = doctorWhoShowFactory()
-        // A show is considered initialized if there is a season.
         ->has(Season::factory()->count(1))
         ->create(['initialized' => true]);
 
@@ -89,7 +87,7 @@ it('will optionally attach the show to a user', function () {
 
     $show = doctorWhoShowFactory()
         ->has(Season::factory()->count(1))
-        ->create();
+        ->create(['initialized' => true]);
 
     expect($user->shows()->count())
         ->toBe(0);
@@ -112,7 +110,7 @@ it('shows a show', function () {
 
     $show = doctorWhoShowFactory()
         ->has(Season::factory()->count(1))
-        ->create();
+        ->create(['initialized' => true]);
 
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, [$show])

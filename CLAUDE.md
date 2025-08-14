@@ -143,12 +143,19 @@ php artisan tvmaze:update-ids
    
    Guidelines:
    - **Always include clear comment markers** for each phase: `// Arrange`, `// Act`, `// Assert`
+   - **STRICT ORDERING**: Tests must follow Arrange → Act → Assert order. Never place assertions before or between acts.
    - **Arrange phase**: Create all test data, set up mocks, configure initial state
-   - **Act phase**: Execute the specific behavior/method being tested. Store results in variables.
+   - **Act phase**: Execute the specific behavior/method being tested. Store ALL results in variables for later assertion.
    - **Assert phase**: Verify all expected outcomes using Pest's expect() syntax
-   - **For simple tests**, Act & Assert can be combined when using Livewire or HTTP testing methods that return testable responses
-   - **Each test should focus on a single behavior** - avoid testing multiple unrelated behaviors in one test
+   - **NO INTERLEAVING**: Never mix Act-Assert-Act-Assert patterns. Collect all action results first, then assert everything.
+   - **For simple tests**, Act & Assert can be combined ONLY when using Livewire or HTTP testing methods that return testable responses
+   - **Each test should focus on a single behavior** - if testing multiple behaviors, collect all results in Act, then assert all
    - **Keep phases visually separated** with the comment markers for better readability
+   - **Cleanup/Teardown is rarely needed**: Laravel automatically clears cache (array driver) and sessions between tests. Only add cleanup for:
+     - External file operations
+     - Database connections outside of RefreshDatabase
+     - External API resources
+     - Use Pest's `afterEach()` hook when cleanup is truly necessary
 
 ## Important Implementation Details
 
@@ -195,6 +202,26 @@ php artisan tvmaze:update-ids
 - Use wire:model for two-way data binding
 
 This approach ensures the codebase remains maintainable, performant, and consistent with Laravel/Livewire best practices.
+
+## Comment Guidelines
+
+**Prefer self-documenting code over comments:**
+- Code should be clear through descriptive naming and structure
+- Comments should explain WHY not WHAT
+- Good comments provide context about business logic or API limitations
+- Remove comments that merely describe what the code does
+
+### Examples of Good Comments:
+- `// Cache search results for 3 hours to avoid hammering the API` - explains rationale
+- `// If we get a 404, the page doesn't exist` - clarifies API behavior  
+- `// TVMaze pagination is based on show ID, not fixed page size` - documents non-obvious API quirk
+
+### Examples of Unnecessary Comments:
+- `// Set test API key` - obvious from code
+- `// Create a show` - code is self-explanatory
+- `// Run the command` - redundant description
+
+**AAA Section Comments in Tests**: Simple `// Arrange`, `// Act`, `// Assert` comments are acceptable for clarity but avoid verbose sub-comments like `// Act - First fetch` or `// Act & Assert - with empty query`
 
 ## Git Commands Policy
 

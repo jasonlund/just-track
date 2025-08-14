@@ -85,9 +85,6 @@ it('allows a user to attach an episode', function () {
 
     Livewire::withoutLazyLoading()
         ->test(EpisodeList::class, ['show' => $show])
-//        ->assertMethodWiredToForm('sync')         // This doesn't work because I'm passing the episode id with the
-        // action like sync(1234).
-        // Maybe that's wrong?
         ->assertSeeInOrder(['Mark as Watched', 'Mark as Watched', 'Mark as Watched', 'Mark as Watched', 'Mark as Watched'])
         ->call('sync', 3)
         ->assertSeeInOrder(['Mark as Watched', 'Mark as Watched', 'Mark as Unwatched', 'Mark as Watched', 'Mark as Watched']);
@@ -128,9 +125,6 @@ it('allows a user to detach an episode', function () {
 
     Livewire::withoutLazyLoading()
         ->test(EpisodeList::class, ['show' => $show])
-//        ->assertMethodWiredToForm('sync')         // This doesn't work because I'm passing the episode id with the
-                                                    // action like sync(1234).
-                                                    // Maybe that's wrong?
         ->call('sync', 3);
 
     expect($user->fresh()->episodes)

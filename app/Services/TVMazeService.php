@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Illuminate\Http\Client\RequestException;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 
 class TVMazeService
@@ -11,9 +12,12 @@ class TVMazeService
 
     public function search(string $term): array
     {
-        return $this->get('search/shows', [
-            'q' => $term,
-        ]);
+        // Cache search results for 3 hours to avoid hammering the API
+        return Cache::remember('tv-maze-search-'.$term, now()->addHours(3), function () use ($term) {
+            return $this->get('search/shows', [
+                'q' => $term,
+            ]);
+        });
     }
 
     public function shows(int $page = 0): array|bool

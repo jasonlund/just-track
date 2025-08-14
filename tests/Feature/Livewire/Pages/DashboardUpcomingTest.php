@@ -53,9 +53,7 @@ it('groups air dates together', function () {
         ->has(
             Season::factory()
                 ->has(Episode::factory(rand(10, 20), [
-                    // Couldn't for the life of me figure out how to use faker here.
-                    // It didn't respect my Carbon setTestNow, so Carbon will do.
-                    'air_timestamp' => fn () => Carbon::now()->addDays(rand(0, 365)),
+                    'air_timestamp' => fn () => fake()->dateTimeBetween(Carbon::now(), Carbon::now()->addYear()),
                 ]))
         )
         ->count(5)
