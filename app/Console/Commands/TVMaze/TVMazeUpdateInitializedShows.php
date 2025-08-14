@@ -12,14 +12,14 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
-class UpdateInitializedShows extends Command
+class TVMazeUpdateInitializedShows extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'tvmaze:update-initialized {--use-fixture : Use local fixture file instead of API}';
+    protected $signature = 'tvmaze:update-initialized-shows {--use-fixture : Use local fixture file instead of API}';
 
     /**
      * The console command description.

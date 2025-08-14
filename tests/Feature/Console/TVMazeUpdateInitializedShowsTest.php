@@ -18,7 +18,7 @@ it('updates initialized shows with new episodes from fixture', function () {
         'external_id' => 125614,
     ]);
 
-    $this->artisan('tvmaze:update-initialized --use-fixture')
+    $this->artisan('tvmaze:update-initialized-shows --use-fixture')
         ->expectsOutput('Fetching initialized shows...')
         ->expectsOutput('Found 1 initialized shows to update.')
         ->expectsOutput('Using fixture file...')
@@ -47,7 +47,7 @@ it('skips non-initialized shows', function () {
         'initialized' => false,
     ]);
 
-    $this->artisan('tvmaze:update-initialized --use-fixture')
+    $this->artisan('tvmaze:update-initialized-shows --use-fixture')
         ->expectsOutput('Fetching initialized shows...')
         ->expectsOutput('No initialized shows found.')
         ->assertSuccessful();
@@ -75,7 +75,7 @@ it('updates existing episodes', function () {
         'premiered' => '2024-01-01',
     ]);
 
-    $this->artisan('tvmaze:update-initialized --use-fixture')
+    $this->artisan('tvmaze:update-initialized-shows --use-fixture')
         ->assertSuccessful();
 
     $episode->refresh();
@@ -94,7 +94,7 @@ it('handles API failures gracefully when not using fixture', function () {
         '*' => Http::response(null, 500),
     ]);
 
-    $this->artisan('tvmaze:update-initialized')
+    $this->artisan('tvmaze:update-initialized-shows')
         ->expectsOutput('Fetching initialized shows...')
         ->expectsOutput('Found 1 initialized shows to update.')
         ->expectsOutput('Fetching schedule data from TVMaze...')
@@ -113,7 +113,7 @@ it('processes multiple initialized shows', function () {
         'initialized' => true,
     ]); // Another show in the fixture
 
-    $this->artisan('tvmaze:update-initialized --use-fixture')
+    $this->artisan('tvmaze:update-initialized-shows --use-fixture')
         ->expectsOutput('Fetching initialized shows...')
         ->expectsOutput('Found 2 initialized shows to update.')
         ->assertSuccessful();

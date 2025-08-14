@@ -226,3 +226,11 @@ This approach ensures the codebase remains maintainable, performant, and consist
 ## Git Commands Policy
 
 **NEVER run git commands unless they are read-only.** When asked for a git commit message, only provide the message text itself, not the git command. The user will handle the actual commit process.
+
+### Commit Message Guidelines
+
+- Keep commit messages to 2-6 bullet points
+- Use 2-3 points for small tasks
+- Use 4-6 points for larger, more complex changes
+- Each point should be concise and describe a specific change
+- Focus on the most important changes rather than listing every detail
