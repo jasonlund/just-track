@@ -13,12 +13,12 @@ it('has many shows', function () {
         ->has(Show::factory()->count(3))
         ->create();
 
-    // Act & Assert
-    expect($user->shows)
+    // Act
+    $shows = $user->shows;
+
+    // Assert
+    expect($shows)
         ->toBeInstanceOf(Collection::class)
-        ->first()->toBeInstanceOf(Show::class)
-
-        ->and($user->shows->count())
-        ->toBe(3);
-
+        ->and($shows->first())->toBeInstanceOf(Show::class)
+        ->and($shows->count())->toBe(3);
 });

@@ -11,14 +11,20 @@ uses()
     ->group('models');
 
 it('is unguarded', function () {
+    // Assert
     expect(Show::isUnguarded())
         ->toBeTrue();
 });
 
 it('casts dates', function () {
+    // Arrange
     $show = Show::factory()->create();
 
-    expect($show->getCasts())
+    // Act
+    $casts = $show->getCasts();
+
+    // Assert
+    expect($casts)
         ->toEqual([
             'id' => 'int',
             'premiered' => 'date',
@@ -34,13 +40,14 @@ it('has many seasons', function () {
         ->has(Season::factory()->count(3))
         ->create();
 
-    // Act & Assert
-    expect($show->seasons)
-        ->toBeInstanceOf(Collection::class)
-        ->first()->toBeInstanceOf(Season::class)
+    // Act
+    $seasons = $show->seasons;
 
-        ->and($show->seasons->count())
-        ->toBe(3);
+    // Assert
+    expect($seasons)
+        ->toBeInstanceOf(Collection::class)
+        ->and($seasons->first())->toBeInstanceOf(Season::class)
+        ->and($seasons->count())->toBe(3);
 });
 
 it('has many episodes thru seasons', function () {
@@ -52,13 +59,14 @@ it('has many episodes thru seasons', function () {
         )
         ->create();
 
-    // Act & Assert
-    expect($show->episodes)
-        ->toBeInstanceOf(Collection::class)
-        ->first()->toBeInstanceOf(Episode::class)
+    // Act
+    $episodes = $show->episodes;
 
-        ->and($show->episodes->count())
-        ->toBe(3);
+    // Assert
+    expect($episodes)
+        ->toBeInstanceOf(Collection::class)
+        ->and($episodes->first())->toBeInstanceOf(Episode::class)
+        ->and($episodes->count())->toBe(3);
 });
 
 it('has many images through polymorphic relationship', function () {
@@ -76,8 +84,11 @@ it('has many images through polymorphic relationship', function () {
         'type' => ImageType::TV_BANNER->value,
     ]);
 
-    // Act & Assert
-    expect($show->images)
+    // Act
+    $images = $show->images;
+
+    // Assert
+    expect($images)
         ->toBeInstanceOf(Collection::class)
         ->toHaveCount(3)
         ->each->toBeInstanceOf(Image::class);
@@ -106,8 +117,9 @@ it('can get most popular image of specific type', function () {
         'likes' => 15,
     ]);
 
-    // Act & Assert
+    // Act
     $poster = $show->images()->ofType(ImageType::TV_POSTER)->popular()->first();
 
+    // Assert
     expect($poster->id)->toBe($mostPopular->id);
 });

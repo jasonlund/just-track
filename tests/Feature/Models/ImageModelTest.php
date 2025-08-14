@@ -8,11 +8,13 @@ use App\Models\Show;
 uses()->group('models');
 
 it('is unguarded', function () {
+    // Assert
     expect(Image::isUnguarded())
         ->toBeTrue();
 });
 
 it('casts likes to integer and type to enum', function () {
+    // Arrange
     $show = Show::factory()->create();
     $image = Image::factory()->create([
         'imageable_type' => Show::class,
@@ -20,17 +22,24 @@ it('casts likes to integer and type to enum', function () {
         'likes' => '10',
     ]);
 
-    expect($image->getCasts())
+    // Act
+    $casts = $image->getCasts();
+    $likes = $image->likes;
+    $type = $image->type;
+
+    // Assert
+    expect($casts)
         ->toHaveKey('likes', 'integer')
         ->toHaveKey('type', ImageType::class)
-        ->and($image->likes)
+        ->and($likes)
         ->toBeInt()
         ->toBe(10)
-        ->and($image->type)
+        ->and($type)
         ->toBeInstanceOf(ImageType::class);
 });
 
 it('belongs to a show via polymorphic relationship', function () {
+    // Arrange
     $show = Show::factory()->create();
     $image = Image::factory()
         ->tvPoster()
@@ -39,13 +48,18 @@ it('belongs to a show via polymorphic relationship', function () {
             'imageable_id' => $show->id,
         ]);
 
-    expect($image->imageable)
+    // Act
+    $imageable = $image->imageable;
+
+    // Assert
+    expect($imageable)
         ->toBeInstanceOf(Show::class)
-        ->and($image->imageable->id)
+        ->and($imageable->id)
         ->toBe($show->id);
 });
 
 it('belongs to a season via polymorphic relationship', function () {
+    // Arrange
     $show = Show::factory()->create();
     $season = Season::factory()->create(['show_id' => $show->id]);
     $image = Image::factory()
@@ -55,42 +69,57 @@ it('belongs to a season via polymorphic relationship', function () {
             'imageable_id' => $season->id,
         ]);
 
-    expect($image->imageable)
+    // Act
+    $imageable = $image->imageable;
+
+    // Assert
+    expect($imageable)
         ->toBeInstanceOf(Season::class)
-        ->and($image->imageable->id)
+        ->and($imageable->id)
         ->toBe($season->id);
 });
 
 it('can be retrieved from a show', function () {
+    // Arrange
     $show = Show::factory()->create();
-    $images = Image::factory()
+    Image::factory()
         ->count(3)
         ->create([
             'imageable_type' => Show::class,
             'imageable_id' => $show->id,
         ]);
 
-    expect($show->images)
+    // Act
+    $images = $show->images;
+
+    // Assert
+    expect($images)
         ->toHaveCount(3)
         ->each->toBeInstanceOf(Image::class);
 });
 
 it('can be retrieved from a season', function () {
+    // Arrange
     $show = Show::factory()->create();
     $season = Season::factory()->create(['show_id' => $show->id]);
-    $images = Image::factory()
+    Image::factory()
         ->count(2)
         ->create([
             'imageable_type' => Season::class,
             'imageable_id' => $season->id,
         ]);
 
-    expect($season->images)
+    // Act
+    $images = $season->images;
+
+    // Assert
+    expect($images)
         ->toHaveCount(2)
         ->each->toBeInstanceOf(Image::class);
 });
 
 it('can scope by popularity', function () {
+    // Arrange
     $show = Show::factory()->create();
     $mostPopular = Image::factory()->create([
         'imageable_type' => Show::class,
@@ -108,13 +137,16 @@ it('can scope by popularity', function () {
         'likes' => 50,
     ]);
 
+    // Act
     $images = Image::popular()->get();
 
+    // Assert
     expect($images->first()->id)->toBe($mostPopular->id)
         ->and($images->last()->id)->toBe($leastPopular->id);
 });
 
 it('can scope by type', function () {
+    // Arrange
     $show = Show::factory()->create();
     $poster = Image::factory()->tvPoster()->create([
         'imageable_type' => Show::class,
@@ -126,8 +158,10 @@ it('can scope by type', function () {
         'type' => ImageType::TV_BANNER->value,
     ]);
 
+    // Act
     $posters = Image::ofType(ImageType::TV_POSTER)->get();
 
+    // Assert
     expect($posters)
         ->toHaveCount(1)
         ->and($posters->first()->id)
@@ -135,6 +169,7 @@ it('can scope by type', function () {
 });
 
 it('can scope by language', function () {
+    // Arrange
     $show = Show::factory()->create();
     $englishImage = Image::factory()->create([
         'imageable_type' => Show::class,
@@ -147,8 +182,10 @@ it('can scope by language', function () {
         'language' => 'es',
     ]);
 
+    // Act
     $englishImages = Image::ofLanguage('en')->get();
 
+    // Assert
     expect($englishImages)
         ->toHaveCount(1)
         ->and($englishImages->first()->id)
@@ -156,6 +193,7 @@ it('can scope by language', function () {
 });
 
 it('can get most popular image of type', function () {
+    // Arrange
     $show = Show::factory()->create();
     Image::factory()->tvPoster()->create([
         'imageable_type' => Show::class,
@@ -174,7 +212,9 @@ it('can get most popular image of type', function () {
         'likes' => 20,
     ]);
 
+    // Act
     $result = Image::mostPopularOfType(ImageType::TV_POSTER);
 
+    // Assert
     expect($result->id)->toBe($mostPopularPoster->id);
 });

@@ -120,6 +120,35 @@ php artisan tvmaze:update-ids
      - Use `and()` to chain multiple assertions on related data
      - Example: `expect($data)->toBeArray()->and($data['key'])->toBe('value')`
      - This keeps tests more readable and groups related assertions together
+   
+   **Arrange-Act-Assert (AAA) Pattern:**
+   All tests should follow the AAA pattern for clarity and consistency:
+   
+   ```php
+   it('performs some behavior', function () {
+       // Arrange - Set up test data and initial conditions
+       $user = User::factory()->create();
+       $show = Show::factory()->create(['tvdb_id' => 12345]);
+       
+       // Act - Execute the behavior being tested
+       $result = $this->service->fetchData($show);
+       $processedData = $result->process();
+       
+       // Assert - Verify the expected outcomes
+       expect($result)->toBeInstanceOf(Result::class)
+           ->and($processedData)->toHaveCount(5)
+           ->and($show->refresh()->status)->toBe('processed');
+   });
+   ```
+   
+   Guidelines:
+   - **Always include clear comment markers** for each phase: `// Arrange`, `// Act`, `// Assert`
+   - **Arrange phase**: Create all test data, set up mocks, configure initial state
+   - **Act phase**: Execute the specific behavior/method being tested. Store results in variables.
+   - **Assert phase**: Verify all expected outcomes using Pest's expect() syntax
+   - **For simple tests**, Act & Assert can be combined when using Livewire or HTTP testing methods that return testable responses
+   - **Each test should focus on a single behavior** - avoid testing multiple unrelated behaviors in one test
+   - **Keep phases visually separated** with the comment markers for better readability
 
 ## Important Implementation Details
 

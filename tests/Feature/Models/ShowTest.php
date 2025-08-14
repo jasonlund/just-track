@@ -3,18 +3,18 @@
 use App\Models\Show;
 
 test('initialized scope returns only initialized shows', function () {
-    // Create some shows with different initialized states
+    // Arrange
     $initializedShow1 = Show::factory()->create(['initialized' => true]);
     $initializedShow2 = Show::factory()->create(['initialized' => true]);
     $notInitializedShow1 = Show::factory()->create(['initialized' => false]);
     $notInitializedShow2 = Show::factory()->create(['initialized' => false]);
 
-    // Get initialized shows using the scope
+    // Act
     $initializedShows = Show::initialized()->get();
 
-    // Assert we only get the initialized shows
-    expect($initializedShows)->toHaveCount(2);
-    expect($initializedShows->pluck('id')->toArray())
+    // Assert
+    expect($initializedShows)->toHaveCount(2)
+        ->and($initializedShows->pluck('id')->toArray())
         ->toContain($initializedShow1->id)
         ->toContain($initializedShow2->id)
         ->not->toContain($notInitializedShow1->id)
@@ -22,7 +22,7 @@ test('initialized scope returns only initialized shows', function () {
 });
 
 test('initialized scope can be chained with other queries', function () {
-    // Create shows with various states
+    // Arrange
     Show::factory()->create([
         'initialized' => true,
         'name' => 'Breaking Bad',
@@ -41,37 +41,42 @@ test('initialized scope can be chained with other queries', function () {
         'external_id' => 1003,
     ]);
 
-    // Test chaining with pluck
+    // Act - Test chaining with pluck
     $initializedIds = Show::initialized()
         ->pluck('id', 'external_id')
         ->toArray();
 
-    expect($initializedIds)->toHaveCount(2);
-    expect($initializedIds)->toHaveKey(1001);
-    expect($initializedIds)->toHaveKey(1002);
-    expect($initializedIds)->not->toHaveKey(1003);
+    // Assert
+    expect($initializedIds)->toHaveCount(2)
+        ->toHaveKey(1001)
+        ->toHaveKey(1002)
+        ->not->toHaveKey(1003);
 
-    // Test chaining with where
+    // Act - Test chaining with where
     $breakingBad = Show::initialized()
         ->where('name', 'Breaking Bad')
         ->first();
 
-    expect($breakingBad)->not->toBeNull();
-    expect($breakingBad->name)->toBe('Breaking Bad');
+    // Assert
+    expect($breakingBad)->not->toBeNull()
+        ->and($breakingBad->name)->toBe('Breaking Bad');
 
-    // Test that non-initialized shows are not found
+    // Act - Test that non-initialized shows are not found
     $theWire = Show::initialized()
         ->where('name', 'The Wire')
         ->first();
 
+    // Assert
     expect($theWire)->toBeNull();
 });
 
 test('initialized scope returns empty collection when no initialized shows exist', function () {
-    // Create only non-initialized shows
+    // Arrange
     Show::factory()->count(3)->create(['initialized' => false]);
 
+    // Act
     $initializedShows = Show::initialized()->get();
 
+    // Assert
     expect($initializedShows)->toBeEmpty();
 });

@@ -7,14 +7,20 @@ uses()
     ->group('models');
 
 it('is unguarded', function () {
+    // Assert
     expect(Episode::isUnguarded())
         ->toBeTrue();
 });
 
 it('casts dates', function () {
+    // Arrange
     $episode = Episode::factory()->create();
 
-    expect($episode->getCasts())
+    // Act
+    $casts = $episode->getCasts();
+
+    // Assert
+    expect($casts)
         ->toEqual([
             'id' => 'int',
             'premiered' => 'date',
@@ -29,7 +35,10 @@ it('belongs to a season', function () {
     $episode = Episode::factory(['season_id' => $season->id])
         ->create();
 
-    // Act & Assert
-    expect($episode->season)
+    // Act
+    $relatedSeason = $episode->season;
+
+    // Assert
+    expect($relatedSeason)
         ->toBeInstanceOf(Season::class);
 });

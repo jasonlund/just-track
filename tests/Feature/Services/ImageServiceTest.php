@@ -14,36 +14,27 @@ beforeEach(function () {
 });
 
 it('fetches and stores show images from FanArt.tv', function () {
-    // Create a show with TVDB ID matching our fixture
+    // Arrange
     $show = Show::factory()->create([
         'external_id' => 210,
         'tvdb_id' => 78804, // Doctor Who
     ]);
-
-    // Create seasons for the show
     Season::factory()->create(['show_id' => $show->id, 'number' => 1]);
     Season::factory()->create(['show_id' => $show->id, 'number' => 3]);
-
-    // Fetch and store images
-    $count = $this->imageService->fetchAndStoreShowImages($show);
-
-    // Check that images were stored
-    expect($count)->toBeGreaterThan(0);
-
-    // Check show images
-    $showImages = $show->images()->get();
     $fixture = json_decode(file_get_contents(base_path('tests/Fixtures/Http/FanArtTV/tv-78804.json')), true);
-
-    // Count only show-level images (season images with "all" are now skipped)
     $expectedCount = collect(ImageType::showTypes())
         ->map(fn ($type) => collect($fixture[$type->value] ?? [])->count())
         ->sum();
 
-    expect($showImages)->toHaveCount($expectedCount);
-
-    // Check that images have correct attributes
+    // Act
+    $count = $this->imageService->fetchAndStoreShowImages($show);
+    $showImages = $show->images()->get();
     $poster = $show->images()->ofType(ImageType::TV_POSTER)->first();
-    expect($poster)
+
+    // Assert
+    expect($count)->toBeGreaterThan(0)
+        ->and($showImages)->toHaveCount($expectedCount)
+        ->and($poster)
         ->toBeInstanceOf(Image::class)
         ->and($poster->external_path)->toStartWith('https://assets.fanart.tv/')
         ->and($poster->language)->toBeIn(['en', 'es', 'fr', 'de', 'ru', '00', null])
@@ -51,104 +42,104 @@ it('fetches and stores show images from FanArt.tv', function () {
 });
 
 it('stores season images to correct seasons', function () {
-    // Create a show with TVDB ID
+    // Arrange
     $show = Show::factory()->create([
         'external_id' => 210,
         'tvdb_id' => 78804,
     ]);
-
-    // Create specific seasons
     $season1 = Season::factory()->create(['show_id' => $show->id, 'number' => 1]);
     $season3 = Season::factory()->create(['show_id' => $show->id, 'number' => 3]);
-
-    // Fetch and store images
-    $this->imageService->fetchAndStoreShowImages($show);
-
-    // Load fixture to check expected results
     $fixture = json_decode(file_get_contents(base_path('tests/Fixtures/Http/FanArtTV/tv-78804.json')), true);
-
-    // Check season 1 images
-    $season1Images = collect($fixture[ImageType::SEASON_POSTER->value] ?? [])
+    $season1ExpectedCount = collect($fixture[ImageType::SEASON_POSTER->value] ?? [])
         ->filter(fn ($img) => $img['season'] === '1')
         ->count();
-
-    if ($season1Images > 0) {
-        expect($season1->images()->ofType(ImageType::SEASON_POSTER)->count())->toBe($season1Images);
-    }
-
-    // Check season 3 images
-    $season3Images = collect($fixture[ImageType::SEASON_POSTER->value] ?? [])
+    $season3ExpectedCount = collect($fixture[ImageType::SEASON_POSTER->value] ?? [])
         ->filter(fn ($img) => $img['season'] === '3')
         ->count();
 
-    if ($season3Images > 0) {
-        expect($season3->images()->ofType(ImageType::SEASON_POSTER)->count())->toBe($season3Images);
+    // Act
+    $this->imageService->fetchAndStoreShowImages($show);
+    $season1ActualCount = $season1->images()->ofType(ImageType::SEASON_POSTER)->count();
+    $season3ActualCount = $season3->images()->ofType(ImageType::SEASON_POSTER)->count();
+
+    // Assert
+    if ($season1ExpectedCount > 0) {
+        expect($season1ActualCount)->toBe($season1ExpectedCount);
+    }
+    if ($season3ExpectedCount > 0) {
+        expect($season3ActualCount)->toBe($season3ExpectedCount);
     }
 });
 
 it('skips shows without TVDB ID', function () {
+    // Arrange
     $show = Show::factory()->create([
         'tvdb_id' => null,
     ]);
 
+    // Act
     $count = $this->imageService->fetchAndStoreShowImages($show);
+    $imageCount = $show->images()->count();
 
+    // Assert
     expect($count)->toBe(0)
-        ->and($show->images()->count())->toBe(0);
+        ->and($imageCount)->toBe(0);
 });
 
 it('handles FanArt.tv API returning null', function () {
-    // Mock FanArt.tv to return 404
+    // Arrange
     Http::fake([
         'https://webservice.fanart.tv/v3/tv/99999*' => Http::response(['status' => 'error', 'error message' => 'Not found'], 404),
     ]);
-
     $show = Show::factory()->create([
         'tvdb_id' => 99999,
     ]);
 
+    // Act
     $count = $this->imageService->fetchAndStoreShowImages($show);
+    $imageCount = $show->images()->count();
 
+    // Assert
     expect($count)->toBe(0)
-        ->and($show->images()->count())->toBe(0);
+        ->and($imageCount)->toBe(0);
 });
 
 it('updates existing images instead of duplicating', function () {
+    // Arrange
     $show = Show::factory()->create([
         'tvdb_id' => 78804,
     ]);
 
-    // First fetch
+    // Act - First fetch
     $count1 = $this->imageService->fetchAndStoreShowImages($show);
     $imageCount1 = Image::count();
 
-    // Second fetch should update, not duplicate
+    // Act - Second fetch should update, not duplicate
     $count2 = $this->imageService->fetchAndStoreShowImages($show);
     $imageCount2 = Image::count();
 
+    // Assert
     expect($imageCount2)->toBe($imageCount1)
         ->and($count1)->toBe($count2);
 });
 
 it('skips season images with "all" or null season', function () {
+    // Arrange
     $show = Show::factory()->create([
         'tvdb_id' => 78804,
     ]);
-
-    // Fetch and store images
-    $this->imageService->fetchAndStoreShowImages($show);
-
-    // Load fixture to check for "all" season images
     $fixture = json_decode(file_get_contents(base_path('tests/Fixtures/Http/FanArtTV/tv-78804.json')), true);
 
-    // Check that season type images with "all" season are NOT stored
+    // Act
+    $this->imageService->fetchAndStoreShowImages($show);
+
+    // Assert
     foreach (ImageType::seasonTypes() as $seasonType) {
         $allSeasonImages = collect($fixture[$seasonType->value] ?? [])
             ->filter(fn ($img) => ($img['season'] ?? null) === 'all' || ($img['season'] ?? null) === null)
             ->count();
 
         if ($allSeasonImages > 0) {
-            // These should NOT be stored at all
             $storedImages = $show->images()->ofType($seasonType)->count();
             expect($storedImages)->toBe(0);
         }

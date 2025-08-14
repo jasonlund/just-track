@@ -11,6 +11,7 @@ uses()
     ->group('models');
 
 it('is unguarded', function () {
+    // Assert
     expect(Season::isUnguarded())
         ->toBeTrue();
 });
@@ -22,8 +23,11 @@ it('belongs to a show', function () {
     $season = Season::factory(['show_id' => $show->id])
         ->create();
 
-    // Act & Assert
-    expect($season->show)
+    // Act
+    $relatedShow = $season->show;
+
+    // Assert
+    expect($relatedShow)
         ->toBeInstanceOf(Show::class);
 });
 
@@ -32,13 +36,14 @@ it('has many episodes', function () {
     $season = Season::factory()->create();
     Episode::factory(['season_id' => $season->id])->count(3)->create();
 
-    // Act & Assert
-    expect($season->episodes)
-        ->toBeInstanceOf(Collection::class)
-        ->first()->toBeInstanceOf(Episode::class)
+    // Act
+    $episodes = $season->episodes;
 
-        ->and($season->episodes->count())
-        ->toBe(3);
+    // Assert
+    expect($episodes)
+        ->toBeInstanceOf(Collection::class)
+        ->and($episodes->first())->toBeInstanceOf(Episode::class)
+        ->and($episodes->count())->toBe(3);
 });
 
 it('has many images through polymorphic relationship', function () {
@@ -57,8 +62,11 @@ it('has many images through polymorphic relationship', function () {
         'type' => ImageType::SEASON_BANNER->value,
     ]);
 
-    // Act & Assert
-    expect($season->images)
+    // Act
+    $images = $season->images;
+
+    // Assert
+    expect($images)
         ->toBeInstanceOf(Collection::class)
         ->toHaveCount(3)
         ->each->toBeInstanceOf(Image::class);
@@ -88,8 +96,9 @@ it('can get most popular season image', function () {
         'likes' => 12,
     ]);
 
-    // Act & Assert
+    // Act
     $poster = $season->images()->ofType(ImageType::SEASON_POSTER)->popular()->first();
 
+    // Assert
     expect($poster->id)->toBe($mostPopular->id);
 });
