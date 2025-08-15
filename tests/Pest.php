@@ -11,6 +11,7 @@
 |
 */
 
+use App\Enums\ImageType;
 use App\Models\Show;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -78,3 +79,18 @@ function hcf(): void
 {
     withoutExceptionHandling();
 }
+
+/*
+|--------------------------------------------------------------------------
+| Datasets
+|--------------------------------------------------------------------------
+|
+| Datasets allow you to define sets of data that can be passed to your
+| tests. This helps to avoid code duplication and makes your tests more
+| expressive.
+|
+*/
+
+dataset('showImageTypes', ImageType::showTypes());
+
+dataset('seasonImageTypes', ImageType::seasonTypes());

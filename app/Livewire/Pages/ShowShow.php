@@ -3,6 +3,7 @@
 namespace App\Livewire\Pages;
 
 use App\Models\Show;
+use App\Services\ImageService;
 use App\Services\SeasonService;
 use App\Services\TVMazeService;
 use Illuminate\Support\Facades\Auth;
@@ -18,10 +19,13 @@ class ShowShow extends Component
 
     private $seasonService;
 
-    public function boot(TVMazeService $tvMazeService, SeasonService $seasonService)
+    private $imageService;
+
+    public function boot(TVMazeService $tvMazeService, SeasonService $seasonService, ImageService $imageService)
     {
         $this->tvMazeService = $tvMazeService;
         $this->seasonService = $seasonService;
+        $this->imageService = $imageService;
     }
 
     public function mount(Show $show, $attach = false)
@@ -40,7 +44,8 @@ class ShowShow extends Component
                     $this->seasonService->create($show, $seasonData);
                 }
 
-                // Mark the show as initialized
+                $this->imageService->fetchAndStoreShowImages($show);
+
                 $show->initialized = true;
                 $show->save();
 
@@ -73,6 +78,9 @@ class ShowShow extends Component
     #[Computed]
     public function show()
     {
-        return Show::find($this->show->id);
+        return Show::with(['images' => function ($query) {
+            $query->where('type', \App\Enums\ImageType::HD_TV_LOGO->value)
+                ->mostPopular();
+        }])->find($this->show->id);
     }
 }

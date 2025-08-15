@@ -168,6 +168,14 @@ php artisan tvmaze:update-ids
 
 ## Coding Principles
 
+### Avoid Single-Use Private Methods
+**Do not create private methods that are only called once.** Keep logic inline unless there's a compelling reason to extract it, such as:
+- The method will likely be reused in the future
+- The extracted code is complex enough that separation significantly improves readability
+- The method encapsulates a distinct, testable piece of business logic
+
+Prefer inline code for simple transformations, calculations, or one-time operations.
+
 ### Framework-First Approach
 **Always prefer framework features over base PHP functionality.** This ensures consistency, leverages built-in optimizations, and maintains idiomatic code patterns.
 

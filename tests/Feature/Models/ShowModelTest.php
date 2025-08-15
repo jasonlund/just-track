@@ -123,3 +123,81 @@ it('can get most popular image of specific type', function () {
     // Assert
     expect($poster->id)->toBe($mostPopular->id);
 });
+
+it('has mostPopularImage relationship for each type', function (ImageType $imageType) {
+    // Arrange
+    $show = Show::factory()->create();
+
+    $lessPopular = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'type' => $imageType->value,
+        'likes' => 5,
+        'external_id' => '2',
+    ]);
+
+    $mostPopular = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'type' => $imageType->value,
+        'likes' => 10,
+        'external_id' => '1',
+    ]);
+
+    // Act
+    $image = $show->mostPopularImage($imageType);
+
+    // Assert
+    expect($image)
+        ->toBeInstanceOf(Image::class)
+        ->and($image->id)->toBe($mostPopular->id);
+})->with('showImageTypes');
+
+it('returns null when no image of type exists', function (ImageType $imageType) {
+    // Arrange
+    $show = Show::factory()->create();
+
+    // Create an image of a different type
+    $differentType = collect(ImageType::showTypes())
+        ->filter(fn ($type) => $type !== $imageType)
+        ->first();
+    
+    Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'type' => $differentType->value,
+    ]);
+
+    // Act
+    $image = $show->mostPopularImage($imageType);
+
+    // Assert
+    expect($image)->toBeNull();
+})->with('showImageTypes');
+
+it('uses external_id as tiebreaker for mostPopularImage', function (ImageType $imageType) {
+    // Arrange
+    $show = Show::factory()->create();
+
+    $higherExternalId = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'type' => $imageType->value,
+        'likes' => 10,
+        'external_id' => '200',
+    ]);
+
+    $lowerExternalId = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'type' => $imageType->value,
+        'likes' => 10,
+        'external_id' => '100',
+    ]);
+
+    // Act
+    $image = $show->mostPopularImage($imageType);
+
+    // Assert
+    expect($image->id)->toBe($lowerExternalId->id);
+})->with('showImageTypes');

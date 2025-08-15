@@ -35,7 +35,7 @@ it('fetches and stores show images from FanArt.tv', function () {
         ->and($showImages)->toHaveCount($expectedCount)
         ->and($poster)
         ->toBeInstanceOf(Image::class)
-        ->and($poster->path)->toStartWith('https://assets.fanart.tv/')
+        ->and($poster->path)->toStartWith('tv/')
         ->and($poster->language)->toBeIn(['en', 'es', 'fr', 'de', 'ru', '00', null])
         ->and($poster->likes)->toBeGreaterThanOrEqual(0);
 });

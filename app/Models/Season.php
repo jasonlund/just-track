@@ -31,6 +31,17 @@ class Season extends Model
         return $this->morphMany(Image::class, 'imageable');
     }
 
+    /**
+     * Get the most popular image of a specific type
+     */
+    public function mostPopularImage(\App\Enums\ImageType $type): ?Image
+    {
+        return $this->morphOne(Image::class, 'imageable')
+            ->where('type', $type->value)
+            ->mostPopular()
+            ->first();
+    }
+
     protected function name(): Attribute
     {
         return Attribute::make(

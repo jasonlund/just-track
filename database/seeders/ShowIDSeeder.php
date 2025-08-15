@@ -13,34 +13,24 @@ class ShowIDSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->command->info('Seeding shows table with TV Maze data...');
-
         // Get the JSON data
         $jsonPath = database_path('seeders/data/show-ids-2025-08-14.json');
 
         if (! File::exists($jsonPath)) {
-            $this->command->error("Shows data file not found at: {$jsonPath}");
-            $this->command->info('Please ensure the show-ids-2025-08-14.json file exists in database/seeders/data/');
-
             return;
         }
 
         $shows = json_decode(File::get($jsonPath), true);
 
         if (empty($shows)) {
-            $this->command->warn('No shows data found in the JSON file.');
-
             return;
         }
-
-        $this->command->info('Found '.count($shows).' shows to import.');
 
         // Clear existing shows
         DB::table('shows')->truncate();
 
         // Process in chunks for better performance
         $chunks = array_chunk($shows, 1000);
-        $bar = $this->command->getOutput()->createProgressBar(count($chunks));
 
         foreach ($chunks as $chunk) {
             $data = [];
@@ -68,11 +58,6 @@ class ShowIDSeeder extends Seeder
             }
 
             DB::table('shows')->insert($data);
-            $bar->advance();
         }
-
-        $bar->finish();
-        $this->command->newLine();
-        $this->command->info('Shows table seeded successfully!');
     }
 }

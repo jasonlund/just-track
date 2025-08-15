@@ -1,5 +1,9 @@
 <div>
-    <h1>{{ $show->name }}</h1>
+    @if($hdtvLogo = $show->mostPopularImage(\App\Enums\ImageType::HD_TV_LOGO))
+        <img src="{{ route('images.stream', $hdtvLogo->path) }}" alt="{{ $show->name }}" />
+    @else
+        <h1>{{ $show->name }}</h1>
+    @endif
 
     <ul>
         <li>{{ Str::title($show->type) }}</li>

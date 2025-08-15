@@ -4,6 +4,7 @@ use App\Livewire\Components\Show\EpisodeList;
 use App\Livewire\Components\Show\ShowCard;
 use App\Livewire\Pages\ShowShow;
 use App\Models\Season;
+use App\Services\ImageService;
 use Livewire\Livewire;
 
 use function Pest\Laravel\get;
@@ -50,6 +51,27 @@ it("initializes a show's seasons that are not already", function () {
 
 });
 
+it('calls image service when initializing a show', function () {
+    // Arrange
+    asUser();
+    $show = doctorWhoShowFactory()->create();
+    
+    $imageServiceMock = Mockery::mock(ImageService::class);
+    $imageServiceMock->shouldReceive('fetchAndStoreShowImages')
+        ->once()
+        ->with(Mockery::on(fn ($arg) => $arg->id === $show->id))
+        ->andReturn(0);
+    
+    $this->app->instance(ImageService::class, $imageServiceMock);
+    
+    // Act
+    Livewire::withoutLazyLoading()
+        ->test(ShowShow::class, ['show' => $show]);
+    
+    // Assert
+    expect($show->refresh()->initialized)->toBeTrue();
+});
+
 it("does not initialize a show's seasons that is already initialized", function () {
     asUser();
 
@@ -65,6 +87,26 @@ it("does not initialize a show's seasons that is already initialized", function 
 
         ->and($show->seasons()->count())
         ->toBe(1);
+});
+
+it('does not call image service when show is already initialized', function () {
+    // Arrange
+    asUser();
+    $show = doctorWhoShowFactory()
+        ->has(Season::factory()->count(1))
+        ->create(['initialized' => true]);
+    
+    $imageServiceMock = Mockery::mock(ImageService::class);
+    $imageServiceMock->shouldNotReceive('fetchAndStoreShowImages');
+    
+    $this->app->instance(ImageService::class, $imageServiceMock);
+    
+    // Act
+    Livewire::withoutLazyLoading()
+        ->test(ShowShow::class, ['show' => $show]);
+    
+    // Assert
+    expect($show->refresh()->initialized)->toBeTrue();
 });
 
 it('only shows existing shows', function () {

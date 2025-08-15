@@ -62,6 +62,17 @@ class Show extends Model
         return $query->where('initialized', true);
     }
 
+    /**
+     * Get the most popular image of a specific type
+     */
+    public function mostPopularImage(\App\Enums\ImageType $type): ?Image
+    {
+        return $this->morphOne(Image::class, 'imageable')
+            ->where('type', $type->value)
+            ->mostPopular()
+            ->first();
+    }
+
     protected function attached(): Attribute
     {
         return Attribute::make(

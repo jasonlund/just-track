@@ -64,11 +64,20 @@ class ImageService
                         }
 
                         try {
+                            // Extract relative path from FanArtTV URL
+                            // Example: https://assets.fanart.tv/fanart/tv/78804/tvposter/doctor-who-12345.jpg
+                            // We want: tv/78804/tvposter/doctor-who-12345.jpg
+                            $relativePath = $imageData['url'];
+                            $baseUrl = FanArtTVService::getAssetBaseUrl();
+                            if (str_starts_with($imageData['url'], $baseUrl)) {
+                                $relativePath = substr($imageData['url'], strlen($baseUrl));
+                            }
+                            
                             $this->storeImage(
                                 $target,
                                 $imageType,
                                 $imageData['id'],
-                                $imageData['url'],
+                                $relativePath,
                                 $imageData['lang'] ?? null,
                                 (int) ($imageData['likes'] ?? 0)
                             );

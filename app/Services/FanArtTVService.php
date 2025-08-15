@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\Http;
 class FanArtTVService
 {
     private $baseUri = 'https://webservice.fanart.tv/v3/';
+    
+    private static string $assetBaseUrl = 'https://assets.fanart.tv/fanart/';
+    
+    public static function getAssetBaseUrl(): string
+    {
+        return self::$assetBaseUrl;
+    }
 
     public function getShowImages(int $tvdbId): ?array
     {

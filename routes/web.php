@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\ImageStreamController;
 use App\Livewire\Pages;
 use Illuminate\Support\Facades\Route;
 
 Route::get('404', function () {
     abort(404);
 });
+
+Route::get('/images/art/{path}', ImageStreamController::class)
+    ->where('path', '.*')
+    ->name('images.stream');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', Pages\Dashboard::class)

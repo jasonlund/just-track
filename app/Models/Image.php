@@ -35,6 +35,14 @@ class Image extends Model
     }
 
     /**
+     * Scope a query to get the most popular (likes with external_id tiebreaker).
+     */
+    public function scopeMostPopular($query)
+    {
+        return $query->orderByDesc('likes')->orderBy('external_id');
+    }
+
+    /**
      * Scope a query to filter by type.
      */
     public function scopeOfType($query, ImageType $type)

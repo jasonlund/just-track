@@ -218,3 +218,57 @@ it('can get most popular image of type', function () {
     // Assert
     expect($result->id)->toBe($mostPopularPoster->id);
 });
+
+it('can scope by mostPopular ordering', function () {
+    // Arrange
+    $show = Show::factory()->create();
+    $highestLikes = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'likes' => 100,
+        'external_id' => '300',
+    ]);
+    $lowestLikes = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'likes' => 1,
+        'external_id' => '100',
+    ]);
+    $midLikes = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'likes' => 50,
+        'external_id' => '200',
+    ]);
+
+    // Act
+    $images = Image::mostPopular()->get();
+
+    // Assert
+    expect($images->pluck('id')->toArray())
+        ->toBe([$highestLikes->id, $midLikes->id, $lowestLikes->id]);
+});
+
+it('uses external_id as tiebreaker in mostPopular scope', function () {
+    // Arrange
+    $show = Show::factory()->create();
+    $higherExternalId = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'likes' => 10,
+        'external_id' => '200',
+    ]);
+    $lowerExternalId = Image::factory()->create([
+        'imageable_type' => Show::class,
+        'imageable_id' => $show->id,
+        'likes' => 10,
+        'external_id' => '100',
+    ]);
+
+    // Act
+    $images = Image::mostPopular()->get();
+
+    // Assert
+    expect($images->pluck('id')->toArray())
+        ->toBe([$lowerExternalId->id, $higherExternalId->id]);
+});
