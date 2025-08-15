@@ -161,7 +161,7 @@ it('returns null when no image of type exists', function (ImageType $imageType) 
     $differentType = collect(ImageType::showTypes())
         ->filter(fn ($type) => $type !== $imageType)
         ->first();
-    
+
     Image::factory()->create([
         'imageable_type' => Show::class,
         'imageable_id' => $show->id,

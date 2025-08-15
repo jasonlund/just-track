@@ -142,7 +142,7 @@ it('returns null when no image of type exists for season', function (ImageType $
     $differentType = collect(ImageType::seasonTypes())
         ->filter(fn ($type) => $type !== $imageType)
         ->first();
-    
+
     Image::factory()->create([
         'imageable_type' => Season::class,
         'imageable_id' => $season->id,

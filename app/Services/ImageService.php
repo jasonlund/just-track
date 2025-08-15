@@ -72,7 +72,7 @@ class ImageService
                             if (str_starts_with($imageData['url'], $baseUrl)) {
                                 $relativePath = substr($imageData['url'], strlen($baseUrl));
                             }
-                            
+
                             $this->storeImage(
                                 $target,
                                 $imageType,

@@ -15,14 +15,14 @@ class ImageStreamController extends Controller
             return $this->streamImage($path);
         }
 
-        $fanartUrl = FanArtTVService::getAssetBaseUrl() . $path;
+        $fanartUrl = FanArtTVService::getAssetBaseUrl().$path;
 
         if (! Http::head($fanartUrl)->successful()) {
             abort(404);
         }
 
         $response = Http::get($fanartUrl);
-        
+
         if (! $response->successful()) {
             abort(404);
         }

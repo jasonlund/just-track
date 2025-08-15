@@ -55,19 +55,19 @@ it('calls image service when initializing a show', function () {
     // Arrange
     asUser();
     $show = doctorWhoShowFactory()->create();
-    
+
     $imageServiceMock = Mockery::mock(ImageService::class);
     $imageServiceMock->shouldReceive('fetchAndStoreShowImages')
         ->once()
         ->with(Mockery::on(fn ($arg) => $arg->id === $show->id))
         ->andReturn(0);
-    
+
     $this->app->instance(ImageService::class, $imageServiceMock);
-    
+
     // Act
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show]);
-    
+
     // Assert
     expect($show->refresh()->initialized)->toBeTrue();
 });
@@ -95,16 +95,16 @@ it('does not call image service when show is already initialized', function () {
     $show = doctorWhoShowFactory()
         ->has(Season::factory()->count(1))
         ->create(['initialized' => true]);
-    
+
     $imageServiceMock = Mockery::mock(ImageService::class);
     $imageServiceMock->shouldNotReceive('fetchAndStoreShowImages');
-    
+
     $this->app->instance(ImageService::class, $imageServiceMock);
-    
+
     // Act
     Livewire::withoutLazyLoading()
         ->test(ShowShow::class, ['show' => $show]);
-    
+
     // Assert
     expect($show->refresh()->initialized)->toBeTrue();
 });
