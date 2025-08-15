@@ -7,11 +7,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a Laravel 11 application with Livewire 3 for tracking TV shows and episodes. The application integrates with the TV Maze API to fetch show information.
 
 ### Features
-- Allows users to add television shows to their dashboard
-- Users can track which episodes of the television show have been watched
-- Users can view a list of upcoming (and previously aired) episodes in chronological order
-- Users can view a list of unwatched episodes sorted by order of importance
-- Regularly scheduled commands keep the database of shows, episodes and air dates up to date
+- Users can search and add TV shows to their dashboard
+- Track watched/unwatched episodes per show
+- View upcoming episodes in chronological order (Dashboard)
+- View unwatched episodes by importance (NOT IMPLEMENTED)
+- Automated daily updates via scheduled commands
+- Artwork/images from FanArtTV with local caching
 
 ## Essential Commands
 
@@ -72,9 +73,17 @@ This ensures:
 
 ### Console Commands
 ```bash
-# Update show IDs from TVMaze
+# Update show IDs from TVMaze (fetches new shows)
 php artisan tvmaze:update-ids
+
+# Update episodes for initialized shows
+php artisan tvmaze:update-initialized-shows
+
+# Fetch artwork from FanArtTV for shows with TVDB IDs
+php artisan fanart:update-images
 ```
+
+These commands run daily via Laravel's scheduler (defined in `routes/console.php`).
 
 ## Architecture Overview
 
@@ -94,16 +103,19 @@ php artisan tvmaze:update-ids
    - Tests mirror the component structure in `tests/Feature/Livewire/`
 
 2. **Service Layer Pattern**
-   - TV Maze API integration is encapsulated in `app/Services/TVMazeService`
-   - Service handles API communication and data transformation
-   - Legacy service classes (`TMDBService`, `TVDBService`) exist but are not currently used
-   - Test fixtures for API responses stored in `tests/Fixtures/Http/TVMaze/`
+   - TV Maze API integration in `app/Services/TVMazeService`
+   - FanArtTV API integration in `app/Services/FanArtTVService` 
+   - Image processing service in `app/Services/ImageService`
+   - Legacy services (`TMDBService`, `TVDBService`) exist but deprecated
+   - Test fixtures for API responses in `tests/Fixtures/Http/`
 
 3. **Model Relationships**
    - `Show` has many `Season` has many `Episode`
-   - Many-to-many relationships between `User` and `Show` (tracking)
-   - Many-to-many relationships between `User` and `Episode` (watch status)
+   - `Show`/`Season` morphMany `Image` (polymorphic for artwork)
+   - Many-to-many: `User` ↔ `Show` (tracking)
+   - Many-to-many: `User` ↔ `Episode` (watch status)
    - Models use `$unguarded = true` for mass assignment
+   - `Show::mostPopularImage(ImageType)` returns best image by type
 
 4. **Authentication & User Context**
    - Uses Laravel's built-in authentication
@@ -159,12 +171,24 @@ php artisan tvmaze:update-ids
 
 ## Important Implementation Details
 
-- Shows use `external_id` as the route key instead of the primary key
-- Lazy loading is used for Livewire components (see `placeholder()` methods)
-- Season initialization happens on-demand in `ShowShow` component when first viewing a show
-- Database transactions are used for bulk operations
-- Test fixtures contain actual TV Maze API response samples for reliable testing
-- Authentication required for most pages (enforced via middleware)
+- Shows use `external_id` as route key (TV Maze ID)
+- Lazy loading for Livewire components via `placeholder()` methods
+- Season/episode initialization happens on first show view
+- Images fetched from FanArtTV on show initialization
+- Database transactions wrap bulk operations
+- Test fixtures contain actual API response samples
+- Authentication required for most pages
+
+### Image System
+- Images stored as relative paths (e.g., `tv/123/hdtvlogo/image.png`)
+- `/images/art/{path}` endpoint serves cached images or fetches from FanArtTV
+- Storage disk: `art` (in storage/art/, gitignored)
+- Images cached locally with 1-year browser cache headers
+
+### Missing Core Features
+- **Unwatched episodes by importance** - Not implemented
+- User preferences/settings system
+- Show recommendations
 
 ## Coding Principles
 
