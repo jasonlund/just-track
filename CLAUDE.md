@@ -59,6 +59,9 @@ php artisan test
 # Format code with Laravel Pint
 ./vendor/bin/pint
 
+# Format only changed files
+./vendor/bin/pint --dirty
+
 # Check code formatting without fixing
 ./vendor/bin/pint --test
 ```
@@ -195,6 +198,16 @@ These commands run daily via Laravel's scheduler (defined in `routes/console.php
 
 ## Coding Principles
 
+### Use Artisan Commands for File Creation
+**Always use `php artisan make:` commands to create new files** instead of creating them manually:
+- `php artisan make:livewire ComponentName` for Livewire components
+- `php artisan make:test --pest TestName` for Pest tests
+- `php artisan make:model ModelName` for models
+- `php artisan make:migration migration_name` for migrations
+- `php artisan make:controller ControllerName` for controllers
+- `php artisan make:class ClassName` for generic PHP classes
+- Pass `--no-interaction` to ensure commands work without user input
+
 ### Avoid Single-Use Private Methods
 **Do not create private methods that are only called once.** Keep logic inline unless there's a compelling reason to extract it, such as:
 - The method will likely be reused in the future
@@ -236,7 +249,63 @@ Prefer inline code for simple transformations, calculations, or one-time operati
 - Leverage Livewire's built-in validation
 - Use wire:model for two-way data binding
 
+### Livewire Security: #[Locked] Attribute
+**Err on the side of caution - use the #[Locked] attribute for any properties that should not be modified from the frontend:**
+
+#### When to Use #[Locked]:
+- Properties containing IDs that control access or actions (e.g., `$postId`, `$userId`)
+- Configuration flags that should only be set server-side (e.g., `$isAdmin`, `$canDelete`)
+- Properties that if tampered with could bypass authorization
+- **Configuration properties** that control component behavior (e.g., `$showWatchButton`)
+- **Eloquent models** - even though they have built-in protection, explicitly lock them for clarity
+
+#### When NOT to Use #[Locked]:
+- Form inputs and search fields meant for user interaction
+- Properties bound with `wire:model` for two-way data binding
+- Properties that users are explicitly meant to modify
+
+#### Best Practice:
+**When in doubt, lock it.** It's better to be overly cautious with security than to leave potential vulnerabilities. Properties can always be unlocked later if needed for functionality.
+
+Example from EpisodeCard:
+```php
+#[Locked]
+public Episode $episode;  // Locked even though models have protection
+
+#[Locked] 
+public bool $showWatchButton = true;  // Locked to prevent tampering with UI logic
+```
+
+**Important:** Even with #[Locked], always implement proper authorization checks in your actions. The attribute prevents tampering but doesn't replace authorization.
+
 This approach ensures the codebase remains maintainable, performant, and consistent with Laravel/Livewire best practices.
+
+### Model Serialization
+**Use the `$visible` property to control which fields are exposed** when models are serialized for Livewire components:
+- **Only include fields that are actually used in views or components** - if a field isn't displayed or used in logic, don't include it
+- Include the `id` field and any foreign keys needed for relationships
+- Exclude timestamps and other metadata by default
+- Exclude fields that are only stored but never displayed (e.g., `image` and `summary` in Episode model)
+- Use `makeVisible()` method for admin contexts or when additional fields are temporarily needed
+- This reduces payload size and improves security by not exposing unnecessary data
+
+Example:
+```php
+// In the model - only include fields actually used in the UI
+protected $visible = [
+    'id',           // Needed for relationships
+    'season_id',    // Foreign key for relationships
+    'external_id',  // Used for routing
+    'name',         // Displayed in views
+    'number',       // Displayed in views
+    'air_timestamp',// Displayed in views
+    'runtime',      // Displayed in views
+    // NOT including 'image' or 'summary' as they're never displayed
+];
+
+// In an admin component when extra fields are needed
+$episode = Episode::find(1)->makeVisible(['created_at', 'updated_at']);
+```
 
 ## Comment Guidelines
 

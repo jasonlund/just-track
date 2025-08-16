@@ -10,10 +10,7 @@
             @endif
         </p>
         @foreach($date as $episode)
-            <p wire:key="{{ $episode->id }}">
-                {{ $episode->season->show->name }}
-                {{ $episode->name }}
-            </p>
+            <livewire:components.episode.episode-card :episode="$episode" :key="$episode->id" />
         @endforeach
     @endforeach
 </div>

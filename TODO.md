@@ -10,4 +10,10 @@
 
 - [ ] Add pagination to Previously Aired page
 - [ ] Add pagination to Upcoming page
+- [ ] Add pagination to ShowShow
+- [ ] Refactor ShowShow to use EpisodeCard
 - [ ] UUIDs
+
+## Bugs
+
+- [ ] Short specials included (show id 210; episode id 13960)
