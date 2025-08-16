@@ -9,10 +9,12 @@ use App\Services\TVMazeService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Locked;
 use Livewire\Component;
 
 class ShowShow extends Component
 {
+    #[Locked]
     public Show $show;
 
     private $tvMazeService;
