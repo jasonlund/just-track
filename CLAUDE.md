@@ -280,33 +280,6 @@ public bool $showWatchButton = true;  // Locked to prevent tampering with UI log
 
 This approach ensures the codebase remains maintainable, performant, and consistent with Laravel/Livewire best practices.
 
-### Model Serialization
-**Use the `$visible` property to control which fields are exposed** when models are serialized for Livewire components:
-- **Only include fields that are actually used in views or components** - if a field isn't displayed or used in logic, don't include it
-- Include the `id` field and any foreign keys needed for relationships
-- Exclude timestamps and other metadata by default
-- Exclude fields that are only stored but never displayed (e.g., `image` and `summary` in Episode model)
-- Use `makeVisible()` method for admin contexts or when additional fields are temporarily needed
-- This reduces payload size and improves security by not exposing unnecessary data
-
-Example:
-```php
-// In the model - only include fields actually used in the UI
-protected $visible = [
-    'id',           // Needed for relationships
-    'season_id',    // Foreign key for relationships
-    'external_id',  // Used for routing
-    'name',         // Displayed in views
-    'number',       // Displayed in views
-    'air_timestamp',// Displayed in views
-    'runtime',      // Displayed in views
-    // NOT including 'image' or 'summary' as they're never displayed
-];
-
-// In an admin component when extra fields are needed
-$episode = Episode::find(1)->makeVisible(['created_at', 'updated_at']);
-```
-
 ## Comment Guidelines
 
 **Prefer self-documenting code over comments:**

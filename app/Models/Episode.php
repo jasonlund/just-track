@@ -17,18 +17,6 @@ class Episode extends Model
         'air_timestamp' => 'datetime',
     ];
 
-    protected $visible = [
-        'id',
-        'season_id',
-        'external_id',
-        'number',
-        'type',
-        'name',
-        'premiered',
-        'air_timestamp',
-        'runtime',
-    ];
-
     public function season()
     {
         return $this->belongsTo(Season::class);
