@@ -96,6 +96,12 @@ npm run format:check
 1. Run the entire test suite: `php artisan test` or `pt`
 2. Run Pint to ensure PHP code formatting: `./vendor/bin/pint`
 3. Run Prettier to ensure frontend formatting: `npm run format`
+4. Ask the user: "How many points should I include in the commit message?"
+5. Generate a commit message with:
+    - Subject line (50 characters or less)
+    - The requested number of bullet points
+6. Present the commit message for approval
+7. When approved, stage all changes and commit: `git add -A && git commit`
 
 This ensures:
 
@@ -104,6 +110,9 @@ This ensures:
 - Code follows Laravel formatting standards
 - Frontend files are consistently formatted
 - The codebase remains stable and maintainable
+- Changes are properly committed with clear messages
+
+**Note:** This is the ONLY circumstance where committing is authorized. All other git operations remain read-only.
 
 ### Console Commands
 
@@ -376,7 +385,7 @@ This approach ensures the codebase remains maintainable, performant, and consist
 
 ## Git Commands Policy
 
-**NEVER run git commands unless they are read-only.** When asked for a git commit message, only provide the message text itself, not the git command. The user will handle the actual commit process.
+**NEVER run git commands unless they are read-only.** The ONLY exception is during the finalize workflow (see "Important: Finalizing Changes" above) where, after user approval of the commit message, you are authorized to stage and commit changes using `git add -A && git commit`.
 
 ### Commit Message Guidelines
 
@@ -385,6 +394,7 @@ This approach ensures the codebase remains maintainable, performant, and consist
 - Use 4-6 points for larger, more complex changes
 - Each point should be concise and describe a specific change
 - Focus on the most important changes rather than listing every detail
+- **NEVER** add "Generated with Claude Code" or "Co-Authored-By" lines to commit messages
 
 ===
 
@@ -776,7 +786,7 @@ document.addEventListener('livewire:init', function () {
   it('returns all', function () {
   $response = $this->postJson('/api/docs', []);
 
-            $response->assertSuccessful();
+              $response->assertSuccessful();
 
     });
     </code-snippet>
@@ -813,13 +823,13 @@ it('has emails', function (string $email) {
 
 - When listing items, use gap utilities for spacing, don't use margins.
 
-          <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
-              <div class="flex gap-8">
-                  <div>Superior</div>
-                  <div>Michigan</div>
-                  <div>Erie</div>
-              </div>
-          </code-snippet>
+            <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
+                <div class="flex gap-8">
+                    <div>Superior</div>
+                    <div>Michigan</div>
+                    <div>Erie</div>
+                </div>
+            </code-snippet>
 
 ### Dark Mode
 
