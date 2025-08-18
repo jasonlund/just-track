@@ -3,7 +3,9 @@
         <p>
             <label for="email">Email</label>
             <input type="email" id="email" wire:model="form.email" />
-            @error('form.email') <span>{{ $message }}</span> @enderror
+            @error('form.email')
+                <span>{{ $message }}</span>
+            @enderror
         </p>
 
         <p>

@@ -1,1 +1,167 @@
-{"id":51303,"url":"https://www.tvmaze.com/shows/51303/taskmaster-nz","name":"Taskmaster NZ","type":"Game Show","language":"English","genres":["Comedy"],"status":"Running","runtime":60,"averageRuntime":61,"premiered":"2020-10-21","ended":null,"officialSite":"https://www.tvnz.co.nz/shows/taskmaster-nz","schedule":{"time":"19:30","days":["Tuesday","Wednesday"]},"rating":{"average":7.7},"weight":97,"network":{"id":452,"name":"TVNZ 2","country":{"name":"New Zealand","code":"NZ","timezone":"Pacific/Auckland"},"officialSite":"https://www.tvnz.co.nz/livetv/tvnz-2"},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":386002,"imdb":"tt13544772"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/427/1068428.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/427/1068428.jpg"},"summary":"<p>Jeremy Wells reigns supreme alongside his royal assistant Paul Williams, in the highly anticipated local version of Taskmaster. They'll be putting Kiwi comedians through their paces in a series of bizarre, hilarious and ingenious tasks.</p>","updated":1754848095,"_links":{"self":{"href":"https://api.tvmaze.com/shows/51303"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/2954474","name":"Oh Baby it's Elegance"},"nextepisode":{"href":"https://api.tvmaze.com/episodes/3318266","name":"It's Like a Make a Wish"}},"_embedded":{"seasons":[{"id":115565,"url":"https://www.tvmaze.com/seasons/115565/taskmaster-nz-season-1","number":1,"name":"","episodeOrder":10,"premiereDate":"2020-10-21","endDate":"2020-12-23","network":{"id":452,"name":"TVNZ 2","country":{"name":"New Zealand","code":"NZ","timezone":"Pacific/Auckland"},"officialSite":"https://www.tvnz.co.nz/livetv/tvnz-2"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/414/1035762.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/414/1035762.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/115565"}}},{"id":125614,"url":"https://www.tvmaze.com/seasons/125614/taskmaster-nz-season-2","number":2,"name":"","episodeOrder":10,"premiereDate":"2021-07-07","endDate":"2021-09-08","network":{"id":452,"name":"TVNZ 2","country":{"name":"New Zealand","code":"NZ","timezone":"Pacific/Auckland"},"officialSite":"https://www.tvnz.co.nz/livetv/tvnz-2"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/414/1035760.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/414/1035760.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/125614"}}},{"id":138389,"url":"https://www.tvmaze.com/seasons/138389/taskmaster-nz-season-3","number":3,"name":"","episodeOrder":10,"premiereDate":"2022-07-06","endDate":"2022-09-07","network":{"id":452,"name":"TVNZ 2","country":{"name":"New Zealand","code":"NZ","timezone":"Pacific/Auckland"},"officialSite":"https://www.tvnz.co.nz/livetv/tvnz-2"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/529/1324104.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/529/1324104.jpg"},"summary":"<p><b>Taskmaster</b> Jeremy Wells and his loyal assistant Paul Williams return to their thrones when the third season of Taskmaster NZ. Of course, every new series needs the spectacle of five fresh and funny fellows anxiously hoping that their attempts at task completion will gain favour with the Great Man.  <br /><br />The unwitting hopefuls vying to be crowned Taskmaster Champion this season are award-winning comedian and Celebrity Treasure Island royalty <b>Chris Parker</b>; comedic surrealist <b>Josh Thomson</b>; queen of comedy <b>Justine Smith</b>; Billy T Award-winner and Shortland Street icon <b>Kura Forrester</b> and comedy veteran <b>Paul Ego</b>.  <br /><br />This quintet of creative contestants face a vast array of simple yet complicated tasks that they must try to perform competently and without making themselves look foolish. Sometimes they will succeed triumphantly, other times they really, really won't. <br /><br />Seals will be broken, tasks will be read and unpredictable actions will then occur as the five comedians grapple with problems involving crème brûlée cracking, cow touching and cereal. Could you create history? Enchant a forest? Make a dramatic exit? Yes? No? These fearless competitors both can and can't too. <br /><br />Rivalry amongst the contenders is encouraged, dodgy tactics rewarded, and bribes accepted in the most hard-fought and ridiculous show on TV.</p>","_links":{"self":{"href":"https://api.tvmaze.com/seasons/138389"}}},{"id":151429,"url":"https://www.tvmaze.com/seasons/151429/taskmaster-nz-season-4","number":4,"name":"","episodeOrder":10,"premiereDate":"2023-08-14","endDate":"2023-09-12","network":{"id":452,"name":"TVNZ 2","country":{"name":"New Zealand","code":"NZ","timezone":"Pacific/Auckland"},"officialSite":"https://www.tvnz.co.nz/livetv/tvnz-2"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/529/1324105.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/529/1324105.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/151429"}}},{"id":172771,"url":"https://www.tvmaze.com/seasons/172771/taskmaster-nz-season-5","number":5,"name":"","episodeOrder":10,"premiereDate":"2024-08-06","endDate":"2024-09-04","network":{"id":452,"name":"TVNZ 2","country":{"name":"New Zealand","code":"NZ","timezone":"Pacific/Auckland"},"officialSite":"https://www.tvnz.co.nz/livetv/tvnz-2"},"webChannel":null,"image":null,"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/172771"}}},{"id":189063,"url":"https://www.tvmaze.com/seasons/189063/taskmaster-nz-season-6","number":6,"name":"","episodeOrder":null,"premiereDate":"2025-08-18","endDate":"2025-09-16","network":{"id":452,"name":"TVNZ 2","country":{"name":"New Zealand","code":"NZ","timezone":"Pacific/Auckland"},"officialSite":"https://www.tvnz.co.nz/livetv/tvnz-2"},"webChannel":null,"image":null,"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/189063"}}}]}}
+{
+  "id": 51303,
+  "url": "https://www.tvmaze.com/shows/51303/taskmaster-nz",
+  "name": "Taskmaster NZ",
+  "type": "Game Show",
+  "language": "English",
+  "genres": ["Comedy"],
+  "status": "Running",
+  "runtime": 60,
+  "averageRuntime": 61,
+  "premiered": "2020-10-21",
+  "ended": null,
+  "officialSite": "https://www.tvnz.co.nz/shows/taskmaster-nz",
+  "schedule": { "time": "19:30", "days": ["Tuesday", "Wednesday"] },
+  "rating": { "average": 7.7 },
+  "weight": 97,
+  "network": {
+    "id": 452,
+    "name": "TVNZ 2",
+    "country": { "name": "New Zealand", "code": "NZ", "timezone": "Pacific/Auckland" },
+    "officialSite": "https://www.tvnz.co.nz/livetv/tvnz-2"
+  },
+  "webChannel": null,
+  "dvdCountry": null,
+  "externals": { "tvrage": null, "thetvdb": 386002, "imdb": "tt13544772" },
+  "image": {
+    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/427/1068428.jpg",
+    "original": "https://static.tvmaze.com/uploads/images/original_untouched/427/1068428.jpg"
+  },
+  "summary": "<p>Jeremy Wells reigns supreme alongside his royal assistant Paul Williams, in the highly anticipated local version of Taskmaster. They'll be putting Kiwi comedians through their paces in a series of bizarre, hilarious and ingenious tasks.</p>",
+  "updated": 1754848095,
+  "_links": {
+    "self": { "href": "https://api.tvmaze.com/shows/51303" },
+    "previousepisode": { "href": "https://api.tvmaze.com/episodes/2954474", "name": "Oh Baby it's Elegance" },
+    "nextepisode": { "href": "https://api.tvmaze.com/episodes/3318266", "name": "It's Like a Make a Wish" }
+  },
+  "_embedded": {
+    "seasons": [
+      {
+        "id": 115565,
+        "url": "https://www.tvmaze.com/seasons/115565/taskmaster-nz-season-1",
+        "number": 1,
+        "name": "",
+        "episodeOrder": 10,
+        "premiereDate": "2020-10-21",
+        "endDate": "2020-12-23",
+        "network": {
+          "id": 452,
+          "name": "TVNZ 2",
+          "country": { "name": "New Zealand", "code": "NZ", "timezone": "Pacific/Auckland" },
+          "officialSite": "https://www.tvnz.co.nz/livetv/tvnz-2"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/414/1035762.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/414/1035762.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/115565" } }
+      },
+      {
+        "id": 125614,
+        "url": "https://www.tvmaze.com/seasons/125614/taskmaster-nz-season-2",
+        "number": 2,
+        "name": "",
+        "episodeOrder": 10,
+        "premiereDate": "2021-07-07",
+        "endDate": "2021-09-08",
+        "network": {
+          "id": 452,
+          "name": "TVNZ 2",
+          "country": { "name": "New Zealand", "code": "NZ", "timezone": "Pacific/Auckland" },
+          "officialSite": "https://www.tvnz.co.nz/livetv/tvnz-2"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/414/1035760.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/414/1035760.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/125614" } }
+      },
+      {
+        "id": 138389,
+        "url": "https://www.tvmaze.com/seasons/138389/taskmaster-nz-season-3",
+        "number": 3,
+        "name": "",
+        "episodeOrder": 10,
+        "premiereDate": "2022-07-06",
+        "endDate": "2022-09-07",
+        "network": {
+          "id": 452,
+          "name": "TVNZ 2",
+          "country": { "name": "New Zealand", "code": "NZ", "timezone": "Pacific/Auckland" },
+          "officialSite": "https://www.tvnz.co.nz/livetv/tvnz-2"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/529/1324104.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/529/1324104.jpg"
+        },
+        "summary": "<p><b>Taskmaster</b> Jeremy Wells and his loyal assistant Paul Williams return to their thrones when the third season of Taskmaster NZ. Of course, every new series needs the spectacle of five fresh and funny fellows anxiously hoping that their attempts at task completion will gain favour with the Great Man.  <br /><br />The unwitting hopefuls vying to be crowned Taskmaster Champion this season are award-winning comedian and Celebrity Treasure Island royalty <b>Chris Parker</b>; comedic surrealist <b>Josh Thomson</b>; queen of comedy <b>Justine Smith</b>; Billy T Award-winner and Shortland Street icon <b>Kura Forrester</b> and comedy veteran <b>Paul Ego</b>.  <br /><br />This quintet of creative contestants face a vast array of simple yet complicated tasks that they must try to perform competently and without making themselves look foolish. Sometimes they will succeed triumphantly, other times they really, really won't. <br /><br />Seals will be broken, tasks will be read and unpredictable actions will then occur as the five comedians grapple with problems involving crème brûlée cracking, cow touching and cereal. Could you create history? Enchant a forest? Make a dramatic exit? Yes? No? These fearless competitors both can and can't too. <br /><br />Rivalry amongst the contenders is encouraged, dodgy tactics rewarded, and bribes accepted in the most hard-fought and ridiculous show on TV.</p>",
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/138389" } }
+      },
+      {
+        "id": 151429,
+        "url": "https://www.tvmaze.com/seasons/151429/taskmaster-nz-season-4",
+        "number": 4,
+        "name": "",
+        "episodeOrder": 10,
+        "premiereDate": "2023-08-14",
+        "endDate": "2023-09-12",
+        "network": {
+          "id": 452,
+          "name": "TVNZ 2",
+          "country": { "name": "New Zealand", "code": "NZ", "timezone": "Pacific/Auckland" },
+          "officialSite": "https://www.tvnz.co.nz/livetv/tvnz-2"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/529/1324105.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/529/1324105.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/151429" } }
+      },
+      {
+        "id": 172771,
+        "url": "https://www.tvmaze.com/seasons/172771/taskmaster-nz-season-5",
+        "number": 5,
+        "name": "",
+        "episodeOrder": 10,
+        "premiereDate": "2024-08-06",
+        "endDate": "2024-09-04",
+        "network": {
+          "id": 452,
+          "name": "TVNZ 2",
+          "country": { "name": "New Zealand", "code": "NZ", "timezone": "Pacific/Auckland" },
+          "officialSite": "https://www.tvnz.co.nz/livetv/tvnz-2"
+        },
+        "webChannel": null,
+        "image": null,
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/172771" } }
+      },
+      {
+        "id": 189063,
+        "url": "https://www.tvmaze.com/seasons/189063/taskmaster-nz-season-6",
+        "number": 6,
+        "name": "",
+        "episodeOrder": null,
+        "premiereDate": "2025-08-18",
+        "endDate": "2025-09-16",
+        "network": {
+          "id": 452,
+          "name": "TVNZ 2",
+          "country": { "name": "New Zealand", "code": "NZ", "timezone": "Pacific/Auckland" },
+          "officialSite": "https://www.tvnz.co.nz/livetv/tvnz-2"
+        },
+        "webChannel": null,
+        "image": null,
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/189063" } }
+      }
+    ]
+  }
+}

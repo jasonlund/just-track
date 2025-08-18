@@ -1,1 +1,326 @@
-{"id":210,"url":"https://www.tvmaze.com/shows/210/doctor-who","name":"Doctor Who","type":"Scripted","language":"English","genres":["Drama","Adventure","Science-Fiction"],"status":"Ended","runtime":null,"averageRuntime":48,"premiered":"2005-03-26","ended":"2022-10-23","officialSite":"http://www.bbc.co.uk/programmes/b006q2x0","schedule":{"time":"","days":["Sunday"]},"rating":{"average":8.3},"weight":99,"network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":3332,"thetvdb":78804,"imdb":"tt0436992"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/488/1220400.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/488/1220400.jpg"},"summary":"<p>Adventures across time and space with the time travelling alien and companions.</p>","updated":1737589355,"_links":{"self":{"href":"https://api.tvmaze.com/shows/210"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/2393182","name":"The Power of the Doctor"}},"_embedded":{"seasons":[{"id":859,"url":"https://www.tvmaze.com/seasons/859/doctor-who-season-1","number":1,"name":"","episodeOrder":13,"premiereDate":"2005-03-26","endDate":"2005-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/443002.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/443002.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/859"}}},{"id":860,"url":"https://www.tvmaze.com/seasons/860/doctor-who-season-2","number":2,"name":"","episodeOrder":13,"premiereDate":"2006-04-15","endDate":"2006-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/443001.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/443001.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/860"}}},{"id":861,"url":"https://www.tvmaze.com/seasons/861/doctor-who-season-3","number":3,"name":"","episodeOrder":13,"premiereDate":"2007-03-31","endDate":"2007-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/443000.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/443000.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/861"}}},{"id":862,"url":"https://www.tvmaze.com/seasons/862/doctor-who-season-4","number":4,"name":"","episodeOrder":13,"premiereDate":"2008-04-05","endDate":"2010-01-01","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/442999.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/442999.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/862"}}},{"id":863,"url":"https://www.tvmaze.com/seasons/863/doctor-who-season-5","number":5,"name":"","episodeOrder":13,"premiereDate":"2010-04-03","endDate":"2010-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/442998.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/442998.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/863"}}},{"id":864,"url":"https://www.tvmaze.com/seasons/864/doctor-who-season-6","number":6,"name":"","episodeOrder":13,"premiereDate":"2011-03-25","endDate":"2011-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/442997.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/442997.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/864"}}},{"id":865,"url":"https://www.tvmaze.com/seasons/865/doctor-who-season-7","number":7,"name":"","episodeOrder":13,"premiereDate":"2012-09-01","endDate":"2013-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/442996.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/442996.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/865"}}},{"id":866,"url":"https://www.tvmaze.com/seasons/866/doctor-who-season-8","number":8,"name":"","episodeOrder":12,"premiereDate":"2014-08-23","endDate":"2014-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/442994.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/442994.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/866"}}},{"id":8260,"url":"https://www.tvmaze.com/seasons/8260/doctor-who-season-9","number":9,"name":"","episodeOrder":12,"premiereDate":"2015-09-11","endDate":"2015-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/442992.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/442992.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/8260"}}},{"id":38217,"url":"https://www.tvmaze.com/seasons/38217/doctor-who-season-10","number":10,"name":"","episodeOrder":12,"premiereDate":"2016-04-23","endDate":"2017-12-25","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/177/442990.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/177/442990.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/38217"}}},{"id":77028,"url":"https://www.tvmaze.com/seasons/77028/doctor-who-season-11","number":11,"name":"","episodeOrder":10,"premiereDate":"2018-10-07","endDate":"2019-01-01","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/170/425229.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/170/425229.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/77028"}}},{"id":91650,"url":"https://www.tvmaze.com/seasons/91650/doctor-who-season-12","number":12,"name":"","episodeOrder":10,"premiereDate":"2020-01-01","endDate":"2021-01-01","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/237/594824.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/237/594824.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/91650"}}},{"id":106103,"url":"https://www.tvmaze.com/seasons/106103/doctor-who-season-13","number":13,"name":"Flux","episodeOrder":null,"premiereDate":"2021-10-31","endDate":"2022-10-23","network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/392/980311.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/392/980311.jpg"},"summary":null,"_links":{"self":{"href":"https://api.tvmaze.com/seasons/106103"}}}]}}
+{
+  "id": 210,
+  "url": "https://www.tvmaze.com/shows/210/doctor-who",
+  "name": "Doctor Who",
+  "type": "Scripted",
+  "language": "English",
+  "genres": ["Drama", "Adventure", "Science-Fiction"],
+  "status": "Ended",
+  "runtime": null,
+  "averageRuntime": 48,
+  "premiered": "2005-03-26",
+  "ended": "2022-10-23",
+  "officialSite": "http://www.bbc.co.uk/programmes/b006q2x0",
+  "schedule": { "time": "", "days": ["Sunday"] },
+  "rating": { "average": 8.3 },
+  "weight": 99,
+  "network": {
+    "id": 12,
+    "name": "BBC One",
+    "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+    "officialSite": "https://www.bbc.co.uk/bbcone"
+  },
+  "webChannel": null,
+  "dvdCountry": null,
+  "externals": { "tvrage": 3332, "thetvdb": 78804, "imdb": "tt0436992" },
+  "image": {
+    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/488/1220400.jpg",
+    "original": "https://static.tvmaze.com/uploads/images/original_untouched/488/1220400.jpg"
+  },
+  "summary": "<p>Adventures across time and space with the time travelling alien and companions.</p>",
+  "updated": 1737589355,
+  "_links": {
+    "self": { "href": "https://api.tvmaze.com/shows/210" },
+    "previousepisode": { "href": "https://api.tvmaze.com/episodes/2393182", "name": "The Power of the Doctor" }
+  },
+  "_embedded": {
+    "seasons": [
+      {
+        "id": 859,
+        "url": "https://www.tvmaze.com/seasons/859/doctor-who-season-1",
+        "number": 1,
+        "name": "",
+        "episodeOrder": 13,
+        "premiereDate": "2005-03-26",
+        "endDate": "2005-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/443002.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/443002.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/859" } }
+      },
+      {
+        "id": 860,
+        "url": "https://www.tvmaze.com/seasons/860/doctor-who-season-2",
+        "number": 2,
+        "name": "",
+        "episodeOrder": 13,
+        "premiereDate": "2006-04-15",
+        "endDate": "2006-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/443001.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/443001.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/860" } }
+      },
+      {
+        "id": 861,
+        "url": "https://www.tvmaze.com/seasons/861/doctor-who-season-3",
+        "number": 3,
+        "name": "",
+        "episodeOrder": 13,
+        "premiereDate": "2007-03-31",
+        "endDate": "2007-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/443000.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/443000.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/861" } }
+      },
+      {
+        "id": 862,
+        "url": "https://www.tvmaze.com/seasons/862/doctor-who-season-4",
+        "number": 4,
+        "name": "",
+        "episodeOrder": 13,
+        "premiereDate": "2008-04-05",
+        "endDate": "2010-01-01",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/442999.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/442999.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/862" } }
+      },
+      {
+        "id": 863,
+        "url": "https://www.tvmaze.com/seasons/863/doctor-who-season-5",
+        "number": 5,
+        "name": "",
+        "episodeOrder": 13,
+        "premiereDate": "2010-04-03",
+        "endDate": "2010-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/442998.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/442998.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/863" } }
+      },
+      {
+        "id": 864,
+        "url": "https://www.tvmaze.com/seasons/864/doctor-who-season-6",
+        "number": 6,
+        "name": "",
+        "episodeOrder": 13,
+        "premiereDate": "2011-03-25",
+        "endDate": "2011-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/442997.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/442997.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/864" } }
+      },
+      {
+        "id": 865,
+        "url": "https://www.tvmaze.com/seasons/865/doctor-who-season-7",
+        "number": 7,
+        "name": "",
+        "episodeOrder": 13,
+        "premiereDate": "2012-09-01",
+        "endDate": "2013-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/442996.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/442996.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/865" } }
+      },
+      {
+        "id": 866,
+        "url": "https://www.tvmaze.com/seasons/866/doctor-who-season-8",
+        "number": 8,
+        "name": "",
+        "episodeOrder": 12,
+        "premiereDate": "2014-08-23",
+        "endDate": "2014-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/442994.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/442994.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/866" } }
+      },
+      {
+        "id": 8260,
+        "url": "https://www.tvmaze.com/seasons/8260/doctor-who-season-9",
+        "number": 9,
+        "name": "",
+        "episodeOrder": 12,
+        "premiereDate": "2015-09-11",
+        "endDate": "2015-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/442992.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/442992.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/8260" } }
+      },
+      {
+        "id": 38217,
+        "url": "https://www.tvmaze.com/seasons/38217/doctor-who-season-10",
+        "number": 10,
+        "name": "",
+        "episodeOrder": 12,
+        "premiereDate": "2016-04-23",
+        "endDate": "2017-12-25",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/442990.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/442990.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/38217" } }
+      },
+      {
+        "id": 77028,
+        "url": "https://www.tvmaze.com/seasons/77028/doctor-who-season-11",
+        "number": 11,
+        "name": "",
+        "episodeOrder": 10,
+        "premiereDate": "2018-10-07",
+        "endDate": "2019-01-01",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/170/425229.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/170/425229.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/77028" } }
+      },
+      {
+        "id": 91650,
+        "url": "https://www.tvmaze.com/seasons/91650/doctor-who-season-12",
+        "number": 12,
+        "name": "",
+        "episodeOrder": 10,
+        "premiereDate": "2020-01-01",
+        "endDate": "2021-01-01",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/237/594824.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/237/594824.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/91650" } }
+      },
+      {
+        "id": 106103,
+        "url": "https://www.tvmaze.com/seasons/106103/doctor-who-season-13",
+        "number": 13,
+        "name": "Flux",
+        "episodeOrder": null,
+        "premiereDate": "2021-10-31",
+        "endDate": "2022-10-23",
+        "network": {
+          "id": 12,
+          "name": "BBC One",
+          "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+          "officialSite": "https://www.bbc.co.uk/bbcone"
+        },
+        "webChannel": null,
+        "image": {
+          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/392/980311.jpg",
+          "original": "https://static.tvmaze.com/uploads/images/original_untouched/392/980311.jpg"
+        },
+        "summary": null,
+        "_links": { "self": { "href": "https://api.tvmaze.com/seasons/106103" } }
+      }
+    ]
+  }
+}

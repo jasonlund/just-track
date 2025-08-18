@@ -10,25 +10,25 @@
 
     <h1>Results</h1>
     <p>
-        @if(count($results))
+        @if (count($results))
             <ul>
-                @foreach($results as $result)
+                @foreach ($results as $result)
                     <li wire:key="{{ $result['id'] }}">
-                        <a href="{{ route('show.show', $result['id'] ) }}" wire:navigate>
-                            {{ $result['name'] }} @if($result['premiered'] !== null) ({{ $result['premiered'] }}) @endif
+                        <a href="{{ route('show.show', $result['id']) }}" wire:navigate>
+                            {{ $result['name'] }}
+                            @if ($result['premiered'] !== null)
+                                ({{ $result['premiered'] }})
+                            @endif
                         </a>
 
-                        <a href="{{ route('show.show', [$result['id'], 'attach'] ) }}" wire:navigate>
-                            Add
-                        </a>
+                        <a href="{{ route('show.show', [$result['id'], 'attach']) }}" wire:navigate>Add</a>
                     </li>
                 @endforeach
             </ul>
-        @elseif($query === '')
+        @elseif ($query === '')
             Please search for a show above
         @else
             Your search returned no results
         @endif
     </p>
-
 </div>

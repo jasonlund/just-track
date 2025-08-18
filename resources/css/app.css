@@ -18,7 +18,7 @@
         --color-zinc-800: var(--color-stone-800);
         --color-zinc-900: var(--color-stone-900);
         --color-zinc-950: var(--color-stone-950);
-        
+
         /* Override orange with papaya colors */
         --color-orange-50: var(--color-papaya-50);
         --color-orange-100: var(--color-papaya-100);
@@ -39,20 +39,20 @@
     --font-sans: 'Work Sans', sans-serif;
     --font-serif: 'Cormorant Garamond', serif;
     --font-mono: 'IBM Plex Mono', monospace;
-    
+
     /* Papaya Brand Colors */
     --color-papaya-50: #fff7ed;
     --color-papaya-100: #ffedd5;
     --color-papaya-200: #fed7aa;
     --color-papaya-300: #fdba74;
     --color-papaya-400: #fb923c;
-    --color-papaya-500: #FF8700;
+    --color-papaya-500: #ff8700;
     --color-papaya-600: #ea580c;
     --color-papaya-700: #c2410c;
     --color-papaya-800: #9a3412;
     --color-papaya-900: #7c2d12;
     --color-papaya-950: #431407;
-    
+
     /* Flux UI Accent Configuration */
     --color-accent-50: var(--color-papaya-50);
     --color-accent-100: var(--color-papaya-100);
@@ -65,7 +65,7 @@
     --color-accent-800: var(--color-papaya-800);
     --color-accent-900: var(--color-papaya-900);
     --color-accent-950: var(--color-papaya-950);
-    
+
     /* Simplified accent variables for Flux */
     --color-accent: var(--color-papaya-500);
     --color-accent-content: var(--color-papaya-500);
@@ -98,5 +98,3 @@
         }
     }
 }
-
-

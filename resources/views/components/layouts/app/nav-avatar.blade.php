@@ -2,7 +2,7 @@
     'profile' => false,
 ])
 
-@if($profile)
+@if ($profile)
     <flux:profile
         avatar:name="{{ auth()->user()->name ?? 'User' }}"
         avatar:color="orange"

@@ -1,1 +1,393 @@
-[{"score":0.69859266,"show":{"id":210,"url":"https://www.tvmaze.com/shows/210/doctor-who","name":"Doctor Who","type":"Scripted","language":"English","genres":["Drama","Adventure","Science-Fiction"],"status":"Ended","runtime":null,"averageRuntime":48,"premiered":"2005-03-26","ended":"2022-10-23","officialSite":"http://www.bbc.co.uk/programmes/b006q2x0","schedule":{"time":"","days":["Sunday"]},"rating":{"average":8.3},"weight":99,"network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":3332,"thetvdb":78804,"imdb":"tt0436992"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/488/1220400.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/488/1220400.jpg"},"summary":"<p>Adventures across time and space with the time travelling alien and companions.</p>","updated":1737589355,"_links":{"self":{"href":"https://api.tvmaze.com/shows/210"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/2393182","name":"The Power of the Doctor"}}}},{"score":0.6984314,"show":{"id":72724,"url":"https://www.tvmaze.com/shows/72724/doctor-who","name":"Doctor Who","type":"Scripted","language":"English","genres":["Drama","Adventure","Science-Fiction"],"status":"Running","runtime":null,"averageRuntime":47,"premiered":"2023-11-25","ended":null,"officialSite":"https://www.bbc.co.uk/programmes/p0gglvqn","schedule":{"time":"00:00","days":["Friday"]},"rating":{"average":6.7},"weight":99,"network":null,"webChannel":{"id":26,"name":"BBC iPlayer","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/iplayer"},"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":449991,"imdb":"tt31433814"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/548/1370219.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/548/1370219.jpg"},"summary":"<p>The Doctor and his companion, Ruby Sunday, travel across time and space, having adventures from the Regency era in England to war-torn future worlds, from the dawn of human history to distant alien worlds. Throughout their adventures in the TARDIS – a time-traveling ship shaped like a police box – they encounter incredible friends and dangerous foes, including a terrifying bogeyman and the Doctor's most powerful enemy yet. And everywhere they go, they find adventure, terror, fun, chases, joy, and monsters.</p>","updated":1735594338,"_links":{"self":{"href":"https://api.tvmaze.com/shows/72724"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/2956383","name":"Joy to the World"}}}},{"score":0.69835037,"show":{"id":75508,"url":"https://www.tvmaze.com/shows/75508/doctor-odyssey","name":"Doctor Odyssey","type":"Scripted","language":"English","genres":["Drama","Medical"],"status":"Running","runtime":60,"averageRuntime":60,"premiered":"2024-09-26","ended":null,"officialSite":"https://abc.com/show/b052ca15-d1e1-4aa4-9568-15c87b104c02","schedule":{"time":"21:00","days":["Thursday"]},"rating":{"average":3.6},"weight":99,"network":{"id":3,"name":"ABC","country":{"name":"United States","code":"US","timezone":"America/New_York"},"officialSite":"https://abc.com/"},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":447900,"imdb":"tt31849826"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/533/1334692.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/533/1334692.jpg"},"summary":"<p>Max is the new on-board doctor for a luxury cruise ship where the staff works hard and plays harder. It's all hands on deck as Max and his small but mighty medical team navigate unique medical crises and each other, miles from shore.</p>","updated":1739325560,"_links":{"self":{"href":"https://api.tvmaze.com/shows/75508"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/3041018","name":"Quackers"},"nextepisode":{"href":"https://api.tvmaze.com/episodes/3049977","name":"Shark Attack!"}}}},{"score":0.697776,"show":{"id":766,"url":"https://www.tvmaze.com/shows/766/doctor-who","name":"Doctor Who","type":"Scripted","language":"English","genres":["Action","Adventure","Science-Fiction"],"status":"Ended","runtime":25,"averageRuntime":25,"premiered":"1963-11-23","ended":"1996-05-12","officialSite":"https://www.bbc.co.uk/programmes/p0ggwr8l","schedule":{"time":"17:15","days":[]},"rating":{"average":8.3},"weight":97,"network":{"id":12,"name":"BBC One","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.bbc.co.uk/bbcone"},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":3331,"thetvdb":76107,"imdb":"tt0056751"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/488/1221842.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/488/1221842.jpg"},"summary":"<p><b>Doctor Who</b> is the longest-running science fiction TV series in history, airing initially from 1963 to 1989. <i>Doctor Who</i> is about ideas. It pioneered sophisticated mixed-level storytelling. Its format was the key to its longevity: the Doctor, a mysterious traveller in space and time, travels in his ship, the TARDIS. The TARDIS can take him and his companions anywhere in time and space. Inevitably he finds evil at work wherever he goes..</p>","updated":1735483513,"_links":{"self":{"href":"https://api.tvmaze.com/shows/766"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/325704","name":"Doctor Who: The Movie"}}}},{"score":0.693172,"show":{"id":6912,"url":"https://www.tvmaze.com/shows/6912/doctor-thorne","name":"Doctor Thorne","type":"Scripted","language":"English","genres":["Drama"],"status":"Ended","runtime":60,"averageRuntime":60,"premiered":"2016-03-06","ended":"2016-05-19","officialSite":null,"schedule":{"time":"","days":["Sunday"]},"rating":{"average":7.4},"weight":87,"network":{"id":35,"name":"ITV1","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.itv.com/"},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":307343,"imdb":"tt4938084"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/48/120969.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/48/120969.jpg"},"summary":"<p><b>Doctor Thorne</b> tells the story of the penniless Mary Thorne, who grows up with her rich aunt/cousins at Greshamsbury Park estate.</p>","updated":1731171042,"_links":{"self":{"href":"https://api.tvmaze.com/shows/6912"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/3047534","name":"Episode 4"}}}},{"score":0.69297487,"show":{"id":20303,"url":"https://www.tvmaze.com/shows/20303/doctor-doctor","name":"Doctor Doctor","type":"Scripted","language":"English","genres":["Drama","Medical"],"status":"Ended","runtime":60,"averageRuntime":60,"premiered":"2016-09-14","ended":"2021-06-23","officialSite":"https://www.9now.com.au/doctor-doctor","schedule":{"time":"20:30","days":["Wednesday"]},"rating":{"average":7.4},"weight":87,"network":{"id":120,"name":"Nine Network","country":{"name":"Australia","code":"AU","timezone":"Australia/Sydney"},"officialSite":null},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":316394,"imdb":"tt6015808"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/178/446527.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/178/446527.jpg"},"summary":"<p>After a spectacular fall from grace, high-flying heart surgeon Dr Hugh Knight receives a life-changing punishment from the Medical Tribunal - he is forced to work for a year as a country GP in his former home town of Whyhope.</p><p><b>Doctor Doctor</b> follows Hugh's attempt to rebuild his world in the town he has spent his whole life running away from. Now the only way to salvage his brilliant career is to work as a lowly GP in an under-resourced, small-town hospital surrounded by estranged family, former friends, crazed colleagues, oddball patients, jealous brothers and a newlywed ex-girlfriend.</p>","updated":1704795238,"_links":{"self":{"href":"https://api.tvmaze.com/shows/20303"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/2111816","name":"Episode 8"}}}},{"score":0.6908191,"show":{"id":59338,"url":"https://www.tvmaze.com/shows/59338/ghost-doctor","name":"Ghost Doctor","type":"Scripted","language":"Korean","genres":["Fantasy","Medical"],"status":"Ended","runtime":80,"averageRuntime":70,"premiered":"2022-01-03","ended":"2022-02-22","officialSite":"https://program.tving.com/tvn/ghostdoctor","schedule":{"time":"22:30","days":["Monday","Tuesday"]},"rating":{"average":7.8},"weight":83,"network":{"id":280,"name":"tvN","country":{"name":"Korea, Republic of","code":"KR","timezone":"Asia/Seoul"},"officialSite":null},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":399085,"imdb":"tt16493854"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/382/956011.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/382/956011.jpg"},"summary":"<p>Cha Young Min is a genius doctor, but he is arrogant and selfish. One day, he gets involved in an unexpected case. Due to the unexpected case, his spirit possesses another doctor's body. These two doctors are complete opposites, with opposite personalities and medical abilities.</p>","updated":1674112876,"_links":{"self":{"href":"https://api.tvmaze.com/shows/59338"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/2231516","name":"Episode 16"}}}},{"score":0.68837863,"show":{"id":11342,"url":"https://www.tvmaze.com/shows/11342/doctor-finlay","name":"Doctor Finlay","type":"Scripted","language":"English","genres":["Drama"],"status":"Ended","runtime":60,"averageRuntime":60,"premiered":"1993-05-09","ended":"1996-12-20","officialSite":null,"schedule":{"time":"21:00","days":["Sunday"]},"rating":{"average":null},"weight":79,"network":{"id":35,"name":"ITV1","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.itv.com/"},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":134631,"imdb":"tt0108747"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/38/95799.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/38/95799.jpg"},"summary":"<p><b>Doctor Finlay</b> is a British television series based on A. J. Cronin's stories about the fictional hero, Dr. Finlay.</p><p>It is a follow-up to <i>Dr. Finlay's Casebook</i>, the successful BBC series and takes place in the 1940s after John Finlay returns from war service. Early storylines include the setting up of the new National Health Service and the modernisation of the medical practice at Arden House, Tannochbrae, Scotland.</p><p>The show stars David Rintoul as Dr. Finlay, Ian Bannen as his semi-retired practice partner, Dr. Cameron, and Annette Crosbie as his housekeeper, Janet. Other central characters include Finlay's assistant, Dr. Neil, played by Jason Flemyng and Finlay's new partner, Dr. Napier, played by Jessica Turner.</p>","updated":1704793445,"_links":{"self":{"href":"https://api.tvmaze.com/shows/11342"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/561077","name":"Snowblind"}}}},{"score":0.6853491,"show":{"id":7367,"url":"https://www.tvmaze.com/shows/7367/doctor-stranger","name":"Doctor Stranger","type":"Scripted","language":"Korean","genres":["Drama","Romance","Medical"],"status":"Ended","runtime":70,"averageRuntime":65,"premiered":"2014-05-05","ended":"2014-07-08","officialSite":"http://program.sbs.co.kr/builder/programMainList.do?pgm_id=22000002970","schedule":{"time":"21:55","days":["Monday","Tuesday"]},"rating":{"average":7.4},"weight":74,"network":{"id":127,"name":"SBS","country":{"name":"Korea, Republic of","code":"KR","timezone":"Asia/Seoul"},"officialSite":null},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":280750,"imdb":"tt3693414"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/27/68060.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/27/68060.jpg"},"summary":"<p>The series will revolve around Park Hoon, a South Korean who was captured with his father and grows up in North Korea. He is trained to become a genius doctor, and though Park Hoon lands a job at the best South Korean hospital after defecting, he is treated as a foreigner. To find his lost North Korean first love, Song Jae Hee, he does anything to make money.</p>","updated":1704794625,"_links":{"self":{"href":"https://api.tvmaze.com/shows/7367"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/419817","name":"Episode 20"}}}},{"score":0.6831129,"show":{"id":27627,"url":"https://www.tvmaze.com/shows/27627/doctor-zhivago","name":"Doctor Zhivago","type":"Scripted","language":"English","genres":["Drama"],"status":"Ended","runtime":90,"averageRuntime":90,"premiered":"2002-11-24","ended":"2002-12-08","officialSite":null,"schedule":{"time":"21:00","days":["Sunday"]},"rating":{"average":null},"weight":70,"network":{"id":35,"name":"ITV1","country":{"name":"United Kingdom","code":"GB","timezone":"Europe/London"},"officialSite":"https://www.itv.com/"},"webChannel":null,"dvdCountry":null,"externals":{"tvrage":null,"thetvdb":139641,"imdb":"tt0324937"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/108/272236.jpg","original":"https://static.tvmaze.com/uploads/images/original_untouched/108/272236.jpg"},"summary":"<p>Young and beautiful Lara is loved by three men: a revolutionary, a mogul, and a doctor. Their lives become intertwined with the drama of Russian revolution. <b>Doctor Zhivago</b> is still married when he meets Lara. Their love story is unfolding against the backdrop of revolution which affects the doctor's career, his family, and his love to Lara.</p>","updated":1704793450,"_links":{"self":{"href":"https://api.tvmaze.com/shows/27627"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/1155773","name":"Part 3"}}}}]
+[
+  {
+    "score": 0.69859266,
+    "show": {
+      "id": 210,
+      "url": "https://www.tvmaze.com/shows/210/doctor-who",
+      "name": "Doctor Who",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama", "Adventure", "Science-Fiction"],
+      "status": "Ended",
+      "runtime": null,
+      "averageRuntime": 48,
+      "premiered": "2005-03-26",
+      "ended": "2022-10-23",
+      "officialSite": "http://www.bbc.co.uk/programmes/b006q2x0",
+      "schedule": { "time": "", "days": ["Sunday"] },
+      "rating": { "average": 8.3 },
+      "weight": 99,
+      "network": {
+        "id": 12,
+        "name": "BBC One",
+        "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+        "officialSite": "https://www.bbc.co.uk/bbcone"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": 3332, "thetvdb": 78804, "imdb": "tt0436992" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/488/1220400.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/488/1220400.jpg"
+      },
+      "summary": "<p>Adventures across time and space with the time travelling alien and companions.</p>",
+      "updated": 1737589355,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/210" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/2393182", "name": "The Power of the Doctor" }
+      }
+    }
+  },
+  {
+    "score": 0.6984314,
+    "show": {
+      "id": 72724,
+      "url": "https://www.tvmaze.com/shows/72724/doctor-who",
+      "name": "Doctor Who",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama", "Adventure", "Science-Fiction"],
+      "status": "Running",
+      "runtime": null,
+      "averageRuntime": 47,
+      "premiered": "2023-11-25",
+      "ended": null,
+      "officialSite": "https://www.bbc.co.uk/programmes/p0gglvqn",
+      "schedule": { "time": "00:00", "days": ["Friday"] },
+      "rating": { "average": 6.7 },
+      "weight": 99,
+      "network": null,
+      "webChannel": {
+        "id": 26,
+        "name": "BBC iPlayer",
+        "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+        "officialSite": "https://www.bbc.co.uk/iplayer"
+      },
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 449991, "imdb": "tt31433814" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/548/1370219.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/548/1370219.jpg"
+      },
+      "summary": "<p>The Doctor and his companion, Ruby Sunday, travel across time and space, having adventures from the Regency era in England to war-torn future worlds, from the dawn of human history to distant alien worlds. Throughout their adventures in the TARDIS – a time-traveling ship shaped like a police box – they encounter incredible friends and dangerous foes, including a terrifying bogeyman and the Doctor's most powerful enemy yet. And everywhere they go, they find adventure, terror, fun, chases, joy, and monsters.</p>",
+      "updated": 1735594338,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/72724" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/2956383", "name": "Joy to the World" }
+      }
+    }
+  },
+  {
+    "score": 0.69835037,
+    "show": {
+      "id": 75508,
+      "url": "https://www.tvmaze.com/shows/75508/doctor-odyssey",
+      "name": "Doctor Odyssey",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama", "Medical"],
+      "status": "Running",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "2024-09-26",
+      "ended": null,
+      "officialSite": "https://abc.com/show/b052ca15-d1e1-4aa4-9568-15c87b104c02",
+      "schedule": { "time": "21:00", "days": ["Thursday"] },
+      "rating": { "average": 3.6 },
+      "weight": 99,
+      "network": {
+        "id": 3,
+        "name": "ABC",
+        "country": { "name": "United States", "code": "US", "timezone": "America/New_York" },
+        "officialSite": "https://abc.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 447900, "imdb": "tt31849826" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/533/1334692.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/533/1334692.jpg"
+      },
+      "summary": "<p>Max is the new on-board doctor for a luxury cruise ship where the staff works hard and plays harder. It's all hands on deck as Max and his small but mighty medical team navigate unique medical crises and each other, miles from shore.</p>",
+      "updated": 1739325560,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/75508" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/3041018", "name": "Quackers" },
+        "nextepisode": { "href": "https://api.tvmaze.com/episodes/3049977", "name": "Shark Attack!" }
+      }
+    }
+  },
+  {
+    "score": 0.697776,
+    "show": {
+      "id": 766,
+      "url": "https://www.tvmaze.com/shows/766/doctor-who",
+      "name": "Doctor Who",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Action", "Adventure", "Science-Fiction"],
+      "status": "Ended",
+      "runtime": 25,
+      "averageRuntime": 25,
+      "premiered": "1963-11-23",
+      "ended": "1996-05-12",
+      "officialSite": "https://www.bbc.co.uk/programmes/p0ggwr8l",
+      "schedule": { "time": "17:15", "days": [] },
+      "rating": { "average": 8.3 },
+      "weight": 97,
+      "network": {
+        "id": 12,
+        "name": "BBC One",
+        "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+        "officialSite": "https://www.bbc.co.uk/bbcone"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": 3331, "thetvdb": 76107, "imdb": "tt0056751" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/488/1221842.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/488/1221842.jpg"
+      },
+      "summary": "<p><b>Doctor Who</b> is the longest-running science fiction TV series in history, airing initially from 1963 to 1989. <i>Doctor Who</i> is about ideas. It pioneered sophisticated mixed-level storytelling. Its format was the key to its longevity: the Doctor, a mysterious traveller in space and time, travels in his ship, the TARDIS. The TARDIS can take him and his companions anywhere in time and space. Inevitably he finds evil at work wherever he goes..</p>",
+      "updated": 1735483513,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/766" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/325704", "name": "Doctor Who: The Movie" }
+      }
+    }
+  },
+  {
+    "score": 0.693172,
+    "show": {
+      "id": 6912,
+      "url": "https://www.tvmaze.com/shows/6912/doctor-thorne",
+      "name": "Doctor Thorne",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama"],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "2016-03-06",
+      "ended": "2016-05-19",
+      "officialSite": null,
+      "schedule": { "time": "", "days": ["Sunday"] },
+      "rating": { "average": 7.4 },
+      "weight": 87,
+      "network": {
+        "id": 35,
+        "name": "ITV1",
+        "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+        "officialSite": "https://www.itv.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 307343, "imdb": "tt4938084" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/48/120969.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/48/120969.jpg"
+      },
+      "summary": "<p><b>Doctor Thorne</b> tells the story of the penniless Mary Thorne, who grows up with her rich aunt/cousins at Greshamsbury Park estate.</p>",
+      "updated": 1731171042,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/6912" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/3047534", "name": "Episode 4" }
+      }
+    }
+  },
+  {
+    "score": 0.69297487,
+    "show": {
+      "id": 20303,
+      "url": "https://www.tvmaze.com/shows/20303/doctor-doctor",
+      "name": "Doctor Doctor",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama", "Medical"],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "2016-09-14",
+      "ended": "2021-06-23",
+      "officialSite": "https://www.9now.com.au/doctor-doctor",
+      "schedule": { "time": "20:30", "days": ["Wednesday"] },
+      "rating": { "average": 7.4 },
+      "weight": 87,
+      "network": {
+        "id": 120,
+        "name": "Nine Network",
+        "country": { "name": "Australia", "code": "AU", "timezone": "Australia/Sydney" },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 316394, "imdb": "tt6015808" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/178/446527.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/178/446527.jpg"
+      },
+      "summary": "<p>After a spectacular fall from grace, high-flying heart surgeon Dr Hugh Knight receives a life-changing punishment from the Medical Tribunal - he is forced to work for a year as a country GP in his former home town of Whyhope.</p><p><b>Doctor Doctor</b> follows Hugh's attempt to rebuild his world in the town he has spent his whole life running away from. Now the only way to salvage his brilliant career is to work as a lowly GP in an under-resourced, small-town hospital surrounded by estranged family, former friends, crazed colleagues, oddball patients, jealous brothers and a newlywed ex-girlfriend.</p>",
+      "updated": 1704795238,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/20303" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/2111816", "name": "Episode 8" }
+      }
+    }
+  },
+  {
+    "score": 0.6908191,
+    "show": {
+      "id": 59338,
+      "url": "https://www.tvmaze.com/shows/59338/ghost-doctor",
+      "name": "Ghost Doctor",
+      "type": "Scripted",
+      "language": "Korean",
+      "genres": ["Fantasy", "Medical"],
+      "status": "Ended",
+      "runtime": 80,
+      "averageRuntime": 70,
+      "premiered": "2022-01-03",
+      "ended": "2022-02-22",
+      "officialSite": "https://program.tving.com/tvn/ghostdoctor",
+      "schedule": { "time": "22:30", "days": ["Monday", "Tuesday"] },
+      "rating": { "average": 7.8 },
+      "weight": 83,
+      "network": {
+        "id": 280,
+        "name": "tvN",
+        "country": { "name": "Korea, Republic of", "code": "KR", "timezone": "Asia/Seoul" },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 399085, "imdb": "tt16493854" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/382/956011.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/382/956011.jpg"
+      },
+      "summary": "<p>Cha Young Min is a genius doctor, but he is arrogant and selfish. One day, he gets involved in an unexpected case. Due to the unexpected case, his spirit possesses another doctor's body. These two doctors are complete opposites, with opposite personalities and medical abilities.</p>",
+      "updated": 1674112876,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/59338" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/2231516", "name": "Episode 16" }
+      }
+    }
+  },
+  {
+    "score": 0.68837863,
+    "show": {
+      "id": 11342,
+      "url": "https://www.tvmaze.com/shows/11342/doctor-finlay",
+      "name": "Doctor Finlay",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama"],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "1993-05-09",
+      "ended": "1996-12-20",
+      "officialSite": null,
+      "schedule": { "time": "21:00", "days": ["Sunday"] },
+      "rating": { "average": null },
+      "weight": 79,
+      "network": {
+        "id": 35,
+        "name": "ITV1",
+        "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+        "officialSite": "https://www.itv.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 134631, "imdb": "tt0108747" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/38/95799.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/38/95799.jpg"
+      },
+      "summary": "<p><b>Doctor Finlay</b> is a British television series based on A. J. Cronin's stories about the fictional hero, Dr. Finlay.</p><p>It is a follow-up to <i>Dr. Finlay's Casebook</i>, the successful BBC series and takes place in the 1940s after John Finlay returns from war service. Early storylines include the setting up of the new National Health Service and the modernisation of the medical practice at Arden House, Tannochbrae, Scotland.</p><p>The show stars David Rintoul as Dr. Finlay, Ian Bannen as his semi-retired practice partner, Dr. Cameron, and Annette Crosbie as his housekeeper, Janet. Other central characters include Finlay's assistant, Dr. Neil, played by Jason Flemyng and Finlay's new partner, Dr. Napier, played by Jessica Turner.</p>",
+      "updated": 1704793445,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/11342" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/561077", "name": "Snowblind" }
+      }
+    }
+  },
+  {
+    "score": 0.6853491,
+    "show": {
+      "id": 7367,
+      "url": "https://www.tvmaze.com/shows/7367/doctor-stranger",
+      "name": "Doctor Stranger",
+      "type": "Scripted",
+      "language": "Korean",
+      "genres": ["Drama", "Romance", "Medical"],
+      "status": "Ended",
+      "runtime": 70,
+      "averageRuntime": 65,
+      "premiered": "2014-05-05",
+      "ended": "2014-07-08",
+      "officialSite": "http://program.sbs.co.kr/builder/programMainList.do?pgm_id=22000002970",
+      "schedule": { "time": "21:55", "days": ["Monday", "Tuesday"] },
+      "rating": { "average": 7.4 },
+      "weight": 74,
+      "network": {
+        "id": 127,
+        "name": "SBS",
+        "country": { "name": "Korea, Republic of", "code": "KR", "timezone": "Asia/Seoul" },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 280750, "imdb": "tt3693414" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/27/68060.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/27/68060.jpg"
+      },
+      "summary": "<p>The series will revolve around Park Hoon, a South Korean who was captured with his father and grows up in North Korea. He is trained to become a genius doctor, and though Park Hoon lands a job at the best South Korean hospital after defecting, he is treated as a foreigner. To find his lost North Korean first love, Song Jae Hee, he does anything to make money.</p>",
+      "updated": 1704794625,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/7367" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/419817", "name": "Episode 20" }
+      }
+    }
+  },
+  {
+    "score": 0.6831129,
+    "show": {
+      "id": 27627,
+      "url": "https://www.tvmaze.com/shows/27627/doctor-zhivago",
+      "name": "Doctor Zhivago",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama"],
+      "status": "Ended",
+      "runtime": 90,
+      "averageRuntime": 90,
+      "premiered": "2002-11-24",
+      "ended": "2002-12-08",
+      "officialSite": null,
+      "schedule": { "time": "21:00", "days": ["Sunday"] },
+      "rating": { "average": null },
+      "weight": 70,
+      "network": {
+        "id": 35,
+        "name": "ITV1",
+        "country": { "name": "United Kingdom", "code": "GB", "timezone": "Europe/London" },
+        "officialSite": "https://www.itv.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 139641, "imdb": "tt0324937" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/108/272236.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/108/272236.jpg"
+      },
+      "summary": "<p>Young and beautiful Lara is loved by three men: a revolutionary, a mogul, and a doctor. Their lives become intertwined with the drama of Russian revolution. <b>Doctor Zhivago</b> is still married when he meets Lara. Their love story is unfolding against the backdrop of revolution which affects the doctor's career, his family, and his love to Lara.</p>",
+      "updated": 1704793450,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/27627" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/1155773", "name": "Part 3" }
+      }
+    }
+  }
+]
