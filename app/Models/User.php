@@ -46,8 +46,6 @@ class User extends Authenticatable
         ];
     }
 
-    protected $with = ['shows', 'episodes'];
-
     /**
      * The shows that belong to the user.
      */

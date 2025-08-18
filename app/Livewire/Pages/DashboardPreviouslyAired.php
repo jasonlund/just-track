@@ -5,6 +5,7 @@ namespace App\Livewire\Pages;
 use App\Models\Episode;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
@@ -32,5 +33,12 @@ class DashboardPreviouslyAired extends Component
                     return 'm '.$item->air_timestamp->startOfMonth()->format('Y-m-d');
                 }
             });
+    }
+
+    #[On('episode-watched-toggled')]
+    public function handleEpisodeToggled($episodeId): void
+    {
+        // Clear the computed property cache to force a refresh
+        unset($this->episodes);
     }
 }

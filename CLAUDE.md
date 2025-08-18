@@ -318,6 +318,21 @@ Prefer inline code for simple transformations, calculations, or one-time operati
 - Use **Form Requests** for validation instead of inline validation
 - Use **Laravel's query builder** methods instead of raw SQL where possible
 
+### Eloquent Query Best Practices
+
+**NEVER use raw SQL methods unless absolutely necessary.** Always prefer Eloquent's built-in query builder methods:
+
+- **AVOID**: `selectRaw()`, `whereRaw()`, `orderByRaw()`, `havingRaw()`, `DB::raw()`
+- **PREFER**: Standard Eloquent methods and scopes
+- **EXCEPTION**: Only use raw methods when there's no Eloquent equivalent for complex database-specific operations
+
+When you need complex queries:
+
+1. First, check Laravel MCP documentation for the appropriate Eloquent method
+2. Consider breaking complex queries into multiple simpler queries
+3. Use query scopes to encapsulate complex logic
+4. Only resort to raw SQL as a last resort, and document why it's necessary
+
 #### Livewire-Specific Guidelines:
 
 - Use Livewire's reactive properties and computed properties
@@ -786,7 +801,7 @@ document.addEventListener('livewire:init', function () {
   it('returns all', function () {
   $response = $this->postJson('/api/docs', []);
 
-              $response->assertSuccessful();
+                $response->assertSuccessful();
 
     });
     </code-snippet>
@@ -823,13 +838,13 @@ it('has emails', function (string $email) {
 
 - When listing items, use gap utilities for spacing, don't use margins.
 
-            <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
-                <div class="flex gap-8">
-                    <div>Superior</div>
-                    <div>Michigan</div>
-                    <div>Erie</div>
-                </div>
-            </code-snippet>
+              <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
+                  <div class="flex gap-8">
+                      <div>Superior</div>
+                      <div>Michigan</div>
+                      <div>Erie</div>
+                  </div>
+              </code-snippet>
 
 ### Dark Mode
 

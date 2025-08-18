@@ -56,5 +56,8 @@ class EpisodeCard extends Component
         // Refresh the user's episodes relationship and clear computed property cache
         Auth::user()->load('episodes');
         unset($this->isWatched);
+
+        // Dispatch event to notify other components
+        $this->dispatch('episode-watched-toggled', episodeId: $this->episode->id);
     }
 }
