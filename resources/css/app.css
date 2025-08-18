@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Base color configuration */
+@layer theme {
+    :root {
+        --color-zinc-50: var(--color-stone-50);
+        --color-zinc-100: var(--color-stone-100);
+        --color-zinc-200: var(--color-stone-200);
+        --color-zinc-300: var(--color-stone-300);
+        --color-zinc-400: var(--color-stone-400);
+        --color-zinc-500: var(--color-stone-500);
+        --color-zinc-600: var(--color-stone-600);
+        --color-zinc-700: var(--color-stone-700);
+        --color-zinc-800: var(--color-stone-800);
+        --color-zinc-900: var(--color-stone-900);
+        --color-zinc-950: var(--color-stone-950);
+        
+        /* Override orange with papaya colors */
+        --color-orange-50: var(--color-papaya-50);
+        --color-orange-100: var(--color-papaya-100);
+        --color-orange-200: var(--color-papaya-200);
+        --color-orange-300: var(--color-papaya-300);
+        --color-orange-400: var(--color-papaya-400);
+        --color-orange-500: var(--color-papaya-500);
+        --color-orange-600: var(--color-papaya-600);
+        --color-orange-700: var(--color-papaya-700);
+        --color-orange-800: var(--color-papaya-800);
+        --color-orange-900: var(--color-papaya-900);
+        --color-orange-950: var(--color-papaya-950);
+    }
+}
+
+/* Theme configuration */
+@theme {
+    --font-sans: 'Work Sans', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    
+    /* Papaya Brand Colors */
+    --color-papaya-50: #fff7ed;
+    --color-papaya-100: #ffedd5;
+    --color-papaya-200: #fed7aa;
+    --color-papaya-300: #fdba74;
+    --color-papaya-400: #fb923c;
+    --color-papaya-500: #FF8700;
+    --color-papaya-600: #ea580c;
+    --color-papaya-700: #c2410c;
+    --color-papaya-800: #9a3412;
+    --color-papaya-900: #7c2d12;
+    --color-papaya-950: #431407;
+    
+    /* Flux UI Accent Configuration */
+    --color-accent-50: var(--color-papaya-50);
+    --color-accent-100: var(--color-papaya-100);
+    --color-accent-200: var(--color-papaya-200);
+    --color-accent-300: var(--color-papaya-300);
+    --color-accent-400: var(--color-papaya-400);
+    --color-accent-500: var(--color-papaya-500);
+    --color-accent-600: var(--color-papaya-600);
+    --color-accent-700: var(--color-papaya-700);
+    --color-accent-800: var(--color-papaya-800);
+    --color-accent-900: var(--color-papaya-900);
+    --color-accent-950: var(--color-papaya-950);
+    
+    /* Simplified accent variables for Flux */
+    --color-accent: var(--color-papaya-500);
+    --color-accent-content: var(--color-papaya-500);
+    --color-accent-foreground: var(--color-white);
+}
+
+/* Dark mode theme overrides */
+@layer theme {
+    .dark {
+        --color-accent: var(--color-papaya-400);
+        --color-accent-content: var(--color-papaya-400);
+        --color-accent-foreground: var(--color-white);
+    }
+}
+
+/* Custom utility classes */
+@layer utilities {
+    /* Remove font-sans-alt as it's the same as font-sans */
+}
+
+/* Flux Avatar Component Overrides */
+@layer components {
+    /* Override orange avatar colors to use brand orange */
+    [data-flux-avatar] {
+        &.bg-orange-200 {
+            @apply !bg-orange-500;
+        }
+        &.text-orange-800 {
+            @apply !text-orange-50;
+        }
+    }
+}
+
+

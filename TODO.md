@@ -8,6 +8,7 @@
 
 ## Improvements
 
+- [ ] Implement Flux toast for session status messages
 - [ ] Add pagination to Previously Aired page
 - [ ] Add pagination to Upcoming page
 - [ ] Add pagination to ShowShow

@@ -157,4 +157,18 @@ return [
     */
 
     'pagination_theme' => 'tailwind',
+
+    /*
+    |---------------------------------------------------------------------------
+    | Navigate Configuration
+    |---------------------------------------------------------------------------
+    |
+    | Configure the progress bar shown during wire:navigate navigation
+    |
+    */
+
+    'navigate' => [
+        'show_progress_bar' => true,
+        'progress_bar_color' => '#FF8700',
+    ],
 ];

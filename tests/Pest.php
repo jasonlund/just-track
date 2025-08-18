@@ -23,7 +23,7 @@ use function Pest\Laravel\withoutExceptionHandling;
 uses(
     Tests\TestCase::class,
     LazilyRefreshDatabase::class
-)->in('Feature');
+)->in('Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------

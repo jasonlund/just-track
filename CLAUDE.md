@@ -198,6 +198,19 @@ These commands run daily via Laravel's scheduler (defined in `routes/console.php
 
 ## Coding Principles
 
+### Tailwind Color Consistency
+**Always replace zinc or other base colors with stone** when copying Tailwind snippets or examples. The application uses stone as its base color palette throughout. Any references to zinc, gray, slate, or neutral should be replaced with stone equivalents (e.g., `bg-zinc-800` → `bg-stone-800`, `border-zinc-200` → `border-stone-200`).
+
+**Exception for Flux vendor files:** Do not publish Flux vendor files just to change zinc colors. We accept zinc color variables in Flux vendor components because we override them in app.css. Only publish Flux vendor files when functionality changes are needed (e.g., the brand component was published to add custom name slot content).
+
+### Documentation and Package Information
+**Always check the Laravel MCP for package documentation first**, even when provided with external URLs. The MCP's `search-docs` tool provides:
+- Version-specific documentation matching installed packages
+- Accurate information for the exact versions in use
+- Laravel-specific integration guidance
+
+This applies to all Laravel ecosystem packages including Flux UI, Livewire, Filament, Pest, etc.
+
 ### Use Artisan Commands for File Creation
 **Always use `php artisan make:` commands to create new files** instead of creating them manually:
 - `php artisan make:livewire ComponentName` for Livewire components
@@ -218,6 +231,13 @@ Prefer inline code for simple transformations, calculations, or one-time operati
 
 ### Framework-First Approach
 **Always prefer framework features over base PHP functionality.** This ensures consistency, leverages built-in optimizations, and maintains idiomatic code patterns.
+
+### Livewire SPA Navigation
+**Always use Livewire's SPA functionality for navigation.** This provides a seamless, fast user experience without full page reloads.
+- Use `wire:navigate` on all internal links in Blade templates
+- Use `$this->redirect('/path', navigate: true)` in Livewire components  
+- Use `return redirect('/path')` in PHP controllers (Livewire will intercept and handle as SPA navigation)
+- This applies to all navigation: links, redirects, form submissions, etc.
 
 #### Enum Usage
 **ALWAYS use Enums instead of string literals when an Enum exists.** This provides type safety, IDE autocompletion, and prevents typos.
@@ -327,9 +347,12 @@ This application is a Laravel application and its main Laravel ecosystems packag
 - php - 8.3.24
 - laravel/framework (LARAVEL) - v12
 - laravel/prompts (PROMPTS) - v0
+- livewire/flux (FLUXUI_FREE) - v2
+- livewire/flux-pro (FLUXUI_PRO) - v2
 - livewire/livewire (LIVEWIRE) - v3
 - laravel/pint (PINT) - v1
 - pestphp/pest (PEST) - v3
+- tailwindcss (TAILWINDCSS) - v4
 
 
 ## Conventions
@@ -499,11 +522,59 @@ protected function isAccessible(User $user, ?string $path = null): bool
 - Casts can and likely should be set in a `casts()` method on a model rather than the `$casts` property. Follow existing conventions from other models.
 
 
+=== fluxui-free/core rules ===
+
+## Flux UI Free
+
+- This project is using the free edition of Flux UI. It has full access to the free components and variants, but does not have access to the Pro components.
+- Flux UI is a component library for Livewire. Flux is a robust, hand-crafted, UI component library for your Livewire applications. It's built using Tailwind CSS and provides a set of components that are easy to use and customize.
+- You should use Flux UI components when available.
+- Fallback to standard Blade components if Flux is unavailable.
+- If available, use Laravel Boost's `search-docs` tool to get the exact documentation and code snippets available for this project.
+- Flux UI components look like this:
+
+<code-snippet name="Flux UI Component Usage Example" lang="blade">
+    <flux:button variant="primary"/>
+</code-snippet>
+
+
+### Available Components
+This is correct as of Boost installation, but there may be additional components within the codebase.
+
+<available-flux-components>
+avatar, badge, brand, breadcrumbs, button, callout, checkbox, dropdown, field, heading, icon, input, modal, navbar, profile, radio, select, separator, switch, text, textarea, tooltip
+</available-flux-components>
+
+
+=== fluxui-pro/core rules ===
+
+## Flux UI Pro
+
+- This project is using the Pro version of Flux UI. It has full access to the free components and variants, as well as full access to the Pro components and variants.
+- Flux UI is a component library for Livewire. Flux is a robust, hand-crafted, UI component library for your Livewire applications. It's built using Tailwind CSS and provides a set of components that are easy to use and customize.
+- You should use Flux UI components when available.
+- Fallback to standard Blade components if Flux is unavailable.
+- If available, use Laravel Boost's `search-docs` tool to get the exact documentation and code snippets available for this project.
+- Flux UI components look like this:
+
+<code-snippet name="Flux UI component usage example" lang="blade">
+    <flux:button variant="primary"/>
+</code-snippet>
+
+
+### Available Components
+This is correct as of Boost installation, but there may be additional components within the codebase.
+
+<available-flux-components>
+accordion, autocomplete, avatar, badge, brand, breadcrumbs, button, calendar, callout, card, chart, checkbox, command, context, date-picker, dropdown, editor, field, heading, icon, input, modal, navbar, pagination, popover, profile, radio, select, separator, switch, table, tabs, text, textarea, toast, tooltip
+</available-flux-components>
+
+
 === livewire/core rules ===
 
 ## Livewire Core
 - Use the `search-docs` tool to find exact version specific documentation for how to write Livewire & Livewire tests.
-- Use the `php artisan make:livewire [Posts\\CreatePost]` artisan command to create new components
+- Use the `php artisan make:livewire [Posts\CreatePost]` artisan command to create new components
 - State should live on the server, with the UI reflecting it.
 - All Livewire requests hit the Laravel backend, they're like regular HTTP requests. Always validate form data, and run authorization checks in Livewire actions.
 
@@ -642,6 +713,66 @@ it('has emails', function (string $email) {
     'taylor' => 'taylor@laravel.com',
 ]);
 </code-snippet>
+
+
+=== tailwindcss/core rules ===
+
+## Tailwind Core
+
+- Use Tailwind CSS classes to style HTML, check and use existing tailwind conventions within the project before writing your own.
+- Offer to extract repeated patterns into components that match the project's conventions (i.e. Blade, JSX, Vue, etc..)
+- Think through class placement, order, priority, and defaults - remove redundant classes, add classes to parent or child carefully to limit repetition, group elements logically
+- You can use the `search-docs` tool to get exact examples from the official documentation when needed.
+
+### Spacing
+- When listing items, use gap utilities for spacing, don't use margins.
+
+    <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
+        <div class="flex gap-8">
+            <div>Superior</div>
+            <div>Michigan</div>
+            <div>Erie</div>
+        </div>
+    </code-snippet>
+
+
+### Dark Mode
+- If existing pages and components support dark mode, new pages and components must support dark mode in a similar way, typically using `dark:`.
+
+
+=== tailwindcss/v4 rules ===
+
+## Tailwind 4
+
+- Always use Tailwind CSS v4 - do not use the deprecated utilities.
+- `corePlugins` is not supported in Tailwind v4.
+- In Tailwind v4, you import Tailwind using a regular CSS `@import` statement, not using the `@tailwind` directives used in v3:
+
+<code-snippet name="Tailwind v4 Import Tailwind Diff" lang="diff"
+   - @tailwind base;
+   - @tailwind components;
+   - @tailwind utilities;
+   + @import "tailwindcss";
+</code-snippet>
+
+
+### Replaced Utilities
+- Tailwind v4 removed deprecated utilities. Do not use the deprecated option - use the replacement.
+- Opacity values are still numeric.
+
+| Deprecated |	Replacement |
+|------------+--------------|
+| bg-opacity-* | bg-black/* |
+| text-opacity-* | text-black/* |
+| border-opacity-* | border-black/* |
+| divide-opacity-* | divide-black/* |
+| ring-opacity-* | ring-black/* |
+| placeholder-opacity-* | placeholder-black/* |
+| flex-shrink-* | shrink-* |
+| flex-grow-* | grow-* |
+| overflow-ellipsis | text-ellipsis |
+| decoration-slice | box-decoration-slice |
+| decoration-clone | box-decoration-clone |
 
 
 === tests rules ===
