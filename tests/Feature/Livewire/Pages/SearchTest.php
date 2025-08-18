@@ -25,8 +25,8 @@ it('is able to return search results', function () {
     Livewire::withQueryParams(['query' => 'Doctor'])
         ->test(Search::class)
         ->assertSee('Doctor Who')
-        ->assertSeeHtml('<a href="'.route('show.show', ['210']).'" wire:navigate>')
-        ->assertSeeHtml('<a href="'.route('show.show', ['210', 'attach']).'" wire:navigate>')
+        ->assertSee(route('show.show', ['210']))
+        ->assertSee(route('show.show', ['210', 'attach']))
         ->assertViewHas('results', function ($results) {
             return count($results) == 10;
         });
@@ -97,7 +97,8 @@ it('can reset the search query and results', function () {
         ->assertViewHas('results', function ($results) {
             return count($results) == 10;
         })
-        ->assertSeeHtml('<button wire:click="resetQuery">Reset Search</button>')
+        ->assertSee('Reset Search')
+        ->assertMethodWired('resetQuery')
         ->call('resetQuery')
         ->assertSet('query', '')
         ->assertViewHas('results', function ($results) {

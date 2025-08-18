@@ -4,6 +4,12 @@ use App\Http\Controllers\ImageStreamController;
 use App\Livewire\Pages;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return auth()->check() 
+        ? redirect()->route('dashboard')
+        : redirect()->route('login');
+})->name('home');
+
 Route::get('404', function () {
     abort(404);
 });

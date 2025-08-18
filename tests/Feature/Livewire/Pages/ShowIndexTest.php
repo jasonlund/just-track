@@ -71,7 +71,7 @@ it('links to each show', function () {
     // Act & Assert
 
     Livewire::test(Page::class)
-        ->assertSeeHtml('<a href="'.route('show.show', $shows->first()).'" wire:navigate>');
+        ->assertSee(route('show.show', $shows->first()));
 });
 
 it('orders shows')

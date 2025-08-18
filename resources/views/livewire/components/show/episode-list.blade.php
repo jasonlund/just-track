@@ -1,49 +1,51 @@
 <div>
-    <table>
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Air Date</th>
-                <th>Runtime</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
+    <flux:table>
+        <flux:table.columns>
+            <flux:table.column>#</flux:table.column>
+            <flux:table.column>Name</flux:table.column>
+            <flux:table.column>Air Date</flux:table.column>
+            <flux:table.column>Runtime</flux:table.column>
+            @if ($this->show->attached)
+                <flux:table.column></flux:table.column>
+            @endif
+        </flux:table.columns>
+
+        <flux:table.rows>
             @foreach ($this->episodes as $seasonEpisodes)
                 @php
                     $season = $seasonEpisodes->first()->season;
                 @endphp
 
-                <tr>
-                    <td colspan="{{ $this->show->attached ? 5 : 4 }}">
-                        <strong>{{ $season->name }}</strong>
-                    </td>
-                </tr>
+                <flux:table.row>
+                    <flux:table.cell colspan="{{ $this->show->attached ? 5 : 4 }}" class="font-semibold">
+                        {{ $season->name }}
+                    </flux:table.cell>
+                </flux:table.row>
+
                 @foreach ($seasonEpisodes as $episode)
-                    <tr wire:key="episode-{{ $episode->id }}">
-                        <td>
+                    <flux:table.row wire:key="episode-{{ $episode->id }}">
+                        <flux:table.cell>
                             {{ $episode['number'] }}
-                        </td>
-                        <td>
+                        </flux:table.cell>
+                        <flux:table.cell>
                             {{ $episode['name'] }}
-                        </td>
-                        <td>
+                        </flux:table.cell>
+                        <flux:table.cell>
                             {{ $episode->air_timestamp ? $episode->air_timestamp->format('Y-m-d H:i:s') : 'TBA' }}
-                        </td>
-                        <td>
+                        </flux:table.cell>
+                        <flux:table.cell>
                             {{ $episode['runtime'] }}
-                        </td>
+                        </flux:table.cell>
                         @if ($this->show->attached)
-                            <td>
-                                <form wire:submit="sync({{ $episode['id'] }})">
-                                    <button>{{ $episode->attached ? 'Mark as Unwatched' : 'Mark as Watched' }}</button>
-                                </form>
-                            </td>
+                            <flux:table.cell>
+                                <flux:button wire:click="sync({{ $episode['id'] }})" size="sm" variant="ghost">
+                                    {{ $episode->attached ? 'Mark as Unwatched' : 'Mark as Watched' }}
+                                </flux:button>
+                            </flux:table.cell>
                         @endif
-                    </tr>
+                    </flux:table.row>
                 @endforeach
             @endforeach
-        </tbody>
-    </table>
+        </flux:table.rows>
+    </flux:table>
 </div>

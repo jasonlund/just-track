@@ -1,34 +1,43 @@
-<div>
-    <p>
-        {{-- TODO -- when we add caching to the response, do we want throttle instead? --}}
-        <input type="text" wire:model.live.debounce="query" />
-    </p>
+<div class="space-y-6">
+    <div class="space-y-4">
+        <flux:input type="text" wire:model.live.debounce="query" placeholder="Search for a show..." />
 
-    <p>
-        <button wire:click="resetQuery">Reset Search</button>
-    </p>
+        <flux:button wire:click="resetQuery" variant="ghost">Reset Search</flux:button>
+    </div>
 
-    <h1>Results</h1>
-    <p>
+    <div>
+        <flux:heading size="lg" class="mb-4">Results</flux:heading>
+
         @if (count($results))
-            <ul>
+            <ul class="space-y-2">
                 @foreach ($results as $result)
-                    <li wire:key="{{ $result['id'] }}">
-                        <a href="{{ route('show.show', $result['id']) }}" wire:navigate>
+                    <li wire:key="{{ $result['id'] }}" class="flex items-center justify-between">
+                        <a
+                            href="{{ route('show.show', $result['id']) }}"
+                            wire:navigate
+                            class="text-stone-900 hover:text-orange-500 dark:text-stone-100"
+                        >
                             {{ $result['name'] }}
                             @if ($result['premiered'] !== null)
-                                ({{ $result['premiered'] }})
+                                <span class="text-stone-500">({{ $result['premiered'] }})</span>
                             @endif
                         </a>
 
-                        <a href="{{ route('show.show', [$result['id'], 'attach']) }}" wire:navigate>Add</a>
+                        <flux:button
+                            href="{{ route('show.show', [$result['id'], 'attach']) }}"
+                            wire:navigate
+                            size="sm"
+                            variant="ghost"
+                        >
+                            Add
+                        </flux:button>
                     </li>
                 @endforeach
             </ul>
         @elseif ($query === '')
-            Please search for a show above
+            <flux:text>Please search for a show above</flux:text>
         @else
-            Your search returned no results
+            <flux:text>Your search returned no results</flux:text>
         @endif
-    </p>
+    </div>
 </div>

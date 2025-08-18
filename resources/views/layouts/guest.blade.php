@@ -34,8 +34,9 @@
                     <div class="flex justify-center">
                         <a href="/" wire:navigate class="inline-flex items-center gap-2">
                             <flux:icon.play class="size-8 text-orange-500" />
-                            <div class="text-3xl font-serif">
-                                <span class="font-light">Just</span><span class="font-bold text-orange-500">Track</span>
+                            <div class="font-serif text-3xl">
+                                <span class="font-light">Just</span>
+                                <span class="font-bold text-orange-500">Track</span>
                             </div>
                         </a>
                     </div>

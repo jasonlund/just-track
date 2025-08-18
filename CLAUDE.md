@@ -55,6 +55,19 @@ pest --coverage
 php artisan test
 ```
 
+#### Missing Livewire Assertions Package
+
+The project includes `christophrumpel/missing-livewire-assertions` for enhanced Livewire testing. Available assertions:
+
+- `assertPropertyWired('email')` - Check if a property is wired to an HTML field
+- `assertMethodWired('submit')` - Check if a method is wired to an HTML field
+- `assertMethodWiredToForm('upload')` - Check if a method is wired to a form
+- `assertMethodWiredToAction('mouseenter', 'enter')` - Check generic method wiring
+- `assertMethodWiredToEvent('setValue', 'change')` - Check method wired to JS event
+- `assertContainsLivewireComponent(Component::class)` - Check for nested Livewire components
+- `assertContainsBladeComponent(Button::class)` - Check for Blade components
+- `assertSeeBefore('first', 'second')` - Check string order
+
 **Note:** During development, only run tests for the specific files being modified (e.g., `pt tests/Feature/Services/ImageServiceTest.php`). Do not run the full test suite or Pint unless explicitly requested by the user or when the user indicates the task is complete.
 
 ### Code Quality
@@ -763,7 +776,7 @@ document.addEventListener('livewire:init', function () {
   it('returns all', function () {
   $response = $this->postJson('/api/docs', []);
 
-          $response->assertSuccessful();
+            $response->assertSuccessful();
 
     });
     </code-snippet>
@@ -800,13 +813,13 @@ it('has emails', function (string $email) {
 
 - When listing items, use gap utilities for spacing, don't use margins.
 
-        <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
-            <div class="flex gap-8">
-                <div>Superior</div>
-                <div>Michigan</div>
-                <div>Erie</div>
-            </div>
-        </code-snippet>
+          <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
+              <div class="flex gap-8">
+                  <div>Superior</div>
+                  <div>Michigan</div>
+                  <div>Erie</div>
+              </div>
+          </code-snippet>
 
 ### Dark Mode
 
