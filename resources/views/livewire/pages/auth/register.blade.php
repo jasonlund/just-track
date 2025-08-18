@@ -1,36 +1,65 @@
 <div>
-    <form wire:submit="register">
-        <p>
-            <label for="name">Name</label>
-            <input type="text" id="name" wire:model="form.name" />
-            @error('form.name')
-                <span>{{ $message }}</span>
-            @enderror
-        </p>
+    <form wire:submit="register" class="space-y-6">
+        <flux:field>
+            <flux:label for="name">Name</flux:label>
+            <flux:input 
+                type="text" 
+                id="name" 
+                wire:model="form.name"
+                placeholder="John Doe"
+                required
+                autofocus
+            />
+            <flux:error name="form.name" />
+        </flux:field>
 
-        <p>
-            <label for="email">Email</label>
-            <input type="email" id="email" wire:model="form.email" />
-            @error('form.email')
-                <span>{{ $message }}</span>
-            @enderror
-        </p>
+        <flux:field>
+            <flux:label for="email">Email address</flux:label>
+            <flux:input 
+                type="email" 
+                id="email" 
+                wire:model="form.email"
+                placeholder="you@example.com"
+                required
+            />
+            <flux:error name="form.email" />
+        </flux:field>
 
-        <p>
-            <label for="password">Password</label>
-            <input type="password" id="password" wire:model="form.password" />
-            @error('form.password')
-                <span>{{ $message }}</span>
-            @enderror
-        </p>
+        <flux:field>
+            <flux:label for="password">Password</flux:label>
+            <flux:input 
+                type="password" 
+                id="password" 
+                wire:model="form.password"
+                placeholder="••••••••"
+                required
+            />
+            <flux:error name="form.password" />
+        </flux:field>
 
-        <p>
-            <label for="password_confirmation">Confirm Password</label>
-            <input type="password" id="password_confirmation" wire:model="form.password_confirmation" />
-        </p>
+        <flux:field>
+            <flux:label for="password_confirmation">Confirm Password</flux:label>
+            <flux:input 
+                type="password" 
+                id="password_confirmation" 
+                wire:model="form.password_confirmation"
+                placeholder="••••••••"
+                required
+            />
+            <flux:error name="form.password_confirmation" />
+        </flux:field>
 
-        <button type="submit">Register</button>
+        <flux:button type="submit" variant="primary" class="w-full">
+            Create account
+        </flux:button>
     </form>
 
-    <p><a href="{{ route('login') }}" wire:navigate>Login To an Existing Account</a></p>
+    <div class="text-center mt-2">
+        <flux:text>
+            Already have an account?
+            <flux:link href="{{ route('login') }}" wire:navigate variant="primary">
+                Sign in
+            </flux:link>
+        </flux:text>
+    </div>
 </div>

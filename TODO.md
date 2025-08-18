@@ -14,6 +14,7 @@
 - [ ] Add pagination to ShowShow
 - [ ] Refactor ShowShow to use EpisodeCard
 - [ ] UUIDs
+- [ ] Add dark/light mode toggle to guest layout
 
 ## Bugs
 

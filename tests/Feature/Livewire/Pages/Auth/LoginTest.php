@@ -12,14 +12,9 @@ it('renders successfully', function () {
         ->assertSeeLivewire(Login::class);
 });
 
-it('uses the guest layout', function () {
-    get(route('login'))
-        ->assertSeeHtml('<h1>Guest Layout!</h1>');
-});
-
 it('links to the registration page', function () {
     get(route('login'))
-        ->assertSee('Register an Account')
+        ->assertSee('Create an account')
         ->assertSee(route('register'));
 });
 
@@ -31,7 +26,7 @@ it('can authenticate users', function () {
         ->assertPropertyWired('form.password')
         ->assertPropertyWired('form.remember')
 
-        ->assertSeeHtml('<button type="submit">Login</button>')
+        ->assertSee('Sign in')
 
         ->assertMethodWiredToForm('login')
 

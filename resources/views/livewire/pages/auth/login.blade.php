@@ -1,27 +1,52 @@
 <div>
-    <form wire:submit="login">
-        <p>
-            <label for="email">Email</label>
-            <input type="email" id="email" wire:model="form.email" />
-            @error('form.email')
-                <span>{{ $message }}</span>
-            @enderror
-        </p>
+    <form wire:submit="login" class="space-y-6">
+        <flux:field>
+            <flux:label for="email">Email address</flux:label>
+            <flux:input 
+                type="email" 
+                id="email" 
+                wire:model="form.email"
+                placeholder="you@example.com"
+                required
+                autofocus
+            />
+            <flux:error name="form.email" />
+        </flux:field>
 
-        <p>
-            <label for="password">Password</label>
-            <input type="password" id="password" wire:model="form.password" />
-        </p>
+        <flux:field>
+            <flux:label for="password">Password</flux:label>
+            <flux:input 
+                type="password" 
+                id="password" 
+                wire:model="form.password"
+                placeholder="••••••••"
+                required
+            />
+            <flux:error name="form.password" />
+        </flux:field>
 
-        <p>
-            <label for="remember">
-                <input wire:model="form.remember" id="remember" type="checkbox" />
-                <span>Remember Me</span>
-            </label>
-        </p>
+        <div class="flex items-center justify-between">
+            <flux:checkbox 
+                wire:model="form.remember" 
+                id="remember"
+                label="Remember me"
+            />
+            <flux:link href="#" variant="primary" class="text-sm">
+                Forgot password?
+            </flux:link>
+        </div>
 
-        <button type="submit">Login</button>
+        <flux:button type="submit" variant="primary" class="w-full">
+            Sign in
+        </flux:button>
     </form>
 
-    <p><a href="{{ route('register') }}" wire:navigate>Register an Account</a></p>
+    <div class="text-center mt-2">
+        <flux:text>
+            Don't have an account?
+            <flux:link href="{{ route('register') }}" wire:navigate variant="primary">
+                Create an account
+            </flux:link>
+        </flux:text>
+    </div>
 </div>

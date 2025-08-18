@@ -83,7 +83,6 @@
 
 /* Custom utility classes */
 @layer utilities {
-    /* Remove font-sans-alt as it's the same as font-sans */
 }
 
 /* Flux Avatar Component Overrides */
