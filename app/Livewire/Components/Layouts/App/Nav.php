@@ -21,6 +21,7 @@ class Nav extends Component
     public array $items = [
         ['route' => 'dashboard', 'label' => 'Dashboard', 'icon' => 'home'],
         ['route' => 'dashboard.upcoming', 'label' => 'Upcoming', 'icon' => 'calendar'],
+        ['route' => 'dashboard.to-watch', 'label' => 'To Watch', 'icon' => 'eye'],
         ['route' => 'dashboard.previously-aired', 'label' => 'Previously Aired', 'icon' => 'clock'],
         ['route' => 'search', 'label' => 'Search', 'icon' => 'magnifying-glass', 'current' => 'search*'],
         ['route' => 'show.index', 'label' => 'Shows', 'icon' => 'tv', 'current' => 'show.*'],

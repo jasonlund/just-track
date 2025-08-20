@@ -25,6 +25,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/upcoming', Pages\DashboardUpcoming::class)
         ->name('dashboard.upcoming');
 
+    Route::get('/dashboard/to-watch', Pages\DashboardToWatch::class)
+        ->name('dashboard.to-watch');
+
     Route::get('/dashboard/previously-aired', Pages\DashboardPreviouslyAired::class)
         ->name('dashboard.previously-aired');
 

@@ -398,6 +398,16 @@ This approach ensures the codebase remains maintainable, performant, and consist
 
 **AAA Section Comments in Tests**: Simple `// Arrange`, `// Act`, `// Assert` comments are acceptable for clarity but avoid verbose sub-comments like `// Act - First fetch` or `// Act & Assert - with empty query`
 
+## Critical Database Rule
+
+**NEVER TOUCH THE DATABASE.SQLITE FILE.** Never run any commands or code that modifies, deletes, or overwrites data in the actual database.sqlite file. This includes:
+
+- Never use `User::query()->delete()` or similar deletion commands in tinker or tests
+- Never truncate tables in the actual database
+- Never run seeders or migrations that could affect existing data
+- Only use test databases or create temporary test data that doesn't affect the main database
+- When using tinker, be extremely careful to only READ data, never modify it
+
 ## Git Commands Policy
 
 **NEVER run git commands unless they are read-only.** The ONLY exception is during the finalize workflow (see "Important: Finalizing Changes" above) where, after user approval of the commit message, you are authorized to stage and commit changes using `git add -A && git commit`.
@@ -801,7 +811,7 @@ document.addEventListener('livewire:init', function () {
   it('returns all', function () {
   $response = $this->postJson('/api/docs', []);
 
-                $response->assertSuccessful();
+                  $response->assertSuccessful();
 
     });
     </code-snippet>
@@ -838,13 +848,13 @@ it('has emails', function (string $email) {
 
 - When listing items, use gap utilities for spacing, don't use margins.
 
-              <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
-                  <div class="flex gap-8">
-                      <div>Superior</div>
-                      <div>Michigan</div>
-                      <div>Erie</div>
-                  </div>
-              </code-snippet>
+                <code-snippet name="Valid Flex Gap Spacing Example" lang="html">
+                    <div class="flex gap-8">
+                        <div>Superior</div>
+                        <div>Michigan</div>
+                        <div>Erie</div>
+                    </div>
+                </code-snippet>
 
 ### Dark Mode
 
