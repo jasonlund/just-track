@@ -15,6 +15,15 @@ class EpisodeCard extends Component
 
     #[Locked]
     public bool $showWatchButton = true;
+    
+    #[Locked]
+    public ?object $background = null;
+    
+    #[Locked]
+    public ?object $logo = null;
+    
+    #[Locked]
+    public ?string $logoType = null;
 
     public function render()
     {

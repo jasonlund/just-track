@@ -30,7 +30,7 @@
     <body class="min-h-screen bg-white dark:bg-stone-800">
         <livewire:components.layouts.app.nav />
 
-        <flux:main container>
+        <flux:main container class="!px-0 sm:!px-4 lg:!px-6">
             {{ $slot }}
         </flux:main>
 

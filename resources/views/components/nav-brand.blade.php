@@ -5,7 +5,6 @@
         <flux:icon.play class="size-7" />
     </x-slot>
     <x-slot:name>
-        <span class="font-light">Just</span>
-        <span class="font-bold text-orange-500">Track</span>
+        <span class="font-light">Just</span><span class="font-bold text-orange-500">Track</span>
     </x-slot>
 </flux:brand>

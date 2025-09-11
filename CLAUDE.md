@@ -231,6 +231,86 @@ These commands run daily via Laravel's scheduler (defined in `routes/console.php
 - Storage disk: `art` (in storage/art/, gitignored)
 - Images cached locally with 1-year browser cache headers
 
+### FanArt.tv Image Specifications
+
+Reference for image types fetched from FanArt.tv API. These specifications define the format and dimensions of artwork available for TV shows and seasons.
+
+#### Show-Level Images
+
+##### HD TV Logo (hdtvlogo)
+**Description**: High-definition TV show logo with transparent background. Primary branding element for shows.
+- **Format**: PNG with transparent background
+- **Dimensions**: 800x310 pixels maximum
+- **Use Cases**: Navigation headers, show identification, overlay on posters/backgrounds
+
+##### Clear Logo (clearlogo)
+**Description**: Standard definition TV show logo with transparent background (deprecated in favor of HD TV Logo).
+- **Format**: PNG with transparent background
+- **Dimensions**: 400x155 pixels maximum
+- **Use Cases**: Legacy support, smaller UI elements
+
+##### HD Clear Art (hdclearart)
+**Description**: High-definition artwork featuring TV show characters or recognizable objects with transparent background.
+- **Format**: PNG with transparent background
+- **Dimensions**: 1000x562 pixels (16:9 aspect ratio)
+- **Use Cases**: Decorative overlays, character showcases, background elements
+
+##### Clear Art (clearart)
+**Description**: Standard definition character artwork with transparent background (deprecated in favor of HD Clear Art).
+- **Format**: PNG with transparent background
+- **Dimensions**: 500x281 pixels
+- **Use Cases**: Legacy support, smaller decorative elements
+
+##### TV Poster (tvposter)
+**Description**: Vertical poster artwork for TV shows, typically includes show branding and key art.
+- **Format**: JPG
+- **Dimensions**: 1000x1426 pixels (2:3 aspect ratio)
+- **Use Cases**: Library browsing, show details page, grid layouts
+
+##### TV Banner (tvbanner)
+**Description**: Horizontal banner featuring show characters and logo.
+- **Format**: JPG
+- **Dimensions**: 1000x185 pixels
+- **Use Cases**: List views, horizontal navigation, wide headers
+
+##### TV Thumb (tvthumb)
+**Description**: Landscape thumbnail featuring characters and show logo.
+- **Format**: JPG
+- **Dimensions**: 1000x562 pixels (16:9 aspect ratio)
+- **Use Cases**: Episode cards, preview images, grid thumbnails
+
+##### Show Background (showbackground)
+**Description**: High-quality background/fanart images without text or logos.
+- **Format**: JPG
+- **Dimensions**: 1920x1080 pixels (Full HD)
+- **Use Cases**: Page backgrounds, hero sections, ambiance imagery
+
+##### Character Art (characterart)
+**Description**: Individual character or object cutouts with transparent background.
+- **Format**: PNG with transparent background
+- **Dimensions**: 512x512 pixels (character must be at least 502px in one dimension)
+- **Use Cases**: Character galleries, profile images, decorative elements
+
+#### Season-Level Images
+
+##### Season Poster (seasonposter)
+**Description**: Vertical poster specific to a TV show season.
+- **Format**: JPG
+- **Dimensions**: 1000x1426 pixels (2:3 aspect ratio)
+- **Use Cases**: Season browsing, season detail pages
+
+##### Season Banner (seasonbanner)
+**Description**: Horizontal banner specific to a TV show season.
+- **Format**: JPG
+- **Dimensions**: 1000x185 pixels
+- **Use Cases**: Season lists, season headers
+
+##### Season Thumb (seasonthumb)
+**Description**: Landscape thumbnail specific to a TV show season.
+- **Format**: JPG
+- **Dimensions**: 1000x562 pixels (16:9 aspect ratio)
+- **Use Cases**: Season cards, season previews
+
 ### Missing Core Features
 
 - **Unwatched episodes by importance** - Not implemented

@@ -41,6 +41,9 @@ Route::middleware('auth')->group(function () {
         ->name('show.show')
         ->where('external_id', '[0-9]+')
         ->lazy();
+
+    Route::get('/test', Pages\Test::class)
+        ->name('test');
 });
 
 Route::middleware('guest')->group(function () {

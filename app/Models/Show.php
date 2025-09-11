@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ImageType;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -67,8 +68,12 @@ class Show extends Model
      */
     public function mostPopularImage(\App\Enums\ImageType $type): ?Image
     {
-        return $this->morphOne(Image::class, 'imageable')
+        return $this->images()
             ->where('type', $type->value)
+            ->where(function ($query) {
+                $query->where('language', 'en')
+                      ->orWhereNull('language');
+            })
             ->mostPopular()
             ->first();
     }
@@ -77,6 +82,30 @@ class Show extends Model
     {
         return Attribute::make(
             get: fn () => auth()->user()->shows->find($this->id) !== null,
+        );
+    }
+
+    protected function logo(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                $priorityTypes = [
+                    ImageType::HD_CLEAR_ART,
+                    ImageType::CLEAR_ART,
+                    ImageType::HD_TV_LOGO,
+                    ImageType::CLEAR_LOGO,
+                    ImageType::TV_THUMB,
+                ];
+
+                foreach ($priorityTypes as $type) {
+                    $image = $this->mostPopularImage($type);
+                    if ($image) {
+                        return $image;
+                    }
+                }
+
+                return null;
+            }
         );
     }
 }

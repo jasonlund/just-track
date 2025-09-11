@@ -73,12 +73,18 @@ class ImageService
                                 $relativePath = substr($imageData['url'], strlen($baseUrl));
                             }
 
+                            // Convert empty string language to null
+                            $language = $imageData['lang'] ?? null;
+                            if ($language === '') {
+                                $language = null;
+                            }
+                            
                             $this->storeImage(
                                 $target,
                                 $imageType,
                                 $imageData['id'],
                                 $relativePath,
-                                $imageData['lang'] ?? null,
+                                $language,
                                 (int) ($imageData['likes'] ?? 0)
                             );
                             $imagesStored++;

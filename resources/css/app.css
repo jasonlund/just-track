@@ -81,8 +81,28 @@
     }
 }
 
-/* Custom utility classes */
 @layer utilities {
+    .scanlines {
+        background: linear-gradient(rgba(18,16,16,0) 50%,rgba(0,0,0,0.25) 50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.03),rgba(0,0,255,0.06));
+        background-size: 100% 2px,3px 100%
+    }
+
+    .scanline {
+        animation: scanline 20s linear infinite
+    }
+
+    @keyframes scanline {
+        0% {
+            transform: translateY(100%);
+        }
+    }
+
+    .flicker {
+        @apply flex bg-stone-900/[0.05];
+        animation: flicker 0.05s infinite linear;
+    }
+
+    @keyframes flicker { 0% { opacity: 0; } 10% { opacity: 0.9; } 20% { opacity: 0.99 } 30% { opacity: 0; } 40% { opacity: 0.9; } 50% { opacity: 0.99; } 60% { opacity: 0; } 70% { opacity: 0.9; } 80% { opacity: 0.99; } 90% { opacity: 0; } 100% { opacity: 0.9; }}
 }
 
 /* Flux Avatar Component Overrides */
